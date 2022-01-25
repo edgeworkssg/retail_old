@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<PrinterName>RECEIPT</PrinterName>
+	<PageWidth>250</PageWidth>
+	<Padding>5</Padding>
+	<HeaderFontName>Century Gothic</HeaderFontName>
+	<HeaderFontSize>10</HeaderFontSize>
+	<CompanyFontName>Century Gothic</CompanyFontName>
+	<CompanyFontSize>14</CompanyFontSize>
+	
+	<FontName>Century Gothic</FontName>
+	<FontSize>9</FontSize>
+	<RowHeight>14</RowHeight>
+	<PriceIncludeGST>True</PriceIncludeGST>
+	<GST>0.05</GST>
+	<Company>AHAVA</Company>
+	<ReceiptHeader>
+	</ReceiptHeader>
+	<ReceiptFooter></ReceiptFooter>
+	<CollectionHeader>CHECKOUT</CollectionHeader>
+	<CollectionFooter></CollectionFooter>
+</config>

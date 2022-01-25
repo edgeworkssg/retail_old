@@ -1,0 +1,2 @@
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PriceScheme')) 
+BEGIN CREATE TABLE [dbo].[PriceScheme]( [SchemeID] [varchar](50) NOT NULL, [ItemNo] [varchar](50) NULL, [Price] [money] NULL ) END

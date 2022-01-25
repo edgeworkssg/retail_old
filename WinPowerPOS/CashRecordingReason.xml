@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CashRecordingReasons>
+	<Reason>
+		<ID>1</ID>
+		<Name>Yesterday Balance</Name>
+	</Reason>
+  <Reason>
+		<ID>2</ID>
+		<Name>Other Sales</Name>
+	</Reason>
+  <Reason>
+		<ID>3</ID>
+		<Name>Stock Out</Name>
+	</Reason>
+  <Reason>
+		<ID>4</ID>
+		<Name>Vendor Payment</Name>
+	</Reason>
+ 
+  <Reason>
+		<ID>6</ID>
+		<Name>MISC</Name>
+	</Reason>
+</CashRecordingReasons>

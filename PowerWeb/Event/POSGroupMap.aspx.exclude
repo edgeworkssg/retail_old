@@ -1,0 +1,17 @@
+<%@ Page Theme="Default" Language="C#" MasterPageFile="~/PowerPOSMst.master" AutoEventWireup="true" CodeFile="POSGroupMap.aspx.cs" Inherits="POSGroupMap" Title="<%$Resources:dictionary,Assign POS To Special Price Event %>" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">    
+   <div><asp:Literal ID = "SEARCHLbl" runat="server" Text="<%$Resources:dictionary,Group Name: %>"></asp:Literal> 
+       <asp:DropDownList ID="ddName" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddName_SelectedIndexChanged"
+           Width="292px">
+       </asp:DropDownList></div>
+   
+    <asp:Label ID="lblErrorMsg" runat="server" CssClass="lblErrorMsg"></asp:Label>
+   
+   <subsonic:ManyManyList ID="ManyManyList1" runat="server" MapTableName="EventLocationMap" 
+   ForeignTableName="PointOfSale" PrimaryTableName="SpecialEvent"   
+   ProviderName="PowerPOS" Height="126px" RepeatColumns="3" Width="652px">
+   </subsonic:ManyManyList><br />
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="<%$Resources:dictionary,Submit %>" />
+</asp:Content>
+

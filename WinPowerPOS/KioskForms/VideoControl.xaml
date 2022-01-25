@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="WinPowerPOS.KioskForms.VideoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="607" Width="683">
+    <Grid Name="grid">
+        <MediaElement LoadedBehavior="Manual" Name="mediaElement" UnloadedBehavior="Stop" Stretch="Fill" Height="Auto" Width="Auto" MediaOpened="mediaElement_MediaOpened" MediaEnded="mediaElement_MediaEnded" />
+        
+        
+        <Border x:Name="block" BorderBrush="{x:Null}" BorderThickness="0" Height="80" VerticalAlignment="Bottom" Panel.ZIndex="1">
+            <TextBlock x:Name="subtitle" TextWrapping="Wrap" FontSize="36" Foreground="LightGray" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Calibri" Text="" FontWeight="Bold" Panel.ZIndex="1">
+                <TextBlock.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="360" Softness="1" ShadowDepth="10" Opacity="0.8" />
+                </TextBlock.BitmapEffect></TextBlock>
+        </Border>
+    </Grid>
+</UserControl>

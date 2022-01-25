@@ -1,0 +1,21 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*body {
+    padding: 0;
+    margin: 0;
+}*/
+
+.panel-primary {
+    border: none;
+}
+
+.multiline-print.form-control,
+.multiline-print.form-control[readonly] {
+    white-space: pre;
+    height: auto;
+    min-height: 34px;
+}

@@ -1,0 +1,65 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">Settings</h4>
+    </div>
+    <div class="panel-body">
+        <!--<h5>Company Name</h5>
+        <input type="text" id="companyName" class="form-control" />-->
+        <h5>Service URL</h5>
+        <input type="text" id="serviceURL" class="form-control" />
+        <!--<h5>Point of Sale ID</h5>
+        <input type="text" id="PointOfSaleID" class="form-control" />-->
+    </div>
+    <div class="panel-footer">
+        <button type="button" id="settingsClearDB" class="btn btn-danger">Clear Data</button>
+        <button type="button" id="settingsDownloadData" class="btn btn-primary">Download Data</button>
+        <div class="pull-right">
+            <!--<button type="button" id="settingsCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>-->
+            <button type="button" id="settingsSave" class="btn btn-success">Save</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- /.panel -->
+
+<script type="text/javascript">
+    // Document ready
+    $(function () {
+        $("#settingsSave").click(function () {
+            settings.fnSave(function () {
+                settings.fnLoad(function () {
+                    BootstrapDialog.alert("Settings was saved");
+                    //window.location.reload();
+                });
+            });
+        });
+
+        $("#settingsClearDB").click(function () {
+            BootstrapDialog.confirm('Are you sure you want to clear the database?', function (ok) {
+                if (ok) {
+                    DAL.fnDropAllTables(function () {
+                        BootstrapDialog.alert('Database has been cleared successfully.')
+                    });
+                };
+            });
+        });
+
+        $("#settingsDownloadData").click(function () {
+            BootstrapDialog.confirm('Are you sure you want to download the database?', function (ok) {
+                if (ok) {
+                    fnInitializeEquipPDA(function (num_of_records) {
+                        settings.fnLoad(function () {
+                            BootstrapDialog.alert(num_of_records + ' records have been added to database.')
+                        });
+                    });
+                };
+            });
+        });
+
+        //$("#companyName").val(localStorage.companyName);
+        $("#serviceURL").val(localStorage.serviceURL);
+        //$("#PointOfSaleID").val(sessionStorage.PointOfSaleID);
+    });
+
+</script>
+

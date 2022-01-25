@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<hotkeysproducts>
+  <hotkey keycode="q11" keyname="Quick Items: Row 1 Col 1" itemno="800029" itemname="Mineral Mud (600)" />
+  <hotkey keycode="q12" keyname="Quick Items: Row 1 Col 2" itemno="806901" itemname="Intensive Nourishing Body Cream" />
+  <hotkey keycode="q21" keyname="Quick Items: Row 2 Col 1" itemno="811018" itemname="Body Sorbet Caress (Tangerine - Cedarwood)" />
+  <hotkey keycode="q22" keyname="Quick Items: Row 2 Col 2" itemno="822701" itemname="Intense Soothing Nourishing Cream" />
+  <hotkey keycode="q31" keyname="Quick Items: Row 3 Col 1" itemno="824601" itemname="Aftersun Rehydrating Balm" />
+  <hotkey keycode="q32" keyname="Quick Items: Row 3 Col 2" itemno="859210" itemname="Moisturizing Shower Cream" />
+  <hotkey keycode="q41" keyname="Quick Items: Row 4 Col 1" itemno="884001" itemname="Age Defying 3D Essence Ampoules" />
+  <hotkey keycode="q42" keyname="Quick Items: Row 4 Col 2" itemno="847043" itemname="Purifying Mud Mask" />
+  <hotkey keycode="q51" keyname="Quick Items: Row 5 Col 1" itemno="856043" itemname="Mineral Hand Cream" />
+  <hotkey keycode="q52" keyname="Quick Items: Row 5 Col 2" itemno="873018" itemname="Gentle Body Exfoliator" />
+</hotkeysproducts>

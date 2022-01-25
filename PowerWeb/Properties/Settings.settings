@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PowerWeb.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HomeIframeLink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SensitiveSalt" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">89DAA1524ABD4DD51C7C021A</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

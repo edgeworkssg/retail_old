@@ -1,0 +1,303 @@
+<div id="DynamicContent">
+	<div id="divInggredientHdrList">
+		<div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Recipe Setup</h4>
+            </div>
+            <div class="panel-body">
+            	 <form role="form">
+            	 	<div class="form-group">
+					   <h5>Product Name</h5>
+					   <input type="text" class="form-control" data-bind="value: FilterRecipeHeaderName" />						
+					</div>
+                    <div class="form-group">
+                        <h5>Material Name</h5>
+                        <input type="text" class="form-control" data-bind="value: FilterItemName" />                      
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchViewRecipe">SEARCH</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: addNewRecipeHeader">ADD NEW</button>
+                     <div class="pull-right">
+                       <button class="btn btn-danger" type="submit" data-bind="click: showRecipeWithWrongConversion">SHOW RECIPE WITH WRONG CONVERSION</button>
+                    </div>
+				</form>
+				<p>&nbsp;</p>
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                    	<thead data-bind="css: {'dropup': sortKeyPOHdr().asc, 'dropdown': !sortKeyPOHdr().asc}">
+                    		<tr>
+                    			<th> 
+                    				<a href="#" data-bind="click: sortPOHdr.bind($data, 'RecipeHeaderNo')">Item No</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='RecipeHeaderNo'"></span>
+                                </th>
+                    			<th>
+                    				<a href="#" data-bind="click: sortPOHdr.bind($data, 'RecipeName')">Product Name</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='RecipeName'"></span>
+                    			</th>
+                    			<th>
+                    				<a href="#" data-bind="click: sortPOHdr.bind($data, 'TotalMaterial')">Total Material</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='TotalMaterial'"></span>
+                    			</th>
+                    			<th>
+                    				<a href="#" data-bind="click: sortPOHdr.bind($data, 'TotalMaterialCost')">Total Material Cost</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='TotalMaterialCost'"></span>
+                    			</th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'RetailPrice')">Retail Price</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='RetailPrice'"></span>
+                                </th>
+                    			<th></th>
+                    		</tr>
+                    	</thead>
+                    	<tbody data-bind="foreach: ViewRecipeList">
+                    		<tr>
+                    			<td data-bind="text: RecipeHeaderNo"></td>
+                    			<td data-bind="text: RecipeName"></td>
+                    			<td data-bind="text: TotalMaterial"></td>
+                    			<td data-bind="text: TotalMaterialCostStr"></td>
+                                <td data-bind="text: RetailPriceStr"></td>
+                    			<td>
+                                    <a href="#" data-bind="text: 'edit', click: $parent.updateRecipeHeader"></a>
+                                </td>
+                    		</tr>
+                    	</tbody>
+                    	 <tbody data-bind="visible: isPOHdrNotFound">
+                            <tr>
+                                <td colspan="4" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+	<div id="divRecipeHeader">
+		<div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Add / Edit Recipe</h4>
+            </div>
+            <div class="panel-body">
+            	<form role="form" data-bind="with: CurrentRecipeHeader">
+            	    <div class="form-group">
+                        <h5>Product Name</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-bind="value: RecipeName, enable: !$parent.IsEdit()" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button" data-bind="click: $parent.openSearchProductDialogFromHeader, enable:!$parent.IsEdit()">SEARCH</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Item No</h5>
+						<input type="text" class="form-control" data-bind="value: ItemNo, enable: !$parent.IsEdit()" />
+                    </div>
+				</form>
+                    <br/>
+                    <p class="bg-danger" style="padding:15px;" data-bind="visible: IsMissingConversionRecipeHeader">
+                        Missing UOM Conversion detected
+                    </p>
+
+					<br/>
+					<button type="button" class="btn btn-primary" data-bind="click: openAddRecipeDetail">ADD NEW MATERIAL</button>
+					<button type="button" class="btn btn-primary" data-bind="click: selectAllRecipeDetail">SELECT ALL</button>
+					<button type="button" class="btn btn-primary" data-bind="click: clearSelectionRecipeDetail">CLEAR SELECTION</button>
+                    <div class="pull-right">
+    					<button type="button" class="btn btn-danger" data-bind="click: deleteSelectionRecipeDetail">DELETE SELECTED MATERIAL</button>
+                    </div>
+                 <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="checkbox" data-bind="checked: IsSelectAllFiles, click: toggleSelectAllFiles" />
+                                </th>
+								<th>Material Item No</th>
+								<th>Material Name</th>
+								<th>Qty</th>
+								<th>Recipe UOM</th>
+                                <th>Material UOM</th>
+                                <th>Conversion Rate</th>
+                                <th>Cost</th>
+								<th>Packing Material</th>
+                                <th></th>
+							</tr>
+						</thead>
+						<tbody data-bind="foreach: RecipeDetailList">
+							<tr data-bind="css: IsMissingConversionRecipeDetail">
+                                <td><input type="checkbox" class="checkbox" data-bind="checked: IsSelected" /></td>
+								<td data-bind="text: ItemNo"></td>
+								<td data-bind="text: ItemName"></td>
+								<td data-bind="text: Qty"></td>
+								<td data-bind="text: Uom"></td>
+                                <td data-bind="text: MaterialUOM"></td>
+                                <td data-bind="text: ConversionRateStr"></td>
+                                <td data-bind="text: CostRateStr"></td>
+								<td><input type="checkbox" class="checkbox" data-bind="checked: IsPacking" /> </td>
+                                <td>
+                                    <a href="#" data-bind="text: 'edit', click: $parent.updateRecipeDetail"></a>
+                                </td>
+							</tr>
+						</tbody>
+					</table>
+					
+                    <div class="pull-left form-inline">
+                        <div class="form-group"> 
+                            <button type="button" class="btn btn-default" data-bind="click: backToList">BACK</button>
+                            <strong> Total Cost : <span data-bind="text: TotalCostRecipeHeader"></span></strong>
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                       <button class="btn btn-primary" type="submit" data-bind="click: addRecipeHeader">SAVE RECIPE</button>
+                       <button class="btn btn-danger" type="submit" data-bind="click: deleteRecipeHeader, visible: IsEdit">DELETE RECIPE</button>
+                    </div>
+	            </div>
+	        </div>
+		</div>
+	</div>
+
+	<div id="divRecipeDetail">
+	 	<div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Material Properties</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: CurrentRecipeDetail">
+                	<div class="form-group">
+                        <h5>Product Name</h5>
+                        <input type="text" class="form-control" data-bind="value: RecipeName, enable:false" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Item No</h5>
+						<input type="text" class="form-control" data-bind="value: RecipeHeaderNo, enable:false" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Material Name</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-bind="value: ItemName, enable:$parent.DetailIsNew" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button" data-bind="click: $parent.openSearchProductDialog, enable: $parent.DetailIsNew">SEARCH</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Material Item No</h5>
+                        <input type="text" class="form-control" data-bind="value: ItemNo, enable:$parent.DetailIsNew" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Quantity</h5>
+						<input type="text" class="form-control" data-bind="value: Qty" />
+                    </div>					
+					<div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <h5>Recipe UOM</h5>
+                                <!--<input class="form-control" data-bind="value: Uom, valueUpdate: 'keyup'">-->
+                                 <select class="form-control" data-bind="options: $parent.UomList, value: Uom, event: { change: $parent.ConversionRateChange() }"></select> 
+                            </div>
+                            <div class="col-xs-3">
+                                <h5>Product UOM</h5>
+                                <input type="text" class="form-control" disabled="disabled" data-bind="value: MaterialUOM">
+                            </div>
+                            <div class="col-xs-3">
+                                <h5>Conversion Rate</h5>
+                                <input type="text" class="form-control" data-bind="value: ConversionRate, disable: IsUOMSimilar">
+                            </div>
+                            <div class="col-xs-3">
+                                <h5>&nbsp;</h5>
+                                <span data-bind="text: ConversionDesc, visible: !IsUOMSimilar()"></span>
+                            </div>
+                        </div>
+                     <!--    <h5>UOM</h5>
+						<input type="text" class="form-control" data-bind="value: Uom, enable: false" />
+                        <select class="form-control" data-bind="options: $parent.UomList, value: Uom"></select> -->
+                    </div>
+                    <div class="form-group">
+                         <h5>Unit Cost</h5>
+                        <input type="text" class="form-control" data-bind="value: CostRateWithFormat"  disabled="disabled" />
+                    </div>
+                    <div class="form-group" style="float:left;">
+                        <h5>This is Packing Material</h5>
+						<input type="checkbox" class="checkbox form-control" data-bind="checked: IsPacking" />
+                    </div>
+					<div class="form-group"  style="clear:both;">
+                        <h5>Total Material Cost</h5>
+                        <input type="text" class="form-control" data-bind="value: CostRateStr" disabled="disabled" />
+                    </div>					
+                </form>
+                    <div style="clear:both;">&nbsp;</div>
+					<button type="button" class="btn btn-default" data-bind="click: backReceiptHeader">BACK</button>
+                    <div class="pull-right">
+                       <button class="btn btn-primary" type="submit" data-bind="click: addRecipeDetail">SAVE MATERIAL</button>
+                    </div>
+               
+
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for Search Product -->
+    <div class="modal fade" id="searchProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span data-bind="text: TitleSearchDialog"></span></h4>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <h5>Search:</h5>
+                                    <div class="input-group">
+                                        <input type="text" id="txtSearchItem" class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-warning" data-bind="click: searchItem">SEARCH</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div style="overflow: auto; max-height: 300px">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><span data-bind="text: HeaderSearchItemNo"></span></th>
+<!--                                            <th><span>Type</span></th>-->
+                                            <th><span data-bind="text: HeaderSearchItemName"></span></th>                                            
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: SearchItemResults">
+                                        <tr>
+                                            <td data-bind="text: data.ItemNo"></td>
+<!--                                            <td data-bind="text: data.Type"></td>                    -->                        
+                                            <td data-bind="text: data.ItemName"></td>
+                                            <td><button type="button" class="btn btn-success" data-bind="click: $parent.selectItem">ADD</button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody data-bind="visible: IsItemNotFound">
+                                        <tr>
+                                            <td colspan="3" align="center"><br />No result found</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadSearchItem, visible: ShowLoadMoreItems">Load more...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/IngredientSetup.js"></script>

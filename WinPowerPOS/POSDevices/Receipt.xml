@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<PrinterName>Receipt</PrinterName>
+	<PageWidth>250</PageWidth>
+	<Padding>5</Padding>
+	<HeaderFontName>Verdana</HeaderFontName>
+	<HeaderFontSize>12</HeaderFontSize>
+	<CompanyFontName>Verdana</CompanyFontName>
+	<CompanyFontSize>12</CompanyFontSize>
+  <termConditionFontSize>8</termConditionFontSize>
+	<FontName>Verdana</FontName>
+	<FontSize>9</FontSize>
+	<RowHeight>13</RowHeight>
+	<PriceIncludeGST>True</PriceIncludeGST>
+	<GST>0.07</GST>
+	<Company>wAHAHAHA</Company>
+	<ReceiptHeader>
+	</ReceiptHeader>
+	<ReceiptFooter></ReceiptFooter>
+	<CollectionHeader>CHECKOUT</CollectionHeader>
+	<CollectionFooter></CollectionFooter>
+</config>

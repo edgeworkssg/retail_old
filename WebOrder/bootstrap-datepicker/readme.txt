@@ -1,0 +1,1 @@
+http://bootstrap-datepicker.readthedocs.org/en/latest/

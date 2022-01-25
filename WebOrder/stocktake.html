@@ -1,0 +1,257 @@
+<div id="dynamicContent">
+    <div id="divStockTakeEntry">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Stock Take Upload</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" data-bind="value: StockTakeDocRefNo" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Date</h5>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default dateButton" type="button"><span class="glyphicon glyphicon-calendar"></span></button>
+                            </span>
+                            <input type="text" class="form-control" data-bind="value: StockTakeDateFormatted, event: { change: stockTakeDateChanged }" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Clinic</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}, disable: !allowChangeClinic" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Taken By</h5>
+                        <input type="text" class="form-control" data-bind="value: TakenBy" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Verified By</h5>
+                        <input type="text" class="form-control" data-bind="value: VerifiedBy" />
+                    </div>
+                </form>
+
+                <div id="backToFirstProduct"></div>
+                <!--<div id="divNewProducts">
+                    <h4>Add to List:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <h5>Drug Code</h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" data-bind="value: selectedItemNo" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" type="button" data-bind="click: openSearchProductDialog">SEARCH</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h5>Quantity</h5>
+                            <input type="text" class="form-control" data-bind="value: qtyToAdd" />
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-danger" data-bind="click: deleteSelectedLine, disable: deleteCheckedBtnState">DELETE CHECKED</button>
+                            <div class="pull-right">
+                                <button class="btn btn-primary" type="submit" data-bind="click: addItemToList">ADD</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>-->
+                <div class="form-group">
+                    <div class="pull-right">
+                        <!-- The fileinput-button span is used to style the file input field as button -->
+                        <span class="btn btn-success fileinput-button">
+                            <span>IMPORT</span>
+                            <input id="fileupload" type="file" name="files[]">
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- The global progress bar -->
+                    <div id="progress" class="progress" style="margin-top: 10px; display: none">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                </div>
+
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKey().asc, 'dropdown': !sortKey().asc}">
+                            <tr>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'ItemNo')">Item No</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='ItemNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'ItemName')">Item Description</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='ItemName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'StockTakeQty')">Quantity</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='StockTakeQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'FixedQty')">Fixed Qty</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='FixedQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'LooseQty')">Loose Qty</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='LooseQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'UOM')">UOM</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='UOM'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'BaseLevel')">Base Level</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='BaseLevel'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'Remark')">Remarks</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='Remark'"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: stockTakes">
+                            <tr>
+                                <td data-bind="text: ItemNo"></td>
+                                <td data-bind="text: ItemName"></td>
+                                <td data-bind="text: StockTakeQty"></td>
+                                <td data-bind="text: FixedQty"></td>
+                                <td data-bind="text: LooseQty"></td>
+                                <td data-bind="text: UOM"></td>
+                                <td data-bind="text: BaseLevel + ' ' + UOM"></td>
+                                <td data-bind="text: Remark"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-danger" data-bind="click: cancelStockTake">CANCEL</button>
+                        <button type="button" class="btn btn-success" data-bind="click: submitStockTake">SUBMIT</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divStockTakeEntry-->
+
+    <!-- Modal for Search Product -->
+    <div class="modal fade" id="searchProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Search Product</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <h5>Search:</h5>
+                                    <div class="input-group">
+                                        <input type="text" id="txtSearchItem" class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-warning" data-bind="click: searchItem">SEARCH</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div style="overflow: auto; max-height: 300px">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item No</th>
+                                            <th>Item Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: searchItemResults">
+                                        <tr>
+                                            <td data-bind="text: data.ItemNo"></td>
+                                            <td data-bind="text: data.ItemName"></td>
+                                            <td><button type="button" class="btn btn-success" data-bind="click: $parent.selectItem">ADD</button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody data-bind="visible: isItemNotFound">
+                                        <tr>
+                                            <td colspan="3" align="center"><br />No result found</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadSearchItem, visible: showLoadMoreItems">Load more...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / #searchProductModal -->
+
+    <!-- Modal for Confirm Date -->
+    <div class="modal fade bootstrap-dialog type-primary" id="confirmDateModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="bootstrap-dialog-header">
+                        <div class ="bootstrap-dialog-title">
+                            <h4>Please Confirm Stock Take Date & Time</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger">
+                        WARNING: Setting wrong DATE & TIME can cause your inventory balance to be incorrect
+                    </div>
+                    <div class="form-group">
+                        <h5>Stock Take Date & Time</h5>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default dateButton" type="button"><span class="glyphicon glyphicon-calendar"></span></button>
+                            </span>
+                            <input type="text" class="form-control" data-bind="value: StockTakeDateFormatted, event: { change: stockTakeDateChanged }" />
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *24 hour format
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="$('#confirmDateModal').modal('hide')">CANCEL</button>
+                    <button type="button" class="btn btn-success" data-bind="click: saveStockTake">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / #confirmDateModal -->
+</div>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="js/jquery.ui.widget.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/jquery.fileupload.js"></script>
+
+<script type="text/javascript" src="js/stocktake.js"></script>

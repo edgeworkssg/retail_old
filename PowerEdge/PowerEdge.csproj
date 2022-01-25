@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C29D2491-B91F-4B62-AC98-B50A2F5172EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PowerEdge</RootNamespace>
+    <AssemblyName>PowerEdge</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PowerPOSLib\CustomDAL\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmItemMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemMst.Designer.cs">
+      <DependentUpon>frmItemMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMembershipSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMembershipSearch.Designer.cs">
+      <DependentUpon>frmMembershipSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewMembershipEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewMembershipEdit.Designer.cs">
+      <DependentUpon>frmNewMembershipEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPin.Designer.cs">
+      <DependentUpon>frmPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductDataEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductDataEntry.Designer.cs">
+      <DependentUpon>frmProductDataEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductDataEntryFormStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductDataEntryFormStyle.Designer.cs">
+      <DependentUpon>frmProductDataEntryFormStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtilityBreakName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtilityBreakName.Designer.cs">
+      <DependentUpon>frmUtilityBreakName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmItemMst.resx">
+      <DependentUpon>frmItemMst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMembershipSearch.resx">
+      <DependentUpon>frmMembershipSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewMembershipEdit.resx">
+      <DependentUpon>frmNewMembershipEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPin.resx">
+      <DependentUpon>frmPin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductDataEntry.resx">
+      <DependentUpon>frmProductDataEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductDataEntryFormStyle.resx">
+      <DependentUpon>frmProductDataEntryFormStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtilityBreakName.resx">
+      <DependentUpon>frmUtilityBreakName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PowerPOSLib\PowerPOSLib.csproj">
+      <Project>{64DBDC7E-DDE7-4BFC-BC41-8BE0F618E35B}</Project>
+      <Name>PowerPOSLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonGold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_scheduleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crimson_top.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crimson_top1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crimson_top_str.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crimson_top_str1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edgeworks-LogoSmallWeb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightgreenbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightorange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightyellowbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobg1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobgrotated.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobgrotated1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longdarkbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longyellowbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longyellowbackground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubackgnd.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubackgnd1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubackgndlong.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubackgndlong1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nice03_small.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purpleButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebackground.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

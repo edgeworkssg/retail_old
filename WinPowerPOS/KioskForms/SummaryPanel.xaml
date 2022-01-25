@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WinPowerPOS.KioskForms.SummaryPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="Auto" Width="450">
+
+    <Grid>
+        <Border Margin="0" Padding="10,10" BorderBrush="#ff2d74b8" BorderThickness="1" CornerRadius="15">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#ff83b3e1" Offset="0"/>
+                    <GradientStop Color="#ff2d74b8" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel HorizontalAlignment="Stretch" Width="Auto">
+                <Label Name="lblPaidAmount" FontSize="20" Foreground="White" Width="Auto" HorizontalContentAlignment="Center">Paid Amount: $0.00</Label>
+                <Label Name="lblBalanceDue" FontSize="24" FontWeight="Bold" Foreground="White" Width="Auto" HorizontalContentAlignment="Center">Balance Due: $0.00</Label>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

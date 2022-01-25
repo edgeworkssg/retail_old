@@ -1,0 +1,195 @@
+﻿<UserControl x:Class="WinPowerPOS.KioskForms.PaymentPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="607" Width="683">
+    <UserControl.Resources>
+        <BitmapImage x:Key="cashImage" UriSource="../Resources/payment_cash.png" />
+        <BitmapImage x:Key="netsImage" UriSource="../Resources/payment_nets.png" />
+        <BitmapImage x:Key="netsFlashImage" UriSource="../Resources/payment_nets_flash.png" />
+        <BitmapImage x:Key="netsCashCardImage" UriSource="../Resources/payment_nets_cashcard.png" />
+        <BitmapImage x:Key="creditCardImage" UriSource="../Resources/payment_creditcard.png" />
+        <BitmapImage x:Key="masterCardImage" UriSource="../Resources/payment_mastercard.png" />
+        
+        <LinearGradientBrush x:Key="netsBrush"  EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#ff4472C4" Offset="0.5" />
+            <GradientStop Color="#ffcc0000" Offset="0.5" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="creditCardBrush"  EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#ff2F5597" Offset="0.5" />
+            <GradientStop Color="#ffFFC000" Offset="0.5" />
+        </LinearGradientBrush>
+        
+        <Style x:Key="cashButtonStyle" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="button" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="#ff548235">
+                                <Grid>
+                                    <Label HorizontalAlignment="Center" Margin="0" Padding="2"  FontSize="18" FontWeight="Bold" Foreground="White">CASH</Label>
+                                    <Rectangle Width="Auto" Fill="White" Height="65"></Rectangle>
+                                    <Image Source="{StaticResource cashImage}" Width="Auto" Height="55" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="button"  Property="Background" Value="#FFf26724"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" BlurRadius="10" Opacity="0.5" />
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="netsButtonStyle" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="button" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="{StaticResource netsBrush}">
+                                <Grid>
+                                    <Label HorizontalAlignment="Center" Margin="0" Padding="2"  FontSize="18" FontWeight="Bold" Foreground="White">NETS</Label>
+                                    <Rectangle Width="Auto" Fill="White" Height="65"></Rectangle>
+                                    <Image Source="{StaticResource netsImage}" Width="Auto" Height="55" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="button"  Property="Background" Value="#FFf26724"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" BlurRadius="10" Opacity="0.5" />
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="netsFlashButtonStyle" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="button" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="{StaticResource netsBrush}">
+                                <Grid>
+                                    <Label HorizontalAlignment="Center" Margin="0" Padding="2"  FontSize="18" FontWeight="Bold" Foreground="White">FLASHPAY</Label>
+                                    <Rectangle Width="Auto" Fill="White" Height="65"></Rectangle>
+                                    <Image Source="{StaticResource netsFlashImage}" Width="Auto" Height="55" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="button"  Property="Background" Value="#FFf26724"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" BlurRadius="10" Opacity="0.5" />
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="netsCashCardButtonStyle" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="button" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="{StaticResource netsBrush}">
+                                <Grid>
+                                    <Label HorizontalAlignment="Center" Margin="0" Padding="2"  FontSize="18" FontWeight="Bold" Foreground="White">CASHCARD</Label>
+                                    <Rectangle Width="Auto" Fill="White" Height="65"></Rectangle>
+                                    <Image Source="{StaticResource netsCashCardImage}" Width="Auto" Height="55" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="button"  Property="Background" Value="#FFf26724"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" BlurRadius="10" Opacity="0.5" />
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="creditCardButtonStyle" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="button" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="{StaticResource creditCardBrush}">
+                                <Grid>
+                                    <Label HorizontalAlignment="Center" Margin="0,0,0,0" Padding="2"  FontSize="18" FontWeight="Bold" Foreground="White">CREDITCARD</Label>
+                                    <Rectangle Width="Auto" Fill="White" Height="65"></Rectangle>
+                                    <Image Source="{StaticResource creditCardImage}" Width="Auto" Height="55" Margin="0,0,0,0" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="button"  Property="Background" Value="#FFf26724"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" BlurRadius="10" Opacity="0.5" />
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="button" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="button" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="White">
+                                <TextBlock  Text="{TemplateBinding Button.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="button"  Property="Background" Value="#ffeef4fb"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Button.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" BlurRadius="10" Opacity="0.5" />
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Width="Auto" Height="Auto"  Margin="5">
+        <Button Name="btnCash" Style="{StaticResource ResourceKey=cashButtonStyle}" Margin="236,190,237,287" Foreground="White" Click="CashPaymentClicked"></Button>
+        <Button Name="btnNet" Style="{StaticResource ResourceKey=netsButtonStyle}" Margin="21,33,0,0" Height="120" Foreground="White" Click="NetsPaymentClicked" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Visibility="Visible"></Button>
+        <Button Name="btnNetFlashPay" Style="{StaticResource ResourceKey=netsFlashButtonStyle}" Margin="236,33,237,0" Height="120" Foreground="White" Click="NetsFlashPaymentClicked" VerticalAlignment="Top" Visibility="Visible"></Button>
+        
+<Button Name="btnNetCashCard" Style="{StaticResource ResourceKey=netsCashCardButtonStyle}" Foreground="White" Click="NetsCashCardPaymentClicked"  HorizontalAlignment="Right" Margin="0,33,21,0" Width="200" Visibility="Visible" Height="120" VerticalAlignment="Top"></Button>
+        <Button Name="btnCreditCard" Style="{StaticResource ResourceKey=creditCardButtonStyle}" Foreground="White" Click="CreditCardPaymentClicked" Margin="21,190,0,287" Visibility="Visible" HorizontalAlignment="Left" Width="200"></Button>
+        <Button Name="button3" Style="{StaticResource ResourceKey=button}" Foreground="White" HorizontalAlignment="Right" Margin="0,190,21,287" Width="200" Visibility="Hidden"></Button>
+        
+        <Button Foreground="White" Height="120" HorizontalAlignment="Left" Margin="21,0,0,130" Name="button4" Style="{StaticResource ResourceKey=button}" VerticalAlignment="Bottom" Width="200" Visibility="Hidden"></Button>
+        <Button Foreground="White" Height="120" Margin="236,0,237,130" Name="button5" Style="{StaticResource ResourceKey=button}" VerticalAlignment="Bottom" Visibility="Hidden"></Button>
+        <Button Foreground="White" Height="120" HorizontalAlignment="Right" Margin="0,0,21,130" Name="button6" Style="{StaticResource ResourceKey=button}" VerticalAlignment="Bottom" Width="200" Visibility="Hidden"></Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">Drug Importer</h4>
+    </div>
+    <div class="panel-body">
+        <h5>Please select *.xls file containing the drugs list to import. The file will be uploaded and processed immediately.</h5>
+        <!-- The fileinput-button span is used to style the file input field as button -->
+        <span class="btn btn-success fileinput-button">
+            <i class="glyphicon glyphicon-plus"></i>
+            <span>Select file...</span>
+            <input id="fileupload" type="file" name="files[]">
+        </span>
+        <br>
+        <br>
+        <!-- The global progress bar -->
+        <div id="progress" class="progress">
+            <div class="progress-bar progress-bar-success"></div>
+        </div>
+    </div>
+</div>
+<!-- /.panel -->
+
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="js/jquery.ui.widget.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/jquery.fileupload.js"></script>
+
+<script type="text/javascript" src="js/itemimporter.js"></script>

@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="WinPowerPOS.KioskForms.CheckOut"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="768" Width="1000">
+    <Grid>
+        <Path Data="M889,124" HorizontalAlignment="Right" Height="2" Margin="0,123,-40,0" Stretch="Fill" Stroke="#FF619ED6" StrokeThickness="2" VerticalAlignment="Top" Width="2"/>
+        <Border BorderBrush="#FF619ED6" Background="White"  BorderThickness="1" Margin="10,17.09,23,8" CornerRadius="20" Padding="12,12,12,0">
+            <StackPanel VerticalAlignment="Top" Margin="0"  Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Height="60">
+                    <TextBlock TextWrapping="Wrap" Text="Check Out" VerticalAlignment="Center" FontSize="46" Margin="5,0,10,0" Padding="0,5,0,0" Height="Auto" Width="470" FontFamily="Calibri"/>
+                    
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="From:" VerticalAlignment="Center" FontSize="32" Margin="10,0,10,0" Padding="0,5,0,0" Height="Auto" Width="85" FontFamily="Calibri"/>
+                        <TextBlock Name="txtStartTime" FontSize="32" Text="01 Mar 2017 09:00:00 AM" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="350" FontFamily="Calibri" HorizontalAlignment="Left"/>
+                    </DockPanel>
+                    
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="To:" VerticalAlignment="Center" FontSize="32" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="85" FontFamily="Calibri"/>
+                        <TextBlock Name="txtEndTime" FontSize="32" Text="01 Mar 2017 09:00:00 AM" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="350" FontFamily="Calibri" HorizontalAlignment="Left"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Name="txtCashier" FontSize="36" Text="Cashier : UserName" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"  TextAlignment="Left" Width="400" FontFamily="Calibri"/>
+                    </DockPanel>   
+                </StackPanel>
+                
+                <StackPanel Name="spTotal" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="Total Sales:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtTotal" FontSize="36" Text="100.00" Margin="10,0,10,0"  Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPayNetsATMCard" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="NETS ATM Card:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtNetsATMCard" FontSize="36" Text="100.00" Margin="10,0,10,0"  Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPayNetsFlashPay" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="NETS Flash Pay:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtNetsFlashPay" FontSize="36" Text="100.00" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPayNetsCashCard" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="NETS Cash Card:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtNetsCashCard" FontSize="36" Text="100.00" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPay1" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="60" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Name="lblPay1" TextWrapping="Wrap" Text="VISA:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtPay1Recorded" FontSize="36" Text="100.00" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPay2" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Name="lblPay2" TextWrapping="Wrap" Text="MASTER:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtPay2Recorded" FontSize="36" Text="100.00" Margin="10,0,10,0" Padding="0,5,0,0" VerticalAlignment="Center" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPay3" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Name="lblPay3" TextWrapping="Wrap" Text="AMEX:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtPay3Recorded" FontSize="36" Text="100.00" VerticalAlignment="Center" Margin="10,0,10,0"  TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPay4" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Name="lblPay4" TextWrapping="Wrap" Text="AMEX:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtPay4Recorded" FontSize="36" Text="100.00" VerticalAlignment="Center" Margin="10,0,10,0"  TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spPay5" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="60" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Name="lblPay5" TextWrapping="Wrap" Text="AMEX:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtPay5Recorded" FontSize="36" Text="100.00" VerticalAlignment="Center" Margin="10,0,10,0"  TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spCash" Orientation="Horizontal" Height="50">
+                    <DockPanel Height="45" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Text="CASH:" VerticalAlignment="Center" FontSize="36" Margin="10,0,10,0"  Padding="0,5,0,0" Height="Auto" Width="250" FontFamily="Calibri"/>
+                    <TextBlock Name="txtCASH" FontSize="36" Text="100.00" VerticalAlignment="Center" Margin="10,0,10,0" Padding="0,5,0,0" TextAlignment="Left" Width="125" FontFamily="Calibri"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Name="spEmpty" Orientation="Horizontal" Height="20">
+                </StackPanel>
+                
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

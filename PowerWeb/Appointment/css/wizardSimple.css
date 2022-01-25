@@ -1,0 +1,138 @@
+﻿.tblWiz
+{
+	
+}
+
+.tblWiz tbody tr td
+{
+	padding:5px;
+}
+
+.btnWiz {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.btnWiz:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+#wizHeaderBlue li .prevStep
+{
+    background-color: #428CC9;
+}
+#wizHeaderBlue li .prevStep:after
+{
+    border-left-color:#428CC9 !important;
+}
+#wizHeaderBlue li .currentStep
+{
+    background-color: #3193D4;
+}
+#wizHeaderBlue li .currentStep:after
+{
+    border-left-color: #3193D4 !important;
+}
+#wizHeaderBlue li .nextStep
+{
+    background-color:#C2C2C2;
+}
+#wizHeaderBlue li .nextStep:after
+{
+    border-left-color:#C2C2C2 !important;
+}
+#wizHeaderBlue
+{
+    list-style: none;
+    overflow: hidden;
+    font: 18px Helvetica, Arial, Sans-Serif;
+    margin: 0px;
+    padding: 0px;
+}
+#wizHeaderBlue li
+{
+    float: left;
+}
+#wizHeaderBlue li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0 10px 55px;
+    background: brown; /* fallback color */
+    background: hsla(34,85%,35%,1);
+    position: relative;
+    display: block;
+    float: left;
+}
+#wizHeaderBlue li a:after
+{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid hsla(34,85%,35%,1);
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+#wizHeaderBlue li a:before
+{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}        
+#wizHeaderBlue li:first-child a
+{
+    padding-left: 10px;
+}
+#wizHeaderBlue li:last-child 
+{
+    padding-right: 50px;
+}
+#wizHeaderBlue li a:hover
+{
+    background: #AEC9E7;
+}
+#wizHeaderBlue li a:hover:after
+{
+    border-left-color: #AEC9E7 !important;
+}
+.contentBlue
+{
+    height:100%;           
+    padding:5px;
+    background-color:#A4C2E6;
+    font-size:12px;
+}

@@ -1,0 +1,215 @@
+﻿#rating
+{
+	width: 900px;
+	margin: 10px 10px 10px 32px;
+}
+
+.red-border
+{
+	border-top: solid 5px #f44336 !important;
+	padding: 10px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.black-border
+{
+	border-top: solid 2px black !important;
+	padding: 10px;
+	width: 98%;
+}
+
+.black-border-bottom
+{
+	border-bottom: solid 2px black !important;
+	padding: 10px;
+	width: 98%;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.alignleft
+{
+	float: left;
+	width: 33.33333%;
+	text-align: left;
+}
+
+.aligncenter
+{
+	float: left;
+	width: 33.33333%;
+	text-align: center;
+}
+
+.alignright
+{
+	float: left;
+	width: 33.33333%;
+	text-align: right;
+}
+
+.leafgreen
+{
+	color: #0F4D0F !important;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12
+{
+	float: left;
+}
+
+.col-xs-12
+{
+	width: 100%;
+}
+.col-xs-11
+{
+	width: 91.66666666666666%;
+}
+.col-xs-10
+{
+	width: 83.33333333333334%;
+}
+.col-xs-9
+{
+	width: 75%;
+}
+.col-xs-8
+{
+	width: 66.66666666666666%;
+}
+.col-xs-7
+{
+	width: 58.333333333333336%;
+}
+.col-xs-6
+{
+	width: 50%;
+}
+.col-xs-5
+{
+	width: 41.66666666666667%;
+}
+.col-xs-4
+{
+	width: 33.33333333333333%;
+}
+.col-xs-3
+{
+	width: 25%;
+}
+.col-xs-2
+{
+	width: 16.666666666666664%;
+}
+.col-xs-1
+{
+	width: 8.333333333333332%;
+}
+.img-responsive
+{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.img
+{
+	vertical-align: middle;
+	border: 0;
+}
+
+.grating
+{
+	height: 100%;
+	width: 0%;
+}
+
+.bg-current
+{
+	background-color: #538234;
+}
+
+.bg-last
+{
+	background-color: #BE9000;
+}
+
+.current
+{
+	color: #538234;
+	
+}
+
+.last
+{
+	color: #BE9000;
+
+}
+
+.col-compact
+{
+	display: block;
+	margin: 5px;
+}
+
+.txt-center
+{
+	text-align:center;
+}
+
+.inner
+{
+	position:absolute;	
+}
+
+.subhdr
+{
+	padding:5px;
+	font-size:15px;
+}
+
+/* unvisited link */
+a.filter-active:link {
+    color: #F44336;
+}
+
+/* visited link */
+a.filter-active:visited {
+    color: #F44336;
+}
+
+/* mouse over link */
+a.filter-active:hover {
+    color: #F68880;
+}
+
+/* selected link */
+a.filter-active:active {
+    color: #F44336;
+}
+
+
+/* unvisited link */
+a.filter-nonactive:link {
+    color: #5F5F5F;
+}
+
+/* visited link */
+a.filter-nonactive:visited {
+    color: #5F5F5F;
+}
+
+/* mouse over link */
+a.filter-nonactive:hover {
+    color: #ABABAB;
+}
+
+/* selected link */
+a.filter-nonactive:active {
+    color: #5F5F5F;
+}
+

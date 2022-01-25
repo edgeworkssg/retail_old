@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ERPIntegration.Properties" GeneratedClassName="FTPSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Protocol" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FTP</Value>
+    </Setting>
+    <Setting Name="FtpHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pabx.dyndns-server.com</Value>
+    </Setting>
+    <Setting Name="FtpPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">21</Value>
+    </Setting>
+    <Setting Name="PassiveMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">edgeworks</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pressingon</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

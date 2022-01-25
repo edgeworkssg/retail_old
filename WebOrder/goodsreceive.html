@@ -1,0 +1,191 @@
+<div id="dynamicContent">
+    <div id="divReceiveList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Goods Receive</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Outlet</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control visible-print" readonly="readonly" data-bind="value: searchOrderNumber" />
+                        <div class="input-group hidden-print">
+                            <input type="text" class="form-control" data-bind="value: searchOrderNumber" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="submit" data-bind="click: searchPurchaseOrder">LOAD LIST</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Receive Date</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: Date.today().toString(settings.dateDisplayFormat)" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Scan Product</h5>
+                        <input type="text" class="form-control" data-bind="value: selectedItemNo, event: {keypress: scanProduct}, valueUpdate: 'afterkeydown'" id="txtSelectedItemNo" />
+
+                        <!--<div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button" data-bind="click: openSearchProductDialog">
+                                    SEARCH
+                                </button>
+                            </span>
+                        </div>-->
+                    </div>
+                </form>
+                <p>&nbsp;</p>
+
+                <div id="backToFirstProduct"></div>
+                <div style="overflow: auto">
+                    <div data-bind="visible: purchaseOrderDetailsDiscrepancy().length > 0">
+                        <span class="bold">Discrepancies</span>
+                        <div id="tableDiscrepancies">
+                            <table class="table table-hover">
+                            <thead data-bind="css: {'dropup': sortKeyPODet().asc, 'dropdown': !sortKeyPODet().asc}">
+                                <tr>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'Categoryname')">Category</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='CategoryName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemNo')">Item Code</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemNo'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemName')">Item Description</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyApproved')">Sent Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyApproved'"></span>
+                                    </th>
+                                    <!--<th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyOutstanding')">Outstanding Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyOutstanding'"></span>
+                                    </th>-->
+                                    <th data-bind="css: {'info': !isReadOnly()}">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyReceived')">Received Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyReceived'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyDiff')">+/-</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyDiff'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'UOM')">UOM</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='UOM'"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: purchaseOrderDetailsDiscrepancy">
+                                <tr data-bind="css: {'danger': $parent.POType().toUpperCase() == 'ORDER' && ItemIsDeleted}">
+                                    <td data-bind="text: CategoryName"></td>
+                                    <td data-bind="text: ItemNo"></td>
+                                    <td data-bind="text: ItemName"></td>
+                                    <td data-bind="text: QtyApproved"></td>
+                                    <!--<td data-bind="text: QtyOutstanding"></td>-->
+                                    <td data-bind="text: QtyReceived, css: {'info': !$parent.isReadOnly()}, click: $parent.setQtyReceived"></td>
+                                    <td data-bind="text: QtyDiff"></td>
+                                    <td data-bind="text: UOM"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div data-bind="visible: purchaseOrderDetailsTally().length > 0">
+                        <span class="bold">Tallies</span>
+                        <div id="tableTallies">
+                            <table class="table table-hover">
+                            <thead data-bind="css: {'dropup': sortKeyPODet().asc, 'dropdown': !sortKeyPODet().asc}">
+                                <tr>
+                                     <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'Categoryname')">Category</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='CategoryName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemNo')">Item Code</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemNo'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemName')">Item Description</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyApproved')">Sent Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyApproved'"></span>
+                                    </th>
+                                    <!--<th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyOutstanding')">Outstanding Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyOutstanding'"></span>
+                                    </th>-->
+                                    <th data-bind="css: {'info': !isReadOnly()}">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyReceived')">Received Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyReceived'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyDiff')">+/-</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyDiff'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'UOM')">UOM</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='UOM'"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: purchaseOrderDetailsTally">
+                                <tr data-bind="css: {'danger': $parent.POType().toUpperCase() == 'ORDER' && ItemIsDeleted}">
+                                    <td data-bind="text: CategoryName"></td>
+                                    <td data-bind="text: ItemNo"></td>
+                                    <td data-bind="text: ItemName"></td>
+                                    <td data-bind="text: QtyApproved"></td>
+                                    <!--<td data-bind="text: QtyOutstanding"></td>-->
+                                    <td data-bind="text: QtyReceived, css: {'info': !$parent.isReadOnly()}, click: $parent.setQtyReceived"></td>
+                                    <td data-bind="text: QtyDiff"></td>
+                                    <td data-bind="text: UOM"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div data-bind="visible: isPODetNotFound">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td align="center"><br />No result found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default hidden-print" data-bind="visible: isEverReceived && purchaseOrderDetails().length > 0, click: print"><span class="glyphicon glyphicon-print print-icon"></span> PRINT</button>
+                        <button type="button" class="btn btn-primary hidden-print" data-bind="visible: !isReadOnly(), click: allTally">ALL TALLY</button>
+                        <button type="button" class="btn btn-success hidden-print" data-bind="visible: !isReadOnly(), click: doStockIn">RECEIVE</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divReceiveList-->
+</div>
+<script type="text/javascript" src="js/goodsreceive.js?version=1000"></script>

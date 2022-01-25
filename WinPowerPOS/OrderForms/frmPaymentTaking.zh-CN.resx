@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtForeignAmount.Error" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtForeignAmount.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtForeignAmount.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>外资金额</value>
+  </data>
+  <data name="lblExchange.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblExchange.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblExchange.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 24</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>￥</value>
+  </data>
+  <data name="label6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 16</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>汇率</value>
+  </data>
+  <data name="cmbExchange.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbExchange.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbExchange.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 16</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>货币 </value>
+  </data>
+  <data name="groupBox4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>外币</value>
+  </data>
+  <data name="label5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 18</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="label12.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label12.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 29</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>收据编号</value>
+  </data>
+  <data name="lblNumOfItems.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNumOfItems.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblNumOfItems.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblRefNo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRefNo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblRefNo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btn2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btn2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btn2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn2.Text" xml:space="preserve">
+    <value>￥2</value>
+  </data>
+  <data name="btn5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btn5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btn5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btn5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn5.Text" xml:space="preserve">
+    <value>￥5</value>
+  </data>
+  <data name="btn10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btn10.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btn10.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btn10.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn10.Text" xml:space="preserve">
+    <value>￥10</value>
+  </data>
+  <data name="btn50.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btn50.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btn50.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btn50.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn50.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn50.Text" xml:space="preserve">
+    <value>￥50</value>
+  </data>
+  <data name="flowLayoutPanel1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="flowLayoutPanel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="flowLayoutPanel1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkAAMDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDx7Z7f+O0VJtHoP0oriufRcpJ+P60VJg+v6mioub8o/Hsf1op+
+        0en/AI7RU3N+Uft+n6UUvHqPzH+FFSaWHZP+c0UuD7/rRSKG4/ztoo4/yBRQMdj3NFFFAH//2Q==
+</value>
+  </data>
+  <data name="btnClose.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnClose.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnClose.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="btnPlus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnPlus.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPlus.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnPlus.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnMin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnMin.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMin.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnMin.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCLEAR.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkAAMDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDx7Z7f+O0VJtHoP0oriufRcpJ+P60VJg+v6mioub8o/Hsf1op+
+        0en/AI7RU3N+Uft+n6UUvHqPzH+FFSaWHZP+c0UuD7/rRSKG4/ztoo4/yBRQMdj3NFFFAH//2Q==
+</value>
+  </data>
+  <data name="btnCLEAR.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCLEAR.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnCLEAR.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCLEAR.Text" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="btnBackSpace.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnBackSpace.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnBackSpace.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnBackSpace.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDot.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDot.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDot.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDot.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button10.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button10.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button10.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button7.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button7.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button7.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button8.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button8.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button9.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button9.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button9.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button4.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button4.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button6.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="button6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABiCAIAAAAX/I5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACzElEQVQ4T4XKB09TURiH8ZdZeu9FaXGw
+        22qitAiCiDIsU2SIiCACskFxIVCVFZw4E40DZaNhiRMBQWTJrC2lfCjf01NOS2o0+eXc+/zPAXv/JgaU
+        jeCgvMmAsmlT2ylv27S96p6d8i7lqLpFmjL1HUsj0g4BzaydVM3guO+BQ8B9hrT1BE6BDxFdETgHPUJs
+        NTdFWrT/MYPTPxuBS/AT5m8tDn5qzaa5kGfW/t+hLxjxgec2zR98SdHJ0nQCIezVpuYOtzA4bWp8u/n+
+        UAvw4a+t2bQQ0Yb48FYT7Kh2xEe2ISHiDXBR7YwQ1QqcuoPh1W0gqLv4I50bOkhbTR3AR3cxgrrTprmY
+        bkpM2zW2Bwkx3QhX4GN7KPoKuLh3VnrAJaGPEsX3iuN7QHS0j+ES3pJ2SewXHRtwSRrkE3qBSxpE2M6J
+        /Vxin7nxEifSYvzglDLEp37gkvpBSBlC4uT3RMoAuKZ8EpI/MrAl9TNOdMUTth7/gnBF+ANuaV/pRIHk
+        xDBODPYIkqZRwyBNH0XmKf0bSDLGkNtJ05oxApJT3wnTKskc3WjTJM0aA+npCSTJGkfSzHFzU+5ZE+Ce
+        /cMabDszyUhzJm16R+4U2p7zk8iehJ150xY5U+BxdobC9sidBs/8WYu8GfAonvUsmvUumPHJn/HKnza3
+        T+GsbwFZwbNkzqt4zrdozq+QnOBdNu9TOi8rmZcV/cITfMoXaMuLyQmy0gVKbgJ+5YvyMjNF2SJpJDu3
+        pChfwglkFcuUomJFfn4Z/C6syE0UF7U4gezKit/lZUp2aZm0Bbbi6m9KXqnFCXZV6RCdZJVa2F2tpxNZ
+        q3TgX61n9lStgEpjQMqaVbS3WgsBGj2jqtFB0DU9CtToiBo9hNSuUcE3DEGaVQitNTIh1w02fajeyITV
+        rUFE/RoTXmeAyAYjgxNEN6xT6noyQVzjOoptMKKYRuMfnG/sx/pbq+YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btn1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btn1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox5.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox5.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox5.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOK.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOK.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnOK.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="txtCashReceived.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCashReceived.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtCashReceived.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblChange.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblChange.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblChange.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblChange.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 16</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>收取现金</value>
+  </data>
+  <data name="label3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>找零</value>
+  </data>
+  <data name="lblAmount.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAmount.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblAmount.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="groupBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>收款明细</value>
+  </data>
+  <data name="label1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+</root>

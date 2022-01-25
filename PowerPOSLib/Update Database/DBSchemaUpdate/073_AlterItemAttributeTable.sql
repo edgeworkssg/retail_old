@@ -1,0 +1,1 @@
+Alter Table ItemAttributes Alter Column Value nvarchar(100);

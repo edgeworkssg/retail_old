@@ -1,0 +1,351 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF95AD28-DABD-4E4C-B50A-9FBFB5BB802B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinUtility</RootNamespace>
+    <AssemblyName>WinUtility</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EncryptionLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WinPowerPOS\_XtraDALs\EncryptionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PowerPOSLib\CustomDAL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PowerPOSLib\CustomDAL\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TPCashCLR, Version=1.0.6165.19800, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PowerPOSLib\CustomDAL\TPCashCLR.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FixReEntrantDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCheckDataIntegrity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckDataIntegrity.Designer.cs">
+      <DependentUpon>frmCheckDataIntegrity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckDuplicatedItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckDuplicatedItem.Designer.cs">
+      <DependentUpon>frmCheckDuplicatedItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClearTrainingData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClearTrainingData.Designer.cs">
+      <DependentUpon>frmClearTrainingData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCostPriceUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCostPriceUpdater.Designer.cs">
+      <DependentUpon>frmCostPriceUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateTouchMenuFromItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateTouchMenuFromItem.Designer.cs">
+      <DependentUpon>frmCreateTouchMenuFromItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecreateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecreateStock.Designer.cs">
+      <DependentUpon>frmRecreateStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRestoreDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRestoreDB.Designer.cs">
+      <DependentUpon>frmRestoreDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckCounterClosingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckCounterClosingReport.Designer.cs">
+      <DependentUpon>frmCheckCounterClosingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSales.Designer.cs">
+      <DependentUpon>frmEditSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockTrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockTrace.Designer.cs">
+      <DependentUpon>frmStockTrace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestGrid.Designer.cs">
+      <DependentUpon>frmTestGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAdjustedInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAdjustedInventory.Designer.cs">
+      <DependentUpon>frmUpdateAdjustedInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateRowColOnQuickAccessButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateRowColOnQuickAccessButton.Designer.cs">
+      <DependentUpon>frmUpdateRowColOnQuickAccessButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVar.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckDataIntegrity.resx">
+      <DependentUpon>frmCheckDataIntegrity.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckDuplicatedItem.resx">
+      <DependentUpon>frmCheckDuplicatedItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClearTrainingData.resx">
+      <DependentUpon>frmClearTrainingData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCostPriceUpdater.resx">
+      <DependentUpon>frmCostPriceUpdater.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateTouchMenuFromItem.resx">
+      <DependentUpon>frmCreateTouchMenuFromItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecreateStock.resx">
+      <DependentUpon>frmRecreateStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRestoreDB.resx">
+      <DependentUpon>frmRestoreDB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSales.resx">
+      <DependentUpon>frmEditSales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockTrace.resx">
+      <DependentUpon>frmStockTrace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestGrid.resx">
+      <DependentUpon>frmTestGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAdjustedInventory.resx">
+      <DependentUpon>frmUpdateAdjustedInventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateRowColOnQuickAccessButton.resx">
+      <DependentUpon>frmUpdateRowColOnQuickAccessButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tryTablePlan.resx">
+      <DependentUpon>tryTablePlan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinCollectionTest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WinCollectionTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinUtilityMain.resx">
+      <DependentUpon>WinUtilityMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="tryTablePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tryTablePlan.Designer.cs">
+      <DependentUpon>tryTablePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="WinCollectionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinCollectionTest.Designer.cs">
+      <DependentUpon>WinCollectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinUtilityMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinUtilityMain.Designer.cs">
+      <DependentUpon>WinUtilityMain.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POSDevices\POSDevices.csproj">
+      <Project>{E019F5FC-683E-42E1-B655-948A94558F7A}</Project>
+      <Name>POSDevices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerPOSLib\PowerPOSLib.csproj">
+      <Project>{64DBDC7E-DDE7-4BFC-BC41-8BE0F618E35B}</Project>
+      <Name>PowerPOSLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinPowerPOS\WinPowerPOS.csproj">
+      <Project>{7CCA6C57-70AC-41A6-AB21-A8BD4350BE9B}</Project>
+      <Name>WinPowerPOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ItemList.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WS.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

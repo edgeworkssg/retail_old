@@ -1,0 +1,1 @@
+sqlcmd -E -S LOCALHOST\SQLEXPRESS -i "03 Insert Settings.sql"

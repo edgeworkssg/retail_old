@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WebService>
+	<URL>http://localhost:49527/PowerPOSWeb/Synchronization/Synchronization.asmx</URL>
+</WebService>

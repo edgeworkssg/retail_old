@@ -1,0 +1,379 @@
+<div id="dynamicContent">
+    <div id="divApprovalList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Return Approval</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Date</h5>
+                        <!-- Date filter dropdown -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown">
+                                <span class="pull-left" data-bind="text: displayDate"></span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: dateDropdown">
+                                <li role="presentation" data-bind="css: { divider: name == '---' }">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: name, click: $parent.selectDate, visible: name != '---'"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Date filter dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Outlet</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Status</h5>
+                        <!-- Status dropdown -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown">
+                                <span class="pull-left" data-bind="text: status"></span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: statusDropdown">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: $data, click: function(o) { $parent.status(o) }"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Status dropdown -->
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchPurchaseOrder">SEARCH</button>
+                </form>
+                <p>&nbsp;</p>
+                <div style="overflow: auto">
+                    <div id="tableSearch">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKeyPOHdr().asc, 'dropdown': !sortKeyPOHdr().asc}">
+                            <tr>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'InventoryLocation.InventoryLocationName')">Outlet</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='InventoryLocation.InventoryLocationName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'PurchaseOrderHeaderRefNo')">Document Number</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='PurchaseOrderHeaderRefNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'PurchaseOrderDate')">Submitted Date</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='PurchaseOrderDate'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'OrderFromName')">Return To</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='OrderFromName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'ApprovalDate')">Approval Date</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='ApprovalDate'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'Status')">Status</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='Status'"></span>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: purchaseOrderHeaders">
+                            <tr data-bind="css: {'success': Status()=='Approved', 'danger': Status()=='Rejected'}">
+                                <td data-bind="text: InventoryLocationName"></td>
+                                <td data-bind="text: PurchaseOrderHeaderRefNo"></td>
+                                <td data-bind="text: PurchaseOrderDateFormatted"></td>
+                                <td data-bind="text: OrderFromName"></td>
+                                <td data-bind="text: (Status()=='Approved' || Status()=='Rejected') ? ApprovalDateFormatted : ''"></td>
+                                <td data-bind="text: Status"></td>
+                                <td><a href="#" data-bind="visible: (Status()=='Submitted' || Status()=='Approved' || Status()=='Rejected'), click: function(o) { $parent.print(o.PurchaseOrderHeaderRefNo) }"><span class="glyphicon glyphicon-print print-icon" title="Print"></span></a></td>
+                                <td><a href="#" data-bind="click: $parent.openUpdatePage">view</a></td>
+                            </tr>
+                        </tbody>
+                        <tbody data-bind="visible: isPOHdrNotFound">
+                            <tr>
+                                <td colspan="5" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!--/ #divApprovalList-->
+
+    <div id="divApprovalDetails">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Return Approval</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: currentPurchaseOrder">
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: PurchaseOrderHeaderRefNo" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Doc Date</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: PurchaseOrderDateFormatted" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Outlet</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: InventoryLocationName" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Reason</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: ReasonName" />
+                    </div>
+                    <div class="form-group">
+                    <h5>
+                            Return To</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: $parent.warehouseName" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Credit Invoice No</h5>
+                        <input type="text" class="form-control" data-bind="value: ShipVia, event: {change: $parent.changeCreditInvoiceNo}, disable: $parent.isReadOnly" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Remarks</h5>
+                        <textarea class="form-control" readonly="readonly" data-bind="value: Remark"></textarea>
+                    </div>
+                    <div class="form-group" data-bind="visible: $parent.showPriceLevel">
+                        <h5>Price Level</h5>
+                        <!-- Price Level dropdown -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown" data-bind="disable: $parent.isReadOnly">
+                                <span class="pull-left" data-bind="text: $parent.selectedPriceLevel"></span><span class="glyphicon glyphicon-chevron-down pull-right">
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: $parent.priceLevel">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: Value, value: Key, click: $root.setPriceLevel">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Price Level dropdown -->
+                    </div>
+                </form>
+
+                <div id="backToFirstProduct"></div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" data-bind="visible: !isReadOnly(), disable: rejectCheckedBtnState, click: rejectChecked">REJECT CHECKED</button>
+                </div>
+                <div style="overflow: auto">
+                    <div data-bind="visible: purchaseOrderDetailsApprovedOrPending().length > 0">
+                        <span class="bold" data-bind="text: (isReadOnly()) ? 'Approved items' : 'Approved / Pending items'"></span>
+                        <div id="tableApproved">
+                        <table class="table table-hover">
+                            <thead data-bind="css: {'dropup': sortKeyPODet().asc, 'dropdown': !sortKeyPODet().asc}">
+                                <tr>
+                                    <th data-bind="visible: !isReadOnly()">
+                                        <input type="checkbox" class="checkbox" data-bind="checked: isSelectAllPODet, click: toggleSelectAllPODet" />
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemNo')">Item Code</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemNo'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemName')">Item Description</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ExpiryDate')">Expiry Date</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ExpiryDate'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'Quantity')">Returned Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='Quantity'"></span>
+                                    </th>
+                                    <th data-bind="css: {'info': !isReadOnly()}, visible: showFactoryPrice">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'FactoryPrice')">Factory Price</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='FactoryPrice'"></span>
+                                    </th>
+                                    <th data-bind="visible: showFactoryPrice">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'TotalCost')">Total Cost</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='TotalCost'"></span>
+                                    </th>
+                                    <th data-bind="css: {'info': !isReadOnly()}">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyApproved')">Approved Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyApproved'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'UOM')">UOM</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='UOM'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'BaseLevel')">Pack Size</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='BaseLevel'"></span>
+                                    </th>
+                                    <th data-bind="css: {'info': !isReadOnly()}">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'Remark')">Remarks</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='Remark'"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: purchaseOrderDetailsApprovedOrPending">
+                                <tr data-bind="css: {'success': Status()=='Approved', 'danger': Status()=='Rejected'}">
+                                    <td data-bind="visible: !$parent.isReadOnly()"><input type="checkbox" class="checkbox" data-bind="checked: isSelected" /></td>
+                                    <td data-bind="text: ItemNo"></td>
+                                    <td data-bind="text: ItemName"></td>
+                                    <td data-bind="text: ExpiryDateFormatted"></td>
+                                    <td data-bind="text: Quantity"></td>
+                                    <td data-bind="text: FactoryPriceFormatted, css: {'info': !$parent.isReadOnly()}, click: $parent.setFactoryPrice, visible: $parent.showFactoryPrice"></td>
+                                    <td data-bind="text: TotalCost, visible: $parent.showFactoryPrice"></td>
+                                    <td data-bind="text: QtyApproved, css: {'info': !$parent.isReadOnly()}, click: $parent.setQtyApproved"></td>
+                                    <td data-bind="text: UOM"></td>
+                                    <td data-bind="text: BaseLevel + ' ' + UOM"></td>
+                                    <td data-bind="text: Remark, css: {'info': !$parent.isReadOnly()}, click: $parent.setRemark"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td data-bind="visible: !isReadOnly()"></td>
+                                    <td class="bold">TOTAL</td>
+                                    <td colspan="3" class="bold">
+                                        <span  data-bind="text: purchaseOrderDetailsApprovedOrPending().length" ></span>&nbsp;<span>Items</span>  
+                                    </td>
+                                    <td data-bind="visible: showFactoryPrice"></td>
+                                    <td data-bind="visible: showFactoryPrice"></td>
+                                    <td colspan="4"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        </div>
+                    </div>
+                    <div data-bind="visible: purchaseOrderDetailsRejected().length > 0">
+                        <span class="bold">Rejected items</span>
+                        <div id="tableRejected">
+                        <table class="table table-hover">
+                            <thead data-bind="css: {'dropup': sortKeyPODet().asc, 'dropdown': !sortKeyPODet().asc}">
+                                <tr>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemNo')">Item Code</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemNo'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ItemName')">Item Description</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'ExpiryDate')">Expiry Date</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ExpiryDate'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'Quantity')">Returned Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='Quantity'"></span>
+                                    </th>
+                                    <th data-bind="css: {'info': !isReadOnly()}, visible: showFactoryPrice">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'FactoryPrice')">Factory Price</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='FactoryPrice'"></span>
+                                    </th>
+                                    <th data-bind="visible: showFactoryPrice">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'TotalCost')">Total Cost</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='TotalCost'"></span>
+                                    </th>
+                                    <th data-bind="css: {'info': !isReadOnly()}">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'QtyApproved')">Approved Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='QtyApproved'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'UOM')">UOM</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='UOM'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'BaseLevel')">Pack Size</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='BaseLevel'"></span>
+                                    </th>
+                                    <th data-bind="css: {'info': !isReadOnly()}">
+                                        <a href="#" data-bind="click: sortPODet.bind($data, 'Remark')">Remarks</a>
+                                        <span class="caret" data-bind="visible: sortKeyPODet().columnName=='Remark'"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: purchaseOrderDetailsRejected">
+                                <tr data-bind="css: {'success': Status()=='Approved', 'danger': Status()=='Rejected'}">
+                                    <td data-bind="text: ItemNo"></td>
+                                    <td data-bind="text: ItemName"></td>
+                                    <td data-bind="text: ExpiryDateFormatted"></td>
+                                    <td data-bind="text: Quantity"></td>
+                                    <td data-bind="text: FactoryPriceFormatted, css: {'info': !$parent.isReadOnly()}, click: $parent.setFactoryPrice, visible: $parent.showFactoryPrice"></td>
+                                    <td data-bind="text: TotalCost, visible: $parent.showFactoryPrice"></td>
+                                    <td data-bind="text: QtyApproved, css: {'info': !$parent.isReadOnly()}, click: $parent.setQtyApproved"></td>
+                                    <td data-bind="text: UOM"></td>
+                                    <td data-bind="text: BaseLevel + ' ' + UOM"></td>
+                                    <td data-bind="text: Remark, css: {'info': !$parent.isReadOnly()}, click: $parent.setRemark"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="bold">TOTAL</td>
+                                    <td colspan="3" class="bold">
+                                        <span  data-bind="text: purchaseOrderDetailsRejected().length" ></span>&nbsp;<span>Items</span>  
+                                    </td>
+                                    <td data-bind="visible: showFactoryPrice"></td>
+                                    <td data-bind="visible: showFactoryPrice"></td>
+                                    <td colspan="4"></td>                                   
+                                </tr>
+                            </tfoot>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default hidden-print" data-bind="visible: IsCanPrint(), click: printFromDetails"><span class="glyphicon glyphicon-print print-icon"></span> PRINT</button>
+                        <button type="button" class="btn btn-default" data-bind="click: backToList">BACK</button>
+                        <button type="button" class="btn btn-primary" data-bind="click: returnToPending, visible: !isReadOnly()">RETURN TO PENDING</button>
+                        <button type="button" class="btn btn-success" data-bind="visible: !isReadOnly(), click: submitApproval">SUBMIT</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divApprovalDetails-->
+
+    <!-- Modal for selecting custom date -->
+    <div class="modal fade" id="customdateModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Set date range</h4>
+                </div>
+                <div class="modal-body">
+                    <h5>Start</h5>
+                    <input type="text" id="dateFrom" class="form-control" readonly="readonly" />
+                    <h5>End</h5>
+                    <input type="text" id="dateTo" class="form-control" readonly="readonly" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: setCustomDate">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal for selecting custom date -->
+</div>
+<script type="text/javascript" src="js/returnapproval.js?version=1002"></script>

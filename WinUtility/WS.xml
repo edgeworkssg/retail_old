@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WebService>
+  <!--<URL>http://localhost:2234/synchronization/synchronization.asmx</URL>-->
+  <URL>http://127.0.0.1:2234/synchronization/synchronization.asmx</URL>
+  <!--<URL>http://equipweb.biz/retailrealtimetest/synchronization/synchronization.asmx</URL>-->
+</WebService>

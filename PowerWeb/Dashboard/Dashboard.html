@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <!-- load the dashboard css -->
+    <link href="sDashboard.css" rel="stylesheet">
+    <!-- load gitter css -->
+    <link href="css/gitter/css/jquery.gritter.css" rel="stylesheet" />
+    <link href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"
+        rel="stylesheet">
+    <!-- load jquery library -->
+
+    <script src="libs/jquery/jquery-1.8.2.js" type="text/javascript"> </script>
+
+    <!-- load jquery ui library -->
+
+    <script src="libs/jquery/jquery-ui.js" type="text/javascript"> </script>
+
+    <!-- load touch punch library to enable dragging on touch based devices -->
+
+    <script src="libs/touchpunch/jquery.ui.touch-punch.js" type="text/javascript"> </script>
+
+    <!-- load gitter notification library -->
+
+    <script src="libs/gitter/jquery.gritter.js" type="text/javascript"> </script>
+
+    <!-- load datatables library -->
+
+    <script src="libs/datatables/jquery.dataTables.js"> </script>
+
+    <!-- load flotr2 charting library -->
+    <!--[if IE]>
+		<script language="javascript" type="text/javascript" src="libs/flotr2/flotr2.ie.min.js"></script>
+		<![endif]-->
+
+    <script src="libs/flotr2/flotr2.js" type="text/javascript"> </script>
+
+    <!-- load dashboard library -->
+
+    <script src="jquery-sDashboard.js" type="text/javascript"> </script>
+
+    <!-- sample data external script file -->
+
+    <script src="libs/exampleData.js" type="text/javascript"> </script>
+
+    <script type="text/javascript">
+        $(function() {
+
+            //**********************************************//
+            //dashboard json data
+            //this is the data format that the dashboard framework expects
+            //**********************************************//
+            //            var sales = [];
+            //            var salesPredicted = [];
+
+            var bugis = [];
+            var suntec = [];
+            var bugisPredicted = [];
+
+            var bag = [];
+            var wallet = [];
+            var bagPredicted = [];
+
+            var acc = [];
+            var brac = [];
+            var accPredicted = [];
+
+            var central = [];
+            var west = [];
+            var east = [];
+            var north = [];
+
+            var max = [];
+            var alvin = [];
+            var kurt = [];
+
+            var necklace = [];
+            var rings = [];
+            var earrings = [];
+
+            var dataSalesForecast;
+            var dataSalesByOutlet;
+            var dataSalesByCategory;
+            var dataSalesByGender;
+            var dataSalesByRegion;
+            var dataSalesBySales;
+            var dataSalesByItem;
+
+            var i;
+            // Data Generation
+            for (i = 0; i < 12; i++) {
+                bugis.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                suntec.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                bugisPredicted.push([i, Math.floor((Math.random() * 120000) + 1)]);
+
+                bag.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                wallet.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                bagPredicted.push([i, Math.floor((Math.random() * 120000) + 1)]);
+
+                acc.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                brac.push([i, Math.floor((Math.random() * 120000) + 1)]);
+
+                central.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                west.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                east.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                north.push([i, Math.floor((Math.random() * 120000) + 1)]);
+
+                max.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                alvin.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                kurt.push([i, Math.floor((Math.random() * 120000) + 1)]);
+
+                necklace.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                rings.push([i, Math.floor((Math.random() * 120000) + 1)]);
+                earrings.push([i, Math.floor((Math.random() * 120000) + 1)]);
+            }
+
+            dataSalesByOutlet = [{
+                data: bugis,
+                label: 'Bugis',
+                color: '#0000ff'
+            }, {
+                data: suntec,
+                label: 'Suntec',
+                color: '#00ff00'
+            }, {
+                data: bugisPredicted,
+                label: 'Web',
+                color: '#ff0000'
+}];
+
+                dataSalesByCategory = [{
+                    data: bag,
+                    label: 'Bag',
+                    color: '#0000ff'
+                }, {
+                    data: wallet,
+                    label: 'Wallet',
+                    color: '#00ff00'
+                }, {
+                    data: bagPredicted,
+                    label: 'Others',
+                    color: '#ff0000'
+}];
+
+                    dataSalesByGender = [{
+                        data: acc,
+                        label: 'Accessories',
+                        color: '#0000ff'
+                    }, {
+                        data: brac,
+                        label: 'Bracelet',
+                        color: '#00ff00'
+}];
+
+                        dataSalesByRegion = [{
+                            data: central,
+                            label: 'central',
+                            color: '#0000ff'
+                        }, {
+                            data: west,
+                            label: 'west',
+                            color: '#00ff00'
+                        }, {
+                            data: east,
+                            label: 'east',
+                            color: '#ff0000'
+                        }, {
+                            data: north,
+                            label: 'north',
+                            color: '#ff00ff'
+                        }
+                        ];
+
+                        dataSalesBySales = [{
+                            data: max,
+                            label: 'Max',
+                            color: '#0000ff',
+                            lines: {
+                                fill: true
+                            }
+                        }, {
+                            data: alvin,
+                            label: 'Alvin',
+                            color: '#00ff00',
+                            lines: {
+                                show: true
+                            },
+                            points: {
+                                show: true
+                            }
+                        }, {
+                            data: kurt,
+                            label: 'Kurt',
+                            color: '#ff0000',
+                            lines: {
+                                show: true
+                            },
+                            points: {
+                                show: false
+                            }
+}];
+
+                            dataSalesByItem = [{
+                                data: necklace,
+                                label: 'Necklace',
+                                color: '#0000ff'
+                            }, {
+                                data: rings,
+                                label: 'Rings',
+                                color: '#00ff00'
+                            }, {
+                                data: earrings,
+                                label: 'Earrings',
+                                color: '#ff0000'
+}];
+
+                                var dashboardJSON = [
+			            {
+			                widgetTitle: "Sales By Outlet",
+			                widgetId: "id002",
+			                widgetType: "chart",
+			                getDataBySelection: true,
+			                widgetContent: {
+			                    data: dataSalesByOutlet,
+			                    options: myExampleData.lineChartOptions
+			                }
+			            }
+					, {
+					    widgetTitle: "Sales By Category",
+					    widgetId: "id003",
+					    widgetType: "chart",
+					    getDataBySelection: true,
+					    widgetContent: {
+					        data: dataSalesByCategory,
+					        options: myExampleData.lineChartOptions
+					    }
+					}
+					, {
+					    widgetTitle: "Sales By Region",
+					    widgetId: "id005",
+					    widgetType: "chart",
+					    getDataBySelection: true,
+					    widgetContent: {
+					        data: dataSalesByRegion,
+					        options: myExampleData.lineChartOptions
+					    }
+					}
+, {
+    widgetTitle: "Sales Person Contribution",
+    widgetId: "id006",
+    widgetType: "chart",
+    widgetContent: {
+        data: myExampleData.pieChartData,
+        options: myExampleData.pieChartOptions
+    }
+}
+, {
+    widgetTitle: "Sales By Item",
+    widgetId: "id007",
+    widgetType: "chart",
+    widgetContent: {
+        data: dataSalesByItem,
+        options: myExampleData.barChartOptions
+    }
+}
+
+, {
+    widgetTitle: "Sales By Sales Person",
+    widgetId: "id008",
+    widgetType: "chart",
+    widgetContent: {
+        data: dataSalesBySales,
+        options: myExampleData.lineChartOptions
+    }
+}
+				    ];
+
+                                //basic initialization example
+                                $("#myDashboard").sDashboard({
+                                    dashboardData: dashboardJSON
+                                });
+                            });
+		
+    </script>
+
+</head>
+<body>
+    <ul id="myDashboard">
+    </ul>
+</body>
+</html>

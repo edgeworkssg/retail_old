@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PaymentTypes>
+  <Payment>
+    <ID>1</ID>
+    <Name>NETS</Name>
+  </Payment>
+  <Payment>
+    <ID>2</ID>
+    <Name>VISA</Name>
+  </Payment>
+  <Payment>
+    <ID>3</ID>
+    <Name>MASTER</Name>
+  </Payment>
+  <Payment>
+    <ID>4</ID>
+    <Name>AMEX</Name>
+  </Payment>
+  <Payment>
+    <ID>5</ID>
+    <Name>GIRO</Name>
+  </Payment>
+  <Payment>
+    <ID>6</ID>
+    <Name>DINERS</Name>
+  </Payment>
+  <Payment>
+    <ID>7</ID>
+    <Name>PAY7</Name>
+  </Payment>
+  <Payment>
+    <ID>8</ID>
+    <Name>PAY8</Name>
+  </Payment>
+  <Payment>
+    <ID>9</ID>
+    <Name>PAY9</Name>
+  </Payment>
+  <Payment>
+    <ID>10</ID>
+    <Name>PAY10</Name>
+  </Payment>
+</PaymentTypes>

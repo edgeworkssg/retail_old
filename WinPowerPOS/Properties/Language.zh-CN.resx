@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="--Please Select--" xml:space="preserve">
+    <value>- 请选择 -</value>
+  </data>
+  <data name="Add New" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="After Discount" xml:space="preserve">
+    <value>折扣后</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="Amount is insufficient" xml:space="preserve">
+    <value>金额不足</value>
+  </data>
+  <data name="An unknown error has been encountered. Please contact your system administrator." xml:space="preserve">
+    <value>遇到一个未知的错误.请与系统管理员联系。</value>
+  </data>
+  <data name="Are you sure to change member?" xml:space="preserve">
+    <value>你确定更改会员吗？</value>
+  </data>
+  <data name="Are you sure you want to cancel order?" xml:space="preserve">
+    <value>你确定你要取消订单吗？</value>
+  </data>
+  <data name="Are you sure you want to change shift?" xml:space="preserve">
+    <value>你确定你要换班?</value>
+  </data>
+  <data name="Are you sure you want to clear all the values? All your changes will be lost." xml:space="preserve">
+    <value>你确定你要清除所有的值吗？所有更改将丢失。</value>
+  </data>
+  <data name="Are you sure you want to close counter?" xml:space="preserve">
+    <value>你确定你想关闭柜台吗？</value>
+  </data>
+  <data name="Are you sure you want to close?" xml:space="preserve">
+    <value>你确定你要关闭吗？</value>
+  </data>
+  <data name="Are you sure you want to continue?" xml:space="preserve">
+    <value>你确定要继续吗？</value>
+  </data>
+  <data name="Are you sure you want to delete these users?" xml:space="preserve">
+    <value>你确定要删除这些用户吗？</value>
+  </data>
+  <data name="Are you sure you want to log out?" xml:space="preserve">
+    <value>你确定你要退出吗？</value>
+  </data>
+  <data name="Are you sure you want to proceed?" xml:space="preserve">
+    <value>你确定你要继续吗？</value>
+  </data>
+  <data name="Are you sure you want to quit?" xml:space="preserve">
+    <value>你确定要停止吗？</value>
+  </data>
+  <data name="Are you sure you want to remove membership?" xml:space="preserve">
+    <value>你确定你要删除会员吗？</value>
+  </data>
+  <data name="Are you sure? This action cant be undone." xml:space="preserve">
+    <value>你确定吗？此操作不可撤消。</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>余额</value>
+  </data>
+  <data name="Barcode does not exist in the system." xml:space="preserve">
+    <value>条码不存在系统中。</value>
+  </data>
+  <data name="Campaign cannot be created. Please try again." xml:space="preserve">
+    <value>不能创建促销活动。请再试一次。</value>
+  </data>
+  <data name="Campaign has been created" xml:space="preserve">
+    <value>促销活动已创建。</value>
+  </data>
+  <data name="Campaign Name has been used before. Please choose another name." xml:space="preserve">
+    <value>促销系列名称已被使用过。请选择另一个名称。</value>
+  </data>
+  <data name="Cannot delete payment by points" xml:space="preserve">
+    <value>不能用点数删除付款</value>
+  </data>
+  <data name="Cannot edit payment by points" xml:space="preserve">
+    <value>不能用点数修改付款</value>
+  </data>
+  <data name="Cannot find item." xml:space="preserve">
+    <value>无法找到产品。</value>
+  </data>
+  <data name="Cannot get Item Name." xml:space="preserve">
+    <value>无法找到产品的名称。</value>
+  </data>
+  <data name="Cannot make any change. This order has been settled." xml:space="preserve">
+    <value>不能作出任何更改。此订单已结算。</value>
+  </data>
+  <data name="Cannot use Item." xml:space="preserve">
+    <value>不能使用此产品</value>
+  </data>
+  <data name="Cash In" xml:space="preserve">
+    <value>现金收入</value>
+  </data>
+  <data name="Cash Out" xml:space="preserve">
+    <value>现金支出</value>
+  </data>
+  <data name="Cash Recording has been saved successfully." xml:space="preserve">
+    <value>现金记录已经成功保存。</value>
+  </data>
+  <data name="Change password succesful" xml:space="preserve">
+    <value>成功更改密码</value>
+  </data>
+  <data name="Change:" xml:space="preserve">
+    <value>找零</value>
+  </data>
+  <data name="Close counter" xml:space="preserve">
+    <value>关闭柜台</value>
+  </data>
+  <data name="Closing Balance" xml:space="preserve">
+    <value>结算余额</value>
+  </data>
+  <data name="Completed!" xml:space="preserve">
+    <value>完成！</value>
+  </data>
+  <data name="Compulsory informations are missing" xml:space="preserve">
+    <value>缺少重要资料</value>
+  </data>
+  <data name="Counter Closed Successfully." xml:space="preserve">
+    <value>柜台关闭成功</value>
+  </data>
+  <data name="CurrentCurrency" xml:space="preserve">
+    <value>¥</value>
+  </data>
+  <data name="Customer only have" xml:space="preserve">
+    <value>只有顾客具有</value>
+  </data>
+  <data name="Customer pay too much" xml:space="preserve">
+    <value>顾客支付太多</value>
+  </data>
+  <data name="Discount exceed the discount limit set." xml:space="preserve">
+    <value>折扣超过限额</value>
+  </data>
+  <data name="Do you want to allow it to continue using the card" xml:space="preserve">
+    <value>你要允许它继续使用该卡吗？</value>
+  </data>
+  <data name="Do you want to use this card number?" xml:space="preserve">
+    <value>你想使用此卡号码吗？</value>
+  </data>
+  <data name="does not exist in this computer" xml:space="preserve">
+    <value>电脑里面不包含</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Downloading data failed. Please check your internet connection." xml:space="preserve">
+    <value>下载数据失败。请检查您的互联网连接。</value>
+  </data>
+  <data name="Downloading data successful" xml:space="preserve">
+    <value>下载数据成功</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Error adding item to order:" xml:space="preserve">
+    <value>添加产品出错</value>
+  </data>
+  <data name="Error assigning membership" xml:space="preserve">
+    <value>创建会员出错</value>
+  </data>
+  <data name="Error Converting Actual Amount to decimal upon closing." xml:space="preserve">
+    <value>转换当前金额为十进制出错</value>
+  </data>
+  <data name="error creating payment" xml:space="preserve">
+    <value>创建付款出错</value>
+  </data>
+  <data name="Error encountered" xml:space="preserve">
+    <value>发生错误</value>
+  </data>
+  <data name="Error encountered when confirming order" xml:space="preserve">
+    <value>确认订单时出错</value>
+  </data>
+  <data name="Error encountered while adding items. Please try again." xml:space="preserve">
+    <value>添加产品时出错。请再试一次。</value>
+  </data>
+  <data name="Error encountered while applying discounts." xml:space="preserve">
+    <value>使用折扣时出错。</value>
+  </data>
+  <data name="Error Encountered. Please try again!" xml:space="preserve">
+    <value>遇到错误。请再试一次！</value>
+  </data>
+  <data name="Error in deleting payment. Please try again." xml:space="preserve">
+    <value>删去付款出错。请再试一次。</value>
+  </data>
+  <data name="Error printing settlement. Please contact your administrator." xml:space="preserve">
+    <value>打印结算出错。请与管理员联系。</value>
+  </data>
+  <data name="Error sending email. Please contact your administrator" xml:space="preserve">
+    <value>发送电子邮件出错。请与管理员联系</value>
+  </data>
+  <data name="Error while calculating total amount:" xml:space="preserve">
+    <value>总金额计算出错</value>
+  </data>
+  <data name="Error while performing Stock Out:" xml:space="preserve">
+    <value>执行出货出错：</value>
+  </data>
+  <data name="Error. Invalid Order amount" xml:space="preserve">
+    <value>错误: 订单金额无效</value>
+  </data>
+  <data name="Error. Load FAILED!" xml:space="preserve">
+    <value>错误: 加载失败！</value>
+  </data>
+  <data name="Error. Members at row" xml:space="preserve">
+    <value>错误: 会员位置</value>
+  </data>
+  <data name="Error: Barcode does not exist in the system." xml:space="preserve">
+    <value>误: 条码不存在系统中。</value>
+  </data>
+  <data name="Exchange Rate set successfully" xml:space="preserve">
+    <value>汇率设置成功</value>
+  </data>
+  <data name="F" xml:space="preserve">
+    <value>女</value>
+  </data>
+  <data name="File saved" xml:space="preserve">
+    <value>文件保存</value>
+  </data>
+  <data name="for member" xml:space="preserve">
+    <value>会员</value>
+  </data>
+  <data name="has insufficient privileges." xml:space="preserve">
+    <value>没有足够的权限</value>
+  </data>
+  <data name="has not been specified" xml:space="preserve">
+    <value>尚未指定</value>
+  </data>
+  <data name="Import failed. Please check your excel file" xml:space="preserve">
+    <value>导入失败。请检查您的Excel文件</value>
+  </data>
+  <data name="Import successful" xml:space="preserve">
+    <value>导入成功</value>
+  </data>
+  <data name="Insufficient points to be deducted" xml:space="preserve">
+    <value>点数不足以被扣除</value>
+  </data>
+  <data name="Insufficient privilege to give FOC" xml:space="preserve">
+    <value>没有权限给予免费</value>
+  </data>
+  <data name="Invalid Point Of Sale ID selected." xml:space="preserve">
+    <value>无效POS 账号被选择</value>
+  </data>
+  <data name="Invalid supervisor id/password. Please try again." xml:space="preserve">
+    <value>无效的管理员账号/密码。请再试一次。</value>
+  </data>
+  <data name="is not a valid Membership No." xml:space="preserve">
+    <value>不是一个有效的会员号</value>
+  </data>
+  <data name="M" xml:space="preserve">
+    <value>男</value>
+  </data>
+  <data name="MEMBER DATE OF BIRTH IS THIS MONTH" xml:space="preserve">
+    <value>会员出生日期为这个月</value>
+  </data>
+  <data name="Member's particular is exist in database as Member" xml:space="preserve">
+    <value>会员的资料存在于数据库</value>
+  </data>
+  <data name="Members card not recognized" xml:space="preserve">
+    <value>会员卡无法识别</value>
+  </data>
+  <data name="Membership Change" xml:space="preserve">
+    <value>成员资格更改</value>
+  </data>
+  <data name="Membership Discount remain unchanged" xml:space="preserve">
+    <value>会员优惠不变</value>
+  </data>
+  <data name="Membership is not found" xml:space="preserve">
+    <value>找不到会员</value>
+  </data>
+  <data name="Membership No:" xml:space="preserve">
+    <value>会员号码：</value>
+  </data>
+  <data name="Name:" xml:space="preserve">
+    <value>产品名称：</value>
+  </data>
+  <data name="No data inside" xml:space="preserve">
+    <value>没有数据</value>
+  </data>
+  <data name="No Discount" xml:space="preserve">
+    <value>不打折</value>
+  </data>
+  <data name="No item was specified to be discounted. Please scan/search items." xml:space="preserve">
+    <value>没有打折扣产品。请扫描/搜索产品。</value>
+  </data>
+  <data name="Not Voided" xml:space="preserve">
+    <value>没有作废</value>
+  </data>
+  <data name="Notes: You can choose delivery by assigning member into the sales" xml:space="preserve">
+    <value>注：您可以通过在销售里加入会员来选择交货</value>
+  </data>
+  <data name="Notes: You cannot choose delivery if there are sales with negative quantity" xml:space="preserve">
+    <value>注：如果销售里有负数量，您不能选择交货</value>
+  </data>
+  <data name="NUMBER OF COPIES" xml:space="preserve">
+    <value>份数</value>
+  </data>
+  <data name="One of the serial number has already been specified before" xml:space="preserve">
+    <value>有一个序列号已经被注明过</value>
+  </data>
+  <data name="Only one new registration allowed per receipt." xml:space="preserve">
+    <value>一份收据只允许一个新的注册。</value>
+  </data>
+  <data name="Opening Balance" xml:space="preserve">
+    <value>期初余额</value>
+  </data>
+  <data name="Order voided successfully." xml:space="preserve">
+    <value>成功作废</value>
+  </data>
+  <data name="Passwords entered do not matched" xml:space="preserve">
+    <value>密码输入不匹配</value>
+  </data>
+  <data name="Payment by point" xml:space="preserve">
+    <value>点数支付</value>
+  </data>
+  <data name="Payment Failed" xml:space="preserve">
+    <value>付款失败</value>
+  </data>
+  <data name="Please assign a member to use installments" xml:space="preserve">
+    <value>请选择一个会员来使用分期付款</value>
+  </data>
+  <data name="Please assign a member to use point" xml:space="preserve">
+    <value>请选择一个会员来使用点数</value>
+  </data>
+  <data name="Please assign membership to continue" xml:space="preserve">
+    <value>请选择会员以继续</value>
+  </data>
+  <data name="Please choose a hot key to assign." xml:space="preserve">
+    <value>请选择一个热键</value>
+  </data>
+  <data name="Please choose an item to assign." xml:space="preserve">
+    <value>请选择一个产品</value>
+  </data>
+  <data name="Please confirm before registering a new member." xml:space="preserve">
+    <value>注册一个新成员之前，请确认。</value>
+  </data>
+  <data name="Please contact your administrator." xml:space="preserve">
+    <value>请与管理员联系。</value>
+  </data>
+  <data name="Please enter a valid amount" xml:space="preserve">
+    <value>请输入一个有效的金额</value>
+  </data>
+  <data name="Please enter positive decimal value for exchange rate" xml:space="preserve">
+    <value>请输入一个正数</value>
+  </data>
+  <data name="Please enter remark. Remark is compulsory for cash out." xml:space="preserve">
+    <value>请输入备注。</value>
+  </data>
+  <data name="Please enter support Password!" xml:space="preserve">
+    <value>请输入密码！</value>
+  </data>
+  <data name="Please enter valid amount for Total Collected." xml:space="preserve">
+    <value>请输入有效的共收集的金额。</value>
+  </data>
+  <data name="Please enter valid numeric value for all the textboxes." xml:space="preserve">
+    <value>请输入在所有的文本框输入有效的数字。</value>
+  </data>
+  <data name="Please scan new Membership No." xml:space="preserve">
+    <value>请扫描新的会员号</value>
+  </data>
+  <data name="Please select a membership group" xml:space="preserve">
+    <value>请选择一个会员组</value>
+  </data>
+  <data name="Please Select a valid Point of Sale ID" xml:space="preserve">
+    <value>请选择一个有效的POS账号</value>
+  </data>
+  <data name="Please select another payment type" xml:space="preserve">
+    <value>请选择其他付款方式</value>
+  </data>
+  <data name="Please select item that you want to return" xml:space="preserve">
+    <value>请选择你要返还的产品</value>
+  </data>
+  <data name="Please set the right number of copies" xml:space="preserve">
+    <value>请设置正确拷贝数量</value>
+  </data>
+  <data name="Please specify a number on the search box" xml:space="preserve">
+    <value>请在搜索框注明一个号码</value>
+  </data>
+  <data name="Please specify correct discount in number format" xml:space="preserve">
+    <value>请用数字来注明正确的折扣</value>
+  </data>
+  <data name="Please specify correct price." xml:space="preserve">
+    <value>请注明正确的价格。</value>
+  </data>
+  <data name="Please specify discount." xml:space="preserve">
+    <value>请注明折扣。</value>
+  </data>
+  <data name="Please specify price." xml:space="preserve">
+    <value>请注明价格。</value>
+  </data>
+  <data name="Please specify valid amount" xml:space="preserve">
+    <value>请注明有效的金额</value>
+  </data>
+  <data name="Please specify valid number" xml:space="preserve">
+    <value>请注明有效的数字</value>
+  </data>
+  <data name="Please specify valid promotion discount" xml:space="preserve">
+    <value>请注明有效的促销折扣</value>
+  </data>
+  <data name="Please specify valid promotion price" xml:space="preserve">
+    <value>请注明有效的促销价</value>
+  </data>
+  <data name="Please try again." xml:space="preserve">
+    <value>请再试一次。</value>
+  </data>
+  <data name="Point is not enough" xml:space="preserve">
+    <value>点数不够</value>
+  </data>
+  <data name="Point is not updated!" xml:space="preserve">
+    <value>点数没有更新！</value>
+  </data>
+  <data name="Point-Redeemable" xml:space="preserve">
+    <value>可用点数兑换</value>
+  </data>
+  <data name="Points are not assigned to new member" xml:space="preserve">
+    <value>点数没有分配给新会员</value>
+  </data>
+  <data name="Points in wrong format for Row No" xml:space="preserve">
+    <value>点数格式错误，行数：</value>
+  </data>
+  <data name="Process canceled by user" xml:space="preserve">
+    <value>用户取消进程</value>
+  </data>
+  <data name="Promo Location is set successfully" xml:space="preserve">
+    <value>促销地点设置成功</value>
+  </data>
+  <data name="Receipt Number" xml:space="preserve">
+    <value>收据编号</value>
+  </data>
+  <data name="Redemption captured successfully" xml:space="preserve">
+    <value>兑换成功</value>
+  </data>
+  <data name="Registered to" xml:space="preserve">
+    <value>注册到</value>
+  </data>
+  <data name="Remaining point is not enough" xml:space="preserve">
+    <value>剩下的点数不够</value>
+  </data>
+  <data name="Remarks Information" xml:space="preserve">
+    <value>备注信息</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Save failed." xml:space="preserve">
+    <value>保存失败。</value>
+  </data>
+  <data name="Save successful." xml:space="preserve">
+    <value>保存成功。</value>
+  </data>
+  <data name="Save unsuccessful:" xml:space="preserve">
+    <value>保存不成功：</value>
+  </data>
+  <data name="Search produce no result." xml:space="preserve">
+    <value>搜索没有结果。</value>
+  </data>
+  <data name="Sending FAILED!!" xml:space="preserve">
+    <value>发送失败！！</value>
+  </data>
+  <data name="Sending failed. Please check your internet connection." xml:space="preserve">
+    <value>发送失败。请检查您的互联网连接。</value>
+  </data>
+  <data name="Sending Logs successful" xml:space="preserve">
+    <value>日志发送成功</value>
+  </data>
+  <data name="Sending Successful" xml:space="preserve">
+    <value>发送成功</value>
+  </data>
+  <data name="Serial number for item" xml:space="preserve">
+    <value>产品序号</value>
+  </data>
+  <data name="Set Price" xml:space="preserve">
+    <value>设置价格</value>
+  </data>
+  <data name="Set Qty" xml:space="preserve">
+    <value>设定数量</value>
+  </data>
+  <data name="Some error occurred" xml:space="preserve">
+    <value>出错</value>
+  </data>
+  <data name="Some item cannot be paid by points" xml:space="preserve">
+    <value>有些产品不能以点数支付</value>
+  </data>
+  <data name="Successful!" xml:space="preserve">
+    <value>成功！</value>
+  </data>
+  <data name="The item has not been hold. Please hold before you unhold." xml:space="preserve">
+    <value>当前订单尚未保存，请点击保留订单键保存订单。</value>
+  </data>
+  <data name="The Item you specified is invalid." xml:space="preserve">
+    <value>您所指定的产品是无效的。</value>
+  </data>
+  <data name="There is no data for the given search criteria" xml:space="preserve">
+    <value>给定的搜索条件没有数据</value>
+  </data>
+  <data name="There is no data to export" xml:space="preserve">
+    <value>没有数据可导出</value>
+  </data>
+  <data name="There is no item can be paid by points." xml:space="preserve">
+    <value>没有产品可以由点数支付。</value>
+  </data>
+  <data name="There is still some amount that has not been completed. Please clear all amount" xml:space="preserve">
+    <value>还有一些金额尚未完成。请清除所有金额</value>
+  </data>
+  <data name="This action cant be undone. Are you sure you want to proceed?" xml:space="preserve">
+    <value>此操作不可撤消。你确定你要继续吗？</value>
+  </data>
+  <data name="This is not a \&quot;Times\&quot; package." xml:space="preserve">
+    <value>这不是多重配套</value>
+  </data>
+  <data name="This member has already expired on" xml:space="preserve">
+    <value>此成员已经期满失效</value>
+  </data>
+  <data name="This order is already voided." xml:space="preserve">
+    <value>这定单已经作废</value>
+  </data>
+  <data name="This receipt number doesn't exist in this computer!" xml:space="preserve">
+    <value>这个收据号码不存在于此电脑中！</value>
+  </data>
+  <data name="This voucher has already expired in" xml:space="preserve">
+    <value>此优惠券已经过期失效</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>总额</value>
+  </data>
+  <data name="Unable to print settlement. Please try again at Closing Report section" xml:space="preserve">
+    <value>无法打印。请再试一次</value>
+  </data>
+  <data name="Unable to void order." xml:space="preserve">
+    <value>无法作废销售订单。</value>
+  </data>
+  <data name="Unknown error has been encountered. Please try again." xml:space="preserve">
+    <value>未知错误。请再试一次。</value>
+  </data>
+  <data name="Use package" xml:space="preserve">
+    <value>使用配套</value>
+  </data>
+  <data name="User Name already exist" xml:space="preserve">
+    <value>用户名已存在</value>
+  </data>
+  <data name="Users has been deleted" xml:space="preserve">
+    <value>用户已被删除</value>
+  </data>
+  <data name="VOID REASON" xml:space="preserve">
+    <value>作废原因</value>
+  </data>
+  <data name="Void Reason is compulsory. Please enter the reason for voiding!" xml:space="preserve">
+    <value>作废原因是强制性的。请输入原因！</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>作废</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="WARNING!!! THE CLOSING AMOUNT DOES NOT TALLY!! ARE YOU SURE YOU WANT TO CLOSE?" xml:space="preserve">
+    <value>警告！金额不符合！你是否确定要关闭？</value>
+  </data>
+  <data name="WARNING. Float amount has been set previously at @OpeningBalance. Are you sure you want to set ADDITIONAL float amount?" xml:space="preserve">
+    <value>警告。现款已成立。你确定你要设置额外的现金吗？</value>
+  </data>
+  <data name="Warning. This voucher has already been redeemed before. Do you like to continue?" xml:space="preserve">
+    <value>警告。此券已被使用过。你要继续吗？</value>
+  </data>
+  <data name="Warning. This voucher has already been sold before. Do you like to continue?" xml:space="preserve">
+    <value>警告。此优惠券之前已售出过。你要继续吗？</value>
+  </data>
+  <data name="WARNING: Sending Data FAILED! Please try to resend or contact your system administrator." xml:space="preserve">
+    <value>警告：发送数据失败！请重新发送或与系统管理员联系。</value>
+  </data>
+  <data name="Welcome!" xml:space="preserve">
+    <value>欢迎！</value>
+  </data>
+  <data name="You don't need to hold empty order" xml:space="preserve">
+    <value>你不需要搁置空的订单</value>
+  </data>
+  <data name="You have no point/package items" xml:space="preserve">
+    <value>你没有任何点数产品和配套产品</value>
+  </data>
+  <data name="You have to allocate manually." xml:space="preserve">
+    <value>你必须手动分配。</value>
+  </data>
+  <data name="You have to fill both Name and Mobile Number" xml:space="preserve">
+    <value>你必须填写名字和手机号码。</value>
+  </data>
+  <data name="You have to fill either NRIC or Mobile No." xml:space="preserve">
+    <value>你必须填写以身份证或手机号。</value>
+  </data>
+  <data name="You need to ask someone else to login for you." xml:space="preserve">
+    <value>你需要另一个人为你登录。</value>
+  </data>
+  <data name="You need to enter a non negative number for discount and discount must not be less than unit price" xml:space="preserve">
+    <value>你需要输入正数的折扣和折扣必须不小于单价</value>
+  </data>
+  <data name="You need to enter a non negative number for discount and discount must not be more than 100%" xml:space="preserve">
+    <value>您需要输入正数的折扣和折扣不得超过100％</value>
+  </data>
+  <data name="You need to enter a non negative number for quantity" xml:space="preserve">
+    <value>你需要输入非负数数量</value>
+  </data>
+  <data name="You need to enter a non negative number for unit price" xml:space="preserve">
+    <value>您需要输入非负数的单价</value>
+  </data>
+  <data name="Please enter a valid password" xml:space="preserve">
+    <value>请输入一个有效的密码</value>
+  </data>
+  <data name="Please enter a valid user id" xml:space="preserve">
+    <value>请输入一个有效的户名</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>发出</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="Label005" xml:space="preserve">
+    <value>0.05</value>
+    <comment>Multiplier 0.05 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label01" xml:space="preserve">
+    <value>0.1</value>
+    <comment>Multiplier 0.1 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label02" xml:space="preserve">
+    <value>0.2</value>
+    <comment>Multiplier 0.2 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label05" xml:space="preserve">
+    <value>0.5</value>
+    <comment>Multiplier 0.5 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label1" xml:space="preserve">
+    <value>1</value>
+    <comment>Multiplier 1 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label10" xml:space="preserve">
+    <value>10</value>
+    <comment>Multiplier 10 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label100" xml:space="preserve">
+    <value>100</value>
+    <comment>Multiplier 100 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label2" xml:space="preserve">
+    <value>2</value>
+    <comment>Multiplier 2 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label5" xml:space="preserve">
+    <value>5</value>
+    <comment>Multiplier 5 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label50" xml:space="preserve">
+    <value>50</value>
+    <comment>Multiplier 50 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Unable to backup data" xml:space="preserve">
+    <value>不能备份你的数据，请通知管理员</value>
+  </data>
+  <data name="Outstanding Balance" xml:space="preserve">
+    <value>未结余额</value>
+  </data>
+</root>

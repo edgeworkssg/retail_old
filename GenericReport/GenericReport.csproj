@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A8933A7-E37A-45FF-94AE-218102B2535A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenericReport</RootNamespace>
+    <AssemblyName>GenericReport</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PowerPOSLib\CustomDAL\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LocalDAL\DocumentInfo.cs" />
+    <Compile Include="LocalDAL\DocumentInfoCollection.cs" />
+    <Compile Include="LocalDAL\PaymentInfo.cs" />
+    <Compile Include="LocalDAL\PrintingInfo.cs">
+      <DependentUpon>PrintingInfo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocalDAL\PrintingInfo.Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocalDAL\PrintingInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewPrint\A4.cs">
+      <DependentUpon>A4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="NewPrint\A5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\A5Controller.cs" />
+    <Compile Include="NewPrint\Cargloss_A4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cargloss_A4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\Closing Template\ClosingDetault.cs">
+      <DependentUpon>ClosingDetault.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\Closing Template\Kai LifeClosing.cs">
+      <DependentUpon>Kai LifeClosing.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\Closing.cs">
+      <DependentUpon>Closing.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\A4Point.cs">
+      <DependentUpon>A4Point.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\DefaultRetailReceiptNew.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultRetailReceiptNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\MasterReceipt.cs">
+      <DependentUpon>MasterReceipt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\RGWeighingTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RGWeighingTemplate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\THK_Invoice_A4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THK_Invoice_A4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\THK_Invoice_Receipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THK_Invoice_Receipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\THK_PO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THK_PO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\A4 Detail Arena.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A4 Detail Arena.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\A4_TFI_TaxInvoice.cs">
+      <DependentUpon>A4_TFI_TaxInvoice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\A5 - Chelsea Lighting.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A5 - Chelsea Lighting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\A5 Delivery - Chelsea Lighting1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A5 Delivery - Chelsea Lighting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Bikelink.cs">
+      <DependentUpon>Bikelink.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Liberty.cs">
+      <DependentUpon>Liberty.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Grin Affair.cs">
+      <DependentUpon>Grin Affair.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\TenderGaia_A4_Delivery.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TenderGaia_A4_Delivery.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\TenderGaia_A4_Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TenderGaia_A4_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\ProductCategoryReport.cs">
+      <DependentUpon>ProductCategoryReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Monster.cs">
+      <DependentUpon>Monster.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\A4_Delivery.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A4_Delivery.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Artistiq.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Artistiq.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\BikeTechInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BikeTechInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\BikeTechOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BikeTechOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Bonnie Affair.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bonnie Affair.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\A4_Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A4_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Hafbox.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hafbox.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Leonard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Leonard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Ashlyn Jane.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ashlyn Jane.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Hungry Caterpillar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hungry Caterpillar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\KODA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KODA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\SpeediSwim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpeediSwim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\PhilipsChn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhilipsChn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\WileyReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WileyReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\Tanglin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tanglin.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\TCMClinic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCMClinic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\TLC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\WileyUK_EUR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WileyUK_EUR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\CustomerTemplate\WileyUK_GBP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WileyUK_GBP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewPrint\PrintController.cs" />
+    <Compile Include="PageType\PageTypeA5.cs" />
+    <Compile Include="PrintLogic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportType.cs" />
+    <Compile Include="XmlOptions\MIMEType.cs" />
+    <Compile Include="XmlOptions\Sizing.cs" />
+    <Compile Include="XmlOptions\BorderStyle.cs" />
+    <Compile Include="ContentHolders\Content.cs" />
+    <Compile Include="Formatting\ElementPosition.cs" />
+    <Compile Include="Formatting\CellFormat.cs" />
+    <Compile Include="ReportLogic\ContentController.cs" />
+    <Compile Include="Formatting\ColumnFormat.cs" />
+    <Compile Include="ContentHolders\Page.cs" />
+    <Compile Include="Formatting\PageFormat.cs" />
+    <Compile Include="ContentHolders\Image.cs" />
+    <Compile Include="ReportLogic\PageController.cs" />
+    <Compile Include="ReportLogic\PageTemplate.cs" />
+    <Compile Include="PageType\PageType.cs" />
+    <Compile Include="PageType\PageTypeA4.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LocalDAL\PrintingInfo.Custom.resx">
+      <DependentUpon>PrintingInfo.Custom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\A4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\A5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\Cargloss_A4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cargloss_A4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\Closing Template\ClosingDetault.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClosingDetault.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\Closing Template\Kai LifeClosing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Kai LifeClosing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\Closing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Closing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\A4Point.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A4Point.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\DefaultRetailReceiptNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DefaultRetailReceiptNew.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrint\MasterReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MasterReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NewPrint\CustomerTemplate\RGWeighingTemplate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RGWeighingTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\THK_Invoice_A4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>THK_Invoice_A4.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\THK_Invoice_Receipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>THK_Invoice_Receipt.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\THK_PO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>THK_PO.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\A4 Detail Arena.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A4 Detail Arena.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\A4_TFI_TaxInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A4_TFI_TaxInvoice.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\A5 - Chelsea Lighting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A5 - Chelsea Lighting.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\A5 Delivery - Chelsea Lighting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A5 Delivery - Chelsea Lighting1.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Bikelink.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bikelink.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Liberty.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Liberty.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Grin Affair.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Grin Affair.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\TenderGaia_A4_Delivery.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TenderGaia_A4_Delivery.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\TenderGaia_A4_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TenderGaia_A4_Invoice.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="NewPrint\ProductCategoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductCategoryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NewPrint\CustomerTemplate\Monster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Monster.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="NewPrint\CustomerTemplate\A4_Delivery.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A4_Delivery.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NewPrint\CustomerTemplate\Artistiq.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Artistiq.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\BikeTechInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BikeTechInvoice.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\BikeTechOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BikeTechOrder.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Bonnie Affair.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bonnie Affair.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="NewPrint\CustomerTemplate\A4_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>A4_Invoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NewPrint\CustomerTemplate\Hafbox.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hafbox.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Leonard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Leonard.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Ashlyn Jane.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ashlyn Jane.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Hungry Caterpillar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hungry Caterpillar.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\KODA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KODA.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\SpeediSwim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpeediSwim.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\PhilipsChn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhilipsChn.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\WileyReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WileyReceipt.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\Tanglin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Tanglin.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\TCMClinic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TCMClinic.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\TLC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TLC.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\WileyUK_EUR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WileyUK_EUR.cs</LastGenOutput>
+    </None>
+    <None Include="NewPrint\CustomerTemplate\WileyUK_GBP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WileyUK_GBP.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="LocalDAL\PrintingInfo.xsc">
+      <DependentUpon>PrintingInfo.xsd</DependentUpon>
+    </None>
+    <None Include="LocalDAL\PrintingInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintingInfo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LocalDAL\PrintingInfo.xss">
+      <DependentUpon>PrintingInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ContentHolders\Table.cs" />
+    <Compile Include="Formatting\TableFormat.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentHolders\Textbox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PowerPOSLib\PowerPOSLib.csproj">
+      <Project>{64DBDC7E-DDE7-4BFC-BC41-8BE0F618E35B}</Project>
+      <Name>PowerPOSLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewPrint\ConsignmentNote\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="An unknown error has been encountered. Please contact your system administrator." xml:space="preserve">
+    <value>알려지지 않은 에러가 발생했습니다. 시스템 관리자에게 연락하세요</value>
+  </data>
+  <data name="Are you sure you want to cancel order?" xml:space="preserve">
+    <value>주문을 취소하겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to quit?" xml:space="preserve">
+    <value>중단하시겠습니까?</value>
+  </data>
+  <data name="Cash Recording has been saved successfully." xml:space="preserve">
+    <value>비용관련 자료가 성공적으로 저장되었습니다.</value>
+  </data>
+  <data name="Do you want to allow it to continue using the card" xml:space="preserve">
+    <value>이 카드를 계속 사용 할 수 있도록 하시겠습니까?</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>오류</value>
+  </data>
+  <data name="Error adding item to order:" xml:space="preserve">
+    <value>추가항목을 주문하는데 오류가 발생하였습니다 :</value>
+  </data>
+  <data name="Error encountered while adding items. Please try again." xml:space="preserve">
+    <value>항목을 추가하는 동안 오류가 발생했습니다. 다시 시도하십시오.</value>
+  </data>
+  <data name="Insufficient privilege to give FOC" xml:space="preserve">
+    <value>무료로 제공할 수 없습니다.</value>
+  </data>
+  <data name="No Discount" xml:space="preserve">
+    <value>할인 없음</value>
+  </data>
+  <data name="Please enter a valid amount" xml:space="preserve">
+    <value>유효한 금액을 입력하십시오.</value>
+  </data>
+  <data name="Please enter remark. Remark is compulsory for cash out." xml:space="preserve">
+    <value>비고를 입력하십시오. 비고는 현금 지불을 위해 필수적입니다.</value>
+  </data>
+  <data name="Save unsuccessful:" xml:space="preserve">
+    <value>성공적으로 저장되지 않았습니다 :</value>
+  </data>
+  <data name="This member has already expired on" xml:space="preserve">
+    <value>이 회원은 이미 유효 기간이 만료되었습니다</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>경고</value>
+  </data>
+  <data name="WARNING. Float amount has been set previously at @OpeningBalance. Are you sure you want to set ADDITIONAL float amount?" xml:space="preserve">
+    <value>경고. 부동 금액은 개시 잔고에서 이전에 설정되었습니다. 추가 부동 금액을 설정 하시겠습니까?</value>
+  </data>
+  <data name="You need to enter a non negative number for discount and discount must not be more than 100%&quot;" xml:space="preserve">
+    <value>할인을 위해 음수가 아닌 숫자를 입력해야 합니다. 할인금액은 100% 이상이 되지 않아야 합니다.</value>
+  </data>
+  <data name="You need to enter a non negative number for quantity" xml:space="preserve">
+    <value>수량은 음수가 아닌 숫자를 입력해야 합니다.</value>
+  </data>
+  <data name="You need to enter a non negative number for unit price" xml:space="preserve">
+    <value>단가는 음수가 아닌 숫자를 입력해야 합니다.</value>
+  </data>
+  <data name="After Discount" xml:space="preserve">
+    <value>할인 후</value>
+  </data>
+  <data name="Are you sure you want to change shift?" xml:space="preserve">
+    <value>변경사항을 반영하겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to clear all the values? All your changes will be lost." xml:space="preserve">
+    <value>모든 값을 삭제하겠습니까? 수정사항이 저장되지 않습니다.</value>
+  </data>
+  <data name="Are you sure you want to close counter?" xml:space="preserve">
+    <value>카운터를 닫겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to continue?" xml:space="preserve">
+    <value>계속 하시겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to log out?" xml:space="preserve">
+    <value>로그아웃 하시겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to remove membership?" xml:space="preserve">
+    <value>회원 정보를 삭제하기를 원하십니까?</value>
+  </data>
+  <data name="Change:" xml:space="preserve">
+    <value>변경 :</value>
+  </data>
+  <data name="Close counter" xml:space="preserve">
+    <value>카운터를 닫습니다.</value>
+  </data>
+  <data name="Counter Closed Successfully." xml:space="preserve">
+    <value>카운터가 성공적으로 완료되었습니다.</value>
+  </data>
+  <data name="Error Converting Actual Amount to decimal upon closing. Actual &gt;" xml:space="preserve">
+    <value>종료시 십진수로 실제 금액을 변환하는 동안 오류가 발생했습니다. 실제&gt;</value>
+  </data>
+  <data name="Error while calculating total amount:" xml:space="preserve">
+    <value>총 금액을 계산하는 동안 오류가 발생했습니다 :</value>
+  </data>
+  <data name="Error while performing Stock Out:" xml:space="preserve">
+    <value>품절을 실행하는 동안 오류가 발생 하였습니다 :</value>
+  </data>
+  <data name="Error: Barcode does not exist in the system." xml:space="preserve">
+    <value>오류: 바코드가 시스템에 존재하지 않습니다</value>
+  </data>
+  <data name="has insufficient privileges." xml:space="preserve">
+    <value>권한이 있습니다.</value>
+  </data>
+  <data name="Invalid supervisor id/password. Please try again." xml:space="preserve">
+    <value>감독자 아이디 / 비밀번호 잘못되었습니다. 다시 시도하십시오.</value>
+  </data>
+  <data name="MEMBER DATE OF BIRTH IS THIS MONTH" xml:space="preserve">
+    <value>회원의 생일은 이 달입니다.</value>
+  </data>
+  <data name="Please assign membership to continue" xml:space="preserve">
+    <value>계속 진행할 멤버쉽을 지정해 주십시오.</value>
+  </data>
+  <data name="Please enter valid amount for Total Collected." xml:space="preserve">
+    <value>총 수집을 위해 유효한 금액을 입력하십시오.</value>
+  </data>
+  <data name="Please enter valid numeric value for all the textboxes." xml:space="preserve">
+    <value>모든 텍스트 박스에 대한 올바른 숫자 값을 입력하십시오.</value>
+  </data>
+  <data name="Please specify valid amount" xml:space="preserve">
+    <value>유효한 금액을 지정하십시오.</value>
+  </data>
+  <data name="Please specify valid number" xml:space="preserve">
+    <value>유효한 번호를 지정하십시오.</value>
+  </data>
+  <data name="Point is not updated!" xml:space="preserve">
+    <value>포인트가 업데이트되지 않았습니다!</value>
+  </data>
+  <data name="The item has not been hold. Please hold before you unhold." xml:space="preserve">
+    <value>항목이 보류되지 않았습니다. 보류를 풀기 전에 보류를 설정해야 합니다.</value>
+  </data>
+  <data name="This voucher has already expired in" xml:space="preserve">
+    <value>이 쿠폰은 이미 유효 기간이 만료되었습니다</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>합계</value>
+  </data>
+  <data name="Unable to print settlement. Please try again at Closing Report section" xml:space="preserve">
+    <value>이 결재를 인쇄할 수 없습니다. 결산 보고서 섹션에서 다시 시도하십시오.</value>
+  </data>
+  <data name="WARNING!!! THE CLOSING AMOUNT DOES NOT TALLY!! ARE YOU SURE YOU WANT TO CLOSE?" xml:space="preserve">
+    <value>경고! 닫으려는 금액은 집계되지 않습니다! 종료 하시겠습니까?</value>
+  </data>
+  <data name="Warning. This voucher has already been redeemed before. Do you like to continue?" xml:space="preserve">
+    <value>경고. 이 쿠폰은 이미 전에 사용되었습니다. 계속하시겠습니까?</value>
+  </data>
+  <data name="Warning. This voucher has already been sold before. Do you like to continue?" xml:space="preserve">
+    <value>경고. 이 쿠폰은 이미 전에 판매되었습니다. 계속하시겠습니까?</value>
+  </data>
+  <data name="WARNING: Sending Data FAILED! Please try to resend or contact your system administrator." xml:space="preserve">
+    <value>경고 : 데이터 전송 실패! 다시 보내거나, 시스템 관리자에게 연락해 보십시오.</value>
+  </data>
+  <data name="Welcome!" xml:space="preserve">
+    <value>환영합니다!</value>
+  </data>
+  <data name="You don't need to hold empty order" xml:space="preserve">
+    <value>빈 주문을 보유 할 필요가 없습니다.</value>
+  </data>
+  <data name="You need to ask someone else to login for you." xml:space="preserve">
+    <value>로그인을 다른 사람 한테 부탁해야합니다.</value>
+  </data>
+  <data name="You need to enter a non negative number for discount and discount must not be less than unit price" xml:space="preserve">
+    <value>할인을 위해 음수가 아닌 숫자를 입력해야 합니다. 할인금액은 단가보다 적지 않아야 합니다.</value>
+  </data>
+  <data name="--Please Select--" xml:space="preserve">
+    <value>- 선택하세요 -</value>
+  </data>
+  <data name="Are you sure you want to delete these users?" xml:space="preserve">
+    <value>해당 사용자를 삭제하기를 원하십니까?</value>
+  </data>
+  <data name="Completed!" xml:space="preserve">
+    <value>완료!</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="Error Encountered. Please try again!" xml:space="preserve">
+    <value>오류가 발생했습니다. 다시 시도하십시오!</value>
+  </data>
+  <data name="Error printing settlement. Please contact your administrator." xml:space="preserve">
+    <value>인쇄하는데 오류가 발생하였습니다. 관리자에게 문의하십시오.</value>
+  </data>
+  <data name="Error sending email. Please contact your administrator" xml:space="preserve">
+    <value>이메일을 보내는 중 오류가 발생했습니다. 관리자에게 문의하시기 바랍니다.</value>
+  </data>
+  <data name="Error. Load FAILED!" xml:space="preserve">
+    <value>오류: 로드 실패!</value>
+  </data>
+  <data name="Error. Members at row" xml:space="preserve">
+    <value>오류: 행의 회원</value>
+  </data>
+  <data name="Exchange Rate set successfully" xml:space="preserve">
+    <value>환율이 성공적으로 설정되었습니다.</value>
+  </data>
+  <data name="File saved" xml:space="preserve">
+    <value>파일이 저장되었습니다.</value>
+  </data>
+  <data name="Insufficient points to be deducted" xml:space="preserve">
+    <value>공제될 포인트가 부족합니다.</value>
+  </data>
+  <data name="Invalid Point Of Sale ID selected." xml:space="preserve">
+    <value>선택된 POS ID가 잘못되었습니다.</value>
+  </data>
+  <data name="is not a valid Membership No." xml:space="preserve">
+    <value>유효한 회원 번호가 아닙니다</value>
+  </data>
+  <data name="Membership No:" xml:space="preserve">
+    <value>회원 번호 :</value>
+  </data>
+  <data name="No data inside" xml:space="preserve">
+    <value>내부 데이터가 없습니다</value>
+  </data>
+  <data name="Please choose a hot key to assign." xml:space="preserve">
+    <value>지정할 단축키를 선택해 주십시오.</value>
+  </data>
+  <data name="Please choose an item to assign." xml:space="preserve">
+    <value>지정할 항목을 선택해 주십시요.</value>
+  </data>
+  <data name="Please enter positive decimal value for exchange rate" xml:space="preserve">
+    <value>환율에 대한 양수의 십진수 값을 입력하세요</value>
+  </data>
+  <data name="Please enter support Password!" xml:space="preserve">
+    <value>지원 비밀번호를 입력하세요!</value>
+  </data>
+  <data name="Please Select a valid Point of Sale ID" xml:space="preserve">
+    <value>유효한 POS ID를 선택해 주십시오.</value>
+  </data>
+  <data name="Please set the right number of copies" xml:space="preserve">
+    <value>사본의 올바른 숫자를 설정하십시오.</value>
+  </data>
+  <data name="Please specify a number on the search box" xml:space="preserve">
+    <value>검색 상자에 번호를 지정하십시오.</value>
+  </data>
+  <data name="Points in wrong format for Row No" xml:space="preserve">
+    <value>행 번호에 잘못된 형식의 포인트가 입력되었습니다.</value>
+  </data>
+  <data name="Save failed." xml:space="preserve">
+    <value>저장되지 않았습니다.</value>
+  </data>
+  <data name="Save successful." xml:space="preserve">
+    <value>성공적으로 저장되었습니다.</value>
+  </data>
+  <data name="Successful!" xml:space="preserve">
+    <value>성공!</value>
+  </data>
+  <data name="The Item you specified is invalid." xml:space="preserve">
+    <value>지정한 항목이 잘못되었습니다.</value>
+  </data>
+  <data name="There is no data for the given search criteria" xml:space="preserve">
+    <value>주어진 검색 기준에 대한 데이터가 없습니다</value>
+  </data>
+  <data name="There is no data to export" xml:space="preserve">
+    <value>내보낼 데이터가 없습니다</value>
+  </data>
+  <data name="Users has been deleted" xml:space="preserve">
+    <value>사용자가 삭제되었습니다</value>
+  </data>
+  <data name="You dont have no point/package items" xml:space="preserve">
+    <value>포인트/패키지 항목이 없습니다.</value>
+  </data>
+  <data name="Add New" xml:space="preserve">
+    <value>새로 추가</value>
+  </data>
+  <data name="Amount is insufficient" xml:space="preserve">
+    <value>금액이 부족합니다.</value>
+  </data>
+  <data name="Are you sure to change member?" xml:space="preserve">
+    <value>회원 정보를 수정하겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to close?" xml:space="preserve">
+    <value>창을 닫겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to proceed?" xml:space="preserve">
+    <value>계속 하시겠습니까?</value>
+  </data>
+  <data name="Are you sure? This action cant be undone." xml:space="preserve">
+    <value>해당 작업은 취소할 수 없습니다. 진행하시겠습니까?</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>잔액</value>
+  </data>
+  <data name="Barcode does not exist in the system." xml:space="preserve">
+    <value>바코드가 현재 시스템에 존재하지 않습니다.</value>
+  </data>
+  <data name="Campaign cannot be created. Please try again." xml:space="preserve">
+    <value>캠페인을 생성할 수 없습니다. 다시 시도하세요.</value>
+  </data>
+  <data name="Campaign has been created" xml:space="preserve">
+    <value>캠페인이 생성되었습니다.</value>
+  </data>
+  <data name="Campaign Name has been used before. Please choose another name" xml:space="preserve">
+    <value>캠페인명이 예전에 사용되었습니다. 다른 이름을 선택하세요.</value>
+  </data>
+  <data name="Cannot delete payment by points" xml:space="preserve">
+    <value>포인트 결제를 삭제할 수 없습니다.</value>
+  </data>
+  <data name="Cannot edit payment by points" xml:space="preserve">
+    <value>포인트 결제를 수정할 수 없습니다.</value>
+  </data>
+  <data name="Cannot find item." xml:space="preserve">
+    <value>아이템을 찾을 수 없습니다.</value>
+  </data>
+  <data name="Cannot get Item Name." xml:space="preserve">
+    <value>아이템 명을 얻을 수 없습니다.</value>
+  </data>
+  <data name="Cannot make any change. This order has been settled." xml:space="preserve">
+    <value>변경을 적용할 수 없습니다. 주문이 완료되었습니다.</value>
+  </data>
+  <data name="Cannot use Item." xml:space="preserve">
+    <value>아이템을 사용할 수 없습니다.</value>
+  </data>
+  <data name="Change password succesful" xml:space="preserve">
+    <value>비밀번호 변경이 성공적으로 완료되었습니다.</value>
+  </data>
+  <data name="Compulsary informations are missing" xml:space="preserve">
+    <value>필수 정보가 누락되었습니다.</value>
+  </data>
+  <data name="Customer only have" xml:space="preserve">
+    <value>고객 전용</value>
+  </data>
+  <data name="Customer pay too much" xml:space="preserve">
+    <value>고객이 너무 많이 지불</value>
+  </data>
+  <data name="Discount exceed the discount limit set." xml:space="preserve">
+    <value>할인 제한 설정을 초과하여 할인합니다.</value>
+  </data>
+  <data name="Do you want to use this card number?" xml:space="preserve">
+    <value>이 카드번호를 사용 하시겠습니까?</value>
+  </data>
+  <data name="does not exist in this computer" xml:space="preserve">
+    <value>이 컴퓨터에 존재하지 않습니다</value>
+  </data>
+  <data name="Downloading data failed. Please check your internet connection." xml:space="preserve">
+    <value>다운로드 데이터에 실패했습니다. 인터넷 연결을 확인하시기 바랍니다.</value>
+  </data>
+  <data name="Downloading data successful" xml:space="preserve">
+    <value>데이터가 성공적으로 다운로드 되었습니다.</value>
+  </data>
+  <data name="Error assigning membership" xml:space="preserve">
+    <value>멤버쉽 등록에 오류가 발생하였습니다.</value>
+  </data>
+  <data name="error creating payment" xml:space="preserve">
+    <value>지불을 등록하는데 오류가 발생하였습니다.</value>
+  </data>
+  <data name="Error encountered" xml:space="preserve">
+    <value>오류가 발생하였습니다.</value>
+  </data>
+  <data name="Error encountered when confirming order" xml:space="preserve">
+    <value>주문을 확정하는데 오류가 발생하였습니다.</value>
+  </data>
+  <data name="Error encountered while applying discounts." xml:space="preserve">
+    <value>할인을 적용하는 동안 오류가 발생했습니다.</value>
+  </data>
+  <data name="Error in deleting payment. Please try again." xml:space="preserve">
+    <value>지불을 삭제하는 중 오류가 발생했습니다. 다시 시도하십시오.</value>
+  </data>
+  <data name="Error. Invalid Order amount" xml:space="preserve">
+    <value>오류: 잘못된 주문 금액</value>
+  </data>
+  <data name="for member" xml:space="preserve">
+    <value>멤버용</value>
+  </data>
+  <data name="has not been specified" xml:space="preserve">
+    <value>지정되지 않았습니다.</value>
+  </data>
+  <data name="Import failed. Please check your excel file" xml:space="preserve">
+    <value>가져 오기를 실패했습니다. Excel 파일을 확인하세요.</value>
+  </data>
+  <data name="Import successful" xml:space="preserve">
+    <value>가져 오기를 성공했습니다.</value>
+  </data>
+  <data name="Member's particular is exist in database as Member" xml:space="preserve">
+    <value>회원의 정보는 데이터베이스에 존재합니다.</value>
+  </data>
+  <data name="Members card not recognized" xml:space="preserve">
+    <value>회원 카드를 인식 할 수 없습니다</value>
+  </data>
+  <data name="Membership Change" xml:space="preserve">
+    <value>회원 변경</value>
+  </data>
+  <data name="Membership Discount remain unchanged" xml:space="preserve">
+    <value>회원 할인은 변경되지 않았습니다.</value>
+  </data>
+  <data name="Membership is not found" xml:space="preserve">
+    <value>회원 가입을 찾을 수 없습니다</value>
+  </data>
+  <data name="Name:" xml:space="preserve">
+    <value>이름 :</value>
+  </data>
+  <data name="No item was specified to be discounted. Please scan/search items." xml:space="preserve">
+    <value>할인될 아이템을 지정하지 않았습니다. 아이템을 검색해 주십시요</value>
+  </data>
+  <data name="Notes: You can choose delivery by assigning member into the sales" xml:space="preserve">
+    <value>참고 사항 : 회원을 지정하여 배송을 선택할 수 있습니다.</value>
+  </data>
+  <data name="Notes: You cannot choose delivery if there are sales with negative quantity" xml:space="preserve">
+    <value>참고 사항 : 음수 수량의 판매의 경우 배송을 선택할 수 없습니다.</value>
+  </data>
+  <data name="NUMBER OF COPIES" xml:space="preserve">
+    <value>인쇄 매수</value>
+  </data>
+  <data name="One of the serial number has already been specified before" xml:space="preserve">
+    <value>일련 번호 중 하나는 이전에 이미 지정되었습니다</value>
+  </data>
+  <data name="Only one new registration allowed per receipt." xml:space="preserve">
+    <value>한 영수증 당 하나의 신규 등록이 허용됩니다.</value>
+  </data>
+  <data name="Order voided successfully." xml:space="preserve">
+    <value>주문이 취소되었습니다.</value>
+  </data>
+  <data name="Passwords entered do not matched" xml:space="preserve">
+    <value>입력된 비밀번호가 일치하지 않습니다.</value>
+  </data>
+  <data name="Payment by point" xml:space="preserve">
+    <value>포인트 지급</value>
+  </data>
+  <data name="Payment Failed" xml:space="preserve">
+    <value>결제 실패</value>
+  </data>
+  <data name="Please assign a member to use installments" xml:space="preserve">
+    <value>할부할 회원을 지정해 주십시요.</value>
+  </data>
+  <data name="Please assign a member to use point" xml:space="preserve">
+    <value>포인트를 사용할 회원을 지정해 주십시오.</value>
+  </data>
+  <data name="Please confirm before registering a new member." xml:space="preserve">
+    <value>신입 회원을 등록 전에 확인하시기 바랍니다.</value>
+  </data>
+  <data name="Please contact your administrator." xml:space="preserve">
+    <value>관리자에게 문의하십시오.</value>
+  </data>
+  <data name="Please scan new Membership No." xml:space="preserve">
+    <value>새로운 회원 번호를 검색하세요.</value>
+  </data>
+  <data name="Please select a membership group" xml:space="preserve">
+    <value>회원 그룹을 선택하십시오</value>
+  </data>
+  <data name="Please select another payment type" xml:space="preserve">
+    <value>다른 결제 유형을 선택하세요.</value>
+  </data>
+  <data name="Please specify correct discount in number format" xml:space="preserve">
+    <value>번호 형식으로 올바른 할인을 지정하십시오.</value>
+  </data>
+  <data name="Please specify correct price." xml:space="preserve">
+    <value>정확한 가격을 지정하십시오.</value>
+  </data>
+  <data name="Please specify discount." xml:space="preserve">
+    <value>할인을 지정하십시오.</value>
+  </data>
+  <data name="Please specify price." xml:space="preserve">
+    <value>가격을 지정하십시오.</value>
+  </data>
+  <data name="Please specify valid promotion discount" xml:space="preserve">
+    <value>유효한 프로모션 할인을 지정하십시오.</value>
+  </data>
+  <data name="Please specify valid promotion price" xml:space="preserve">
+    <value>유효한 프로모션 가격을 지정하십시오.</value>
+  </data>
+  <data name="Please try again." xml:space="preserve">
+    <value>다시 시도하십시오.</value>
+  </data>
+  <data name="Point is not enough" xml:space="preserve">
+    <value>포인트는가 충분하지 않습니다.</value>
+  </data>
+  <data name="Point-Redeemable" xml:space="preserve">
+    <value>포인트 상환</value>
+  </data>
+  <data name="Points are not assigned to new member" xml:space="preserve">
+    <value>신규회원에 포인트가 지정되지 않았습니다.</value>
+  </data>
+  <data name="Process canceled by user" xml:space="preserve">
+    <value>사용자에 의해 프로세스가 취소되었습니다.</value>
+  </data>
+  <data name="Promo Location is set successfully" xml:space="preserve">
+    <value>프로모션 위치가 성공적으로 설정되었습니다.</value>
+  </data>
+  <data name="Receipt Number" xml:space="preserve">
+    <value>영수증 번호</value>
+  </data>
+  <data name="Redemption captured successfully" xml:space="preserve">
+    <value>상환이 성공적으로 이루어졌습니다.</value>
+  </data>
+  <data name="Registered to" xml:space="preserve">
+    <value>등록</value>
+  </data>
+  <data name="Remaining point is not enough" xml:space="preserve">
+    <value>잔여 포인트가 충분하지 않습니다.</value>
+  </data>
+  <data name="Remarks Information" xml:space="preserve">
+    <value>비고 정보</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="Search produce no result." xml:space="preserve">
+    <value>검색 결과가 없습니다.</value>
+  </data>
+  <data name="Sending FAILED!!" xml:space="preserve">
+    <value>전송 실패!</value>
+  </data>
+  <data name="Sending failed. Please check your internet connection." xml:space="preserve">
+    <value>전송에 실패했습니다. 인터넷 연결을 확인하시기 바랍니다.</value>
+  </data>
+  <data name="Sending Logs successful" xml:space="preserve">
+    <value>기록을 보내는데 성공하였습니다.</value>
+  </data>
+  <data name="Sending Successful" xml:space="preserve">
+    <value>보내기를 성공하였습니다.</value>
+  </data>
+  <data name="Serial number for item" xml:space="preserve">
+    <value>항목의 일련 번호</value>
+  </data>
+  <data name="Set Price" xml:space="preserve">
+    <value>가격 설정</value>
+  </data>
+  <data name="Set Qty" xml:space="preserve">
+    <value>수량 설정</value>
+  </data>
+  <data name="Some error occurred" xml:space="preserve">
+    <value>일부 오류가 발생했습니다</value>
+  </data>
+  <data name="Some item cannot be paid by points" xml:space="preserve">
+    <value>일부 아이템은 포인트로 지불 할 수 없습니다</value>
+  </data>
+  <data name="There is no item can be paid by points." xml:space="preserve">
+    <value>포인트로 지불할 항목이 없습니다.</value>
+  </data>
+  <data name="There is still some amount that has not been completed. Please clear all amount" xml:space="preserve">
+    <value>아직 완료되지 않은 일부 금액이 있습니다. 모든 금액을 삭제하시기 바랍니다.</value>
+  </data>
+  <data name="This action cant be undone. Are you sure you want to proceed?" xml:space="preserve">
+    <value>이 작업은 취소 할 수 없습니다. 계속 하시겠습니까?</value>
+  </data>
+  <data name="This is not a \&quot;Times\&quot; package." xml:space="preserve">
+    <value>\"Times\" 패키지가 아닙니다.</value>
+  </data>
+  <data name="This order is already voided." xml:space="preserve">
+    <value>이 주문은 이미 취소 되었습니다.</value>
+  </data>
+  <data name="Unable to void order." xml:space="preserve">
+    <value>주문을 취소할 수 없습니다.</value>
+  </data>
+  <data name="Unknown error has been encountered. Please try again." xml:space="preserve">
+    <value>알 수없는 오류가 발생했습니다. 다시 시도하십시오.</value>
+  </data>
+  <data name="Use package" xml:space="preserve">
+    <value>패키지 사용</value>
+  </data>
+  <data name="User Name already exist" xml:space="preserve">
+    <value>사용자 이름이 이미 존재</value>
+  </data>
+  <data name="VOID REASON" xml:space="preserve">
+    <value>취소 이유</value>
+  </data>
+  <data name="Void Reason is compulsory. Please enter the reason for voiding!" xml:space="preserve">
+    <value>취소 사유는 필수적입니다. 취소하려면 사유를 입력해 주십시오.</value>
+  </data>
+  <data name="You have to allocate manually." xml:space="preserve">
+    <value>수동으로 할당해야합니다.</value>
+  </data>
+  <data name="You have to fill either NRIC or Mobile No." xml:space="preserve">
+    <value>NRIC 또는 핸드폰 번호를 입력해야합니다.</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>모두보기</value>
+  </data>
+  <data name="Not Voided" xml:space="preserve">
+    <value>취소되지 않았습니다.</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>취소됨</value>
+  </data>
+  <data name="You have to fill both Name and Mobile Number" xml:space="preserve">
+    <value>이름과 핸드폰 번호를 모두 입력해야 합니다.</value>
+  </data>
+  <data name="Cash In" xml:space="preserve">
+    <value>현금 입금</value>
+  </data>
+  <data name="Cash Out" xml:space="preserve">
+    <value>현금 출금</value>
+  </data>
+  <data name="Closing Balance" xml:space="preserve">
+    <value>잔액 완료</value>
+  </data>
+  <data name="Opening Balance" xml:space="preserve">
+    <value>개시 잔고</value>
+  </data>
+  <data name="CurrentCurrency" xml:space="preserve">
+    <value>₩</value>
+  </data>
+  <data name="Please select item that you want to return" xml:space="preserve">
+    <value>당신이 반환하고자하는 항목을 선택하십시오.</value>
+  </data>
+  <data name="This receipt number doesn't exist in this computer!" xml:space="preserve">
+    <value>이 영수증 번호는 컴퓨터에 존재하지 않습니다!</value>
+  </data>
+  <data name="F" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="M" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="Alternate Barcode Saved" xml:space="preserve">
+    <value>다른 바코드로 저장완료</value>
+  </data>
+  <data name="as a Date/Time format" xml:space="preserve">
+    <value>일자, 시간 포맷</value>
+  </data>
+  <data name="Cost Price must be a non-negative number and minimum price must not be greater than price." xml:space="preserve">
+    <value>원가는 음수가 아닌 숫자이어야하며, 최소 가격은 판매가격을 초과 할 수 없습니다.</value>
+  </data>
+  <data name="Edit Item" xml:space="preserve">
+    <value>아이템 추가</value>
+  </data>
+  <data name="has already been used." xml:space="preserve">
+    <value>이미 사용되었습니다.</value>
+  </data>
+  <data name="is not found" xml:space="preserve">
+    <value>찾을 수 없습니다</value>
+  </data>
+  <data name="No item selected for the delivery" xml:space="preserve">
+    <value>배송에 대해 선택한 항목이 없습니다</value>
+  </data>
+  <data name="Please fill in the Category Name." xml:space="preserve">
+    <value>카테고리 이름을 입력하세요.</value>
+  </data>
+  <data name="Please fill in the Department ID." xml:space="preserve">
+    <value>부서 ID를 입력하십시오.</value>
+  </data>
+  <data name="Please select a time slot" xml:space="preserve">
+    <value>시간대를 선택하십시오.</value>
+  </data>
+  <data name="Please select item category" xml:space="preserve">
+    <value>항목 카테고리를 선택하세요.</value>
+  </data>
+  <data name="Please select item department" xml:space="preserve">
+    <value>항목 부서를 선택하세요.</value>
+  </data>
+  <data name="Price must be a non-negative number" xml:space="preserve">
+    <value>가격은 음수가 아닌 숫자 여야합니다.</value>
+  </data>
+  <data name="Sales Person" xml:space="preserve">
+    <value>영업 담당자</value>
+  </data>
+  <data name="Settings saved successfully" xml:space="preserve">
+    <value>설정이 성공적으로 저장되었습니다</value>
+  </data>
+  <data name="System cannot recognize" xml:space="preserve">
+    <value>시스템은 인식 할 수 없습니다.</value>
+  </data>
+  <data name="The Category Name you have entered is already created. Please choose another name." xml:space="preserve">
+    <value>입력 한 카테고리 이름이 이미 생성되어 있습니다. 다른 이름을 선택하십시오.</value>
+  </data>
+  <data name="The Department ID you have entered is already created. Please choose another ID." xml:space="preserve">
+    <value>입력 한 부서 ID가 이미 생성되어 있습니다. 다른 ID를 선택하십시오.</value>
+  </data>
+  <data name="The item no" xml:space="preserve">
+    <value>아이템 번호</value>
+  </data>
+  <data name="Wrong time format. System only accept time from 00:00 until 23:59" xml:space="preserve">
+    <value>잘못된 시간 형식입니다. 시스템은 00:00에서 23:59분까지의 시간을 수용합니다.</value>
+  </data>
+  <data name="ARE YOU SURE YOU WANT TO DELETE ALL ITEMS AND MEMBERSHIP DATA?" xml:space="preserve">
+    <value>아이템과 회원 정보를 모두 삭제하겠습니까?</value>
+  </data>
+  <data name="ARE YOU SURE YOU WANT TO DELETE ALL SALES &amp; INVENTORY DATA?" xml:space="preserve">
+    <value>세일즈 정보와 재고 정보를 모두 삭제하겠습니까?</value>
+  </data>
+  <data name="Are you sure you want to delete these categories?" xml:space="preserve">
+    <value>이 카테고리를 삭제하기를 원하십니까?</value>
+  </data>
+  <data name="Cannot find membership group." xml:space="preserve">
+    <value>회원 그룹을 찾을 수 없습니다.</value>
+  </data>
+  <data name="Categories has been deleted" xml:space="preserve">
+    <value>카데고리가 삭제되었습니다.</value>
+  </data>
+  <data name="Do you like to continue?" xml:space="preserve">
+    <value>계속 하시겠습니까?</value>
+  </data>
+  <data name="Error in doing Configuration for first time use" xml:space="preserve">
+    <value>처음 사용하기 위해 구성하는 중 오류가 발생했습니다.</value>
+  </data>
+  <data name="Foreign Currency settlement are not enabled for Demo version. Get the full version for foreign currency settlement" xml:space="preserve">
+    <value>Foreign Currency settlement are not enabled for Demo version. Get the full version for foreign currency settlement</value>
+  </data>
+  <data name="Invalid Culture Code Specified in Setting!" xml:space="preserve">
+    <value>Culture Code 지정이 잘못되었습니다.</value>
+  </data>
+  <data name="Invalid Discounted Price" xml:space="preserve">
+    <value>할인가격이 잘못되었습니다.</value>
+  </data>
+  <data name="Invalid membership number scanned." xml:space="preserve">
+    <value>회원번호 스캔이 잘못되었습니다.</value>
+  </data>
+  <data name="Invalid Qty" xml:space="preserve">
+    <value>수량이 잘못되었습니다.</value>
+  </data>
+  <data name="Invalid Retail Price" xml:space="preserve">
+    <value>소매가격이 잘못되었습니다.</value>
+  </data>
+  <data name="Item Added" xml:space="preserve">
+    <value>항목 추가</value>
+  </data>
+  <data name="Membership No Required" xml:space="preserve">
+    <value>회원 가입은 필요 없습니다</value>
+  </data>
+  <data name="Please contact our support team" xml:space="preserve">
+    <value>지원 팀에 문의하십시오.</value>
+  </data>
+  <data name="Please contact your administrator to enable this feature" xml:space="preserve">
+    <value>이 기능을 사용하려면 관리자에게 문의하시기 바랍니다.</value>
+  </data>
+  <data name="Please enter a valid number between 0-100." xml:space="preserve">
+    <value>0-100 사이의 유효한 숫자를 입력하세요.</value>
+  </data>
+  <data name="Please enter bank name and cheque number." xml:space="preserve">
+    <value>은행 이름과 수표 번호를 입력하십시오.</value>
+  </data>
+  <data name="Please scan membership no" xml:space="preserve">
+    <value>회원 번호를 스캔해 주십시오.</value>
+  </data>
+  <data name="Please specify remark" xml:space="preserve">
+    <value>비고를 입력하십시오.</value>
+  </data>
+  <data name="The entered amount is invalid" xml:space="preserve">
+    <value>입력 한 금액이 잘못되었습니다.</value>
+  </data>
+  <data name="This voucher has already been redeemed before." xml:space="preserve">
+    <value>이 쿠폰은 이미 전에 사용되었습니다.</value>
+  </data>
+  <data name="This voucher has never been sold before." xml:space="preserve">
+    <value>이 쿠폰은 이전에 판매 된 적이 없다.</value>
+  </data>
+  <data name="Voucher has already expired on" xml:space="preserve">
+    <value>쿠폰은 이미 유효기간이 만료되었습니다.</value>
+  </data>
+  <data name="Voucher number does not exist." xml:space="preserve">
+    <value>쿠폰 번호가 존재하지 않습니다.</value>
+  </data>
+  <data name="Please enter a valid password" xml:space="preserve">
+    <value>올바른 비밀번호를 입력하세요</value>
+  </data>
+  <data name="Please enter a valid user id" xml:space="preserve">
+    <value>올바른 사용자 ID를 입력하세요</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>발신</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>보내기</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Label005" xml:space="preserve">
+    <value>5</value>
+    <comment>Multiplier 5 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label01" xml:space="preserve">
+    <value>10</value>
+    <comment>Multiplier 10 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label02" xml:space="preserve">
+    <value>50</value>
+    <comment>Multiplier 50 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label05" xml:space="preserve">
+    <value>100</value>
+    <comment>Multiplier 100 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label1" xml:space="preserve">
+    <value>500</value>
+    <comment>Multiplier 500 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label10" xml:space="preserve">
+    <value>10000</value>
+    <comment>Multiplier 10000 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label100" xml:space="preserve">
+    <value>100000</value>
+    <comment>Multiplier 100000 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label2" xml:space="preserve">
+    <value>2000</value>
+    <comment>Multiplier 2000 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label5" xml:space="preserve">
+    <value>5000</value>
+    <comment>Multiplier 5000 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Label50" xml:space="preserve">
+    <value>50000</value>
+    <comment>Multiplier 50000 for "CheckOut Form &gt; Cash Breakdown"</comment>
+  </data>
+  <data name="Amount in receipt" xml:space="preserve">
+    <value>총 금액</value>
+  </data>
+  <data name="Are you sure you want to confirm?" xml:space="preserve">
+    <value>확정 하시겠습니까?</value>
+  </data>
+  <data name="Change in receipt" xml:space="preserve">
+    <value>거스름 돈:</value>
+  </data>
+  <data name="Goods receive successful" xml:space="preserve">
+    <value>제품 수령이 성공적으로 완료되었습니다.</value>
+  </data>
+  <data name="Please specify the stock in reason." xml:space="preserve">
+    <value>재고의 사유를 지정해 주세요</value>
+  </data>
+  <data name="Please tick the item you wish to process" xml:space="preserve">
+    <value>진행하고자 하는 항목을 선택해주세요</value>
+  </data>
+</root>

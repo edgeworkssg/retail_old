@@ -1,0 +1,437 @@
+<div id="dynamicContent">
+    <div id="divPurchaseOrderList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    Production</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                <div class="form-group">
+                    <h5>
+                        Outlet</h5>
+                    <!-- Inventory Location dropdown -->
+                    <div class="dropdown">
+                        <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationText, valueUpdate: 'keyup', event: {keyup: inventoryLocationTextKeyUp}" />
+                        <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationList">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation">
+                            </a></li>
+                        </ul>
+                    </div>
+                    <!-- /Inventory Location dropdown -->
+                    <div class="form-group">
+                        <h5>
+                            Production Date</h5>
+                        <!-- Date filter dropdown -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown">
+                                <span class="pull-left" data-bind="text: displayDate"></span><span class="glyphicon glyphicon-chevron-down pull-right">
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: dateDropdown">
+                                <li role="presentation" data-bind="css: { divider: name == '---' }"><a role="menuitem"
+                                    tabindex="-1" href="#" data-bind="text: name, click: $parent.selectDate, visible: name != '---'">
+                                </a></li>
+                            </ul>
+                        </div>
+                        <!-- /Date filter dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>
+                            Products</h5>
+                        <input type="text" class="form-control" data-bind="value: selectedItemNo" />
+                    </div>
+                    <div class="form-group">
+                        <h5>
+                            Status</h5>
+                        <!-- Status dropdown -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown">
+                                <span class="pull-left" data-bind="text: status"></span><span class="glyphicon glyphicon-chevron-down pull-right">
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: statusDropdown">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-bind="text: $data, click: function(o) { $parent.status(o) }">
+                                </a></li>
+                            </ul>
+                        </div>
+                        <!-- /Status dropdown -->
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning" data-bind="click: searchCookItem">
+                    SEARCH</button>
+                <button type="button" class="btn btn-primary" data-bind="click: openAddNewPage">
+                    NEW</button>
+                </form>
+                <p>
+                    &nbsp;</p>
+                <div style="overflow: auto">
+                    <div id="tableSearch">
+                        <table class="table table-hover">
+                            <thead data-bind="css: {'dropup': sortKeyPOHdr().asc, 'dropdown': !sortKeyPOHdr().asc}">
+                                <tr>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'DocumentNo')">Production No</a>
+                                        <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='DocumentNo'">
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'CookDate')">Production Date</a>
+                                        <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='CookDate'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'InventoryLocationName')">Outlet</a>
+                                        <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='InventoryLocationName'">
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'ItemName')">Produce</a> <span
+                                            class="caret" data-bind="visible: sortKeyPOHdr().columnName=='ItemName'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'Quantity')">Production Qty</a>
+                                        <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='Quantity'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'COG')">Production Cost</a>
+                                        <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='COG'"></span>
+                                    </th>
+                                    <th>
+                                        <a href="#" data-bind="click: sortPOHdr.bind($data, 'Status')">Status</a> <span class="caret"
+                                            data-bind="visible: sortKeyPOHdr().columnName=='Status'"></span>
+                                    </th>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: itemCookHistories">
+                                <tr>
+                                    <td data-bind="text: DocumentNo">
+                                    </td>
+                                    <td data-bind="text: CookDateFormatted">
+                                    </td>
+                                    <td data-bind="text: InventoryLocationName">
+                                    </td>
+                                    <td data-bind="text: ItemName">
+                                    </td>
+                                    <td data-bind="text: Quantity">
+                                    </td>
+                                    <td data-bind="text: COG">
+                                    </td>
+                                    <td data-bind="text: Status">
+                                    </td>
+                                    <td>
+                                        <a href="#" data-bind="text: Status=='Pending' ? 'edit' : 'view', click: $parent.openUpdatePage">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody data-bind="visible: isPOHdrNotFound">
+                                <tr>
+                                    <td colspan="7" align="center">
+                                        <br />
+                                        No result found
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">
+                            Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <div id="divPurchaseOrderModify">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    Production</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: currentItemCook">
+                <div class="form-group">
+                    <h5>
+                        Outlet</h5>
+                    <!-- Inventory Location dropdown -->
+                    <input type="text" class="form-control" data-bind="value: InventoryLocationName"
+                        readonly="readonly" />
+                    <!-- /Inventory Location dropdown -->
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Produce
+                    </h5>
+                    <div class="form-group">
+                        <h5>
+                        </h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" data-bind="value: ItemName, disable: $parent.isReadOnly(), event: { change: $parent.ChangeItem }" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button" data-bind="click: $parent.openSearchProductDialogFromHeader, enable: !$parent.isReadOnly()">
+                                    SEARCH</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Produced Item No</h5>
+                    <input type="text" class="form-control" data-bind="value: ItemNo, disable: true " />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Produced Qty</h5>
+                    <input type="text" class="form-control" data-bind="value: Quantity, event: {change: $parent.changeQtyHeader}, disable: $parent.isReadOnly " />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Produced Unit Cost</h5>
+                    <input type="text" class="form-control" data-bind="value: $parent.totalHeaderCost()"  readonly="readonly"/>
+                </div>
+                </form>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" data-bind="click: deleteSelectedPODet, disable: deleteCheckedBtnState">
+                        DELETE PRODUCT USED</button>
+                    <button class="btn btn-primary" type="submit" data-bind="click: addItemToOrder, visible: !isReadOnly()">
+                        ADD PRODUCT USED</button>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <div style="overflow: auto">
+                    <div>
+                        <div id="tableDetail">
+                            <table class="table table-hover" id="fixTable">
+                                <thead data-bind="css: {'dropup': sortKeyPODet().asc, 'dropdown': !sortKeyPODet().asc}">
+                                    <tr id="theadPurchaseOrder" style="background-color: white; width: 100%;">
+                                        <th data-bind="visible: !isReadOnly()" class="rc-1">
+                                            <input type="checkbox" class="checkbox" data-bind="checked: isSelectAllDet, click: toggleSelectAllDet" />
+                                        </th>
+                                        <th class="rc-2">
+                                            <a href="#" data-bind="click: sortPODet.bind($data, 'ItemName')">Product Used</a>
+                                            <span class="caret" data-bind="visible: sortKeyPODet().columnName=='ItemName'"></span>
+                                        </th>
+                                        <th class="rc-3">
+                                            <a href="#" data-bind="click: sortPODet.bind($data, 'ItemNo')">Used Item No</a> <span class="caret"
+                                                data-bind="visible: sortKeyPODet().columnName=='ItemNo'"></span>
+                                        </th>
+                                        <th class="rc-4">
+                                            <a href="#" data-bind="click: sortPODet.bind($data, 'UOM')">Used UOM</a> <span class="caret"
+                                                data-bind="visible: sortKeyPODet().columnName=='UOM'"></span>
+                                        </th>
+                                        <th class="rc-5">
+                                            <a href="#" data-bind="click: sortPODet.bind($data, 'Qty')">Used</a> <span class="caret"
+                                                data-bind="visible: sortKeyPODet().columnName=='Qty'"></span>
+                                        </th>
+                                        <th class="rc-6">
+                                            <a href="#" data-bind="click: sortPODet.bind($data, 'UnitPrice')">Cur</a> <span class="caret"
+                                                data-bind="visible: sortKeyPODet().columnName=='UnitPrice'"></span>
+                                        </th>
+                                        <th class="rc-7">
+                                            <a href="#" data-bind="click: sortPODet.bind($data, 'TotalCost')">Cost</a> <span
+                                                class="caret" data-bind="visible: sortKeyPODet().columnName=='TotalCost'"></span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="foreach: itemCookDetails">
+                                    <tr id="tbodyPurchaseOrder">
+                                        <td data-bind="visible: !$parent.isReadOnly()" class="rc-1">
+                                            <input type="checkbox" class="checkbox" data-bind="checked: isSelected" />
+                                        </td>
+                                        <td data-bind="text: ItemName" class="rc-2">
+                                        </td>
+                                        <td data-bind="text: ItemNo" class="rc-3">
+                                        </td>
+                                        <td data-bind="text: UOM" class="rc-4">
+                                        </td>
+                                        <td data-bind="text: QtyWithFormat, click: $parent.changeItemQty" class="rc-5">
+                                        </td>
+                                        <td data-bind="text: UnitPrice" class="rc-6">
+                                        </td>
+                                        <td data-bind="text: TotalCostWithFormat" class="rc-7">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td data-bind="visible: !isReadOnly()" class="rc-1">
+                                        </td>
+                                        <td class="rc-2 bold">
+                                            TOTAL
+                                        </td>
+                                        <td colspan="4" class="rc-2 bold">
+                                            <span data-bind="text: itemCookDetails().length"></span>&nbsp;<span>Items</span>
+                                        </td>  
+                                        <td class="rc-6 bold" data-bind="text: totalCost()">                                            
+                                        </td>                                     
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" data-bind="click: backToList">
+                            BACK</button>
+                        <button type="button" class="btn btn-success" data-bind="click: cookItem, visible: !isReadOnly()">
+                            PRODUCE</button>
+                        <button type="button" class="btn btn-primary hidden-print" data-bind="visible: !isReadOnly(), click: cancelItemCook">
+                            CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divPurchaseOrderDetail">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    Production Detail</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: CurrentProductDetail">
+                <div class="form-group">
+                    <h5>
+                        Product Name</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductName, enable:false" />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Product No</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductNo, enable:false" />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Product Used Name</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" data-bind="value: ProductUsedName, enable:$parent.DetailIsNew" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning" type="button" data-bind="click: $parent.openSearchProductDialog">
+                                SEARCH</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Product User No</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductUsedNo"   disabled="disabled" />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Quantity</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductUsedQty" />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        UOM</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductUsedUOM"  disabled="disabled" />
+                </div>
+                <div class="form-group">
+                    <h5>
+                        Unit Cost</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductUsedUnitPrice" disabled="disabled" />
+                </div>
+                <div class="form-group" style="clear: both;">
+                    <h5>
+                        Total Cost</h5>
+                    <input type="text" class="form-control" data-bind="value: ProductUsedCOG" disabled="disabled" />
+                </div>
+                </form>
+                <div style="clear: both;">
+                    &nbsp;</div>
+                <button type="button" class="btn btn-default" data-bind="click: backProductUsed">
+                    BACK</button>
+                <div class="pull-right">
+                    <button class="btn btn-primary" type="submit" data-bind="click: addProductUsed">
+                        SAVE </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ #divOrderList-->
+    <!-- Modal for Search Product -->
+    <div class="modal fade" id="searchProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">
+                        &times;</button>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <span data-bind="text: TitleSearchDialog"></h4>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                            <div class="form-group">
+                                <h5>
+                                    Search:</h5>
+                                <div class="input-group">
+                                    <input type="text" id="txtSearchItem" class="form-control" />
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-warning" data-bind="click: searchItem">
+                                            SEARCH</button>
+                                    </span>
+                                </div>
+                            </div>
+                            </form>
+                            <div style="overflow: auto; max-height: 300px">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <span data-bind="text: HeaderSearchItemNo">
+                                            </th>
+                                            <th>
+                                                <span data-bind="text: HeaderSearchItemName">
+                                            </th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: searchItemResults">
+                                        <tr>
+                                            <td data-bind="text: data.ItemNo">
+                                            </td>
+                                            <td data-bind="text: data.ItemName">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-success" data-bind="click: $parent.selectItem">
+                                                    ADD</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody data-bind="visible: isItemNotFound">
+                                        <tr>
+                                            <td colspan="3" align="center">
+                                                <br />
+                                                No result found
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadSearchItem, visible: showLoadMoreItems">
+                                        Load more...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / #searchProductModal -->
+</div>
+ <script type="text/javascript" src="js/freeze-table.js"></script>
+<script type="text/javascript" src="js/itemcooking.js?version=1001"></script>
+

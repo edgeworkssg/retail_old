@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WinAutoSync.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SyncSaleFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\\Integration\\Sale\\ERPIntegration.exe</Value>
+    </Setting>
+    <Setting Name="CHECKORDER_INTERVAL_SEC" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="SyncProductFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\\Integration\\Product\\ERPIntegration.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

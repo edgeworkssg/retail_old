@@ -1,0 +1,3712 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64DBDC7E-DDE7-4BFC-BC41-8BE0F618E35B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PowerPOSLib</RootNamespace>
+    <AssemblyName>PowerPOSLib</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WinPowerPOS\BLL\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Edgeworks.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Google.GData.AccessControl, Version=1.7.0.1, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328, processorArchitecture=MSIL" />
+    <Reference Include="Google.GData.Calendar, Version=1.7.0.1, Culture=neutral, PublicKeyToken=aa6748391206b888, processorArchitecture=MSIL" />
+    <Reference Include="Google.GData.Client, Version=1.7.0.1, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL" />
+    <Reference Include="Google.GData.Extensions, Version=1.7.0.1, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>bin\x86\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CustomDAL\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CustomDAL\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CustomDAL\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.1.4.0, Culture=neutral, PublicKeyToken=e9238d4446c6cba1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CustomDAL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="RKLib.ExportData, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>CustomDAL\RKLib.ExportData.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WinPowerPOS\BLL\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Subsonic\src\SubSonic\bin\Release\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.51.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Container\CompanyInfo.cs" />
+    <Compile Include="Container\DropdownResult.cs" />
+    <Compile Include="Container\HoldTransactionServerModel.cs" />
+    <Compile Include="Container\InventorySettings.cs" />
+    <Compile Include="Container\JsonResult.cs" />
+    <Compile Include="Container\ProductAttributeInfo.cs" />
+    <Compile Include="Container\CurrencyInfo.cs" />
+    <Compile Include="Container\EZLinkComPortInfo.cs" />
+    <Compile Include="Container\LanguageInfo.cs" />
+    <Compile Include="Container\PrintSettingInfo.cs" />
+    <Compile Include="Container\SalesPersonInfo.cs" />
+    <Compile Include="Container\PointOfSaleInfo.cs" />
+    <Compile Include="Container\ShiftInfo.cs" />
+    <Compile Include="Container\UpdateBalancePaymentModel.cs" />
+    <Compile Include="Container\UserInfoContainer.cs" />
+    <Compile Include="Controller\AccessLogController.Custom.cs" />
+    <Compile Include="Controller\AppointmentSync.cs" />
+    <Compile Include="Controller\AttributesLabelController.cs" />
+    <Compile Include="Controller\AuditLogController.Custom.cs" />
+    <Compile Include="Controller\CashRecordingController.Custom.cs" />
+    <Compile Include="Controller\ClosingController.cs" />
+    <Compile Include="Controller\AttendanceSheetController.cs" />
+    <Compile Include="Controller\Commission\CommissionBasedOnPercentage.cs" />
+    <Compile Include="Controller\Commission\CommissionBasedOnQty.cs" />
+    <Compile Include="Controller\Commission\CommissionController.Custom.cs" />
+    <Compile Include="Controller\Dashboard\DashboardController.Custom.cs" />
+    <Compile Include="Controller\Excel\ExcelController.xls.cs" />
+    <Compile Include="Controller\Excel\ExcelController.xml.cs" />
+    <Compile Include="Controller\ExchangeRateController.cs" />
+    <Compile Include="Controller\Course Management\BuildingController.cs" />
+    <Compile Include="Controller\Course Management\CourseController.cs" />
+    <Compile Include="Controller\Course Management\RoomController.cs" />
+    <Compile Include="Controller\Delivery\DeliveryOrderController.cs" />
+    <Compile Include="Controller\Delivery\DeliveryOrderDetail.cs" />
+    <Compile Include="Controller\Delivery\DeliveryOrderDetailController.cs" />
+    <Compile Include="Controller\Delivery\DeliveryPersonnelController.cs" />
+    <Compile Include="Controller\EZLinkController.cs" />
+    <Compile Include="Controller\EZLink\EZLinkAPI.cs" />
+    <Compile Include="Controller\EZLink\EZLinkConstants.cs" />
+    <Compile Include="Controller\EZLink\PacketClass\ACKPacket.cs" />
+    <Compile Include="Controller\EZLink\PacketClass\EZLinkContactlessPurchasePacket.cs" />
+    <Compile Include="Controller\EZLink\PacketClass\EZLinkCreditCardPurchasePacket.cs" />
+    <Compile Include="Controller\EZLink\PacketClass\EZLinkPurchasePacket.cs" />
+    <Compile Include="Controller\EZLink\PacketClass\NACKPacket.cs" />
+    <Compile Include="Controller\EZLink\PacketClass\Packet.cs" />
+    <Compile Include="Controller\EZLink\ResponseMessageData.cs" />
+    <Compile Include="Controller\EZLink\TransDataFormat.cs" />
+    <Compile Include="Controller\EZLink\Utilities.cs" />
+    <Compile Include="Controller\GSTOverride.cs" />
+    <Compile Include="Controller\GuestBookController.cs" />
+    <Compile Include="Controller\Hardware\BarcodeScannerController.cs" />
+    <Compile Include="Controller\Hardware\WeighingMachineController.cs" />
+    <Compile Include="Controller\InstallmentController.Custom.cs" />
+    <Compile Include="Controller\InventoryLocationController.cs" />
+    <Compile Include="Controller\Inventory\InventoryController.Custom.ItemTag.cs" />
+    <Compile Include="Controller\Inventory\InventoryController.Custom.Upgrade.cs" />
+    <Compile Include="Controller\Inventory\ItemSummaryController.Custom.cs" />
+    <Compile Include="Controller\Inventory\ItemTagController.cs" />
+    <Compile Include="Controller\ItemCookingController.cs" />
+    <Compile Include="Controller\ItemFuturePriceController.Custom.cs" />
+    <Compile Include="Controller\Inventory\StockTransferController.cs" />
+    <Compile Include="Controller\Item\Item.Points.cs" />
+    <Compile Include="Controller\Item\Item.SubItem.cs" />
+    <Compile Include="Controller\Item\ItemBaseLevelTriggerController.custom.cs" />
+    <Compile Include="Controller\Item\ItemQuantityTriggerController.custom.cs" />
+    <Compile Include="Controller\Item\ItemSupplierMapController.custom.cs" />
+    <Compile Include="Controller\LabelController.cs" />
+    <Compile Include="Controller\MallIntegrationController.cs" />
+    <Compile Include="Controller\MallIntegration\MallIntegrationProviderController.cs" />
+    <Compile Include="Controller\MassEmail.cs" />
+    <Compile Include="Controller\Membership\MembershipController.Points.ClientBased.cs" />
+    <Compile Include="Controller\Membership\MembershipController.Points.WebBased.cs" />
+    <Compile Include="Controller\Membership\MembershipAttendanceController.Custom.cs" />
+    <Compile Include="Controller\Membership\MembershipController.Update.cs" />
+    <Compile Include="Controller\Membership\PackageController.Custom.cs" />
+    <Compile Include="Controller\Membership\RedeemLogController.Custom.cs" />
+    <Compile Include="Controller\Membership\RedemptionItemController.Custom.cs" />
+    <Compile Include="Controller\Membership\MembershipTapController.Custom.cs" />
+    <Compile Include="Controller\NRICController.cs" />
+    <Compile Include="Controller\Order\OrderDet.Points.cs" />
+    <Compile Include="Controller\Order\OrderHdr.Points.cs" />
+    <Compile Include="Controller\OutletController.Custom.cs" />
+    <Compile Include="Controller\PointOfSaleController.Custom.cs" />
+    <Compile Include="Controller\Points\MembershipPoint.Custom.cs" />
+    <Compile Include="Controller\Points\PointAllocationLog.Custom.cs" />
+    <Compile Include="Controller\POS\DeliveryTimeController.cs" />
+    <Compile Include="Controller\POS\PaymentTypesController.cs" />
+    <Compile Include="Controller\Order\ReceiptDet.Points.cs" />
+    <Compile Include="Controller\POS\POSController.Delivery.cs" />
+    <Compile Include="Controller\POS\POSController.Funding.cs" />
+    <Compile Include="Controller\POS\POSController.PreOrder.cs" />
+    <Compile Include="Controller\POS\Z2ClosingController.cs" />
+    <Compile Include="Controller\Promo\PromoSpecialDiscountsController.Custom.cs" />
+    <Compile Include="Controller\PurchaseOrder\PurchaseOdrController.Custom.cs" />
+    <Compile Include="Controller\PurchaseOrder\PurchaseOrderController.Custom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\PurchaseOrder\PurchaseOrderController.Static.cs" />
+    <Compile Include="Controller\PurchaseOrder\PurchaseOrderHdrController.Custom.cs" />
+    <Compile Include="Controller\PurchaseOrder\SalesOrderMappingController.cs" />
+    <Compile Include="Controller\Quotation\QuoteController.cs" />
+    <Compile Include="Controller\RatingController.cs" />
+    <Compile Include="Controller\RecipeController.custom.cs" />
+    <Compile Include="Controller\Report\ReportController.Custom.cs" />
+    <Compile Include="Controller\Report\ReportController.DWRegenerate.cs" />
+    <Compile Include="Controller\ResourceController.cs" />
+    <Compile Include="Controller\RetailerLevelController.cs" />
+    <Compile Include="Controller\SalesGroupController.cs" />
+    <Compile Include="Controller\SavedItemController.cs" />
+    <Compile Include="Controller\ShiftTypesController.cs" />
+    <Compile Include="Controller\ShopifyIntegrationController.Custom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\SpecialBarcodeController.cs" />
+    <Compile Include="Controller\Sync\SyncAppointmentRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncAttendanceRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncCashRecordingRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncDeliveryOrderRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncFileAttachmentRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncPerformanceLogRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncQuotationRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncPointsRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncMemberRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncAccessLogRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncLogsRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncInventoryRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncMasterDataRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncProductRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncRatingRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncSalesRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncUserRealTimeController.cs" />
+    <Compile Include="Controller\Sync\SyncVoucherRealTimeController.cs" />
+    <Compile Include="Controller\UserGroupController.cs" />
+    <Compile Include="Controller\Utility\DateTimeRange.cs" />
+    <Compile Include="Controller\Utility\DbUtilityController.cs" />
+    <Compile Include="Controller\Utility\Extension.cs" />
+    <Compile Include="Controller\Utility\Extension.Mobord.cs" />
+    <Compile Include="Controller\Utility\ImageCompressor.cs" />
+    <Compile Include="Controller\VoucherController.cs" />
+    <Compile Include="Controller\PreOrderController.cs" />
+    <Compile Include="Controller\EventController.custom.cs" />
+    <Compile Include="Controller\Inventory\IInventoryController.cs" />
+    <Compile Include="Controller\Inventory\InventoryController.Custom.StockInOut.AHAVA.cs" />
+    <Compile Include="Controller\Inventory\SaveItemController.cs" />
+    <Compile Include="Controller\Membership\MembershipController.Points.Custom.cs" />
+    <Compile Include="Controller\POS\CashRecordingController.Custom.cs" />
+    <Compile Include="Controller\CommonUILib.cs">
+    </Compile>
+    <Compile Include="Controller\Inventory\InventoryController.Custom.StockInOut.cs" />
+    <Compile Include="Controller\Inventory\InventoryController.Custom.Transfers.cs" />
+    <Compile Include="Controller\Inventory\InventoryController.Custom.Statics.cs" />
+    <Compile Include="Controller\POS\POSController.APL.cs" />
+    <Compile Include="Controller\POS\HotKeysController.cs" />
+    <Compile Include="Controller\POS\POSController.Promo.cs" />
+    <Compile Include="Controller\POS\POSController.Membership.cs" />
+    <Compile Include="Controller\POS\POSController.Receipt.cs" />
+    <Compile Include="Controller\POS\POSController.Order.cs" />
+    <Compile Include="Controller\QuickAccessController.Custom.cs" />
+    <Compile Include="Controller\ReceiptSettingController.Custom.cs" />
+    <Compile Include="Controller\Report\ReportController.Inventory.cs" />
+    <Compile Include="Controller\Report\ReportController.Membership.cs" />
+    <Compile Include="Controller\SpecialActivityLogController.Custom.cs" />
+    <Compile Include="Controller\Inventory\StockTakeController.cs" />
+    <Compile Include="Controller\ExchangeController.cs" />
+    <Compile Include="Controller\Promo\ItemGroupController.Custom.cs" />
+    <Compile Include="Controller\Membership\MembershipController.Custom.cs" />
+    <Compile Include="Controller\ExportController.cs" />
+    <Compile Include="Controller\SyncClientController.cs" />
+    <Compile Include="Controller\TouchScreenHotKeysController.cs" />
+    <Compile Include="Controller\Inventory\InventoryController.Custom.cs" />
+    <Compile Include="Controller\Item\ItemController.Custom.cs" />
+    <Compile Include="Controller\Logger.cs" />
+    <Compile Include="Controller\POS\OrderHdrController.Custom.cs" />
+    <Compile Include="Controller\POS\POSController.cs" />
+    <Compile Include="Controller\PrivilegesController.cs" />
+    <Compile Include="Controller\Promo\PromotionAdminController.Custom.cs" />
+    <Compile Include="Controller\Promo\ApplyPromotionController.Custom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\POS\ReceiptController.Custom.cs" />
+    <Compile Include="Controller\Report\ReportController.cs" />
+    <Compile Include="Controller\POS\PointOfSaleSetupController.Custom.cs" />
+    <Compile Include="Controller\SalesPersonController.Custom.cs" />
+    <Compile Include="Controller\UserController.Custom.cs" />
+    <Compile Include="Controller\Utility\UtilityController.cs" />
+    <Compile Include="Controller\WarrantyController.custom.cs" />
+    <Compile Include="Controller\Web\ChartController.cs" />
+    <Compile Include="DAL\AccessLog.cs" />
+    <Compile Include="DAL\AccessLogController.cs" />
+    <Compile Include="DAL\AllStructs.cs" />
+    <Compile Include="DAL\AlternateBarcode.cs" />
+    <Compile Include="DAL\AlternateBarcodeController.cs" />
+    <Compile Include="DAL\AppliedPromo.cs" />
+    <Compile Include="DAL\AppliedPromoController.cs" />
+    <Compile Include="DAL\Appointment.cs" />
+    <Compile Include="DAL\AppointmentController.cs" />
+    <Compile Include="DAL\AppointmentItem.cs" />
+    <Compile Include="DAL\AppointmentItemController.cs" />
+    <Compile Include="DAL\AppointmentManager.cs" />
+    <Compile Include="DAL\AppointmentManagerController.cs" />
+    <Compile Include="DAL\AppSetting.cs" />
+    <Compile Include="DAL\AppSettingController.cs" />
+    <Compile Include="DAL\AttachedParticular.cs" />
+    <Compile Include="DAL\AttachedParticularController.cs" />
+    <Compile Include="DAL\AttendanceSheet.cs" />
+    <Compile Include="DAL\AttendanceSheetController.cs" />
+    <Compile Include="DAL\AttributesLabel.cs" />
+    <Compile Include="DAL\AttributesLabelController.cs" />
+    <Compile Include="DAL\AuditLog.cs" />
+    <Compile Include="DAL\AuditLogController.cs" />
+    <Compile Include="DAL\BillInfo.cs" />
+    <Compile Include="DAL\BillInfoController.cs" />
+    <Compile Include="DAL\Building.cs" />
+    <Compile Include="DAL\BuildingController.cs" />
+    <Compile Include="DAL\Camera.cs" />
+    <Compile Include="DAL\CameraController.cs" />
+    <Compile Include="DAL\CashDeviceInfo.cs" />
+    <Compile Include="DAL\CashDeviceInfoController.cs" />
+    <Compile Include="DAL\CashRecording.cs" />
+    <Compile Include="DAL\CashRecordingController.cs" />
+    <Compile Include="DAL\CashRecordingType.cs" />
+    <Compile Include="DAL\CashRecordingTypeController.cs" />
+    <Compile Include="DAL\CashTransactionLog.cs" />
+    <Compile Include="DAL\CashTransactionLogController.cs" />
+    <Compile Include="DAL\Category.cs" />
+    <Compile Include="DAL\CategoryController.cs" />
+    <Compile Include="DAL\Commission.cs" />
+    <Compile Include="DAL\CommissionBasedOnPercentage.cs" />
+    <Compile Include="DAL\CommissionBasedOnPercentageController.cs" />
+    <Compile Include="DAL\CommissionBasedOnQty.cs" />
+    <Compile Include="DAL\CommissionBasedOnQtyController.cs" />
+    <Compile Include="DAL\CommissionController.cs" />
+    <Compile Include="DAL\CommissionDetBy.cs" />
+    <Compile Include="DAL\CommissionDetByController.cs" />
+    <Compile Include="DAL\CommissionDetFor.cs" />
+    <Compile Include="DAL\CommissionDetForController.cs" />
+    <Compile Include="DAL\CommissionHdr.cs" />
+    <Compile Include="DAL\CommissionHdrController.cs" />
+    <Compile Include="DAL\CommissionStructure.cs" />
+    <Compile Include="DAL\CommissionStructureController.cs" />
+    <Compile Include="DAL\Company.cs" />
+    <Compile Include="DAL\CompanyController.cs" />
+    <Compile Include="DAL\CounterCloseDet.cs" />
+    <Compile Include="DAL\CounterCloseDetController.cs" />
+    <Compile Include="DAL\CounterCloseLog.cs" />
+    <Compile Include="DAL\CounterCloseLogController.cs" />
+    <Compile Include="DAL\Course.cs" />
+    <Compile Include="DAL\CourseController.cs" />
+    <Compile Include="DAL\CourseType.cs" />
+    <Compile Include="DAL\CourseTypeController.cs" />
+    <Compile Include="DAL\Currency.cs" />
+    <Compile Include="DAL\CurrencyController.cs" />
+    <Compile Include="DAL\CustomerPricing.cs" />
+    <Compile Include="DAL\CustomerPricingController.cs" />
+    <Compile Include="DAL\Dashboard.cs" />
+    <Compile Include="DAL\DashboardController.cs" />
+    <Compile Include="DAL\DeliveryOrder.cs" />
+    <Compile Include="DAL\DeliveryOrderController.cs" />
+    <Compile Include="DAL\DeliveryOrderDetail.cs" />
+    <Compile Include="DAL\DeliveryOrderDetailController.cs" />
+    <Compile Include="DAL\DeliveryPersonnel.cs" />
+    <Compile Include="DAL\DeliveryPersonnelController.cs" />
+    <Compile Include="DAL\Department.cs" />
+    <Compile Include="DAL\DepartmentController.cs" />
+    <Compile Include="DAL\EmailNotification.cs" />
+    <Compile Include="DAL\EmailNotificationController.cs" />
+    <Compile Include="DAL\EventAttendance.cs" />
+    <Compile Include="DAL\EventAttendanceController.cs" />
+    <Compile Include="DAL\EventItemMap.cs" />
+    <Compile Include="DAL\EventItemMapController.cs" />
+    <Compile Include="DAL\EventLocationMap.cs" />
+    <Compile Include="DAL\EventLocationMapController.cs" />
+    <Compile Include="DAL\ExchangeLog.cs" />
+    <Compile Include="DAL\ExchangeLogController.cs" />
+    <Compile Include="DAL\EZlinkMessage.cs" />
+    <Compile Include="DAL\EZlinkMessageController.cs" />
+    <Compile Include="DAL\EZLinkMessageParameter.cs" />
+    <Compile Include="DAL\EZLinkMessageParameterController.cs" />
+    <Compile Include="DAL\EZLinkMessageParameterMap.cs" />
+    <Compile Include="DAL\EZLinkMessageParameterMapController.cs" />
+    <Compile Include="DAL\EZLinkMsgLog.cs" />
+    <Compile Include="DAL\EZLinkMsgLogController.cs" />
+    <Compile Include="DAL\EZLinkResponseCode.cs" />
+    <Compile Include="DAL\EZLinkResponseCodeController.cs" />
+    <Compile Include="DAL\EZLinkUnCfmLog.cs" />
+    <Compile Include="DAL\EZLinkUnCfmLogController.cs" />
+    <Compile Include="DAL\Family.cs" />
+    <Compile Include="DAL\FamilyController.cs" />
+    <Compile Include="DAL\FamilyGroupMap.cs" />
+    <Compile Include="DAL\FamilyGroupMapController.cs" />
+    <Compile Include="DAL\FeedBackLog.cs" />
+    <Compile Include="DAL\FeedBackLogController.cs" />
+    <Compile Include="DAL\FeedBackMsg.cs" />
+    <Compile Include="DAL\FeedBackMsgController.cs" />
+    <Compile Include="DAL\FileAttachment.cs" />
+    <Compile Include="DAL\FileAttachmentController.cs" />
+    <Compile Include="DAL\GroupUserPrivilege.cs" />
+    <Compile Include="DAL\GroupUserPrivilegeController.cs" />
+    <Compile Include="DAL\Gst.cs" />
+    <Compile Include="DAL\GstController.cs" />
+    <Compile Include="DAL\GuestBook.cs" />
+    <Compile Include="DAL\GuestBookCompulsory.cs" />
+    <Compile Include="DAL\GuestBookCompulsoryController.cs" />
+    <Compile Include="DAL\GuestBookController.cs" />
+    <Compile Include="DAL\HoldTransaction.cs" />
+    <Compile Include="DAL\HoldTransactionController.cs" />
+    <Compile Include="DAL\Installment.cs" />
+    <Compile Include="DAL\InstallmentController.cs" />
+    <Compile Include="DAL\InstallmentDetail.cs" />
+    <Compile Include="DAL\InstallmentDetailController.cs" />
+    <Compile Include="DAL\InventoryDet.cs" />
+    <Compile Include="DAL\InventoryDetController.cs" />
+    <Compile Include="DAL\InventoryHdr.cs" />
+    <Compile Include="DAL\InventoryHdrController.cs" />
+    <Compile Include="DAL\InventoryLocation.cs" />
+    <Compile Include="DAL\InventoryLocationController.cs" />
+    <Compile Include="DAL\InventoryLocationGroup.cs" />
+    <Compile Include="DAL\InventoryLocationGroupController.cs" />
+    <Compile Include="DAL\InventoryStockOutReason.cs" />
+    <Compile Include="DAL\InventoryStockOutReasonController.cs" />
+    <Compile Include="DAL\InventoryTransferDiscrepancy.cs" />
+    <Compile Include="DAL\InventoryTransferDiscrepancyController.cs" />
+    <Compile Include="DAL\InventoryUpdateLog.cs" />
+    <Compile Include="DAL\InventoryUpdateLogController.cs" />
+    <Compile Include="DAL\InvoiceSequenceNo.cs" />
+    <Compile Include="DAL\InvoiceSequenceNoController.cs" />
+    <Compile Include="DAL\Item.cs" />
+    <Compile Include="DAL\ItemAttribute.cs" />
+    <Compile Include="DAL\ItemAttributeController.cs" />
+    <Compile Include="DAL\ItemBaseLevel.cs" />
+    <Compile Include="DAL\ItemBaseLevelController.cs" />
+    <Compile Include="DAL\ItemController.cs" />
+    <Compile Include="DAL\ItemCookDetail.cs" />
+    <Compile Include="DAL\ItemCookDetailController.cs" />
+    <Compile Include="DAL\ItemCookHistory.cs" />
+    <Compile Include="DAL\ItemCookHistoryController.cs" />
+    <Compile Include="DAL\ItemCostPrice.cs" />
+    <Compile Include="DAL\ItemCostPriceController.cs" />
+    <Compile Include="DAL\ItemDepartment.cs" />
+    <Compile Include="DAL\ItemDepartmentController.cs" />
+    <Compile Include="DAL\ItemFuturePrice.cs" />
+    <Compile Include="DAL\ItemFuturePriceController.cs" />
+    <Compile Include="DAL\ItemGroup.cs" />
+    <Compile Include="DAL\ItemGroupController.cs" />
+    <Compile Include="DAL\ItemGroupMap.cs" />
+    <Compile Include="DAL\ItemGroupMapController.cs" />
+    <Compile Include="DAL\ItemQuantityTrigger.cs" />
+    <Compile Include="DAL\ItemQuantityTriggerController.cs" />
+    <Compile Include="DAL\ItemSalesPersonMap.cs" />
+    <Compile Include="DAL\ItemSalesPersonMapController.cs" />
+    <Compile Include="DAL\ItemsNew.cs" />
+    <Compile Include="DAL\ItemsNewController.cs" />
+    <Compile Include="DAL\ItemSummary.cs" />
+    <Compile Include="DAL\ItemSummaryController.cs" />
+    <Compile Include="DAL\ItemSummaryGroup.cs" />
+    <Compile Include="DAL\ItemSummaryGroupController.cs" />
+    <Compile Include="DAL\ItemSupplierMap.cs" />
+    <Compile Include="DAL\ItemSupplierMapController.cs" />
+    <Compile Include="DAL\ItemTagStatusDetail.cs" />
+    <Compile Include="DAL\ItemTagStatusDetailController.cs" />
+    <Compile Include="DAL\ItemTagSummary.cs" />
+    <Compile Include="DAL\ItemTagSummaryController.cs" />
+    <Compile Include="DAL\LanguageSetting.cs" />
+    <Compile Include="DAL\LanguageSettingController.cs" />
+    <Compile Include="DAL\LineInfo.cs" />
+    <Compile Include="DAL\LineInfoController.cs" />
+    <Compile Include="DAL\LocationTransfer.cs" />
+    <Compile Include="DAL\LocationTransferController.cs" />
+    <Compile Include="DAL\LoginActivity.cs" />
+    <Compile Include="DAL\LoginActivityController.cs" />
+    <Compile Include="DAL\MailList.cs" />
+    <Compile Include="DAL\MailListController.cs" />
+    <Compile Include="DAL\ManualSalesUpdate.cs" />
+    <Compile Include="DAL\ManualSalesUpdateController.cs" />
+    <Compile Include="DAL\Membership.cs" />
+    <Compile Include="DAL\MembershipAttendance.cs" />
+    <Compile Include="DAL\MembershipAttendanceController.cs" />
+    <Compile Include="DAL\MembershipController.cs" />
+    <Compile Include="DAL\MembershipCustomField.cs" />
+    <Compile Include="DAL\MembershipCustomFieldController.cs" />
+    <Compile Include="DAL\MembershipGroup.cs" />
+    <Compile Include="DAL\MembershipGroupController.cs" />
+    <Compile Include="DAL\MembershipPoint.cs" />
+    <Compile Include="DAL\MembershipPointController.cs" />
+    <Compile Include="DAL\MembershipRemark.cs" />
+    <Compile Include="DAL\MembershipRemarkCategory.cs" />
+    <Compile Include="DAL\MembershipRemarkCategoryController.cs" />
+    <Compile Include="DAL\MembershipRemarkController.cs" />
+    <Compile Include="DAL\MembershipRenewal.cs" />
+    <Compile Include="DAL\MembershipRenewalController.cs" />
+    <Compile Include="DAL\MembershipTap.cs" />
+    <Compile Include="DAL\MembershipTapController.cs" />
+    <Compile Include="DAL\MembershipTapsLog.cs" />
+    <Compile Include="DAL\MembershipTapsLogController.cs" />
+    <Compile Include="DAL\MembershipUpgradeLog.cs" />
+    <Compile Include="DAL\MembershipUpgradeLogController.cs" />
+    <Compile Include="DAL\OrderDet.cs" />
+    <Compile Include="DAL\OrderDetController.cs" />
+    <Compile Include="DAL\OrderDetTransfer.cs" />
+    <Compile Include="DAL\OrderDetTransferController.cs" />
+    <Compile Include="DAL\OrderDetUOMConversion.cs" />
+    <Compile Include="DAL\OrderDetUOMConversionController.cs" />
+    <Compile Include="DAL\OrderHdr.cs" />
+    <Compile Include="DAL\OrderHdrController.cs" />
+    <Compile Include="DAL\Outlet.cs" />
+    <Compile Include="DAL\OutletController.cs" />
+    <Compile Include="DAL\OutletCustomerPricing.cs" />
+    <Compile Include="DAL\OutletCustomerPricingController.cs" />
+    <Compile Include="DAL\OutletGroup.cs" />
+    <Compile Include="DAL\OutletGroupController.cs" />
+    <Compile Include="DAL\OutletGroupItemMap.cs" />
+    <Compile Include="DAL\OutletGroupItemMapController.cs" />
+    <Compile Include="DAL\PackageDet.cs" />
+    <Compile Include="DAL\PackageDetController.cs" />
+    <Compile Include="DAL\PackageHdr.cs" />
+    <Compile Include="DAL\PackageHdrController.cs" />
+    <Compile Include="DAL\PackageRedemptionLog.cs" />
+    <Compile Include="DAL\PackageRedemptionLogController.cs" />
+    <Compile Include="DAL\PaymentTerm.cs" />
+    <Compile Include="DAL\PaymentTermController.cs" />
+    <Compile Include="DAL\PerformanceLog.cs" />
+    <Compile Include="DAL\PerformanceLogController.cs" />
+    <Compile Include="DAL\PerformanceLogSummary.cs" />
+    <Compile Include="DAL\PerformanceLogSummaryController.cs" />
+    <Compile Include="DAL\PointAllocationLog.cs" />
+    <Compile Include="DAL\PointAllocationLogController.cs" />
+    <Compile Include="DAL\PointOfSale.cs" />
+    <Compile Include="DAL\PointOfSaleController.cs" />
+    <Compile Include="DAL\PointTempLog.cs" />
+    <Compile Include="DAL\PointTempLogController.cs" />
+    <Compile Include="DAL\PostalCodeDB.cs" />
+    <Compile Include="DAL\PostalCodeDBController.cs" />
+    <Compile Include="DAL\PowerLog.cs" />
+    <Compile Include="DAL\PowerLogController.cs" />
+    <Compile Include="DAL\PreOrderRecord.cs" />
+    <Compile Include="DAL\PreOrderRecordController.cs" />
+    <Compile Include="DAL\PreOrderSchedule.cs" />
+    <Compile Include="DAL\PreOrderScheduleController.cs" />
+    <Compile Include="DAL\Project.cs" />
+    <Compile Include="DAL\ProjectController.cs" />
+    <Compile Include="DAL\PromoCampaignDet.cs" />
+    <Compile Include="DAL\PromoCampaignDetController.cs" />
+    <Compile Include="DAL\PromoCampaignHdr.cs" />
+    <Compile Include="DAL\PromoCampaignHdrController.cs" />
+    <Compile Include="DAL\PromoCode.cs" />
+    <Compile Include="DAL\PromoCodeController.cs" />
+    <Compile Include="DAL\PromoDaysMap.cs" />
+    <Compile Include="DAL\PromoDaysMapController.cs" />
+    <Compile Include="DAL\PromoDiscountTier.cs" />
+    <Compile Include="DAL\PromoDiscountTierController.cs" />
+    <Compile Include="DAL\PromoLocationMap.cs" />
+    <Compile Include="DAL\PromoLocationMapController.cs" />
+    <Compile Include="DAL\PromoMembershipMap.cs" />
+    <Compile Include="DAL\PromoMembershipMapController.cs" />
+    <Compile Include="DAL\PromoOutlet.cs" />
+    <Compile Include="DAL\PromoOutletController.cs" />
+    <Compile Include="DAL\PurchaseOrderDet.cs" />
+    <Compile Include="DAL\PurchaseOrderDetail.cs" />
+    <Compile Include="DAL\PurchaseOrderDetailController.cs" />
+    <Compile Include="DAL\PurchaseOrderDetController.cs" />
+    <Compile Include="DAL\PurchaseOrderHdr.cs" />
+    <Compile Include="DAL\PurchaseOrderHdrController.cs" />
+    <Compile Include="DAL\PurchaseOrderHeader.cs" />
+    <Compile Include="DAL\PurchaseOrderHeaderController.cs" />
+    <Compile Include="DAL\QuickAccessButton.cs" />
+    <Compile Include="DAL\QuickAccessButtonController.cs" />
+    <Compile Include="DAL\QuickAccessCategory.cs" />
+    <Compile Include="DAL\QuickAccessCategoryController.cs" />
+    <Compile Include="DAL\QuickAccessGroup.cs" />
+    <Compile Include="DAL\QuickAccessGroupController.cs" />
+    <Compile Include="DAL\QuickAccessGroupMap.cs" />
+    <Compile Include="DAL\QuickAccessGroupMapController.cs" />
+    <Compile Include="DAL\QuotationDet.cs" />
+    <Compile Include="DAL\QuotationDetController.cs" />
+    <Compile Include="DAL\QuotationHdr.cs" />
+    <Compile Include="DAL\QuotationHdrController.cs" />
+    <Compile Include="DAL\Rating.cs" />
+    <Compile Include="DAL\RatingController.cs" />
+    <Compile Include="DAL\RatingFeedback.cs" />
+    <Compile Include="DAL\RatingFeedbackController.cs" />
+    <Compile Include="DAL\RatingMaster.cs" />
+    <Compile Include="DAL\RatingMasterController.cs" />
+    <Compile Include="DAL\ReceiptDet.cs" />
+    <Compile Include="DAL\ReceiptDetController.cs" />
+    <Compile Include="DAL\ReceiptHdr.cs" />
+    <Compile Include="DAL\ReceiptHdrController.cs" />
+    <Compile Include="DAL\ReceiptSetting.cs" />
+    <Compile Include="DAL\ReceiptSettingController.cs" />
+    <Compile Include="DAL\RecipeDetail.cs" />
+    <Compile Include="DAL\RecipeDetailController.cs" />
+    <Compile Include="DAL\RecipeHeader.cs" />
+    <Compile Include="DAL\RecipeHeaderController.cs" />
+    <Compile Include="DAL\Recurrence.cs" />
+    <Compile Include="DAL\RecurrenceController.cs" />
+    <Compile Include="DAL\RecyclerCoinsBalance.cs" />
+    <Compile Include="DAL\RecyclerCoinsBalanceController.cs" />
+    <Compile Include="DAL\RecyclerNotesBalance.cs" />
+    <Compile Include="DAL\RecyclerNotesBalanceController.cs" />
+    <Compile Include="DAL\RedeemLog.cs" />
+    <Compile Include="DAL\RedeemLogController.cs" />
+    <Compile Include="DAL\RedemptionItem.cs" />
+    <Compile Include="DAL\RedemptionItemController.cs" />
+    <Compile Include="DAL\RedemptionLog.cs" />
+    <Compile Include="DAL\RedemptionLogController.cs" />
+    <Compile Include="DAL\Resource.cs" />
+    <Compile Include="DAL\ResourceController.cs" />
+    <Compile Include="DAL\ResourceGroup.cs" />
+    <Compile Include="DAL\ResourceGroupController.cs" />
+    <Compile Include="DAL\RetailerLevel.cs" />
+    <Compile Include="DAL\RetailerLevelController.cs" />
+    <Compile Include="DAL\Room.cs" />
+    <Compile Include="DAL\RoomController.cs" />
+    <Compile Include="DAL\RoomsTimeSlot.cs" />
+    <Compile Include="DAL\RoomsTimeSlotController.cs" />
+    <Compile Include="DAL\SalesCommissionHistory.cs" />
+    <Compile Include="DAL\SalesCommissionHistoryController.cs" />
+    <Compile Include="DAL\SalesCommissionRecord.cs" />
+    <Compile Include="DAL\SalesCommissionRecordController.cs" />
+    <Compile Include="DAL\SalesGroup.cs" />
+    <Compile Include="DAL\SalesGroupController.cs" />
+    <Compile Include="DAL\SalesOrderMapping.cs" />
+    <Compile Include="DAL\SalesOrderMappingController.cs" />
+    <Compile Include="DAL\SalesPerson.cs" />
+    <Compile Include="DAL\SalesPersonController.cs" />
+    <Compile Include="DAL\SAPCustomerCode.cs" />
+    <Compile Include="DAL\SAPCustomerCodeController.cs" />
+    <Compile Include="DAL\SavedClosing.cs" />
+    <Compile Include="DAL\SavedClosingController.cs" />
+    <Compile Include="DAL\SavedFile.cs" />
+    <Compile Include="DAL\SavedFileController.cs" />
+    <Compile Include="DAL\SaveItem.cs" />
+    <Compile Include="DAL\SaveItemController.cs" />
+    <Compile Include="DAL\ScheduledDiscount.cs" />
+    <Compile Include="DAL\ScheduledDiscountController.cs" />
+    <Compile Include="DAL\ServerQuickRef.cs" />
+    <Compile Include="DAL\ServerQuickRefController.cs" />
+    <Compile Include="DAL\ServicingAppointment.cs" />
+    <Compile Include="DAL\ServicingAppointmentController.cs" />
+    <Compile Include="DAL\Setting.cs" />
+    <Compile Include="DAL\SettingController.cs" />
+    <Compile Include="DAL\ShopifyIntegration.cs" />
+    <Compile Include="DAL\SpecialActivityLog.cs" />
+    <Compile Include="DAL\SpecialActivityLogController.cs" />
+    <Compile Include="DAL\SpecialDiscount.cs" />
+    <Compile Include="DAL\SpecialDiscountController.cs" />
+    <Compile Include="DAL\SpecialDiscountDetail.cs" />
+    <Compile Include="DAL\SpecialDiscountDetailController.cs" />
+    <Compile Include="DAL\SpecialEvent.cs" />
+    <Compile Include="DAL\SpecialEventController.cs" />
+    <Compile Include="DAL\StockTake.cs" />
+    <Compile Include="DAL\StockTakeController.cs" />
+    <Compile Include="DAL\StockTransferDet.cs" />
+    <Compile Include="DAL\StockTransferDetController.cs" />
+    <Compile Include="DAL\StockTransferHdr.cs" />
+    <Compile Include="DAL\StockTransferHdrController.cs" />
+    <Compile Include="DAL\StoredProcedures.cs" />
+    <Compile Include="DAL\Supplier.cs" />
+    <Compile Include="DAL\SupplierController.cs" />
+    <None Include="Reports\OutletSalesByGenderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutletSalesByGenderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ProductSalesByGenderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesByGenderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ProductSalesByOutletByGenderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesByOutletByGenderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="DAL\TextLanguage.cs" />
+    <Compile Include="DAL\TextLanguageController.cs" />
+    <Compile Include="DAL\UOMConversionDet.cs" />
+    <Compile Include="DAL\UOMConversionDetController.cs" />
+    <Compile Include="DAL\UOMConversionHdr.cs" />
+    <Compile Include="DAL\UOMConversionHdrController.cs" />
+    <Compile Include="DAL\Viewitembaselevel.cs" />
+    <Compile Include="DAL\ViewItemSupplier.cs" />
+    <Compile Include="DAL\ViewOrderHdrInstOutstandingBal.cs" />
+    <Compile Include="DAL\ViewPromoMasterDetailAny.cs" />
+    <Compile Include="DAL\ViewPurchaseOrderHeader.cs" />
+    <Compile Include="DAL\ViewRecipe.cs" />
+    <Compile Include="DAL\VoucherHeader.cs" />
+    <Compile Include="DAL\VoucherHeaderController.cs" />
+    <Compile Include="DAL\Z2ClosingLog.cs" />
+    <Compile Include="DAL\Z2ClosingLogController.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Helper\UtilityHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\AccessLogReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccessLogReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\AccountingReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountingReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\AuditLogReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditLogReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\AuditLogReportDCL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditLogReportDCL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\CategorySalesReportAllOutlet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategorySalesReportAllOutlet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CommByQty.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommByQty.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ConsignmentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsignmentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ConsolidatedCCReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedCCReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ConsolidatedDeliveryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedDeliveryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ConsolidatedFOCReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedFOCReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ConsolidatedPreOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedPreOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockCardDetailedReport.cs">
+      <DependentUpon>StockCardDetailedReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\ItemSerialNoReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemSerialNoReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MembershipBalancePointsByDate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipBalancePointsByDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProductSalesCategoryReportWithProfit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesCategoryReportWithProfit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReportItemBatchSummary.cs">
+      <DependentUpon>StockOnHandReportItemBatchSummary.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\DeliveryByDayReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeliveryByDayReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MembershipAccountStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipAccountStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReportWithCostGroup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockOnHandReportWithCostGroup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TaxReport.cs">
+      <DependentUpon>TaxReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\DailyTransactionMovementReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyTransactionMovementReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Data\InvPrintOut.cs">
+      <DependentUpon>InvPrintOut.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Data\InvPrintOut1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvPrintOut.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MembershipUnusedBalanceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipUnusedBalanceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\POSPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionApprovedOrderReturn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionApprovedOrderReturn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionDetailVoidReport.cs">
+      <DependentUpon>TransactionDetailVoidReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CustomerAttendanceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerAttendanceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DailyCCSalesSummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyCCSalesSummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DailyDeliveryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyDeliveryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DailyFOCReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyFOCReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DailyPreOrderSalesSummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyPreOrderSalesSummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DailyProductSalesAnalysisReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyProductSalesAnalysisReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\DailySummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailySummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Data\CustomerAttendanceReportData.cs">
+      <DependentUpon>CustomerAttendanceReportData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Data\CustomerAttendanceReportData.designer.cs">
+      <DependentUpon>CustomerAttendanceReportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Data\CustomerAttendanceReportData1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerAttendanceReportData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Data\PrintStaffCard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintStaffCard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DPSAR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DPSAR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\GoodsReceiveReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoodsReceiveReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\GRDetailReport.cs">
+      <DependentUpon>GRDetailReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\GRPrintout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRPrintout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\GRSummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRSummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ItemSupplierMapReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemSupplierMapReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\LNCCDailyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LNCCDailyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LNPreOrderDailyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LNPreOrderDailyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MembershipPackageReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipPackageReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MonthlyFundingReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyFundingReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\OrderPrintout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderPrintout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\OrderPrintoutXY.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderPrintoutXY.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OutstandingPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutstandingPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PackageUtilizationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PackageUtilizationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PerformanceLogReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerformanceLogReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PerformanceLogSummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerformanceLogSummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PersonalSalesReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalSalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PreAccrualListReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PreAccrualListReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProductPreOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductPreOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\PurchaseOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\RefundTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefundTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ReturnPrintout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnPrintout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ReturnPrintoutXY.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnPrintoutXY.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RollForwardReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RollForwardReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\RSCASR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSCASR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\RSCASR2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSCASR2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\RSCASR3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSCASR3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesCommissionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesCommissionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesCommissionReportBreakdownByCategory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesCommissionReportBreakdownByCategory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesCommissionReportSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesCommissionReportSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesDetailReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesDetailReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesPersonPerformanceNEW.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonPerformanceNEW.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReportByDate.cs">
+      <DependentUpon>StockOnHandReportByDate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReportItemSummary.cs">
+      <DependentUpon>StockOnHandReportItemSummary.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\EmailNotifyPreOrder.cs">
+      <DependentUpon>EmailNotifyPreOrder.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\EmailPreOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailPreOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\EmailPreorderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailPreorderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockOrderVarianceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockOrderVarianceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockReturnVarianceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockReturnVarianceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockTakeMissOutReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockTakeMissOutReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockTransferPrintOut.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockTransferPrintOut.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockTransferVarianceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockTransferVarianceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SupplierListReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierListReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionDetailReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDetailReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\InvoiceListing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceListing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionDetailReportDCL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDetailReportDCL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionDetailReportWithPaymentType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDetailReportWithPaymentType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionDiscountReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDiscountReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockVarianceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockVarianceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransferOrderPrintout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransferOrderPrintout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TransferReturnPrintout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransferReturnPrintout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UrbanCutCollectionReport.cs">
+      <DependentUpon>UrbanCutCollectionReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesCommissionByPercentageReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesCommissionByPercentageReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesCommissionReportPerSalesPerson.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SalesPersonCommissionDetailedReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonCommissionDetailedReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesPersonCommissionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonCommissionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesPersonPerformanceSophia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonPerformanceSophia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockOnHandDailyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockOnHandDailyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReportFifo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockOnHandReportFifo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReportWithCostFifo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockOnHandReportWithCostFifo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\TransactionDetailWithCostReport-Monster.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDetailWithCostReport-Monster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\UserAccessReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserAccessReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\UserBarcode.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserBarcode.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ugController\AppointmentController.cs" />
+    <Compile Include="ugController\InventoryLocationController.cs" />
+    <Compile Include="ugController\MailController.cs" />
+    <Compile Include="ugController\PerformanceLogController.Custom.cs" />
+    <Compile Include="ugController\PointTempLogController.cs" />
+    <Compile Include="ugController\ServerQuickRefController.cs" />
+    <Compile Include="ugDAL\AccessLog.cs" />
+    <Compile Include="ugDAL\Appointment.cs" />
+    <Compile Include="ugDAL\Category.cs" />
+    <Compile Include="ugDAL\FileAttachment.cs" />
+    <Compile Include="ugDAL\InstallmentDetail.cs" />
+    <Compile Include="ugDAL\InventoryStockOutReason.cs" />
+    <Compile Include="ugDAL\InvoiceSequenceNo.cs" />
+    <Compile Include="ugDAL\ItemCookDetail.cs" />
+    <Compile Include="ugDAL\ItemCookHistory.cs" />
+    <Compile Include="ugDAL\OutletGroupItemMap.cs" />
+    <Compile Include="ugDAL\PromoCampaignHdr.Custom.cs" />
+    <Compile Include="ugDAL\PurchaseOrderHdr.cs" />
+    <Compile Include="ugDAL\DeliveryOrderDetail.Stock.cs" />
+    <Compile Include="ugDAL\InventoryHdr.cs" />
+    <Compile Include="ugDAL\InventoryLocation.cs" />
+    <Compile Include="ugDAL\Item.cs" />
+    <Compile Include="ugDAL\OrderHdr.cs" />
+    <Compile Include="ugDAL\Outlet.cs" />
+    <Compile Include="ugDAL\PurchaseOrderDet.cs" />
+    <Compile Include="ugDAL\PurchaseOrderDetail.cs" />
+    <Compile Include="ugDAL\PurchaseOrderHeader.cs" />
+    <Compile Include="ugDAL\QuotationDet.cs" />
+    <Compile Include="ugDAL\ReceiptHdr.cs" />
+    <Compile Include="ugDAL\RecipeHeader.Custom.cs" />
+    <Compile Include="ugDAL\RetailerLevel.cs" />
+    <Compile Include="Controller\SavedFileController.cs" />
+    <Compile Include="ugDAL\SpecialDiscount.cs" />
+    <Compile Include="ugDAL\StockTake.cs" />
+    <Compile Include="ugDAL\StockTransferDet.cs" />
+    <Compile Include="ugDAL\StockTransferHdr.cs" />
+    <Compile Include="ugDAL\Supplier.Custom.cs" />
+    <Compile Include="ugDAL\SupplierItemMap.cs" />
+    <Compile Include="DAL\SyncCommand.cs" />
+    <Compile Include="DAL\SyncCommandController.cs" />
+    <Compile Include="DAL\SyncLog.cs" />
+    <Compile Include="DAL\SyncLogController.cs" />
+    <Compile Include="DAL\SyncRequest.cs" />
+    <Compile Include="DAL\SyncRequestController.cs" />
+    <Compile Include="DAL\UserGroup.cs" />
+    <Compile Include="DAL\UserGroupController.cs" />
+    <Compile Include="DAL\UserMst.cs" />
+    <Compile Include="DAL\UserMstController.cs" />
+    <Compile Include="DAL\UserPrivilege.cs" />
+    <Compile Include="DAL\UserPrivilegeController.cs" />
+    <Compile Include="DAL\ViewAdjustedStockTake.cs" />
+    <Compile Include="DAL\ViewAlternateBarcode.cs" />
+    <Compile Include="DAL\ViewAvgTransaction.cs" />
+    <Compile Include="DAL\ViewAvgTransactionByOutlet.cs" />
+    <Compile Include="DAL\ViewCashRecording.cs" />
+    <Compile Include="DAL\ViewCategory.cs" />
+    <Compile Include="DAL\ViewCloseCounterReport.cs" />
+    <Compile Include="DAL\ViewCostOfGood.cs" />
+    <Compile Include="DAL\ViewDailyTransactionBySalesPerson.cs" />
+    <Compile Include="DAL\ViewErrornousSalesStockOut.cs" />
+    <Compile Include="DAL\ViewEventLocationMap.cs" />
+    <Compile Include="DAL\ViewEZLinkMessageParameter.cs" />
+    <Compile Include="DAL\ViewGroupPrivilege.cs" />
+    <Compile Include="DAL\ViewHourlyTransaction.cs" />
+    <Compile Include="DAL\ViewInstallmentMembershipItem.cs" />
+    <Compile Include="DAL\ViewInventoryActivity.cs" />
+    <Compile Include="DAL\ViewInventoryActivityByItemNo.cs" />
+    <Compile Include="DAL\ViewInventoryHeader.cs" />
+    <Compile Include="DAL\ViewInventoryItemOnHandQty.cs" />
+    <Compile Include="DAL\ViewInventorySalesStockOut.cs" />
+    <Compile Include="DAL\ViewInventoryTransfer.cs" />
+    <Compile Include="DAL\ViewInventoryTransferDetail.cs" />
+    <Compile Include="DAL\ViewInventoryTransferDiscrepancy.cs" />
+    <Compile Include="DAL\ViewItem.cs" />
+    <Compile Include="DAL\ViewItemGroup.cs" />
+    <Compile Include="DAL\ViewItemGroupMap.cs" />
+    <Compile Include="DAL\ViewLoginActivityReport.cs" />
+    <Compile Include="DAL\ViewMailList.cs" />
+    <Compile Include="DAL\ViewMembership.cs" />
+    <Compile Include="DAL\ViewMembershipAttendance.cs" />
+    <Compile Include="DAL\ViewMembershipRemark.cs" />
+    <Compile Include="DAL\ViewMembershipTap.cs" />
+    <Compile Include="DAL\ViewMembershipTapsLog.cs" />
+    <Compile Include="DAL\ViewMembershipTotalPurchase.cs" />
+    <Compile Include="DAL\ViewMembershipUpgrade.cs" />
+    <Compile Include="DAL\ViewMonthlyAvgTransaction.cs" />
+    <Compile Include="DAL\ViewMonthlyNumTransaction.cs" />
+    <Compile Include="DAL\ViewNumTransaction.cs" />
+    <Compile Include="DAL\ViewNumTransactionByOutlet.cs" />
+    <Compile Include="DAL\ViewPackage.cs" />
+    <Compile Include="DAL\ViewPackageRedemption.cs" />
+    <Compile Include="DAL\ViewPreOrderSchedule.cs" />
+    <Compile Include="DAL\ViewProductAndServiceBySalesPerson.cs" />
+    <Compile Include="DAL\ViewPromoLocationMap.cs" />
+    <Compile Include="DAL\ViewPromoMasterDetail.cs" />
+    <Compile Include="DAL\ViewPromoMembershipMap.cs" />
+    <Compile Include="DAL\ViewPromotionsByItem.cs" />
+    <Compile Include="DAL\ViewPurchaseOrder.cs" />
+    <Compile Include="DAL\ViewQuickAccessButton.cs" />
+    <Compile Include="DAL\ViewQuickAccessGroupMap.cs" />
+    <Compile Include="DAL\ViewReceiptDet.cs" />
+    <Compile Include="DAL\ViewReceiptSummary.cs" />
+    <Compile Include="DAL\ViewRedeemLog.cs" />
+    <Compile Include="DAL\ViewRedemptionItem.cs" />
+    <Compile Include="DAL\ViewRedemptionLog.cs" />
+    <Compile Include="DAL\ViewSalesDetail.cs" />
+    <Compile Include="DAL\ViewSalesPersonCurrentMonthCommission.cs" />
+    <Compile Include="DAL\ViewSalesPersonLastMonthCommission.cs" />
+    <Compile Include="DAL\ViewSaveItem.cs" />
+    <Compile Include="DAL\ViewSpecialEventItem.cs" />
+    <Compile Include="DAL\ViewStockTake.cs" />
+    <Compile Include="DAL\ViewTransaction.cs" />
+    <Compile Include="DAL\ViewTransactionDetail.cs" />
+    <Compile Include="DAL\ViewTransactionDetailWithRemark.cs" />
+    <Compile Include="DAL\ViewTransactionDetailWithSalesPerson.cs" />
+    <Compile Include="DAL\ViewTransactionWithMembership.cs" />
+    <Compile Include="DAL\ViewTransactionWithSalesPerson.cs" />
+    <Compile Include="DAL\ViewUser.cs" />
+    <Compile Include="DAL\ViewVoucherRedeemed.cs" />
+    <Compile Include="DAL\ViewVouchersSold.cs" />
+    <Compile Include="DAL\ViewWarrantyMembershipItem.cs" />
+    <Compile Include="DAL\ViewWarrantyMembershipItemOrder.cs" />
+    <Compile Include="DAL\VoidLog.cs" />
+    <Compile Include="DAL\VoidLogController.cs" />
+    <Compile Include="DAL\Voucher.cs" />
+    <Compile Include="DAL\VoucherController.cs" />
+    <Compile Include="DAL\VoucherStatus.cs" />
+    <Compile Include="DAL\VoucherStatusController.cs" />
+    <Compile Include="DAL\WarningMsg.cs" />
+    <Compile Include="DAL\WarningMsgController.cs" />
+    <Compile Include="DAL\Warranty.cs" />
+    <Compile Include="DAL\WarrantyController.cs" />
+    <Compile Include="Factory\Membership.Factory.cs" />
+    <Compile Include="Feature\PackageFeature.cs" />
+    <Compile Include="frmTransparent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransparent.designer.cs">
+      <DependentUpon>frmTransparent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecurrenceLogic.cs" />
+    <None Include="Reports\ClosingReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClosingReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\AssistantProductSalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssistantProductSalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\CashRecordingReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashRecordingReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\CategorySalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategorySalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Commission\CommissionReport.cs" />
+    <Compile Include="Reports\CRReport.cs" />
+    <None Include="Reports\TransactionDetailRemarkReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDetailRemarkReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\CurrentMonthCommissionerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrentMonthCommissionerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\Data\ItemActivity.Data.cs" />
+    <Compile Include="Reports\Data\PriceImportView.Data.cs" />
+    <Compile Include="Reports\Data\StockTakeReport.Data.cs" />
+    <None Include="Reports\InventoryTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\DeletedStockOnHandReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeletedStockOnHandReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\HourlySalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HourlySalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\InventoryStockOutReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryStockOutReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\InventorySummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventorySummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\InventoryTransferReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryTransferReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ItemActivity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemActivity.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ItemImportView.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemImportView.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\LineCommissionItemReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LineCommissionItemReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\LineCommissionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LineCommissionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\LowQuantityItemReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LowQuantityItemReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MasterDataReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDataReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MemberPurchaseByCategoryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberPurchaseByCategoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MembershipProductSalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipProductSalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MembershipTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MembershipTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\MonthlyDemand.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyDemand.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\POSReport.cs" />
+    <None Include="Reports\ProductSalesRepotWithProfitReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesRepotWithProfitReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ProductSalesReportWithProfit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesReportWithProfit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\ProductMaster.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductMaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProductSalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProductSales\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProductSales\MonthlyProductSales_Quantity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyProductSales_Quantity.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProductSales\ProductSales.cs" />
+    <Compile Include="Reports\ProductSales\ProductSalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProfitAndLoss\ProfitAndLoss.cs" />
+    <None Include="Reports\SalesPersonPerformance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonPerformance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\SalesPersonProfit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonProfit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\ProfitLossReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfitLossReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\ProfitLossReportDaily.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfitLossReportDaily.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesPersonByReceiptReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonByReceiptReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\SalesPerson\SalesPersonProfit.cs" />
+    <Compile Include="Reports\SalesPerson\SalesPersonProfit1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesPersonProfit.rpt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <None Include="Reports\SalesReportDetailed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesReportDetailed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\StockBalance\ProductSalesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSalesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalance.cs" />
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes7.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes7.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockBalance\StockBalanceByAttributes8.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockBalanceByAttributes8.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockCardReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockCardReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockOnHandReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockOnHandReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\StockTakeReport.cs">
+      <DependentUpon>StockTakeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <None Include="Reports\TransactionDetailWithCostReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDetailWithCostReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Reports\TransactionReport-Back.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionReport-Back.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\VoidTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VoidTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SQLChangeTracking.cs" />
+    <Compile Include="SqlCustomTools.cs" />
+    <Compile Include="SQLScript\SQLInventory.cs" />
+    <Compile Include="SQLScript\SQLProfitAndLoss.cs" />
+    <Compile Include="ugController\DeliveryController.cs" />
+    <Compile Include="ugController\GoogleController.cs" />
+    <Compile Include="ugController\HoldController.cs" />
+    <Compile Include="ugController\LineInfoController.Custom.cs" />
+    <Compile Include="ugController\MembershipController.cs" />
+    <Compile Include="ugController\PriceSchemeController.cs" />
+    <Compile Include="ugController\ReportController\ReportController.cs" />
+    <Compile Include="ugController\RoomsController.cs" />
+    <Compile Include="ugController\SetupController\ItemSetupController.cs" />
+    <Compile Include="ugController\SetupController\SetupController.cs" />
+    <Compile Include="ugController\ReportController\TransactionDetailReport.cs" />
+    <Compile Include="ugController\SyncCommandController.cs" />
+    <Compile Include="ugController\SystemController.cs" />
+    <Compile Include="ugController\UserMstController.cs" />
+    <Compile Include="ugDAL\AppSetting.Custom.cs" />
+    <Compile Include="ugDAL\Installment.cs" />
+    <Compile Include="ugDAL\InventoryDet.cs" />
+    <Compile Include="ugDAL\MembershipRenewal.cs" />
+    <Compile Include="ugDAL\OrderDet.cs" />
+    <Compile Include="ugDAL\CounterCloseLog.cs" />
+    <Compile Include="ugDAL\CounterCloseLog.Fields.cs" />
+    <Compile Include="ugDAL\CounterCloseLogCollection.cs" />
+    <Compile Include="ugDAL\ExcelDataLogic.cs" />
+    <Compile Include="ugDAL\ItemCollection.cs" />
+    <Compile Include="ugDAL\Membership.cs" />
+    <Compile Include="ugDAL\MembershipCollection.cs" />
+    <Compile Include="ugDAL\MembershipGroup.cs" />
+    <Compile Include="ugDAL\OrderDet.Stock.cs" />
+    <Compile Include="ugDAL\OrderHdrCollection.cs" />
+    <Compile Include="ugDAL\PointOfSale.cs" />
+    <Compile Include="ugDAL\ReceiptDet.cs" />
+    <Compile Include="ugDAL\SyncCommand.cs" />
+    <Compile Include="ugDAL\UserGroup.cs" />
+    <Compile Include="ugDAL\UserMst.cs" />
+    <Compile Include="ugDAL\UserPrivilege.cs" />
+    <Compile Include="ugDAL\VoucherHeader.cs" />
+    <Compile Include="Version.cs" />
+    <Compile Include="Web References\FetchMembershipHistory\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Magento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PowerPOSSync\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FetchMembershipHistory\FetchMembersPastTransaction.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://ahava.edgeworks.com.sg/FetchMembersPastTransaction.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FetchMembershipHistory\</RelPath>
+      <UpdateFromURL>http://ahava.edgeworks.com.sg/FetchMembersPastTransaction.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PowerPOSLib_FetchMembershipHistory_FetchMembersPastTransaction</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://jdmtacklecom.forecepts.net/api/v2_soap%3fwsdl=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Magento\</RelPath>
+      <UpdateFromURL>http://jdmtacklecom.forecepts.net/api/v2_soap%3fwsdl=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PowerPOSLib_Magento_MagentoService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:2234/synchronization/synchronization.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PowerPOSSync\</RelPath>
+      <UpdateFromURL>http://localhost:2234/synchronization/synchronization.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PowerPOSLib_PowerPOSSync_Synchronization</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\FetchMembershipHistory\FetchMembersPastTransaction.disco" />
+    <None Include="Web References\FetchMembershipHistory\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams\ClassDiagram1.cd" />
+    <None Include="Diagrams\Controller.cd" />
+    <None Include="Diagrams\Model.cd" />
+    <None Include="Diagrams\View.cd" />
+    <None Include="Update Database\Version 2.0\01 AppSetting Table.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\Version 2.0\02 Rooms Table.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\Version 2.0\03 Insert Settings.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\Version 2.0\04 Update AppSetting Field Length.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\Version 2.0\05 Insert More Settings.sql" />
+    <None Include="Update Database\Version 2.0\Run Update.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\PowerPOSSync\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PowerPOSSync\Synchronization.disco" />
+    <None Include="Web References\PowerPOSSync\Synchronization.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmTransparent.resx">
+      <DependentUpon>frmTransparent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Controller\Dashboard\DashboardTable.sql" />
+    <Content Include="Update Database\DBSchemaUpdate\001_UpdateUserMst.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\Data\CustomerAttendanceReportData.xsc">
+      <DependentUpon>CustomerAttendanceReportData.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Data\CustomerAttendanceReportData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerAttendanceReportData1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\Data\CustomerAttendanceReportData.xss">
+      <DependentUpon>CustomerAttendanceReportData.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Data\InvPrintOut.xsc">
+      <DependentUpon>InvPrintOut.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Data\InvPrintOut.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvPrintOut1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Data\InvPrintOut.xss">
+      <DependentUpon>InvPrintOut.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Data\PrintStaffCard.xsc">
+      <DependentUpon>PrintStaffCard.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Data\PrintStaffCard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintStaffCard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Data\PrintStaffCard.xss">
+      <DependentUpon>PrintStaffCard.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\EmailPreorderDataSet.xsc">
+      <DependentUpon>EmailPreorderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\EmailPreorderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmailPreorderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\EmailPreorderDataSet.xss">
+      <DependentUpon>EmailPreorderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ProductSalesRepotWithProfitReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesRepotWithProfitReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ClosingReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClosingReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Reports\InventoryTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventoryTransactionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\AccessLogReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccessLogReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AccountingReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountingReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AssistantProductSalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AssistantProductSalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AuditLogReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AuditLogReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AuditLogReportDCL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AuditLogReportDCL.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CashRecordingReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CashRecordingReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CategorySalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CategorySalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CategorySalesReportAllOutlet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CategorySalesReportAllOutlet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CommByQty.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CommByQty.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsignmentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsignmentReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsolidatedCCReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedCCReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsolidatedDeliveryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedDeliveryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsolidatedFOCReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedFOCReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsolidatedPreOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedPreOrderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\TaxReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TaxReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\StockCardDetailedReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockCardDetailedReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ItemSerialNoReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemSerialNoReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MembershipBalancePointsByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipBalancePointsByDate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\ProductSalesCategoryReportWithProfit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesCategoryReportWithProfit.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\StockOnHandReportItemBatchSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReportItemBatchSummary.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DeliveryByDayReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DeliveryByDayReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\MembershipAccountStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipAccountStatement.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\MembershipUnusedBalanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipUnusedBalanceReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyTransactionMovementReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyTransactionMovementReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\POSPaymentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>POSPaymentReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOnHandReportWithCostGroup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReportWithCostGroup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionApprovedOrderReturn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionApprovedOrderReturn.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionDetailVoidReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailVoidReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerAttendanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerAttendanceReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyCCSalesSummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyCCSalesSummaryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyDeliveryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyDeliveryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyFOCReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyFOCReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyPreOrderSalesSummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyPreOrderSalesSummaryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyProductSalesAnalysisReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyProductSalesAnalysisReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailySummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailySummaryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DPSAR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DPSAR.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GoodsReceiveReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GoodsReceiveReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRDetailReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GRDetailReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRPrintout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GRPrintout.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRSummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GRSummaryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\MonthlyFundingReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyFundingReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\ItemSupplierMapReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemSupplierMapReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\LNCCDailyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LNCCDailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LNPreOrderDailyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LNPreOrderDailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MembershipPackageReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipPackageReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OrderPrintout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderPrintout.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OrderPrintoutXY.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderPrintoutXY.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OutstandingPaymentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OutstandingPaymentReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PackageUtilizationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PackageUtilizationReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PerformanceLogReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PerformanceLogReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PerformanceLogSummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PerformanceLogSummaryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PersonalSalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PersonalSalesReport1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PreAccrualListReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PreAccrualListReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductPreOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductPreOrderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PurchaseOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurchaseOrderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RefundTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RefundTransactionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReturnPrintout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReturnPrintout.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\RollForwardReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RollForwardReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\ReturnPrintoutXY.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReturnPrintoutXY.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSCASR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RSCASR.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSCASR2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RSCASR2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSCASR3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RSCASR3.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesCommissionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesCommissionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesCommissionReportBreakdownByCategory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesCommissionReportBreakdownByCategory.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesCommissionReportSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesCommissionReportSummary.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\SalesPersonPerformanceNEW.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonPerformanceNEW.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\SalesDetailReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesDetailReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOnHandReportByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReportByDate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOnHandReportItemSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReportItemSummary.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmailNotifyPreOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmailNotifyPreOrder.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmailPreOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmailPreOrder.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\TransactionDiscountReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDiscountReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StockVarianceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockVarianceReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\StockOrderVarianceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOrderVarianceReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockReturnVarianceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockReturnVarianceReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockTakeMissOutReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockTakeMissOutReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\SupplierListReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierListReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\StockTransferPrintOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockTransferPrintOut.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockTransferVarianceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockTransferVarianceReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionDetailReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\InvoiceListing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InvoiceListing.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\TransactionDetailReportDCL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailReportDCL.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionDetailReportWithPaymentType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailReportWithPaymentType.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransferOrderPrintout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransferOrderPrintout.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransferReturnPrintout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransferReturnPrintout.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UrbanCutCollectionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UrbanCutCollectionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CurrentMonthCommissionerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CurrentMonthCommissionerReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DeletedStockOnHandReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DeletedStockOnHandReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MasterDataReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MasterDataReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MemberPurchaseByCategoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MemberPurchaseByCategoryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MembershipProductSalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipProductSalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MembershipTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MembershipTransactionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyDemand.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyDemand.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OutletSalesByGenderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OutletSalesByGenderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductMaster.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\ProductSalesByGenderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesByGenderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\ProductSalesByOutletByGenderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesByOutletByGenderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesCommissionByPercentageReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesCommissionByPercentageReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesCommissionReportPerSalesPerson.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesCommissionReportPerSalesPerson1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesPersonCommissionDetailedReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonCommissionDetailedReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesPersonCommissionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonCommissionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesPersonPerformanceSophia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonPerformanceSophia.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockOnHandDailyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandDailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOnHandReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOnHandReportFifo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReportFifo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockOnHandReportWithCostFifo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockOnHandReportWithCostFifo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionDetailRemarkReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailRemarkReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HourlySalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HourlySalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventoryStockOutReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventoryStockOutReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventorySummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventorySummaryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InventoryTransferReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventoryTransferReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ItemActivity.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemActivity.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\ProductSalesReportWithProfit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesReportWithProfit.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\ItemImportView.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemImportView.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LineCommissionItemReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LineCommissionItemReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LineCommissionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LineCommissionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LowQuantityItemReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LowQuantityItemReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PriceImportView.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PriceImportView1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductSalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductSales\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductSales\MonthlyProductSales_Quantity.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyProductSales_Quantity.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProductSales\ProductSalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\SalesPersonPerformance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonPerformance.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\ProfitLossReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProfitLossReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProfitLossReportDaily.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProfitLossReportDaily.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\SalesPersonProfit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonProfit.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\SalesPersonByReceiptReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonByReceiptReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesPerson\SalesPersonProfit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesPersonProfit1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\SalesReportDetailed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesReportDetailed.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\StockBalance\ProductSalesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductSalesReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes2.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes3.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes4.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes5.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes6.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes7.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockBalance\StockBalanceByAttributes8.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockBalanceByAttributes8.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockCardReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockCardReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockTakeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockTakeReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionDetailWithCostReport-Monster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailWithCostReport-Monster.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransactionReport-Back.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionReport-Back.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Reports\UserAccessReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UserAccessReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\UserBarcode.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UserBarcode.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Reports\VoidTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VoidTransactionReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\TransactionDetailWithCostReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionDetailWithCostReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\070.CreateTableGuestBook.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\141_AlterTable_Supplier.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\129_Create_StockTransfer.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\134_CreateTable_RecipeHeaderDetail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\135_CreateTable_UOMConversionHdrDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\136_ViewRecipe.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\137_CreateTable_ItemCookHistory.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\162_CounterCloseDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\153_Add_Item_Credit_Note.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\143_AlterTable_OutletGroupItemMap.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\004_Alter View Item.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\005_CreateTableItemAtrributes.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\006_SPGetItemMatrix.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\011_CreateViewPromoMasterDetailAny.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\012_FuncGetApplicableDaysPromo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\013_SPFetchAllPossiblePromoAnyXofAllItems.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\009_SPGetTotalFloatAmount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\010_UpdatePromoTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\003_Alter Item UserFloat.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\002_AlterItemTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\007_SPGetMaxItemRefNo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\008_SPGetMaxItemNoMatrix.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\014_FetchStockReportBreakdownLocation.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\015_CreatePurchaseOrderHdrTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\019_SPFetchProductCategorySalesReportWithCashOut.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\071.CreateGuestBookCompulsory.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\087_Add BillInfo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\016_Alter_ItemSupplierMap.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\017_Alter PurchaseOrderHdr.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\018_Alter PurchaseOrderDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\020_Add_Settings.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\021_Fn_GetInstallmentOutstandingBalance.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\022_Fn_GetItemQtyOnHand.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\023_SP_FetchCashOutReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\000_AddPrivilege.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\024_AddOutletGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\025_ItemSummaryTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\026_InventoryDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\027_InsertPrivileges.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\028_AlterOutlet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\029_DashboardTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\030_FetchStockBalanceItemSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\031_GetOrderHdrNotInOrderListWithoutPOSID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\024_Alter DeliveryOrder table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\025_Alter DeliveryOrderDetails table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\026_Vw_ViewOrderHdrInstOutstandingBal.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\027_Drop FK_Order_Personnel.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\028_SP_GetNewOrderHdrNoByPointOfSaleIDForWeb.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\029_SP_GetNewOrderHdrNoByPointOfSaleID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\024_CreateViewItemSupplier.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\030_Fn_GetFundingPrice.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\031_SP_FetchPreOrderReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\032_SP_GetNewDeliveryNoByPointOfSaleID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\033_FetchCustomerPurchaseBehaviorReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\034_CreateTableAccessLog.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\035_CreateTableZ2Closing.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\036_Alter CounterCloseLog.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\037_SP_FetchStockReportBreakdownByLocationItemSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\038_CreateTableSpecialDiscount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\039_Fn_GetItemQtyOnHandItemSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\040_Fn_GetItemTotalPreOrderQty.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\039_AlterSupplier.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\041_AlterPointofSale.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\045_AlterCurrency.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\046_FetchClosingReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\042_Create_PriceSchemeTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\043_Create_SupplierItemMap.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\044_AlterPreOrderRecord.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\047_AddUserCol_OrderDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\048_AlterAppSetting.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\049_CreateDashboardTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\050_Alter_PointOfSale.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\051_AddHourlySalesItem.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\052_CreateManualSalesUpdateTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\053_FnGetEveryDateBetween.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\054_CreateRetailerLevelTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\055_AuditLogTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\056_FetchAuditLogReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\057_TEXT_LANGUAGE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\058_LANGUAGE_SETTINGS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\059_Alter_Qty_To_Decimal.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\069_ResourceTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\061_GetMaxResourceID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\068_CreateTableAppointment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\063_CreateTableAppointmentItem.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\067_AddColumnInUserMst.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\060_FetchTransactionReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\062_Quotation.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\061_AlterViewMembership.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\063_ItemBaseLevel.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\064_AlterPurchaseOrder.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\065_CreateSalesOrderMapping.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\066_FetchSalesPersonPerformance.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\074.UpdateTableAppointment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\072.AddLineDiscountItem.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\073_AlterItemAttributeTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\075.UpdateItemQuantityTrigger.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\078.AlterViewStockTake.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\079.Update FetchAllPossiblePromo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\080_UpdateGuestBook.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\081_CreateTableRating.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\082_Alter View ViewInventoryActivity.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\082_CreateTableRatingMaster.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\083_CreateTableRatingFeedback.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\084_SetDefaultRatingSetting.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\085_CreateRecordData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\086_CreateTableSAPCustomerCode.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\087_AlterTable_Installment_InstallmentDetail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\088_WEB_Generate Installment data.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\088_CreateTable_VoucherHeader.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\089_AlterTable_Vouchers.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\087_CreateStaffAssistLog.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\088_CreateItemWeight.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\089_TextLanguages.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\090_CreateTable_FileAttachment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\090_AlterInventoryDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\095_ActivePayment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\096_DW_HourlyProductSales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\097_DW_HourlySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\098_DW_HourlyPayment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\099_DW_RegenerateDate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\100_viewDW_HourlyPayment_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\101_viewDW_HourlyProductSales_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\102_viewDW_HourlyProductSales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\103_WEB_AlterUserPrivilege.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\130_CreateCommission.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\092_Alter_SP_FetchPreOrderReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\093_AlterTable_ReceiptDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\091_SP_FetchAllPossibleBuyXAtPriceofYPromo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\094_Alter_SP_GetNewMembershipNoByPointOfSalePrefix.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\092_REPORT_NewCommissionReportBracket.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\093_REPORT_NewCommissionReportTotal.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\095_AlterTable_MembershipPoints_PointAllocationLog.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\096_AlterTable_OrderDet.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\097_SP_FetchStockBalanceItemSummaryByCategory.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\098_AlterTable_Membership.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\099_SPFetchAllPossiblePromoAnyXofAllItemsMemberGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\100_REPORT_InventorySummaryReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\101_REPORT_StockOnHandReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\102_REPORT_StockOnHandReportByDate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\103_viewDW_HourlyProductSales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\104_viewDW_HourlySales_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\105_viewDW_HourlySales_today_sales_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\106_viewDW_HourlySales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\107_viewDW_HourlySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\108_viewDW_DailyProductCategorySales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\109_viewDW_DailyProductCategorySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\110_viewDW_DailyProductSales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\111_viewDW_DailyProductSales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\112_viewDW_DailySales_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\113_viewDW_DailySales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\114_viewDW_DailySales_today_sales_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\115_viewDW_DailySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\116_viewDW_HourlyProductCategorySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\117_viewDW_HourlyProductCategorySales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\118_viewDW_HourlyProductDepartmentSales_today_src.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\119_viewDW_HourlyProductDepartmentSales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\120_viewDW_MonthlySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\121_UPDATE_DW_HourlyPayment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\122_UPDATE_DW_HourlyProductSales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\123_UPDATE_DW_HourlySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\124_fnSplitRow.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\125_fnGetDWHourlyProductSales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\126_fnGetDWHourlySales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\127_REPORT_ProductSalesReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\128_REPORT_CategorySalesReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\129_fnGetSalesCommissionDetail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\132_REPORT_SalesCommissionSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\131_REPORT_NewCommissionReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\133_REPORT_NewCommissionReport_SalesDetail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\139_CreateTable_PointTempLog.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\142_CreateTable_HoldTransaction.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\140_CreateTable_ServerQuickRef.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\144_InventoryLocationGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\145_ItemSummaryGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\146_ItemFuturePrice.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\147_ViewItemSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\148_UPDATE_FuturePrice.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\149_REPORT_StockOnHandReportGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\143_Alter_View_ViewDailyTransactionBySalesPerson.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\143_CreateTable_CustomerPricing.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\144_CreateTable_OrderDetUOMConversion.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\145_AddData_GuestBookCompulsory.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\146_Alter_ItemDepartment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\150_CREATE_Table_InvoiceSequenceNo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\151_CREATE_ViewPurchaseOrderHeader.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\150_ItemBatchSummary.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\151_ItemCostSummary.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\152_UPDATE_ItemBatchSummaryStockOut.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\153_UPDATE_ItemBatchSummaryStockIn.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\154_AppPendingProcess.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\155_ItemTagSummary.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\156_ALTER_StockTake.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\157_ALTER_InventoryDet.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\158_ItemTagStatusDetail.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\152_ALTER_TableCompany.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Update Database\DBSchemaUpdate\159_CREATE_ItemCookDetail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\160_CREATE_SP_StockOnhandreportInvLocGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\161_SP_REPORT_StockOnHandReportLocGroupByDate.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\161_SP_REPORT_StockOnHandReportWithCostGroup.rpt.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\164_SP_REPORT_REPORT_StockOnHandReportItemSummaryGroup.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\165_SP_REPORT_StockOnHandReportItemSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\166_SP_REPORT_StockOnHandReportItemGlobal.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\163_Alter_Table_DeliveryOrder.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\164_CreateTable_ShopifyIntegration.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\164_AlterViewActivityByItemNo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Update Database\DBSchemaUpdate\167_SPGetLatestCostPriceByItem.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\168_SPGetLatestCostPriceByItemNoAndLocationID.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\167_SP_REPORT_DeliveryOrder.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Update Database\DBSchemaUpdate\169_REPORT_StockOnHandReportByDateWithCOG.sql" />
+    <None Include="Web References\Magento\apiEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\associativeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogAssignedProduct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogAttributeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogAttributeOptionEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogCategoryEntityNoChildren.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogCategoryInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogCategoryTree.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogInventoryStockItemEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductAttributeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductAttributeMediaTypeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductAttributeSetEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductCustomOptionInfoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductCustomOptionListEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductCustomOptionTypesEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductCustomOptionValueInfoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductCustomOptionValueListEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductDownloadableLinkListEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductImageEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductLinkAttributeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductLinkEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductReturnEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductSpecialPriceReturnEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductTagInfoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductTagListEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductTierPriceEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductTypeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\customerAddressEntityItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\customerCustomerEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\customerGroupEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\directoryCountryEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\directoryRegionEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\existsFaltureEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\giftMessageResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\Magento.wsdl" />
+    <None Include="Web References\Magento\magentoInfoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Magento\salesOrderCreditmemoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderInvoiceEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderListEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderShipmentEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartInfoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartLicenseEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartPaymentMethodResponseEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartShippingMethodEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartTotalsEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\startSessionResponseParam.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\storeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PowerPOSSync\InventoryItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomDAL\AjaxControlToolkit.dll" />
+    <Content Include="CustomDAL\DocumentFormat.OpenXml.dll" />
+    <Content Include="CustomDAL\Edgeworks.Model.dll" />
+    <Content Include="CustomDAL\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="CustomDAL\Ionic.Zip.dll" />
+    <Content Include="CustomDAL\Mediachase.AjaxCalendar.dll" />
+    <Content Include="CustomDAL\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="CustomDAL\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="CustomDAL\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="CustomDAL\MySql.Data.dll" />
+    <Content Include="CustomDAL\Newtonsoft.Json.dll" />
+    <Content Include="CustomDAL\RKLib.ExportData.dll" />
+    <Content Include="CustomDAL\SpreadsheetLight.dll" />
+    <Content Include="CustomDAL\SubSonic.dll" />
+    <Content Include="CustomDAL\System.Data.SQLite.dll" />
+    <Content Include="CustomDAL\TPCashCLR.dll" />
+    <Content Include="CustomDAL\WeighingMachine.dll" />
+    <Content Include="Google\Google.GData.AccessControl.DLL" />
+    <Content Include="Google\Google.GData.Analytics.dll" />
+    <Content Include="Google\Google.GData.Apps.dll" />
+    <Content Include="Google\Google.GData.Blogger.dll" />
+    <Content Include="Google\Google.GData.Calendar.dll" />
+    <Content Include="Google\Google.GData.Client.dll" />
+    <Content Include="Google\Google.GData.CodeSearch.dll" />
+    <Content Include="Google\Google.GData.Contacts.dll" />
+    <Content Include="Google\Google.GData.Documents.dll" />
+    <Content Include="Google\Google.GData.Extensions.dll" />
+    <Content Include="Google\Google.GData.GoogleBase.dll" />
+    <Content Include="Google\Google.GData.Health.dll" />
+    <Content Include="Google\Google.GData.Photos.dll" />
+    <Content Include="Google\Google.GData.Spreadsheets.dll" />
+    <Content Include="Google\Google.GData.YouTube.dll" />
+    <Content Include="Google\zlib.x86.dll" />
+    <Content Include="SQL Version.txt" />
+    <Content Include="Update Database\DBSchemaUpdate\076_CreateTable_PerformanceLog.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\077_CreateTable_PerformanceLogSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update Database\DBSchemaUpdate\079_Alter_ViewTransactionDetail.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\CashRecycler\" />
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="UnitTestCase\Membership\" />
+    <Folder Include="UnitTestCase\Promo\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

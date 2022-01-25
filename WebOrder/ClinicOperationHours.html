@@ -1,0 +1,344 @@
+<div id="dynamicContent">
+    <div id="divApprovalList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Manage Operation Hours</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" id="formData">
+                    <div class="form-group">
+                        <h5>Clinic</h5>
+                        <div class="dropdown">
+                            <select class="select" id="ClinicCode" name="ClinicCode" style="width: 50%;">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Year</h5>
+                        <div class="dropdown">
+                            <select class="select" id="Year" name="Year" style="width: 25%;">
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="buttonGenerateData" class="btn btn-warning">Generate Data</button>
+                    <button type="button" id="buttonManagePublicHolidays" class="btn btn-warning">Manage Public Holidays</button>
+                    <button type="button" id="buttonManageClinicOperatingHours" class="btn btn-warning">Manage Clinic Operating Hours</button>
+                </form>
+
+                <div style="">
+                    <table class="table table-hover" id="table-operation-hours">
+                        <thead data-bind="css: {'dropup': sortKeyPOHdr().asc, 'dropdown': !sortKeyPOHdr().asc}" class="dropdown">
+                            <tr>
+                                <th>
+                                    <span href="#">Operation Date</span>
+                                    <span class="caret"  style="display: none;" ></span>
+                                </th>
+                                <th>
+                                    <span href="#">Day</span>
+                                    <span class="caret"  style="display: none;"></span>
+                                </th>
+                                <th>
+                                    <span href="#">Status</span>
+                                    <span class="caret"style="display: none;"></span>
+                                </th>
+                                <th>
+                                    <span href="#">Action</span>
+                                    <span class="caret"style="display: none;"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-operation-hours-body">
+                            <tr >
+                                <td colspan="4" align="center"><br>No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore" style="display: none;">Load more...</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalOperationHoursHistory" class="modal fade bootstrap-dialog type-primary size-normal in" tabindex="-1" id="ef883bf6-fba8-4b77-9d98-5454cab5ea7c" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bootstrap-dialog-header">
+                    <div class="bootstrap-dialog-title">History</div>
+                    <div class="bootstrap-dialog-close-button" style="display: none;">
+                        <button class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="bootstrap-dialog-body">
+                    <div class="bootstrap-dialog-message" id="ModalOperationHoursHistory_OperationDate">
+                        <strong>Date selected : </strong>
+                    </div>
+                    <div id="ModalOperationHoursHistory_History"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="bootstrap-dialog-footer">
+                    <div class="bootstrap-dialog-footer-buttons">
+                        <button class="btn btn-default" data-dismiss="modal" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalOperationHoursEdit" class="modal fade bootstrap-dialog type-primary size-normal in" tabindex="-1" id="ef883bf6-fba8-4b77-9d98-5454cab5ea7c" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bootstrap-dialog-header">
+                    <div class="bootstrap-dialog-title">Edit Operating Day</div>
+                    <div class="bootstrap-dialog-close-button" style="display: none;">
+                        <button class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="bootstrap-dialog-body">
+                    <table border="1px solid black;">
+                        <thead>
+                            <tr style="font-weight: bolder">
+                                <td style="padding: 5px; width: 150px;">Date</td>
+                                <td style="padding: 5px; width: 300px;">Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 5px;">
+                                    <select style="width: 125px;" id="ModalOperationHoursEdit_Status">
+                                        <option value="true">Open</option>
+                                        <option value="false">Closed</option>
+                                    </select>
+                                </td>
+                                <td style="padding: 5px;" id="ModalOperationHoursEdit_OperationDate"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="bootstrap-dialog-footer">
+                    <div class="bootstrap-dialog-footer-buttons">
+                        <button id ="ModalOperationHoursEdit_ButtonSave" class="btn btn-default" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalPublicHoliday" class="modal fade bootstrap-dialog type-primary size-normal in" tabindex="-1" id="ef883bf6-fba8-4b77-9d98-5454cab5ea7c" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog" style=" width: 900px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bootstrap-dialog-header">
+                    <div class="bootstrap-dialog-title">Public Holiday</div>
+                    <div class="bootstrap-dialog-close-button" style="display: none;">
+                        <button class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="bootstrap-dialog-body">
+                    <label>Year</label> &nbsp; 
+                    <select id="ModalPublicHoliday_Year" name="ModalPublicHoliday_Year" class="form-control" style="width: 200px;">
+                    </select>
+                    <br />
+                    <br />
+                    <table border="1px solid black;" class="table table-hover" id="ModalPublicHoliday_List" style="overflow: auto;">
+                        <thead>
+                            <tr style="font-weight: bolder">
+                                <td style="padding: 5px; width: 150px;">Day</td>
+                                <td style="padding: 5px; width: 300px;">Name</td>
+                                <td style="padding: 5px; width: 120px;">Created On</td>
+                                <td style="padding: 5px; width: 120px;">Created By</td>
+                                <td style="padding: 5px; width: 100px;">Actions</td>
+                            </tr>
+                        </thead>
+                        <tbody id="ModalPublicHoliday_List_Body">
+                        </tbody>
+                    </table>
+
+                    <table class="table table-hover" id="ModalPublicHoliday_Form">
+                        <tbody>
+                            <tr>
+                                <td>Holiday Date</td>
+                                <td><input id="ModalPublicHoliday_HolidayDate" name="ModalPublicHoliday_HolidayDate" class="form-control datepicker" style="width: 250px; display: inline;" /></td>
+                            </tr>
+
+                            <tr>
+                                <td>Holiday Name</td>
+                                <td><input id="ModalPublicHoliday_HolidayName" name="ModalPublicHoliday_HolidayName" class="form-control " style="width: 250px; display: inline;" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="bootstrap-dialog-footer">
+                    <div class="bootstrap-dialog-footer-buttons">
+                        <button id ="ModalPublicHoliday_ButtonSave" class="btn btn-success" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Save
+                        </button>
+
+                        <button id ="ModalPublicHoliday_ButtonCancel" class="btn btn-warning" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Cancel
+                        </button>
+
+                        <button id ="ModalPublicHoliday_ButtonAdd" class="btn btn-warning" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Add New
+                        </button>
+
+                        <button id ="ModalPublicHoliday_ButtonImport" class="btn btn-danger" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Import .ICAL
+                        </button>
+                        <input type="file" id="ModalPublicHoliday_IcalFile" name="ModalPublicHoliday_IcalFile" style="display: none;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalManageDay" class="modal fade bootstrap-dialog type-primary size-normal in" tabindex="-1" id="ef883bf6-fba8-4b77-9d98-5454cab5ea7c" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bootstrap-dialog-header">
+                    <div class="bootstrap-dialog-title">Manage Operation Hours</div>
+                    <div class="bootstrap-dialog-close-button" style="display: none;">
+                        <button class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="bootstrap-dialog-body">
+                    Clinic 
+                    <select style="width: 400px; display: inline;" class="form-control" name="ModalManageDay_ClinicCode" id="ModalManageDay_ClinicCode">
+                    </select>
+
+                    <br />
+                    <table border="1px solid black;" style="margin-top: 15px;" class="table table-hover">
+                        <thead>
+                            <tr style="font-weight: bolder; background-color: #428bca; color: white;">
+                                <td style="padding: 5px; width: 150px; text-align: center;">Day</td>
+                                <td style="padding: 5px; width: 300px; text-align: center;">Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 5px; vertical-align: text-top;" id="">Monday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Monday" name="ModalManageDay_Monday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Tuesday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Tuesday" name="ModalManageDay_Tuesday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Wednesday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Wednesday" name="ModalManageDay_Wednesday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Thursday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Thursday" name="ModalManageDay_Thursday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Friday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Friday" name="ModalManageDay_Friday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Saturday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Saturday" name="ModalManageDay_Saturday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Sunday</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_Sunday" name="ModalManageDay_Sunday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <table border="1px solid black;" style="margin-top: 15px;" class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 5px; vertical-align: text-top;" id="">Date Effective From</td>
+                                <td style="padding: 5px;" id="">
+                                    <input type="text" class="datepicker" name="ModalManageDay_StartDate"  id="ModalManageDay_StartDate" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;" id="">Open on Public Holidays?</td>
+                                <td style="padding: 5px;" id="">
+                                    <select id="ModalManageDay_OpenOnPublicHoliday" name="ModalManageDay_OpenOnPublicHoliday" class="form-control" style="width: 200px;">
+                                        <option value="true">Open</option>   
+                                        <option value="false">Close</option>   
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="bootstrap-dialog-footer">
+                    <div class="bootstrap-dialog-footer-buttons">
+                        <button id ="ModalManageDay_ButtonSave" class="btn btn-default" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/ClinicOperationHours.js"></script>

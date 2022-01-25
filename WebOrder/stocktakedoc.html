@@ -1,0 +1,189 @@
+<div id="dynamicContent">
+    <div id="divStockTakeDocList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Stock Take Document</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Clinic</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}, disable: !allowChangeClinic" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" data-bind="value: searchDocNumber" />
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchDoc">SEARCH</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: newDoc.bind($data, 'Blind')">GENERATE Blind Stock Take</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: newDoc.bind($data, 'Normal')">GENERATE Normal Stock Take</button>
+                </form>
+                <p>&nbsp;</p>
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKey().asc, 'dropdown': !sortKey().asc}">
+                            <tr>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'InventoryLocation.InventoryLocationName')">Clinic</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='InventoryLocation.InventoryLocationName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'StockTakeDocRefNo')">Document Number</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='StockTakeDocRefNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'StockTakeDocDate')">Generate Date</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='StockTakeDocDate'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'StockTakeType')">Type</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='StockTakeType'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'Status')">Status</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='Status'"></span>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: stockTakeDocs">
+                            <tr>
+                                <td data-bind="text: InventoryLocationName"></td>
+                                <td data-bind="text: StockTakeDocRefNo"></td>
+                                <td data-bind="text: StockTakeDocDateFormatted"></td>
+                                <td data-bind="text: StockTakeType"></td>
+                                <td data-bind="text: Status"></td>
+                                <td data-bind="click: function(o) { $parent.print(o.StockTakeDocRefNo) }"><a href="#"><span class="glyphicon glyphicon-print print-icon" title="Print"></span></a></td>
+                                <td>
+                                    <a href="#" data-bind="click: $parent.openDetailPage">view</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody data-bind="visible: stockTakeDocs().length < 1">
+                            <tr>
+                                <td colspan="4" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!--/ #divStockTakeDocList-->
+
+    <div id="divStockTakeDocDetail">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Stock Take Document</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: currentDoc">
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: StockTakeDocRefNo" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Date</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: StockTakeDocDateFormatted" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Clinic</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: InventoryLocationName" />
+                    </div>
+                </form>
+
+                <div id="backToFirstProduct"></div>
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKeyDetail().asc, 'dropdown': !sortKeyDetail().asc}">
+                            <tr>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'ItemNo')">Item No</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='ItemNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'ItemName')">Item Description</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='ItemName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'StockTakeQty')">Quantity</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='StockTakeQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'FixedQty')">Fixed Qty</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='FixedQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'LooseQty')">Loose Qty</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='LooseQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'UOM')">UOM</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='UOM'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'BaseLevel')">Base Level</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='BaseLevel'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'TakenBy')">TakenBy</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='TakenBy'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'VerifiedBy')">VerifiedBy</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='VerifiedBy'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGridDetail.bind($data, 'Remark')">Remarks</a>
+                                    <span class="caret" data-bind="visible: sortKeyDetail().columnName=='Remark'"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: stockTakes">
+                            <tr>
+                                <td data-bind="text: ItemNo"></td>
+                                <td data-bind="text: ItemName"></td>
+                                <td data-bind="text: StockTakeQty"></td>
+                                <td data-bind="text: FixedQty"></td>
+                                <td data-bind="text: LooseQty"></td>
+                                <td data-bind="text: UOM"></td>
+                                <td data-bind="text: BaseLevel + ' ' + UOM"></td>
+                                <td data-bind="text: TakenBy"></td>
+                                <td data-bind="text: VerifiedBy"></td>
+                                <td data-bind="text: Remark"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default hidden-print" data-bind="click: printFromDetails"><span class="glyphicon glyphicon-print print-icon"></span> PRINT w/ DATA</button>
+                        <button type="button" class="btn btn-default" data-bind="click: backToList">BACK</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divStockTakeDocDetail-->
+</div>
+<script type="text/javascript" src="js/stocktakedoc.js"></script>

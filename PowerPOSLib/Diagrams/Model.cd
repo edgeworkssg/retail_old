@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
+  <Class Name="PowerPOS.AlternateBarcode" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAQACEBICAEECAAQAAAAFACEMAACEAAAQAgAAAAAgAE=</HashCode>
+      <FileName>DAL\AlternateBarcode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.AppliedPromo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>XwUhyGBIyIBEKAAAACQENAKsIBAeYBoCUAiBAABDCIU=</HashCode>
+      <FileName>DAL\AppliedPromo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.AppSetting" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAEBACAIAGBAAAAAABACEIAAAAAAAQAAAAIAAAAA=</HashCode>
+      <FileName>DAL\AppSetting.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.AttendanceSheet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAQgKVBMCAAECAABEIAANBiENQBCAAQAQAAAAAAAIBU=</HashCode>
+      <FileName>DAL\AttendanceSheet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.AttributesLabel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAGAAACAAEAAAAAACEIAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\AttributesLabel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Building" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQggEABCEAACAAIAAAAIACGIAJAAAAAIAAAQAAQAAQ=</HashCode>
+      <FileName>DAL\Building.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Camera" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyIDEKAABECAEMAKEIDAWYBoDEAiBAAADCIU=</HashCode>
+      <FileName>DAL\Camera.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.CashRecording" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>nwUD6mBIyaDEOAABACQEMAKEIDgWYRoCEAiBgAADCY0=</HashCode>
+      <FileName>DAL\CashRecording.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.CashRecordingType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGJIyYBEqAAAACAEMCKEMBBWYBoCEAiBgAADCYU=</HashCode>
+      <FileName>DAL\CashRecordingType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Category" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhzGRIyIBEKgAgACAEMAKMMDBW4BoCMAjBAgAjSYU=</HashCode>
+      <FileName>DAL\Category.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.CourseType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgCEBISAAHCAAAAAIAMACEMABCAAAAAAAAAABAAAE=</HashCode>
+      <FileName>DAL\CourseType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EventAttendance" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAiEBYKAAECAgBQAKAUACEcAACAAAACIgBEICYAJE=</HashCode>
+      <FileName>DAL\EventAttendance.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EventItemMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQAiEJorIEECQhQUCSAWBCsMAACsgwQAABB9YuEBYE=</HashCode>
+      <FileName>DAL\EventItemMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Currency" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIQwCEBICgAkCAgAAQAAMACEMABCAAAAAQAAAIAAAAE=</HashCode>
+      <FileName>DAL\Currency.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EventLocationMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FCQAiEBIqIGEKQgAUCSAWBC0MCACsgwwAABB9YuEBYE=</HashCode>
+      <FileName>DAL\EventLocationMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EZLinkMsgLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IASBAEAACAAECAAAAAQAEACEMAAAAAAQAAQAAAQAAAA=</HashCode>
+      <FileName>DAL\EZLinkMsgLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EZLinkResponseCode" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAiEBICAAECAAAAAYAEACEMAACAAAAAEAABAAAAAE=</HashCode>
+      <FileName>DAL\EZLinkResponseCode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EZLinkMessageParameterMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQBCEBICAAEKACAAARAEACEMAACABAEQAAAAAAAAAE=</HashCode>
+      <FileName>DAL\EZLinkMessageParameterMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Gst" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyIBEKAAAACAEMAKEMBCWYBoCMAiBAAADCJU=</HashCode>
+      <FileName>DAL\Gst.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InventoryUpdateLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>H4UByGBIyIBEKQAACCAEMAKMIBAWYBoCEAmBAAADCIU=</HashCode>
+      <FileName>DAL\InventoryUpdateLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Item" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUn7GJI6a1s7Ch4AzRMtALmeLBW8h4C+CiDhY1rnZc=</HashCode>
+      <FileName>Controller\Item\Item.Points.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Installment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEQgCEBICQAUCBABADAAsACEMABEAgAAAAAAAIQAARE=</HashCode>
+      <FileName>DAL\Installment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ItemCostPrice" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICgGECQgQAAAAEACEOAACAAAAAAAQIAAAAAE=</HashCode>
+      <FileName>DAL\ItemCostPrice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InstallmentDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBMCQIEKCCAAABAkACENABCAAAEAAAEAIAAAQE=</HashCode>
+      <FileName>DAL\InstallmentDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.LoginActivity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyKDEKAgQCCQEMAKEMDEWYBoCEQiBAAADCIU=</HashCode>
+      <FileName>DAL\LoginActivity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.LocationTransfer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUh2GBIyoBEaIUEAGBFMAKEIRBeYBqCEAiBAAADzIU=</HashCode>
+      <FileName>DAL\LocationTransfer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EZLinkUnCfmLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAYACMBKiAAECIAAAAQAEACEMACCAACAAAAAgAgAAAE=</HashCode>
+      <FileName>DAL\EZLinkUnCfmLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.DeliveryOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQhCEJMCAAECAARBCgAMACEdCBDACAXAAACIAAACBE=</HashCode>
+      <FileName>DAL\DeliveryOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.CommissionStructure" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>PwUByGBIyIREKAAAQCIEMAKEMBAWYBqDEAiBAAkDCIU=</HashCode>
+      <FileName>DAL\CommissionStructure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Company" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQASEBICAIECAAAAACEEACEMAACAAAAAAQAAIAAIAE=</HashCode>
+      <FileName>DAL\Company.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.DeliveryOrderDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAACoGACQAQABAAIBCEKAEAAAAAoIICgAAAAAA=</HashCode>
+      <FileName>Controller\Delivery\DeliveryOrderDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.DeliveryPersonnel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQwAEAACJAACAAAAEBAIACEIABCAAAGIAAAAAAAAAA=</HashCode>
+      <FileName>DAL\DeliveryPersonnel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.FamilyGroupMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACkBICAAGCABBAAAAEACEMAACAAAAAAAAAAAAABE=</HashCode>
+      <FileName>DAL\FamilyGroupMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InventoryLocation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUxyWBM2IBEKAAAADAkMAKEMBBWYBoCEAiBAAADCIU=</HashCode>
+      <FileName>DAL\InventoryLocation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ItemGroupMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyMFEKEAQECAEMAKEMJgWYBoDEAiBAAADCIU=</HashCode>
+      <FileName>DAL\ItemGroupMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InventoryHdr" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HxUhyHBMy4BmqIoIAG4MMQaHODF2YBoCO4yJoAADCYU=</HashCode>
+      <FileName>DAL\InventoryHdr.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Family" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACkBICQAGCAAAAAAEUACEMAACAAAAAAAAAAAAAQE=</HashCode>
+      <FileName>DAL\Family.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ExchangeLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwWByWBIyoFEqAAQICQEsAKEpDYW4JoOEAiBAARDCYU=</HashCode>
+      <FileName>DAL\ExchangeLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InventoryDet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Hw0FyGRIyalEKQBYACSEMAqmMBAWYBsC0iiJgAADSaU=</HashCode>
+      <FileName>DAL\InventoryDet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ItemDepartment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQhCEBICQAECBAAAAAAMACEMABCAgAAAQAQAAAAAQE=</HashCode>
+      <FileName>DAL\ItemDepartment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ItemGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBI6IFEKAAABCBEMAKEMBBWcBoCEEiBQACjCIU=</HashCode>
+      <FileName>DAL\ItemGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipAttendance" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FBQACEBIKAAEKAgBQASAUAiEMCACsAwAAABB8IMQKJE=</HashCode>
+      <FileName>DAL\MembershipAttendance.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Membership" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>H4Un62B4zaREKmjJAiRE8AKEOLZ+5BqDMwiDTAAbqJ8=</HashCode>
+      <FileName>DAL\Membership.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Course" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AISiBUgACAggiAAAAhAAIACsIABAAABAAEAFBEAAAAA=</HashCode>
+      <FileName>DAL\Course.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Department" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUxyGBIy4BEqBAAACAEMAKEMBF2YBoCEQiBAAADCYU=</HashCode>
+      <FileName>DAL\Department.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.CounterCloseLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>P0cB6HBL3IzNaqAUAC4csMKNIDS25B4GkAy3BgmPqIc=</HashCode>
+      <FileName>CustomDAL\CounterCloseLog.Custom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EZlinkMessage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MASACEBICAAECAAAAARAEACEMAACAAAAQAAAAAAAAAE=</HashCode>
+      <FileName>DAL\EZlinkMessage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.FeedBackLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICSBECAApAAAAEASEOAACAAAAAAgIgAAAARE=</HashCode>
+      <FileName>DAL\FeedBackLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.FeedBackMsg" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgCEBICCAMCAAAAACAMACEMABCAAgAAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\FeedBackMsg.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EZLinkMessageParameter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQBCEBJCAAECAAAEAQAEACEMAACABAAAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\EZLinkMessageParameter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.EmailNotification" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAEAACABACAAAACAAEASEMAAIAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>DAL\EmailNotification.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.GroupUserPrivilege" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyJBEKAAEACAEMAKEMRAWYBoCEAiBAAALDIU=</HashCode>
+      <FileName>DAL\GroupUserPrivilege.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InventoryStockOutReason" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUxyGBIyIBEKAAAECAEMBKEMBBWYDoCEAiBAAADCIU=</HashCode>
+      <FileName>DAL\InventoryStockOutReason.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ItemQuantityTrigger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACkBMCAEECAAQAGAAEACEMgACAIAAAAAAAAAAIAU=</HashCode>
+      <FileName>DAL\ItemQuantityTrigger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipCustomField" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBIGAAECAACAAAAMAKEMAGjAAAAAQACAAAAAAE=</HashCode>
+      <FileName>DAL\MembershipCustomField.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBIyIBEKAAACCAEMQKEMBBWYBoCEgiBAAADCIU=</HashCode>
+      <FileName>DAL\MembershipGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ItemsNew" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQCBUAACAAgiEAAAAAAIACkIAAABAAAAEAFBEAAAAA=</HashCode>
+      <FileName>DAL\ItemsNew.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.InventoryTransferDiscrepancy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyYFE6AAQACBEMAKEIFAWYFoCWCiBAoADCYU=</HashCode>
+      <FileName>DAL\InventoryTransferDiscrepancy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipPoint" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUDyGBIyIBEqAAJACAMMoKEIBIWYHoCEAiBAAADCJU=</HashCode>
+      <FileName>Controller\Points\MembershipPoint.Custom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.OrderHdr" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwchyWJI6YDEKQABCCQMcAaGYjB2ahsCEgiLAABTCZU=</HashCode>
+      <FileName>Controller\Order\OrderHdr.Points.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipRemark" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EARACEBISQAECAABAAAAEACEcAIGAAQAAAAAAAAAARE=</HashCode>
+      <FileName>DAL\MembershipRemark.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipRemarkCategory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICAAECAAAAAAAEACEMAICAAAgAgAAAAAAAAE=</HashCode>
+      <FileName>DAL\MembershipRemarkCategory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Outlet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUlyGBMy4BEuAAAAGAEMAKEMBJWYBoCEAiBAAADCYU=</HashCode>
+      <FileName>DAL\Outlet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PointOfSale" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGpIyMhE+AIQAiEEMEKEMDJ2YhoSkAiRAAADCIU=</HashCode>
+      <FileName>DAL\PointOfSale.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PurchaseOrderDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwWByGBIyYFEOAAwACAEOAKEIBAWYBoDkgiBkAADCYU=</HashCode>
+      <FileName>DAL\PurchaseOrderDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ReceiptDet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUBymBIyIBUKAAAACQUOAKEMBhWYBoCEAqBAEADCMU=</HashCode>
+      <FileName>Controller\Order\ReceiptDet.Points.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ReceiptHdr" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyWJIyYBUKAAAACQEcAKGMDxWYBoCEAqBAABDCYU=</HashCode>
+      <FileName>DAL\ReceiptHdr.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PromoCampaignDet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>H4UhzGBqzMFEKEAQACAEMAKkMrgW4BoDEAiJAIADCIU=</HashCode>
+      <FileName>DAL\PromoCampaignDet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PurchaseOrderHeader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyOBMz4BErIAgACAEMAqEMDF2eh4iEyqBAAQDCYU=</HashCode>
+      <FileName>DAL\PurchaseOrderHeader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ReceiptSetting" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GIwACEBISEkUGMAgAAIAmISUMAAKAAAIAAAAQqEAASE=</HashCode>
+      <FileName>DAL\ReceiptSetting.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PromoCampaignHdr" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUjyGBJyYBEKIEgACAFMAKkNBDXdDoCEAiBACInCcc=</HashCode>
+      <FileName>DAL\PromoCampaignHdr.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.QuickAccessButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAUACUBIGAEEKgAQAIAIEASMsSEDAwAgAAAEAQABAAM=</HashCode>
+      <FileName>DAL\QuickAccessButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PromoDiscountTier" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBIzIBEKAAAACAEMAKkMBBWYBoDEgiDAAADCIU=</HashCode>
+      <FileName>DAL\PromoDiscountTier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.QuickAccessGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECQgCEBICkAECAAAAAAAMECEMABCCAAAAAgAAAAAAAE=</HashCode>
+      <FileName>DAL\QuickAccessGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.RedeemLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASACEDICACECIAhACCAEACEOAgCgQAgAQgCgAAAABE=</HashCode>
+      <FileName>DAL\RedeemLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SalesCommissionRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUB6GBIyYREKAAAQCQEMIKEIBAWYBoCEAiBAABTCIU=</HashCode>
+      <FileName>DAL\SalesCommissionRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SaveItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQAiGBMqaEGCQgYeCqEWBCsMAACsgwSwIBJ9SsGFQU=</HashCode>
+      <FileName>DAL\SaveItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PromoLocationMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgCEBICAAEKAAAAAAAEACkMCACAAAAAAAAAAAAIgE=</HashCode>
+      <FileName>DAL\PromoLocationMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.QuickAccessGroupMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICEAECCgAAAAAEECMMAACAQAAgAAAAAAAAAE=</HashCode>
+      <FileName>DAL\QuickAccessGroupMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.RedemptionItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EISACUBICBEkCIAQIAQAEACEMAACQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\RedemptionItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SalesGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBIyIREKAAAQCBEMQKEMBBWYBoCEAiBAAADSI0=</HashCode>
+      <FileName>DAL\SalesGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ScheduledDiscount" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQKCUJIKAEEjAhQQAiAUEDkMBACsAwAAABl8MMKCIE=</HashCode>
+      <FileName>DAL\ScheduledDiscount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PromoCode" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQoCEBICAAECAAAIAQAUACEcAACQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\PromoCode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SalesCommissionHistory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUB2GBIyIBUKAAAICEUMQKEIhAWYBpDGAiBAAEDGIU=</HashCode>
+      <FileName>DAL\SalesCommissionHistory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SpecialActivityLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBIyM1cKEIwACQEMAaMIBQWYBoSkBiBgBBDCIU=</HashCode>
+      <FileName>DAL\SpecialActivityLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Supplier" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DwUhwWBA2IBAKHABACANsAqEIdFWYJoCEKihAhADCIQ=</HashCode>
+      <FileName>DAL\Supplier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.UserGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBIyIBEKAAEACAEcQKEMFBWYBoCEAiBAAADCIU=</HashCode>
+      <FileName>DAL\UserGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SpecialDiscount" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEJICAAECgAAAIAIEACMMAACAAAAAAAAAAACCAM=</HashCode>
+      <FileName>DAL\SpecialDiscount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SyncLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGDIyIBEqAAAACAEMSKEIDIWYBoDEAiBAAADKIU=</HashCode>
+      <FileName>DAL\SyncLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.UserMst" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUh2GBI2ZBEqAABCCAEMQKEMBF2YBoCGQiBAQADCYU=</HashCode>
+      <FileName>CustomDAL\UserMst.Custom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SpecialEvent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQgqEBoqIAGyQgAUCSAeBCkMKBCsgwQAABF9csEBYE=</HashCode>
+      <FileName>DAL\SpecialEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SyncRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICACEiCAAACAAEACkMAACAAAiAAAEAEAAAAE=</HashCode>
+      <FileName>DAL\SyncRequest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PromoMembershipMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgCEBICAAETABAAAQAEACkMCACAMAAAABAAAAAACE=</HashCode>
+      <FileName>DAL\PromoMembershipMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.RedemptionLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGBYyYFEqAABACQEMgKEIBAWYBqCUAjhAABDCZU=</HashCode>
+      <FileName>DAL\RedemptionLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SalesPerson" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>H4UByGBIyZBEKAABACIEMAKEOBAWYBpCEAiBgAATCY0=</HashCode>
+      <FileName>DAL\SalesPerson.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ServicingAppointment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBMCBAECAAAAAoAAACUJAACmACAAAEAAAAAAAE=</HashCode>
+      <FileName>DAL\ServicingAppointment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.UserPrivilege" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBIyYBEKAAAACAEMAKEMBBWYBoCEAiBCAADDIU=</HashCode>
+      <FileName>DAL\UserPrivilege.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.TimeSlot" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQiAEAACAAACAAAAAAAIQCEIABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\TimeSlot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.VoidLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>nwUDyGBIyIBEKAACACAEMAOEIDgWYBoCEAiRgABDCIU=</HashCode>
+      <FileName>DAL\VoidLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.StockTake" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUByGRN6YFkKAAUAOgEMQKEIBAeZBsCUQiJAIKDCYU=</HashCode>
+      <FileName>DAL\StockTake.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SavedClosing" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YEaAAFABGASEKoCwBAAAgImFICSABEQACGREAgUEAAA=</HashCode>
+      <FileName>DAL\SavedClosing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Setting" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YEQEgMQVCkBCLgBWBAACBATFMCAIglAgEACAMCUAgJA=</HashCode>
+      <FileName>DAL\Setting.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Room" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQiAFAICAARCAgAAAAAIACEIABAAAAAAAAAQBAAAAQ=</HashCode>
+      <FileName>DAL\Room.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.QuickAccessCategory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAwgCUBIGIEEKgAAAIAIMACMMSBDCAAAAAAAgQABAAM=</HashCode>
+      <FileName>DAL\QuickAccessCategory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Recurrence" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAMAEDAAAiCCAwYAIAAG0IIEAAAQCIAoEAMAAAAA=</HashCode>
+      <FileName>DAL\Recurrence.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.SavedFile" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICSAECAAAAAIAEACEcAACAAAAAIABAABGEQE=</HashCode>
+      <FileName>DAL\SavedFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.myOrderDetComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Promo\ApplyPromotionController.Custom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PaymentTerm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUhyGBIyYBEKAAAECAEMAKEMBFWYB4CEAmBAAADCYU=</HashCode>
+      <FileName>DAL\PaymentTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PreOrderSchedule" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICAEECAAQIgAAEACEMAACACAABCAAAAAAAAE=</HashCode>
+      <FileName>DAL\PreOrderSchedule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipUpgradeLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQQCERICAAECARAAAQgEACEMAACAABAAAAAAABAgAE=</HashCode>
+      <FileName>DAL\MembershipUpgradeLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PreOrderRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQACEBICQBECAAAAAQAEASEOAACAAAQAAAAgABABQE=</HashCode>
+      <FileName>DAL\PreOrderRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipTapsLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBKCAAECAABAAAAEACEcAkCAAAAAQIAAAQAABE=</HashCode>
+      <FileName>DAL\MembershipTapsLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PackageRedemptionLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAQAKEBICABECAABAAQAECSEsAgCAAAAAgAAAgAAABE=</HashCode>
+      <FileName>DAL\PackageRedemptionLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipTap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICAAECAABAAAAEACEMAgCAQAAEAAAAAAAABE=</HashCode>
+      <FileName>DAL\MembershipTap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PackageHdr" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEQgCEBICQAMCAgAAAAAMACEMABGAAAAAAAAAAQAASE=</HashCode>
+      <FileName>DAL\PackageHdr.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PowerLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAACAACCAAEAAAAAISEIAAAAAAAAAAACAAAAIA=</HashCode>
+      <FileName>DAL\PowerLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MembershipRenewal" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEQAiEBIuIAEGQgBUCCAWBikMAACsgwQAABB9Y8ERZE=</HashCode>
+      <FileName>DAL\MembershipRenewal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PackageDet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICwAMCAAAAAAgMACEMAACAAAAAACAAAAEAaE=</HashCode>
+      <FileName>DAL\PackageDet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PostalCodeDB" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQCgEAACCAgnLANAAAAKISEIAIAAAAgIABAAAgAAAg=</HashCode>
+      <FileName>DAL\PostalCodeDB.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.PointAllocationLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwUBymBIyoBEKAEBACQEMAKEIBAWYBoSEAiBiABDCJU=</HashCode>
+      <FileName>Controller\Points\PointAllocationLog.Custom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.OrderDet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>fwVh6HrI25VEOCpQFyQNeg6GYBhXYBoGsgqJgEDDjYU=</HashCode>
+      <FileName>Controller\Order\OrderDet.Points.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.Warranty" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQCGEFICQEECAAxAAIAAAGEIAgCgAAAKAAgAAAAAZE=</HashCode>
+      <FileName>DAL\Warranty.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.WarningMsg" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACEBICQAEKAAAAAQAEACEMCAKAAAAAAAAAAAAAwE=</HashCode>
+      <FileName>DAL\WarningMsg.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.VoucherStatus" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgCEBYCAAECgAAAABAMASEMABCAAAAAAAAAAAAEAE=</HashCode>
+      <FileName>DAL\VoucherStatus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.MailList" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEACCAAQCAABAAAAAACEIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\MailList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Voucher" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAYECEJYCQAECABAAAAAGICEsBgCAAAAAAAAAEIAERM=</HashCode>
+      <FileName>DAL\Voucher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

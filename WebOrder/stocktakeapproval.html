@@ -1,0 +1,137 @@
+<div id="dynamicContent">
+    <div id="divStockTakeAdjust">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Stock Take Approval</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Clinic</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}, disable: !allowChangeClinic" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" data-bind="value: searchDocNo" />
+                    </div>
+                    <!--<div class="form-group">
+                        <h5>Drug Filter</h5>
+                        <input type="text" class="form-control" data-bind="value: searchItemName" />
+                    </div>-->
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchStockTake">SEARCH</button>
+                </form>
+
+                <p>&nbsp;</p>
+                <div id="backToFirstProduct"></div>
+                <!--<div>
+                    <button type="button" class="btn btn-danger" data-bind="click: deleteSelectedLine, disable: deleteCheckedBtnState">DELETE CHECKED</button>
+                </div>-->
+
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKey().asc, 'dropdown': !sortKey().asc}">
+                            <tr>
+                                <!--<th>
+                                    <input type="checkbox" class="checkbox" data-bind="checked: isSelectAllLines, click: toggleSelectAllLines" />
+                                </th>-->
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'ItemNo')">Item No</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='ItemNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'ItemName')">Item Description</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='ItemName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'StockTakeQty')">Count Qty</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='StockTakeQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'SystemBalQty')">System Qty</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='SystemBalQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'Defi')">+/-</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='Defi'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'FixedQty')">Fixed Qty</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='FixedQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'LooseQty')">Loose Qty</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='LooseQty'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'UOM')">UOM</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='UOM'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'StockTakeDate')">Stock Take Date</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='StockTakeDate'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'TakenBy')">Taken By</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='TakenBy'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'Remark')">Remarks</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='Remark'"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: stockTakes">
+                            <tr>
+                                <!--<td><input type="checkbox" class="checkbox" data-bind="checked: isSelected" /></td>-->
+                                <td data-bind="text: ItemNo"></td>
+                                <td data-bind="text: ItemName"></td>
+                                <td data-bind="text: StockTakeQty"></td>
+                                <td data-bind="text: SystemBalQty"></td>
+                                <td data-bind="text: Defi"></td>
+                                <td data-bind="text: FixedQty"></td>
+                                <td data-bind="text: LooseQty"></td>
+                                <td data-bind="text: UOM"></td>
+                                <td data-bind="text: StockTakeDateFormatted"></td>
+                                <td data-bind="text: TakenBy"></td>
+                                <td data-bind="text: Remark"></td>
+                            </tr>
+                        </tbody>
+                        <tbody data-bind="visible: stockTakes().length < 1">
+                            <tr>
+                                <td colspan="9" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--<div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>-->
+                </div>
+                <p>&nbsp;</p>
+                <div>
+                    <div class="pull-right">
+                        <!--<button type="button" class="btn btn-default" data-bind="visible: stockTakes().length > 0, click: print"><span class="glyphicon glyphicon-print print-icon"></span> PRINT</button>-->
+                        <button type="button" class="btn btn-danger" data-bind="click: rejectStockTake, disable: stockTakes().length < 1">REJECT ALL</button>
+                        <button type="button" class="btn btn-success" data-bind="click: submitStockTake, disable: stockTakes().length < 1">APPROVE ALL</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divStockTakeEntry-->
+</div>
+<script type="text/javascript" src="js/stocktakeapproval.js"></script>

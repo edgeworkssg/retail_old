@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Notifier.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMTP_Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="SMTP_Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">yellowstrike1015814.0002@gmail.com</Value>
+    </Setting>
+    <Setting Name="SMTP_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Testing_123</Value>
+    </Setting>
+    <Setting Name="Mail_From_Address" Type="System.String" Scope="User">
+      <Value Profile="(Default)">yellowstrike1015814.0002@gmail.com</Value>
+    </Setting>
+    <Setting Name="SMTP_Port" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="SaleTallyReport_MailSubject" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[Philips_POS] Sales Tally Report Notification</Value>
+    </Setting>
+    <Setting Name="NoSalesStoresReport_MailSubject" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[Philips_POS] No Sales Stores Report Notification</Value>
+    </Setting>
+    <Setting Name="ProfitLossReport_MailSubject" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[Philips_POS] Profit / Loss Report Notification</Value>
+    </Setting>
+    <Setting Name="IsTestingPurpose" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UseCrystalReport" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ExportPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\Export</Value>
+    </Setting>
+    <Setting Name="UseLocalMailSetting" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MonthlySaleReport_MailSubject" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[Philips_POS] Monthly Sale Report Notification</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

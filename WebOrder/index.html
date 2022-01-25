@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Inventory Web</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link href="bootstrap-datepicker/datepicker3.css" rel="stylesheet">
+    <link href="css/bootstrap-dialog.min.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/select2-bootstrap.css" rel="stylesheet">
+    <link href="css/jquery.dataTables.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="print" href="css/print.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top hidden-print" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand" id="headerTitle"></span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right menu-settings-narrow">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="userDisplayName"></span></a>
+                        <ul class="dropdown-menu notif-container">
+                            <li><a href="#" onclick="event.preventDefault()">No notification</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav hidden" id="mainMenu">
+                    <li class="dropdown hidden">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--<li class="menu-goods-ordering hidden"><a href="#goodsordering" onclick="fnLoadContent('goodsordering', true)">Goods Ordering</a></li>
+                    <li class="menu-order-approval hidden"><a href="#orderapproval" onclick="fnLoadContent('orderapproval', true)">Order Approval</a></li>
+                    <li class="menu-goods-receive hidden"><a href="#goodsreceive" onclick="fnLoadContent('goodsreceive', true)">Goods Receive</a></li>-->
+                            <li class="menu-goods-ordering hidden"><a href="#goodsordering">Goods Ordering</a></li>
+                            <li class="menu-order-approval hidden"><a href="#orderapproval">Order Approval</a></li>
+                            <li class="menu-goods-receive hidden"><a href="#goodsreceive">Goods Receive</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Return <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--<li class="menu-stock-return hidden"><a href="#stockreturn" onclick="fnLoadContent('stockreturn', true)">Stock Return</a></li>
+                    <li class="menu-return-approval hidden"><a href="#returnapproval" onclick="fnLoadContent('returnapproval', true)">Return Approval</a></li>-->
+                            <li class="menu-stock-return hidden"><a href="#stockreturn">Stock Return</a></li>
+                            <li class="menu-return-approval hidden"><a href="#returnapproval">Return Approval</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adjustment <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                            <li class="menu-stock-adjustment hidden"><a href="#stockadjustment">Stock Adjustment</a></li>
+                            <li class="menu-adjustment-approval hidden"><a href="#adjustmentapproval">Adjustment Approval</a></li>
+                        </ul>
+                    </li>-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transfer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-stock-transfer hidden"><a href="#inventorytransfer">Stock Transfer</a></li>
+                            <li class="menu-transfer-approval hidden"><a href="#transferapproval">Transfer Approval</a></li>
+                            <li class="menu-receive-transfer hidden"><a href="#receiveinventorytransfer">Receive Transfer</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stock Take <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-stock-take-doc hidden"><a href="#stocktakedoc" onclick="fnLoadContent('stocktakedoc', true)">Stock Take Document</a></li>
+                    <li class="menu-stock-take hidden"><a href="#stocktake" onclick="fnLoadContent('stocktake', true)">Stock Take Upload</a></li>
+                    <li class="menu-stock-take-approval hidden"><a href="#stocktakeapproval" onclick="fnLoadContent('stocktakeapproval', true)">Stock Take Approval</a></li>
+                            <li class="menu-stock-take-doc hidden"><a href="#stocktakedoc">Stock Take Document</a></li>
+                            <li class="menu-stock-take hidden"><a href="#stocktake">Stock Take Upload</a></li>
+                            <li class="menu-stock-take-approval hidden"><a href="#stocktakeapproval">Stock Take Approval</a></li>
+                        </ul>
+                    </li>-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recipe <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-uom-conversion-setup hidden"><a href="#uomconversionsetup">UOM Conversion Setup</a></li>
+                            <li class="menu-ingredient-setup hidden"><a href="#IngredientSetup">Recipe Setup</a></li>
+                            <li class="menu-item-cooking hidden"><a href="#itemcooking">Production</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-report-stocktakedocument hidden"><a href="#" onclick="fnLoadReport('StockTakeDocument')">Print Stock Take</a></li>
+                            <li class="menu-report-stockbalancebyoutlet hidden"><a href="#" onclick="fnLoadReport('StockBalanceByOutlet')">Stock Balance Report</a></li>
+                            <li class="menu-report-stockcardreport hidden"><a href="#" onclick="fnLoadReport('StockCardReport')">Stock Card Report</a></li>
+                            <li class="menu-report-inventorytransactionreport hidden"><a href="#" onclick="fnLoadReport('InventoryTransactionReport')">Inventory Activity Report</a></li>
+                            <li class="menu-report-stockdiscrepanciesreport hidden"><a href="#" onclick="fnLoadReport('StockDiscrepanciesReport')">Discrepancies Report</a></li>
+                            <li class="menu-report-adjustmentreport hidden"><a href="#" onclick="fnLoadReport('AdjustmentReport')">Adjustment Report</a></li>
+                            <li class="menu-report-transferreport hidden"><a href="#" onclick="fnLoadReport('TransferReport')">Transfer Report</a></li>
+                            <li class="menu-report-transferreportwocost hidden"><a href="#" onclick="fnLoadReport('TransferReportWOCost')">Transfer W/O Cost Report</a></li>
+                            <li class="menu-report-clinicuploadstatusreport hidden"><a href="#" onclick="fnLoadReport('ClinicUploadStatusReport')">Clinic Upload Status Report</a></li>
+                            <li class="menu-report-uploadhistoryreport hidden"><a href="#" onclick="fnLoadReport('UploadHistoryReport')">Upload History Report</a></li>
+                            <li class="menu-report-dispensingreport hidden"><a href="#" onclick="fnLoadReport('DispensingReport')">Dispensing Report</a></li>
+                            <li class="menu-report-clinicdrugorderingstatusreport hidden"><a href="#ClinicDrugOrderingStatusReport">Clinic Drug Ordering Status Report</a></li>
+                            <li class="menu-report-stocktransfervariancereport hidden"><a href="#" onclick="fnLoadReport('StockTransferVarianceReport')">Stock Transfer Variance Report</a></li>
+                            <li class="menu-report-stockreturnvariancereport hidden"><a href="#" onclick="fnLoadReport('StockReturnVarianceReport')">Stock Return Variance Report</a></li>
+                            <li class="menu-report-stockorderreport hidden"><a href="#" onclick="fnLoadReport('StockOrderVarianceReport')">Stock Order Variance Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consolidated <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-second-screen-setup hidden"><a href="#secondscreensetup">Second Screen Setup</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right menu-settings-wide">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="userDisplayName"></span></a>
+                        <ul class="dropdown-menu pull-right notif-container">
+                            <li><a href="#" onclick="event.preventDefault()">No notification</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
+                        <ul class="dropdown-menu pull-right">
+                            <!--<li><a href="#settings" onclick="fnLoadSettings(true)">Settings</a></li>-->
+                            <!--<li class="menu-item-importer"><a href="#itemimporter" onclick="fnLoadContent('itemimporter', true)">Drug Importer</a></li>
+                            <li class="menu-cost-importer"><a href="#costimporter" onclick="fnLoadContent('costimporter', true)">Cost Importer</a></li>
+                            <li class="menu-freeze-clinic"><a href="#freezeclinic" onclick="fnLoadContent('freezeclinic', true)">Freeze/Unfreeze Clinic</a></li>
+                            <li class="menu-email-notification"><a href="#emailnotification" onclick="fnLoadContent('emailnotification', true)">Email Notification</a></li>
+                            <li class="menu-change-password"><a href="#changepassword" onclick="fnLoadContent('changepassword', true)">Change Password</a></li>-->
+							<li class="menu-outlet-optimal-stock"><a href="#OutletOptimalStock">Outlet Optimal Stock</a></li>
+                            <li class="menu-clinic-operation-hours"><a href="#ClinicOperationHours">Clinic Operation Hours</a></li>
+                            <li class="menu-item-importer"><a href="#itemimporter">Drug Importer</a></li>
+                            <li class="menu-cost-importer"><a href="#costimporter">Cost Importer</a></li>
+                            <li class="menu-freeze-clinic"><a href="#freezeclinic">Freeze/Unfreeze Clinic</a></li>
+                            <li class="menu-email-notification"><a href="#emailnotification">Email Notification</a></li>
+                            <li class="menu-change-password"><a href="#changepassword">Change Password</a></li>
+                            <li class="menu-logout hidden"><a href="#" onclick="fnLogout(true)">Log out</a></li>
+                            <li class="menu-login"><a href="#" onclick="fnLogin(true)">Log in</a></li>
+                            <!--<li><a href="#" onclick="fnExitFromApp()">Exit</a></li>-->
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav menu-settings-narrow">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--<li><a href="#settings" onclick="fnLoadSettings(true)">Settings</a></li>-->
+                            <!--<li class="menu-item-importer"><a href="#itemimporter" onclick="fnLoadContent('itemimporter', true)">Drug Importer</a></li>
+                            <li class="menu-cost-importer"><a href="#costimporter" onclick="fnLoadContent('costimporter', true)">Cost Importer</a></li>
+                            <li class="menu-freeze-clinic"><a href="#freezeclinic" onclick="fnLoadContent('freezeclinic', true)">Freeze/Unfreeze Clinic</a></li>
+                            <li class="menu-email-notification"><a href="#emailnotification" onclick="fnLoadContent('emailnotification', true)">Email Notification</a></li>
+                            <li class="menu-change-password"><a href="#changepassword" onclick="fnLoadContent('changepassword', true)">Change Password</a></li>-->
+                            <li class="menu-item-importer"><a href="#itemimporter">Drug Importer</a></li>
+                            <li class="menu-cost-importer"><a href="#costimporter">Cost Importer</a></li>
+                            <li class="menu-freeze-clinic"><a href="#freezeclinic">Freeze/Unfreeze Clinic</a></li>
+                            <li class="menu-email-notification"><a href="#emailnotification">Email Notification</a></li>
+                            <li class="menu-change-password"><a href="#changepassword">Change Password</a></li>
+                            <li class="menu-logout hidden"><a href="#" onclick="fnLogout(true)">Log out</a></li>
+                            <li class="menu-login"><a href="#" onclick="fnLogin(true)">Log in</a></li>
+                            <!--<li><a href="#" onclick="fnExitFromApp()">Exit</a></li>-->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- / .nav-collapse -->
+        </div>
+    </div>
+    <!-- / Fixed navbar -->
+
+
+    <div class="container">
+        
+        <div id="content">
+
+            <!--Placeholder for main content, loaded using jquery.load()-->
+            
+        </div>
+        <div id="divLoading" style="z-index: 9999; display: none">
+            <img src="img/ajax-loader.gif" />
+        </div>
+
+        <!-- Modal for Login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!--<a href="#settings" onclick="$('#loginModal').modal('hide'); fnLoadSettings();"><span class="glyphicon glyphicon-cog"></span> Settings</a>-->
+                        <!--<button type="button" class="close" aria-hidden="true" onclick="fnExitFromApp()">&times;</button>-->
+                        <form class="form-signin" role="form">
+                            <img src="img/ew_logo.png" width="181" height="104" class="img-responsive" />
+                            <h2 class="form-signin-heading">Please sign in</h2>
+                            <input type="text" id="username" class="form-control" placeholder="User name" required autofocus>
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                            <label class="checkbox">
+                                <input type="checkbox" id="remember" checked="checked">Keep me signed in
+                            </label>
+                            <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        </form>
+                        <p class="text-right"><small>Version 0.12.01</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / #loginModal -->
+    </div>
+    <!-- / .container -->
+
+
+    <!-- Bootstrap core JavaScript
+       ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.xml2json.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-scrolltofixed-min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-dialog.min.js"></script>
+    <script type="text/javascript" src="js/select2.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+
+    <script type="text/javascript" src="connectionStrings.js"></script>
+    <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="js/sammy-0.7.5.min.js"></script>
+    <script type="text/javascript" src="js/InventoryWeb_web_service.js?version=1003"></script>
+    <script type="text/javascript" src="js/data_access_layer.js?version=1003"></script>
+    <script type="text/javascript" src="js/setting.js"></script>
+    <script type="text/javascript" src="js/logger.js"></script>
+    <script type="text/javascript" src="js/common_functions.js"></script>
+    <script type="text/javascript" src="js/download_initial_data.js"></script>
+    <script type="text/javascript" src="js/accounting.min.js"></script>
+    <script type="text/javascript" src="js/freeze-table.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

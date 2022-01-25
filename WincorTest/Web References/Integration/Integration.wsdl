@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.edgeworks.com.sg/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.edgeworks.com.sg/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.edgeworks.com.sg/">
+      <s:element name="GetItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="syncAll" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="syncAll" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadMemberDataNewOrUpdated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SinceLastTimestamp" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadMemberDataNewOrUpdatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadMemberDataNewOrUpdatedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StockOutItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StockOutReasonID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InventoryLocationID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsAdjustment" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="deductRemainingQty" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StockOutItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StockOutItemResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newRefNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InventoryLocation" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockQuantityResult" type="tns:ArrayOfInventoryItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInventoryItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InventoryItem" nillable="true" type="tns:InventoryItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InventoryItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockQuantityByItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InventoryLocation" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQuantityByItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockQuantityByItemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendNewMembershipSignup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="membershipgroupid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nametoappear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nric" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendNewMembershipSignupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendNewMembershipSignupResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsInventory" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="RetailPrice" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="FactoryPrice" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GSTRule" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes8" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isMatrixItem" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="NonDiscountable" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="isPointRedeemable" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddProductResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteProductResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MembershipNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteMemberResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderdata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="membershipno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cashier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentdata" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSalesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsEmailRegistered">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsEmailRegisteredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsEmailRegisteredResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsNRICRegistered">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nric" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsNRICRegisteredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsNRICRegisteredResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberTransactionHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberTransactionHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberTransactionHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberFULLTransactionHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberFULLTransactionHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberFULLTransactionHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberTransactionHistoryByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberTransactionHistoryByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberTransactionHistoryByDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberFULLTransactionHistoryByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberFULLTransactionHistoryByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberFULLTransactionHistoryByDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPoints">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderHdrID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="validPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="points" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPointsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPointsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeductPoints">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderHdrID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="points" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeductPointsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeductPointsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentPoints">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentPointsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentPointsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfInventoryItem" nillable="true" type="tns:ArrayOfInventoryItem" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberList" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadMemberDataNewOrUpdatedSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadMemberDataNewOrUpdated" />
+  </wsdl:message>
+  <wsdl:message name="DownloadMemberDataNewOrUpdatedSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadMemberDataNewOrUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="StockOutItemSoapIn">
+    <wsdl:part name="parameters" element="tns:StockOutItem" />
+  </wsdl:message>
+  <wsdl:message name="StockOutItemSoapOut">
+    <wsdl:part name="parameters" element="tns:StockOutItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockQuantity" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityByItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockQuantityByItem" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityByItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockQuantityByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendNewMembershipSignupSoapIn">
+    <wsdl:part name="parameters" element="tns:SendNewMembershipSignup" />
+  </wsdl:message>
+  <wsdl:message name="SendNewMembershipSignupSoapOut">
+    <wsdl:part name="parameters" element="tns:SendNewMembershipSignupResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProductSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProduct" />
+  </wsdl:message>
+  <wsdl:message name="AddProductSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProductSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteProduct" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProductSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMember" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSalesSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSales" />
+  </wsdl:message>
+  <wsdl:message name="SendSalesSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsEmailRegisteredSoapIn">
+    <wsdl:part name="parameters" element="tns:IsEmailRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IsEmailRegisteredSoapOut">
+    <wsdl:part name="parameters" element="tns:IsEmailRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsNRICRegisteredSoapIn">
+    <wsdl:part name="parameters" element="tns:IsNRICRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IsNRICRegisteredSoapOut">
+    <wsdl:part name="parameters" element="tns:IsNRICRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberTransactionHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberTransactionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberFULLTransactionHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberFULLTransactionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberTransactionHistoryByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberTransactionHistoryByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberFULLTransactionHistoryByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberFULLTransactionHistoryByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPoints" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeductPointsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeductPoints" />
+  </wsdl:message>
+  <wsdl:message name="DeductPointsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeductPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPointsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentPoints" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPointsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemListHttpGetIn">
+    <wsdl:part name="syncAll" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetItemListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberListHttpGetIn">
+    <wsdl:part name="syncAll" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadMemberDataNewOrUpdatedHttpGetIn">
+    <wsdl:part name="SinceLastTimestamp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadMemberDataNewOrUpdatedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityHttpGetIn">
+    <wsdl:part name="InventoryLocation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInventoryItem" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityByItemHttpGetIn">
+    <wsdl:part name="InventoryLocation" type="s:string" />
+    <wsdl:part name="ItemNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityByItemHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSalesHttpGetIn">
+    <wsdl:part name="orderdata" type="s:string" />
+    <wsdl:part name="membershipno" type="s:string" />
+    <wsdl:part name="cashier" type="s:string" />
+    <wsdl:part name="paymentdata" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSalesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsEmailRegisteredHttpGetIn">
+    <wsdl:part name="emailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsEmailRegisteredHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsNRICRegisteredHttpGetIn">
+    <wsdl:part name="nric" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsNRICRegisteredHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryByDateHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryByDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryByDateHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryByDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="orderHdrID" type="s:string" />
+    <wsdl:part name="transactionDate" type="s:string" />
+    <wsdl:part name="validPeriod" type="s:string" />
+    <wsdl:part name="points" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeductPointsHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="orderHdrID" type="s:string" />
+    <wsdl:part name="transactionDate" type="s:string" />
+    <wsdl:part name="points" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeductPointsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPointsHttpGetIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="currentDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPointsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetItemListHttpPostIn">
+    <wsdl:part name="syncAll" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetItemListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberListHttpPostIn">
+    <wsdl:part name="syncAll" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadMemberDataNewOrUpdatedHttpPostIn">
+    <wsdl:part name="SinceLastTimestamp" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadMemberDataNewOrUpdatedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityHttpPostIn">
+    <wsdl:part name="InventoryLocation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInventoryItem" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityByItemHttpPostIn">
+    <wsdl:part name="InventoryLocation" type="s:string" />
+    <wsdl:part name="ItemNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQuantityByItemHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSalesHttpPostIn">
+    <wsdl:part name="orderdata" type="s:string" />
+    <wsdl:part name="membershipno" type="s:string" />
+    <wsdl:part name="cashier" type="s:string" />
+    <wsdl:part name="paymentdata" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSalesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsEmailRegisteredHttpPostIn">
+    <wsdl:part name="emailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsEmailRegisteredHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsNRICRegisteredHttpPostIn">
+    <wsdl:part name="nric" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsNRICRegisteredHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryByDateHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionHistoryByDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryByDateHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberFULLTransactionHistoryByDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="orderHdrID" type="s:string" />
+    <wsdl:part name="transactionDate" type="s:string" />
+    <wsdl:part name="validPeriod" type="s:string" />
+    <wsdl:part name="points" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeductPointsHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="orderHdrID" type="s:string" />
+    <wsdl:part name="transactionDate" type="s:string" />
+    <wsdl:part name="points" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeductPointsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPointsHttpPostIn">
+    <wsdl:part name="membershipNo" type="s:string" />
+    <wsdl:part name="currentDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentPointsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="IntegrationSoap">
+    <wsdl:operation name="GetItemList">
+      <wsdl:input message="tns:GetItemListSoapIn" />
+      <wsdl:output message="tns:GetItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <wsdl:input message="tns:GetMemberListSoapIn" />
+      <wsdl:output message="tns:GetMemberListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <wsdl:input message="tns:DownloadMemberDataNewOrUpdatedSoapIn" />
+      <wsdl:output message="tns:DownloadMemberDataNewOrUpdatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StockOutItem">
+      <wsdl:input message="tns:StockOutItemSoapIn" />
+      <wsdl:output message="tns:StockOutItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <wsdl:input message="tns:GetStockQuantitySoapIn" />
+      <wsdl:output message="tns:GetStockQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <wsdl:input message="tns:GetStockQuantityByItemSoapIn" />
+      <wsdl:output message="tns:GetStockQuantityByItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNewMembershipSignup">
+      <wsdl:input message="tns:SendNewMembershipSignupSoapIn" />
+      <wsdl:output message="tns:SendNewMembershipSignupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <wsdl:input message="tns:AddProductSoapIn" />
+      <wsdl:output message="tns:AddProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <wsdl:input message="tns:DeleteProductSoapIn" />
+      <wsdl:output message="tns:DeleteProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMember">
+      <wsdl:input message="tns:DeleteMemberSoapIn" />
+      <wsdl:output message="tns:DeleteMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <wsdl:input message="tns:SendSalesSoapIn" />
+      <wsdl:output message="tns:SendSalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <wsdl:input message="tns:IsEmailRegisteredSoapIn" />
+      <wsdl:output message="tns:IsEmailRegisteredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <wsdl:input message="tns:IsNRICRegisteredSoapIn" />
+      <wsdl:output message="tns:IsNRICRegisteredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <wsdl:input message="tns:GetMemberTransactionHistorySoapIn" />
+      <wsdl:output message="tns:GetMemberTransactionHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <wsdl:input message="tns:GetMemberFULLTransactionHistorySoapIn" />
+      <wsdl:output message="tns:GetMemberFULLTransactionHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <wsdl:input message="tns:GetMemberTransactionHistoryByDateSoapIn" />
+      <wsdl:output message="tns:GetMemberTransactionHistoryByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <wsdl:input message="tns:GetMemberFULLTransactionHistoryByDateSoapIn" />
+      <wsdl:output message="tns:GetMemberFULLTransactionHistoryByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <wsdl:input message="tns:AddPointsSoapIn" />
+      <wsdl:output message="tns:AddPointsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <wsdl:input message="tns:DeductPointsSoapIn" />
+      <wsdl:output message="tns:DeductPointsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <wsdl:input message="tns:GetCurrentPointsSoapIn" />
+      <wsdl:output message="tns:GetCurrentPointsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IntegrationHttpGet">
+    <wsdl:operation name="GetItemList">
+      <wsdl:input message="tns:GetItemListHttpGetIn" />
+      <wsdl:output message="tns:GetItemListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <wsdl:input message="tns:GetMemberListHttpGetIn" />
+      <wsdl:output message="tns:GetMemberListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <wsdl:input message="tns:DownloadMemberDataNewOrUpdatedHttpGetIn" />
+      <wsdl:output message="tns:DownloadMemberDataNewOrUpdatedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <wsdl:input message="tns:GetStockQuantityHttpGetIn" />
+      <wsdl:output message="tns:GetStockQuantityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <wsdl:input message="tns:GetStockQuantityByItemHttpGetIn" />
+      <wsdl:output message="tns:GetStockQuantityByItemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <wsdl:input message="tns:SendSalesHttpGetIn" />
+      <wsdl:output message="tns:SendSalesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <wsdl:input message="tns:IsEmailRegisteredHttpGetIn" />
+      <wsdl:output message="tns:IsEmailRegisteredHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <wsdl:input message="tns:IsNRICRegisteredHttpGetIn" />
+      <wsdl:output message="tns:IsNRICRegisteredHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <wsdl:input message="tns:GetMemberTransactionHistoryHttpGetIn" />
+      <wsdl:output message="tns:GetMemberTransactionHistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <wsdl:input message="tns:GetMemberFULLTransactionHistoryHttpGetIn" />
+      <wsdl:output message="tns:GetMemberFULLTransactionHistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <wsdl:input message="tns:GetMemberTransactionHistoryByDateHttpGetIn" />
+      <wsdl:output message="tns:GetMemberTransactionHistoryByDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <wsdl:input message="tns:GetMemberFULLTransactionHistoryByDateHttpGetIn" />
+      <wsdl:output message="tns:GetMemberFULLTransactionHistoryByDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <wsdl:input message="tns:AddPointsHttpGetIn" />
+      <wsdl:output message="tns:AddPointsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <wsdl:input message="tns:DeductPointsHttpGetIn" />
+      <wsdl:output message="tns:DeductPointsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <wsdl:input message="tns:GetCurrentPointsHttpGetIn" />
+      <wsdl:output message="tns:GetCurrentPointsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IntegrationHttpPost">
+    <wsdl:operation name="GetItemList">
+      <wsdl:input message="tns:GetItemListHttpPostIn" />
+      <wsdl:output message="tns:GetItemListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <wsdl:input message="tns:GetMemberListHttpPostIn" />
+      <wsdl:output message="tns:GetMemberListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <wsdl:input message="tns:DownloadMemberDataNewOrUpdatedHttpPostIn" />
+      <wsdl:output message="tns:DownloadMemberDataNewOrUpdatedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <wsdl:input message="tns:GetStockQuantityHttpPostIn" />
+      <wsdl:output message="tns:GetStockQuantityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <wsdl:input message="tns:GetStockQuantityByItemHttpPostIn" />
+      <wsdl:output message="tns:GetStockQuantityByItemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <wsdl:input message="tns:SendSalesHttpPostIn" />
+      <wsdl:output message="tns:SendSalesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <wsdl:input message="tns:IsEmailRegisteredHttpPostIn" />
+      <wsdl:output message="tns:IsEmailRegisteredHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <wsdl:input message="tns:IsNRICRegisteredHttpPostIn" />
+      <wsdl:output message="tns:IsNRICRegisteredHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <wsdl:input message="tns:GetMemberTransactionHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetMemberTransactionHistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <wsdl:input message="tns:GetMemberFULLTransactionHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetMemberFULLTransactionHistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <wsdl:input message="tns:GetMemberTransactionHistoryByDateHttpPostIn" />
+      <wsdl:output message="tns:GetMemberTransactionHistoryByDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <wsdl:input message="tns:GetMemberFULLTransactionHistoryByDateHttpPostIn" />
+      <wsdl:output message="tns:GetMemberFULLTransactionHistoryByDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <wsdl:input message="tns:AddPointsHttpPostIn" />
+      <wsdl:output message="tns:AddPointsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <wsdl:input message="tns:DeductPointsHttpPostIn" />
+      <wsdl:output message="tns:DeductPointsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <wsdl:input message="tns:GetCurrentPointsHttpPostIn" />
+      <wsdl:output message="tns:GetCurrentPointsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IntegrationSoap" type="tns:IntegrationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItemList">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetMemberList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/DownloadMemberDataNewOrUpdated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockOutItem">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/StockOutItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetStockQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetStockQuantityByItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNewMembershipSignup">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/SendNewMembershipSignup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/AddProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMember">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/DeleteMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/SendSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/IsEmailRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/IsNRICRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetMemberTransactionHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetMemberFULLTransactionHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetMemberTransactionHistoryByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetMemberFULLTransactionHistoryByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/AddPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/DeductPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetCurrentPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrationSoap12" type="tns:IntegrationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItemList">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetItemList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetMemberList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/DownloadMemberDataNewOrUpdated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockOutItem">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/StockOutItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetStockQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetStockQuantityByItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNewMembershipSignup">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/SendNewMembershipSignup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/AddProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMember">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/DeleteMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/SendSales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/IsEmailRegistered" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/IsNRICRegistered" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetMemberTransactionHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetMemberFULLTransactionHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetMemberTransactionHistoryByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetMemberFULLTransactionHistoryByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/AddPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/DeductPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetCurrentPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrationHttpGet" type="tns:IntegrationHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetItemList">
+      <http:operation location="/GetItemList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <http:operation location="/GetMemberList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <http:operation location="/DownloadMemberDataNewOrUpdated" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <http:operation location="/GetStockQuantity" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <http:operation location="/GetStockQuantityByItem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <http:operation location="/SendSales" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <http:operation location="/IsEmailRegistered" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <http:operation location="/IsNRICRegistered" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <http:operation location="/GetMemberTransactionHistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <http:operation location="/GetMemberFULLTransactionHistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <http:operation location="/GetMemberTransactionHistoryByDate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <http:operation location="/GetMemberFULLTransactionHistoryByDate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <http:operation location="/AddPoints" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <http:operation location="/DeductPoints" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <http:operation location="/GetCurrentPoints" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrationHttpPost" type="tns:IntegrationHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetItemList">
+      <http:operation location="/GetItemList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <http:operation location="/GetMemberList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadMemberDataNewOrUpdated">
+      <http:operation location="/DownloadMemberDataNewOrUpdated" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantity">
+      <http:operation location="/GetStockQuantity" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQuantityByItem">
+      <http:operation location="/GetStockQuantityByItem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSales">
+      <http:operation location="/SendSales" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailRegistered">
+      <http:operation location="/IsEmailRegistered" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsNRICRegistered">
+      <http:operation location="/IsNRICRegistered" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistory">
+      <http:operation location="/GetMemberTransactionHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistory">
+      <http:operation location="/GetMemberFULLTransactionHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTransactionHistoryByDate">
+      <http:operation location="/GetMemberTransactionHistoryByDate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberFULLTransactionHistoryByDate">
+      <http:operation location="/GetMemberFULLTransactionHistoryByDate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <http:operation location="/AddPoints" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeductPoints">
+      <http:operation location="/DeductPoints" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentPoints">
+      <http:operation location="/GetCurrentPoints" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Integration">
+    <wsdl:port name="IntegrationSoap" binding="tns:IntegrationSoap">
+      <soap:address location="http://localhost:2234/Synchronization/Integration.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrationSoap12" binding="tns:IntegrationSoap12">
+      <soap12:address location="http://localhost:2234/Synchronization/Integration.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrationHttpGet" binding="tns:IntegrationHttpGet">
+      <http:address location="http://localhost:2234/Synchronization/Integration.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrationHttpPost" binding="tns:IntegrationHttpPost">
+      <http:address location="http://localhost:2234/Synchronization/Integration.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

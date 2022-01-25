@@ -1,0 +1,251 @@
+<div id="dynamicContent">
+    <div id="divItemOptimalStockList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Item Optimal Stock Level</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Outlet</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}, disable: !allowChangeClinic" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+					<div clas="form-group">
+					<h5>Category</h5>
+						<select id="selPOSFilter" class="form-control" data-bind="foreach: categoryList, value: selectedCategoryName">
+								<option data-bind="value: CategoryName, text: CategoryName"></option>
+						</select>
+					</div>
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchItemOptimalStock">SEARCH</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: openAddNewPage">NEW</button>
+					<button type="button" class="btn btn-primary" data-bind="click: selectAllFiles">SELECT ALL</button>
+					<button type="button" class="btn btn-primary" data-bind="click: clearSelection">CLEAR SELECTION</button>
+					<button type="button" class="btn btn-warning" data-bind="click: openCopyPage">COPY TO OUTLET</button>
+					<div class="pull-right">
+                        <button type="button" class="btn btn-danger" data-bind="click: deleteSelectedItem, disable: deleteCheckedBtnState">DELETE CHECKED</button>
+                    </div>
+                </form>
+                <p>&nbsp;</p>
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKeyPOHdr().asc, 'dropdown': !sortKeyPOHdr().asc}">
+                            <tr>
+								<th>
+                                    <input type="checkbox" class="checkbox" data-bind="checked: isSelectAllFiles, click: toggleSelectAllFiles" />
+                                </th>
+								<th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'BaseLevelID')">Base Level ID</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='BaseLevelID'"></span>
+                                </th>
+								<th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'Category')">Category Name</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='Category'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'ItemNo')">Item Number</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='ItemNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'ItemName')">Item Name</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='ItemName'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'BaseLevelQuantity')">Quantity</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='BaseLevelQuantity'"></span>
+                                </th>
+								<th>
+                                    <a href="#" data-bind="click: sortPOHdr.bind($data, 'InventoryLocationName')">Outlet</a>
+                                    <span class="caret" data-bind="visible: sortKeyPOHdr().columnName=='InventoryLocationName'"></span>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: itemBaseLevels">
+                            <tr>
+								<td><input type="checkbox" class="checkbox" data-bind="checked: isSelected" /></td>
+								<td data-bind="text: BaseLevelID" visible="false"></td>
+								<td data-bind="text: Category"></td>
+                                <td data-bind="text: ItemNo"></td>
+                                <td data-bind="text: ItemName"></td>
+                                <td data-bind="text: BaseLevelQuantity"></td>
+								<td data-bind="text: InventoryLocationName"></td>
+                                <td>
+                                    <a href="#" data-bind="text: 'edit', click: $parent.openUpdatePage"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody data-bind="visible: isPOHdrNotFound">
+                            <tr>
+                                <td colspan="4" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!--/ #divStockReturnList-->
+
+    <div id="divItemOptimalStockModify">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Item Optimal Stock</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: currentItemBaseLevel">
+                    <div class="form-group">
+                        <h5>Item No</h5>
+                        <div class="input-group">
+                                <input type="text" class="form-control" data-bind="value: ItemNo" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" type="button" data-bind="click: $parent.openSearchProductDialog">SEARCH</button>
+                                </span>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Item Name</h5>
+                        <input type="text" class="form-control" data-bind="value: ItemName" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Quantity</h5>
+						<input type="text" class="form-control" data-bind="value: BaseLevelQuantity" />
+                    </div>
+					
+					<div class="form-group">
+                        <h5>UOM</h5>
+						<input type="text" class="form-control" data-bind="value: UOM" />
+                    </div>
+					
+					
+                </form>
+					<button type="button" class="btn btn-default" data-bind="click: backToList">BACK</button>
+                    <div class="pull-right">
+                       <button class="btn btn-primary" type="submit" data-bind="click: addItemBaseLevel">ADD</button>
+                    </div>
+               
+
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divStockReturnModify-->
+
+    <!-- Modal for Search Product -->
+    <div class="modal fade" id="searchProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Search Product</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <h5>Search:</h5>
+                                    <div class="input-group">
+                                        <input type="text" id="txtSearchItem" class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-warning" data-bind="click: searchItem">SEARCH</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div style="overflow: auto; max-height: 300px">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item Code</th>
+                                            <th>Item Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: searchItemResults">
+                                        <tr>
+                                            <td data-bind="text: data.ItemNo"></td>
+                                            <td data-bind="text: data.ItemName"></td>
+                                            <td><button type="button" class="btn btn-success" data-bind="click: $parent.selectItem">ADD</button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody data-bind="visible: isItemNotFound">
+                                        <tr>
+                                            <td colspan="3" align="center"><br />No result found</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadSearchItem, visible: showLoadMoreItems">Load more...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / #searchProductModal -->
+	<!-- / #Item Base Level Copy -->
+	<div id="divItemBaseLevelCopy">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Copy to Outlet</h4>
+            </div>
+            <div class="panel-body">
+                <div class="well well-sm">
+                    <span>Copy all files from one outlet to another outlet.</span>
+                </div>
+                <form role="form">
+                    <div class="form-group">
+                        <h5>From Outlet</h5>
+                        <select id="selPOSCopyFrom" class="form-control" data-bind="foreach: inventoryLocationList, value: copyFromInventoryLocationID">
+                            <option data-bind="value: InventoryLocationID, text: InventoryLocationName"></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h5>To Outlet</h5>
+                        <select id="selPOSCopyTo" class="form-control" data-bind="foreach: inventoryLocationList, value: copyToInventoryLocationID">
+                            <option data-bind="value: InventoryLocationID, text: InventoryLocationName"></option>
+                        </select>
+                    </div>
+					 <div class="checkbox">
+                        <label>
+                            <input type="checkbox" data-bind="checked: allowOverwrite" /> Overwrite Quantity
+                        </label>
+                    </div>
+                </form>
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" data-bind="click: backToList">Cancel</button>
+                        <button type="button" class="btn btn-success" data-bind="click: copyItemOptimalOutlet">COPY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+	<!-- / #Item Base Level Copy -->
+</div>
+<script type="text/javascript" src="js/ItemOptimalStock.js"></script>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.edgeworks.com.sg" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.edgeworks.com.sg" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.edgeworks.com.sg">
+      <s:element name="SendDataFromServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDataFromServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendDataFromServerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserCredentials" type="tns:UserCredentials" />
+      <s:complexType name="UserCredentials">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="mallCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="getAPIKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tenantCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAPIKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAPIKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendDataFromServerSoapIn">
+    <wsdl:part name="parameters" element="tns:SendDataFromServer" />
+  </wsdl:message>
+  <wsdl:message name="SendDataFromServerSoapOut">
+    <wsdl:part name="parameters" element="tns:SendDataFromServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendDataFromServerUserCredentials">
+    <wsdl:part name="UserCredentials" element="tns:UserCredentials" />
+  </wsdl:message>
+  <wsdl:message name="getAPIKeySoapIn">
+    <wsdl:part name="parameters" element="tns:getAPIKey" />
+  </wsdl:message>
+  <wsdl:message name="getAPIKeySoapOut">
+    <wsdl:part name="parameters" element="tns:getAPIKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAPIKeyUserCredentials">
+    <wsdl:part name="UserCredentials" element="tns:UserCredentials" />
+  </wsdl:message>
+  <wsdl:portType name="MallIntegrationService">
+    <wsdl:operation name="SendDataFromServer">
+      <wsdl:input message="tns:SendDataFromServerSoapIn" />
+      <wsdl:output message="tns:SendDataFromServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAPIKey">
+      <wsdl:input message="tns:getAPIKeySoapIn" />
+      <wsdl:output message="tns:getAPIKeySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MallIntegrationService" type="tns:MallIntegrationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendDataFromServer">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/SendDataFromServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendDataFromServerUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAPIKey">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/getAPIKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAPIKeyUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MallIntegrationService1" type="tns:MallIntegrationService">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendDataFromServer">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/SendDataFromServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendDataFromServerUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAPIKey">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/getAPIKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAPIKeyUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MallIntegrationServer">
+    <wsdl:port name="MallIntegrationService" binding="tns:MallIntegrationService">
+      <soap:address location="http://localhost:2234/Synchronization/MallIntegrationServer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MallIntegrationService1" binding="tns:MallIntegrationService1">
+      <soap12:address location="http://localhost:2234/Synchronization/MallIntegrationServer.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

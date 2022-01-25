@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADJUST" xml:space="preserve">
+    <value>ADJUST</value>
+  </data>
+  <data name="ADJUST IN" xml:space="preserve">
+    <value>ADJUST IN</value>
+  </data>
+  <data name="ADJUST OUT" xml:space="preserve">
+    <value>ADJUST OUT</value>
+  </data>
+  <data name="ADJUST STOCK" xml:space="preserve">
+    <value>ADJUST STOCK</value>
+  </data>
+  <data name="ADJUSTMENT" xml:space="preserve">
+    <value>ADJUSTMENT</value>
+  </data>
+  <data name="Adjustment Successful" xml:space="preserve">
+    <value>Adjustment Successful</value>
+  </data>
+  <data name="Adjustment Type" xml:space="preserve">
+    <value>Adjustment Type</value>
+  </data>
+  <data name="Are you sure you want to add full stock take item list to the current list?" xml:space="preserve">
+    <value>Are you sure you want to add full stock take item list to the current list?</value>
+  </data>
+  <data name="Cannot transfer to the same location. Select another destination location." xml:space="preserve">
+    <value>Cannot transfer to the same location. Select another destination location.</value>
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Currencies</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Error encounter." xml:space="preserve">
+    <value>Error encounter.</value>
+  </data>
+  <data name="Error encountered while trying to perform stock in. Error" xml:space="preserve">
+    <value>Error encountered while trying to perform stock in. Error</value>
+  </data>
+  <data name="Exchange Rate" xml:space="preserve">
+    <value>Exchange Rate</value>
+  </data>
+  <data name="Freight Charges" xml:space="preserve">
+    <value>Freight Charges</value>
+  </data>
+  <data name="GOODS RECEIVE" xml:space="preserve">
+    <value>GOODS RECEIVE</value>
+  </data>
+  <data name="Goods receive successful" xml:space="preserve">
+    <value>Goods receive successful</value>
+  </data>
+  <data name="Invalid Discount;" xml:space="preserve">
+    <value>Invalid Discount;</value>
+  </data>
+  <data name="Invalid Exchange Rate" xml:space="preserve">
+    <value>Invalid Exchange Rate</value>
+  </data>
+  <data name="Invalid Freight Charges" xml:space="preserve">
+    <value>Invalid Freight Charges</value>
+  </data>
+  <data name="ISSUE" xml:space="preserve">
+    <value>ISSUE</value>
+  </data>
+  <data name="Please enter remark." xml:space="preserve">
+    <value>Please enter remark.</value>
+  </data>
+  <data name="Please select the location." xml:space="preserve">
+    <value>Please select the location.</value>
+  </data>
+  <data name="Please specify stock take personnel." xml:space="preserve">
+    <value>Please specify stock take personnel.</value>
+  </data>
+  <data name="Please specify stock take verifier." xml:space="preserve">
+    <value>Please specify stock take verifier.</value>
+  </data>
+  <data name="Please specify the stock out reason." xml:space="preserve">
+    <value>Please specify the stock out reason.</value>
+  </data>
+  <data name="Please tick the item you wish to process" xml:space="preserve">
+    <value>Please tick the item you wish to process.</value>
+  </data>
+  <data name="Purchase Order" xml:space="preserve">
+    <value>Purchase Order</value>
+  </data>
+  <data name="Purchase Order No" xml:space="preserve">
+    <value>Purchase Order No</value>
+  </data>
+  <data name="RECEIVE" xml:space="preserve">
+    <value>RECEIVE</value>
+  </data>
+  <data name="SAVE STOCK TAKE" xml:space="preserve">
+    <value>SAVE STOCK TAKE</value>
+  </data>
+  <data name="STOCK ADJUSTMENT" xml:space="preserve">
+    <value>STOCK ADJUSTMENT</value>
+  </data>
+  <data name="STOCK ISSUE" xml:space="preserve">
+    <value>STOCK ISSUE</value>
+  </data>
+  <data name="Stock Issue successful" xml:space="preserve">
+    <value>Stock Issue successful</value>
+  </data>
+  <data name="Stock Out Reason" xml:space="preserve">
+    <value>Stock Out Reason</value>
+  </data>
+  <data name="STOCK TAKE" xml:space="preserve">
+    <value>STOCK TAKE</value>
+  </data>
+  <data name="Stock Take Saved" xml:space="preserve">
+    <value>Stock Take Saved</value>
+  </data>
+  <data name="Stock Take successful" xml:space="preserve">
+    <value>Stock Take successful</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="Taken By" xml:space="preserve">
+    <value>Taken By</value>
+  </data>
+  <data name="There is no item to be printed." xml:space="preserve">
+    <value>There is no item to be printed.</value>
+  </data>
+  <data name="TRANSFER" xml:space="preserve">
+    <value>TRANSFER</value>
+  </data>
+  <data name="Transfer Destination" xml:space="preserve">
+    <value>Transfer Destination</value>
+  </data>
+  <data name="Transfer successful" xml:space="preserve">
+    <value>Transfer successful</value>
+  </data>
+  <data name="Transfer to" xml:space="preserve">
+    <value>Transfer to</value>
+  </data>
+  <data name="Unable to perform Stock Out. Error:" xml:space="preserve">
+    <value>Unable to perform Stock Out. Error: </value>
+  </data>
+  <data name="Verified By" xml:space="preserve">
+    <value>Verified By</value>
+  </data>
+  <data name="Adjustment In" xml:space="preserve">
+    <value>Adjustment In</value>
+  </data>
+  <data name="Adjustment Out" xml:space="preserve">
+    <value>Adjustment Out</value>
+  </data>
+  <data name="ALL" xml:space="preserve">
+    <value>ALL</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Delete Checked" xml:space="preserve">
+    <value>Delete Checked</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Item Name" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="Item No." xml:space="preserve">
+    <value>Item No.</value>
+  </data>
+  <data name="Not Voided" xml:space="preserve">
+    <value>Not Voided</value>
+  </data>
+  <data name="Select Currency" xml:space="preserve">
+    <value>Select Currency</value>
+  </data>
+  <data name="Select Reason" xml:space="preserve">
+    <value>Select Reason</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>Voided</value>
+  </data>
+  <data name="Item No" xml:space="preserve">
+    <value>Item No</value>
+  </data>
+  <data name="ItemNo" xml:space="preserve">
+    <value>ItemNo</value>
+  </data>
+  <data name="--Please Select--" xml:space="preserve">
+    <value>--Please Select--</value>
+  </data>
+  <data name="All your saved files will be deleted! Are you sure you want to delete all?" xml:space="preserve">
+    <value>All your saved files will be deleted! Are you sure you want to delete all?</value>
+  </data>
+  <data name="An unknown error has been encountered. Please contact your system administrator." xml:space="preserve">
+    <value>An unknown error has been encountered. Please contact your system administrator.</value>
+  </data>
+  <data name="Are you sure you want to cancel?" xml:space="preserve">
+    <value>Are you sure you want to cancel?</value>
+  </data>
+  <data name="Are you sure you want to delete?" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="Are you sure you want to quit?" xml:space="preserve">
+    <value>Are you sure you want to quit?</value>
+  </data>
+  <data name="Cost Price must be a non-negative number." xml:space="preserve">
+    <value>Cost Price must be a non-negative number.</value>
+  </data>
+  <data name="CurrentCurrency" xml:space="preserve">
+    <value>฿</value>
+  </data>
+  <data name="Edit Item" xml:space="preserve">
+    <value>Edit Item</value>
+  </data>
+  <data name="Enter Remark for the saved file" xml:space="preserve">
+    <value>Enter Remark for the saved file</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ERROR adjusting stock take. Please try again. If the problem persist, please contact your system administrator." xml:space="preserve">
+    <value>ERROR adjusting stock take. Please try again. If the problem persist, please contact your system administrator.</value>
+  </data>
+  <data name="Error encountered while trying to perform stock in." xml:space="preserve">
+    <value>Error encountered while trying to perform stock in.</value>
+  </data>
+  <data name="Error loading inventory from the web. Please check your internet connection." xml:space="preserve">
+    <value>Error loading inventory from the web. Please check your internet connection.</value>
+  </data>
+  <data name="Error loading inventory from the web. Please download all data from server first." xml:space="preserve">
+    <value>Error loading inventory from the web. Please download all data from server first.</value>
+  </data>
+  <data name="File saved" xml:space="preserve">
+    <value>File saved</value>
+  </data>
+  <data name="has already been used." xml:space="preserve">
+    <value>has already been used.</value>
+  </data>
+  <data name="Invalid Inventory data. Unable to receive Inventory." xml:space="preserve">
+    <value>Invalid Inventory data. Unable to receive Inventory.</value>
+  </data>
+  <data name="Item Added" xml:space="preserve">
+    <value>Item Added</value>
+  </data>
+  <data name="Load FAILED!" xml:space="preserve">
+    <value>Load FAILED!</value>
+  </data>
+  <data name="Load successful" xml:space="preserve">
+    <value>Load successful</value>
+  </data>
+  <data name="No data inside" xml:space="preserve">
+    <value>No data inside</value>
+  </data>
+  <data name="Please select item category" xml:space="preserve">
+    <value>Please select item category</value>
+  </data>
+  <data name="Please select item department" xml:space="preserve">
+    <value>Please select item department</value>
+  </data>
+  <data name="Price must be a non-negative number" xml:space="preserve">
+    <value>Price must be a non-negative number</value>
+  </data>
+  <data name="Save successful" xml:space="preserve">
+    <value>Save Successful</value>
+  </data>
+  <data name="Stock In" xml:space="preserve">
+    <value>Stock In</value>
+  </data>
+  <data name="Stock Out" xml:space="preserve">
+    <value>Stock Out</value>
+  </data>
+  <data name="Stock Take has been adjusted." xml:space="preserve">
+    <value>Stock Take has been adjusted.</value>
+  </data>
+  <data name="The item no" xml:space="preserve">
+    <value>The item no</value>
+  </data>
+  <data name="The Item you specified is invalid." xml:space="preserve">
+    <value>The Item you specified is invalid.</value>
+  </data>
+  <data name="There is no data for the given search criteria." xml:space="preserve">
+    <value>There is no data for the given search criteria.</value>
+  </data>
+  <data name="There is no data to export" xml:space="preserve">
+    <value>There is no data to export</value>
+  </data>
+  <data name="There is no Stock Take data to adjust. All Stock Take has been adjusted" xml:space="preserve">
+    <value>There is no Stock Take data to adjust. All Stock Take has been adjusted</value>
+  </data>
+  <data name="Transfer In" xml:space="preserve">
+    <value>Transfer In</value>
+  </data>
+  <data name="Transfer Out" xml:space="preserve">
+    <value>Transfer Out</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Update failed. Please try again" xml:space="preserve">
+    <value>Update failed. Please try again</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WARNING. You will lose all your modified cost priced. Are you sure you want to change your Currency?" xml:space="preserve">
+    <value>WARNING. You will lose all your modified cost priced. Are you sure you want to change your Currency?</value>
+  </data>
+  <data name="You need to enter a non negative number for quantity" xml:space="preserve">
+    <value>You need to enter a non negative number for quantity</value>
+  </data>
+  <data name="Stock In Reason" xml:space="preserve">
+    <value>Stock In Reason</value>
+  </data>
+  <data name="Please specify the stock in reason." xml:space="preserve">
+    <value>Please specify the stock in reason.</value>
+  </data>
+  <data name="Please key in the Purchase Order No." xml:space="preserve">
+    <value>Please key in the Purchase Order No.</value>
+  </data>
+  <data name="This Purchase Order No has been used before." xml:space="preserve">
+    <value>This Purchase Order No has been used before.</value>
+  </data>
+  <data name="Add New" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="Alternate Barcode Saved" xml:space="preserve">
+    <value>Alternate Barcode Saved</value>
+  </data>
+  <data name="Are you sure you want to confirm?" xml:space="preserve">
+    <value>Are you sure you want to confirm?</value>
+  </data>
+  <data name="Are you sure you want to delete these categories?" xml:space="preserve">
+    <value>Are you sure you want to delete these categories?</value>
+  </data>
+  <data name="Are you sure you want to delete these Locations?" xml:space="preserve">
+    <value>Are you sure you want to delete these Locations?</value>
+  </data>
+  <data name="Are you sure you want to delete these users?" xml:space="preserve">
+    <value>Are you sure you want to delete these users?</value>
+  </data>
+  <data name="Are you sure you want to delete this item?" xml:space="preserve">
+    <value>Are you sure you want to delete this item?</value>
+  </data>
+  <data name="Are you sure you want to logout?" xml:space="preserve">
+    <value>Are you sure you want to logout?</value>
+  </data>
+  <data name="Categories has been deleted" xml:space="preserve">
+    <value>Categories has been deleted</value>
+  </data>
+  <data name="Change password succesful" xml:space="preserve">
+    <value>Change password succesful</value>
+  </data>
+  <data name="Import failed. Please check your excel file" xml:space="preserve">
+    <value>Import failed. Please check your excel file</value>
+  </data>
+  <data name="Import successful" xml:space="preserve">
+    <value>Import successful</value>
+  </data>
+  <data name="Invalid quantity for row" xml:space="preserve">
+    <value>Invalid quantity for row</value>
+  </data>
+  <data name="Locations has been deleted" xml:space="preserve">
+    <value>Locations has been deleted</value>
+  </data>
+  <data name="No category is selected" xml:space="preserve">
+    <value>No category is selected</value>
+  </data>
+  <data name="Passwords entered do not matched" xml:space="preserve">
+    <value>Passwords entered do not matched</value>
+  </data>
+  <data name="Please choose a hot key to assign." xml:space="preserve">
+    <value>Please choose a hot key to assign.</value>
+  </data>
+  <data name="Please choose an item to assign." xml:space="preserve">
+    <value>Please choose an item to assign.</value>
+  </data>
+  <data name="Please contact your administrator" xml:space="preserve">
+    <value>Please contact your administrator</value>
+  </data>
+  <data name="Please fill in the Category Name." xml:space="preserve">
+    <value>Please fill in the Category Name.</value>
+  </data>
+  <data name="Please fill in the Location Name." xml:space="preserve">
+    <value>Please fill in the Location Name.</value>
+  </data>
+  <data name="Please select at least 1 (one) category to be exported" xml:space="preserve">
+    <value>Please select at least 1 (one) category to be exported</value>
+  </data>
+  <data name="Please specify valid input for the hour and minutes" xml:space="preserve">
+    <value>Please specify valid input for the hour and minutes</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="The Category Name you have entered is already created. Please choose another name." xml:space="preserve">
+    <value>The Category Name you have entered is already created. Please choose another name.</value>
+  </data>
+  <data name="The location name you entered has already been created." xml:space="preserve">
+    <value>The location name you entered has already been created.</value>
+  </data>
+  <data name="There are Cash Receipts that contain this item. Delete them first before you can delete this Item" xml:space="preserve">
+    <value>There are Cash Receipts that contain this item. Delete them first before you can delete this Item</value>
+  </data>
+  <data name="There is no category available" xml:space="preserve">
+    <value>There is no category available</value>
+  </data>
+  <data name="There is Stock take in progress, no stock movement is allowed" xml:space="preserve">
+    <value>There is Stock take in progress, no stock movement is allowed</value>
+  </data>
+  <data name="User Name already exist" xml:space="preserve">
+    <value>User Name already exist</value>
+  </data>
+  <data name="Users has been deleted" xml:space="preserve">
+    <value>Users has been deleted</value>
+  </data>
+  <data name="Wrong hour specified, hour must be between 00 to 23" xml:space="preserve">
+    <value>Wrong hour specified, hour must be between 00 to 23</value>
+  </data>
+  <data name="Wrong minute specified, minute must be between 00 to 59" xml:space="preserve">
+    <value>Wrong minute specified, minute must be between 00 to 59</value>
+  </data>
+  <data name="You can also click select all button to export all category" xml:space="preserve">
+    <value>You can also click select all button to export all category</value>
+  </data>
+  <data name="Actual Stock" xml:space="preserve">
+    <value>Actual Stock</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+</root>

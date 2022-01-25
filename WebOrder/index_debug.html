@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Inventory Web</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link href="bootstrap-datepicker/datepicker3.css" rel="stylesheet">
+    <link href="css/bootstrap-dialog.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="print" href="css/print.css">
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top hidden-print" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand" id="headerTitle"></span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right menu-settings-narrow">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="userDisplayName"></span></a>
+                        <ul class="dropdown-menu notif-container">
+                            <li><a href="#" onclick="event.preventDefault()">No notification</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav hidden" id="mainMenu">
+                    <li class="dropdown hidden">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="menu-goods-ordering" class="hidden"><a href="#goodsordering" onclick="fnLoadContent('goodsordering', true)">Goods Ordering</a></li>
+                            <li id="menu-order-approval" class="hidden"><a href="#orderapproval" onclick="fnLoadContent('orderapproval', true)">Order Approval</a></li>
+                            <li id="menu-goods-receive" class="hidden"><a href="#goodsreceive" onclick="fnLoadContent('goodsreceive', true)">Goods Receive</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Return <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="menu-stock-return" class="hidden"><a href="#stockreturn" onclick="fnLoadContent('stockreturn', true)">Stock Return</a></li>
+                            <li id="menu-return-approval" class="hidden"><a href="#returnapproval" onclick="fnLoadContent('returnapproval', true)">Return Approval</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adjustment <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="menu-stock-adjustment" class="hidden"><a href="#stockadjustment" onclick="fnLoadContent('stockadjustment', true)">Stock Adjustment</a></li>
+                            <li id="menu-adjustment-approval" class="hidden"><a href="#adjustmentapproval" onclick="fnLoadContent('adjustmentapproval', true)">Adjustment Approval</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transfer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="menu-stock-transfer" class="hidden"><a href="#stocktransfer" onclick="fnLoadContent('stocktransfer', true)">Stock Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stock Take <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="menu-stock-take-doc" class="hidden"><a href="#stocktakedoc" onclick="fnLoadContent('stocktakedoc', true)">Stock Take Document</a></li>
+                            <li id="menu-stock-take" class="hidden"><a href="#stocktake" onclick="fnLoadContent('stocktake', true)">Stock Take</a></li>
+                            <li id="menu-stock-take-approval" class="hidden"><a href="#stocktakeapproval" onclick="fnLoadContent('stocktakeapproval', true)">Stock Take Approval</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="fnLoadReport('StockBalanceByOutlet')">Stock Balance Report</a></li>
+                            <li><a href="#" onclick="fnLoadReport('StockCardReport')">Stock Card Report</a></li>
+                            <li><a href="#" onclick="fnLoadReport('InventoryTransactionReport')">Inventory Activity Report</a></li>
+                            <li><a href="#" onclick="fnLoadReport('StockDiscrepanciesReport')">Discrepancies Report</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right menu-settings-wide">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="userDisplayName"></span></a>
+                        <ul class="dropdown-menu pull-right notif-container">
+                            <li><a href="#" onclick="event.preventDefault()">No notification</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="#settings" onclick="fnLoadSettings(true)">Settings</a></li>
+                            <li><a href="#itemimporter" onclick="fnLoadContent('itemimporter', true)">Drug Importer</a></li>
+                            <li class="menuLogOut hidden"><a href="#" onclick="fnLogout(true)">Log out</a></li>
+                            <li class="menuLogIn"><a href="#" onclick="fnLogin(true)">Log in</a></li>
+                            <!--<li><a href="#" onclick="fnExitFromApp()">Exit</a></li>-->
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right menu-settings-narrow">
+                    <li><a href="#settings" onclick="fnLoadSettings(true)">Settings</a></li>
+                    <li><a href="#itemimporter" onclick="fnLoadContent('itemimporter', true)">Drug Importer</a></li>
+                    <li class="menuLogOut hidden"><a href="#" onclick="fnLogout(true)">Log out</a></li>
+                    <li class="menuLogIn"><a href="#" onclick="fnLogin(true)">Log in</a></li>
+                    <!--<li><a href="#" onclick="fnExitFromApp()">Exit</a></li>-->
+                </ul>
+            </div>
+            <!-- / .nav-collapse -->
+        </div>
+    </div>
+    <!-- / Fixed navbar -->
+
+
+    <div class="container">
+        
+        <div id="content">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Drug Importer</h4>
+                </div>
+                <div class="panel-body">
+                    <!-- The fileinput-button span is used to style the file input field as button -->
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Select files...</span>
+                        <input id="fileupload" type="file" name="files[]">
+                    </span>
+                    <!--<button id="fileupload" type="button">upload</button>-->
+                    <br>
+                    <br>
+                    <!-- The global progress bar -->
+                    <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                    <!-- The container for the uploaded files -->
+                    <div id="files" class="files"></div>
+                </div>
+            </div>
+            <!-- /.panel -->
+
+            <!--<script type="text/javascript" src="js/itemimporter.js"></script>-->
+
+            
+            
+        </div>
+        <div id="divLoading" style="z-index: 9999; display: none">
+            <img src="img/ajax-loader.gif" />
+        </div>
+
+        <!-- Modal for Login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#settings" onclick="$('#loginModal').modal('hide'); fnLoadSettings();"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+                        <!--<button type="button" class="close" aria-hidden="true" onclick="fnExitFromApp()">&times;</button>-->
+                        <form class="form-signin" role="form">
+                            <img src="img/ew_logo.png" width="181" height="104" class="img-responsive" />
+                            <h2 class="form-signin-heading">Please sign in</h2>
+                            <input type="text" id="username" class="form-control" placeholder="User name" required autofocus>
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                            <label class="checkbox">
+                                <input type="checkbox" id="remember" checked="checked">Keep me signed in
+                            </label>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        </form>
+                        <p class="text-right"><small>Version 0.8.1</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / #loginModal -->
+    </div>
+    <!-- / .container -->
+
+
+    <!-- Bootstrap core JavaScript
+       ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.xml2json.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery-scrolltofixed-min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-dialog.min.js"></script>
+
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="js/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="js/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="js/jquery.fileupload.js"></script>
+
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+
+    <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="js/InventoryWeb_web_service.js"></script>
+    <script type="text/javascript" src="js/data_access_layer.js"></script>
+    <script type="text/javascript" src="js/setting.js"></script>
+    <script type="text/javascript" src="js/logger.js"></script>
+    <script type="text/javascript" src="js/common_functions.js"></script>
+    <script type="text/javascript" src="js/download_initial_data.js"></script>
+
+    <script type="text/javascript">
+
+        // Document ready
+        var timeoutHandler;
+
+        $(function () {
+            $(".form-signin").submit(function (e) {
+                e.preventDefault();
+                InventoryWebWS.fnLogin($("#username").val(), $("#password").val(), function (result) {
+                    if (result.result == true) {
+                        var user = {
+                            username: result.UserName,
+                            displayName: result.DisplayName,
+                            role: result.Role,
+                            departmentID: result.DeptID,
+                            pointOfSaleID: result.PointOfSaleID,
+                            locationID: result.InventoryLocation.InventoryLocationID,
+                            locationName: result.InventoryLocation.InventoryLocationName,
+                            privileges: result.Privileges,
+                            userToken: result.UserToken
+                        };
+
+                        fnSetUserSession(user);
+
+                        if ($("#remember").is(':checked')) {
+                            localStorage.setItem("user", JSON.stringify(user));
+                        };
+
+                        localStorage.companyName = result.CompanyName;
+                        $("#headerTitle").text(localStorage.companyName);
+
+                        //window.location.reload();
+
+                        DAL.fnDropAllTables(function () {
+                            fnInitializeEquipPDA(function (num_of_records) {
+                                console.log(num_of_records + ' records have been added to database.')
+                                $("#loginModal").modal('hide');
+                                fnLoadPage();
+                            });
+                        });
+
+                    }
+                    else {
+                        $("#loginModal").modal('hide');
+                        BootstrapDialog.alert(result.status, function () {
+                            $("#loginModal").modal('show');
+                        });
+                        $("#password").select();
+                    };
+                });
+            });
+
+            DAL.fnOpenDB(function () {
+                settings.fnLoad(function () {
+                    if (localStorage.getItem("user")) {
+                        var user = JSON.parse(localStorage.getItem("user"));
+                        InventoryWebWS.fnCheckUserToken(user.userToken + "", function (result) {
+                            if (result.valid) {
+                                fnSetUserSession(user);
+                            }
+                            else {
+                                sessionStorage.clear();
+                            };
+                            fnLoadPage();
+                        });
+                    }
+                    else {
+                        fnLoadPage();
+                    };
+
+                    $("#headerTitle").text(localStorage.getItem("companyName"));
+                });
+            });
+        });
+
+        function fnSetUserSession(user) {
+            sessionStorage.username = user.username;
+            sessionStorage.displayName = user.displayName;
+            sessionStorage.role = user.role;
+            sessionStorage.departmentID = user.departmentID;
+            sessionStorage.PointOfSaleID = user.pointOfSaleID;
+            sessionStorage.locationID = user.locationID;
+            sessionStorage.locationName = user.locationName;
+            sessionStorage.privileges = JSON.stringify(user.privileges);
+            sessionStorage.userToken = user.userToken;
+
+            $(".userDisplayName").html("<span class='glyphicon glyphicon-user'></span> " + sessionStorage.displayName + " <span class='badge notif-count'></span>");
+        }
+
+        function fnGenerateMenu() {
+            if (fnIsAuthenticated()) {
+                $("#mainMenu").removeClass("hidden");
+                $(".menuLogIn").addClass("hidden");
+                $(".menuLogOut").removeClass("hidden");
+                $(".userDisplayName").removeClass("hidden");
+            }
+            else {
+                $("#mainMenu").addClass("hidden");
+                $(".menuLogIn").removeClass("hidden");
+                $(".menuLogOut").addClass("hidden");
+                $(".userDisplayName").addClass("hidden");
+            };
+
+            fnShowOrHideMenu("Goods Ordering", "#menu-goods-ordering");
+            fnShowOrHideMenu("Order Approval", "#menu-order-approval");
+            fnShowOrHideMenu("Goods Receive", "#menu-goods-receive");
+            fnShowOrHideMenu("Stock Return", "#menu-stock-return");
+            fnShowOrHideMenu("Return Approval", "#menu-return-approval");
+            fnShowOrHideMenu("Stock Adjustment", "#menu-stock-adjustment");
+            fnShowOrHideMenu("Adjustment Approval", "#menu-adjustment-approval");
+            fnShowOrHideMenu("Stock Transfer", "#menu-stock-transfer");
+            fnShowOrHideMenu("Stock Take Document", "#menu-stock-take-doc");
+            fnShowOrHideMenu("Stock Take", "#menu-stock-take");
+            fnShowOrHideMenu("Stock Take Approval", "#menu-stock-take-approval");
+
+            var dropdownList = $("#mainMenu li.dropdown");
+            for (var i = 0; i < dropdownList.length; i++) {
+                if ($(dropdownList[i]).find("ul.dropdown-menu li:not('.hidden')").length > 0)
+                    $(dropdownList[i]).removeClass("hidden");
+                else
+                    $(dropdownList[i]).addClass("hidden");
+            };
+        }
+
+        function fnShowOrHideMenu(privilegeName, menuId) {
+            if (sessionStorage.privileges) {
+                var userPrivileges = JSON.parse(sessionStorage.privileges);
+                (userPrivileges.indexOf(privilegeName) > -1) ? $(menuId).removeClass("hidden") : $(menuId).addClass("hidden");
+            }
+            else {
+                $(menuId).addClass("hidden");
+            };
+        }
+
+        function fnIsAuthenticated(isAskForLogin) {
+            if (sessionStorage.username == null) {
+                if (isAskForLogin == true) $("#loginModal").modal({ backdrop: 'static', keyboard: false });
+                return false;
+            };
+            return true;
+        }
+
+        function fnExitFromApp() {
+            BootstrapDialog.confirm('Are you sure you want to Exit this application?', function (ok) {
+                if (ok) {
+                    navigator.app.exitApp();
+                };
+            });
+        }
+
+        function fnLogin(toggleNavBar) {
+            fnIsAuthenticated(true);
+            if (toggleNavBar == true) hideNavBar();
+        }
+
+        function fnLogout(toggleNavBar) {
+            BootstrapDialog.confirm('Are you sure you want to Log out?', function (ok) {
+                if (ok) {
+                    sessionStorage.clear();
+                    localStorage.removeItem("user");
+                    window.location.href = "index.html";
+                };
+            });
+        }
+
+        function hideNavBar() {
+            if ($(".navbar-toggle").css("display") != "none") {
+                $(".navbar-toggle").click();
+            }
+        }
+
+        function fnLoadPage() {
+            fnGenerateMenu();
+            //if (window.location.hash == "#settings") {
+            //    fnLoadSettings();
+            //}
+            //else {
+            //    var name = window.location.hash.substring(1);
+            //    fnLoadContent(name);
+            //};
+        }
+
+        function fnLoadContent(name, toggleNavBar) {
+            if (fnIsAuthenticated(true)) {
+                if (!name) name = "goodsordering";  // Default to goods ordering page.
+                $("#content").load(name + ".html?" + new Date().getTime(), function (response, status, xhr) {
+                    if (status == "error") {
+                        var msg = "Sorry but there was an error: ";
+                        $("#content").html(msg + xhr.status + " " + xhr.statusText);
+                    };
+                });
+            };
+            if (toggleNavBar == true) hideNavBar();
+            fnGetNotificationCount();
+        }
+
+        function fnLoadSettings(toggleNavBar) {
+            $("#content").load("settings.html?" + new Date().getTime());
+            if (toggleNavBar == true) hideNavBar();
+            fnGetNotificationCount();
+        }
+
+        function fnLoadReport(ReportName) {
+            var urlReport = settings.crReportLocation + "?r=" + ReportName + ".rpt&ut=" + sessionStorage.userToken;
+            window.open(urlReport, "_blank", "width=700,height=500,location=0");
+        }
+
+        function fnGetNotificationCount() {
+            try {
+                DAL.fnGetNotifications(function (result) {
+                    if (result.status == "") {
+                        $(".notif-container").html("<li class='pull-right'><a href='#' onclick='event.preventDefault(); fnGetNotificationCount();'><small><span class='glyphicon glyphicon-refresh'></span> refresh</small></a></li>");
+                        if (result.notifications.length > 0) {
+                            $(".notif-count").html(result.notifications.length);
+                            for (var i = 0; i < result.notifications.length; i++) {
+                                $(".notif-container").append("<li><a href='#" + result.notifications[i].menu + "' onclick=\"fnLoadContent('" + result.notifications[i].menu + "', true)\">" + result.notifications[i].message + "</a></li>");
+                            };
+                        }
+                        else {
+                            $(".notif-count").html("");
+                            $(".notif-container").append("<li><a href='#' onclick='event.preventDefault()'>No notification</a></li>");
+                        };
+                    };
+                });
+            } finally {
+                if (timeoutHandler) clearTimeout(timeoutHandler);
+                timeoutHandler = setTimeout(fnGetNotificationCount, 1000 * 60 * 10); // 10 minutes
+            };
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            // Change this to the location of your server-side upload handler:
+            //var url = "http://localhost:804/synchronization/MobileWS.asmx/ItemImporter?abc=def";
+            var url = connection.serverAddress + "/synchronization/ItemImporter.ashx";
+            console.log(url);
+
+            $('#fileupload').fileupload({
+                url: url,
+                dataType: 'json',
+                start: function (e) {
+                    $('#progress .progress-bar').css(
+                        'width', '0%'
+                    );
+                },
+                done: function (e, data) {
+                    console.log(e);
+                    console.log(data.result);
+                    if (data.result.status == "")
+                        BootstrapDialog.alert("The file has been imported successfully.");
+                    else
+                        BootstrapDialog.alert(data.result.status);
+                    //$.each(data.result.files, function (index, file) {
+                    //    $('<p/>').text(file.name).appendTo('#files');
+                    //});
+                },
+                progressall: function (e, data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    $('#progress .progress-bar').css(
+                        'width',
+                        progress + '%'
+                    );
+                }
+            }).prop('disabled', !$.support.fileInput)
+                .parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+            //$('#fileupload').click(function () {
+            //    $.ajax({
+            //        type: 'POST',
+            //        url: url,
+            //        dataType: 'text',
+            //        success: function (data) {
+            //            alert('success');
+            //        },
+            //        error: function (data) {
+            //            alert('error');
+            //        }
+            //    });
+            //});
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA2D652F-5364-4C8D-9AC8-CED0C5E6F9AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinVoucherBatchGenerator</RootNamespace>
+    <AssemblyName>WinVoucherBatchGenerator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PowerPOSLib\CustomDAL\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CashierLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierLogin.Designer.cs">
+      <DependentUpon>CashierLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVouchers.Designer.cs">
+      <DependentUpon>frmVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateVouchers.Designer.cs">
+      <DependentUpon>frmGenerateVouchers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVoucherList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVoucherList.Designer.cs">
+      <DependentUpon>frmVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CashierLogin.resx">
+      <DependentUpon>CashierLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVouchers.resx">
+      <DependentUpon>frmVouchers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateVouchers.resx">
+      <DependentUpon>frmGenerateVouchers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVoucherList.resx">
+      <DependentUpon>frmVoucherList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PowerPOSLib\PowerPOSLib.csproj">
+      <Project>{64DBDC7E-DDE7-4BFC-BC41-8BE0F618E35B}</Project>
+      <Name>PowerPOSLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluebackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonGold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_scheduleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crimson_top1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crimson_top_str1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edgeworks-LogoSmallWeb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightgreenbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightorange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightyellowbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobg1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobgrotated1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longdarkbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longyellowbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longyellowbackground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubackgnd1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubackgndlong1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purpleButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbutton.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

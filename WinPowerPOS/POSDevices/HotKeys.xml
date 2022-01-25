@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<hotkeysproducts>
+  <hotkey keycode="q11" keyname="Quick Items: Row 01" itemno="" itemname="" />
+  <hotkey keycode="q12" keyname="Quick Items: Row 02" itemno="" itemname="" />
+  <hotkey keycode="q21" keyname="Quick Items: Row 03" itemno="" itemname="" />
+  <hotkey keycode="q22" keyname="Quick Items: Row 04" itemno="" itemname="" />
+  <hotkey keycode="q31" keyname="Quick Items: Row 05" itemno="" itemname="" />
+  <hotkey keycode="q32" keyname="Quick Items: Row 06" itemno="" itemname="" />
+  <hotkey keycode="q41" keyname="Quick Items: Row 07" itemno="" itemname="" />
+  <hotkey keycode="q42" keyname="Quick Items: Row 08" itemno="" itemname="" />
+  <hotkey keycode="q51" keyname="Quick Items: Row 09" itemno="" itemname="" />
+  <hotkey keycode="q52" keyname="Quick Items: Row 10" itemno="" itemname="" />
+</hotkeysproducts>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.edgeworks.com.sg/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.edgeworks.com.sg/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.edgeworks.com.sg/">
+      <s:element name="FetchOrdersCCMW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsHeaders" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDetails" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReceiptHdr" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReceiptDet" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FetchOrdersCCMWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FetchOrdersCCMWResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsHeaders">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDetails">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReceiptHdr">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReceiptDet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dsComm">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FetchOrdersResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchNewMembershipSignUps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsMember">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchNewMembershipSignUpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FetchNewMembershipSignUpsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchLogTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsLogTable">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="logTableName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchLogTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FetchLogTableResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="syncAll" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderHdrList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="PointOfSaleID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderHdrListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderHdrListResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FetchOrdersCCMWSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchOrdersCCMW" />
+  </wsdl:message>
+  <wsdl:message name="FetchOrdersCCMWSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchOrdersCCMWResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchOrders" />
+  </wsdl:message>
+  <wsdl:message name="FetchOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchNewMembershipSignUpsSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchNewMembershipSignUps" />
+  </wsdl:message>
+  <wsdl:message name="FetchNewMembershipSignUpsSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchNewMembershipSignUpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchLogTableSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchLogTable" />
+  </wsdl:message>
+  <wsdl:message name="FetchLogTableSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchLogTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderHdrListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderHdrList" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderHdrListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderHdrListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SynchronizationSoap">
+    <wsdl:operation name="FetchOrdersCCMW">
+      <wsdl:input message="tns:FetchOrdersCCMWSoapIn" />
+      <wsdl:output message="tns:FetchOrdersCCMWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchOrders">
+      <wsdl:input message="tns:FetchOrdersSoapIn" />
+      <wsdl:output message="tns:FetchOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNewMembershipSignUps">
+      <wsdl:input message="tns:FetchNewMembershipSignUpsSoapIn" />
+      <wsdl:output message="tns:FetchNewMembershipSignUpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchLogTable">
+      <wsdl:input message="tns:FetchLogTableSoapIn" />
+      <wsdl:output message="tns:FetchLogTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input message="tns:GetDataTableSoapIn" />
+      <wsdl:output message="tns:GetDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHdrList">
+      <wsdl:input message="tns:GetOrderHdrListSoapIn" />
+      <wsdl:output message="tns:GetOrderHdrListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SynchronizationSoap" type="tns:SynchronizationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FetchOrdersCCMW">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/FetchOrdersCCMW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOrders">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/FetchOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchNewMembershipSignUps">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/FetchNewMembershipSignUps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLogTable">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/FetchLogTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHdrList">
+      <soap:operation soapAction="http://www.edgeworks.com.sg/GetOrderHdrList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SynchronizationSoap12" type="tns:SynchronizationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FetchOrdersCCMW">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/FetchOrdersCCMW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOrders">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/FetchOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchNewMembershipSignUps">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/FetchNewMembershipSignUps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLogTable">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/FetchLogTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHdrList">
+      <soap12:operation soapAction="http://www.edgeworks.com.sg/GetOrderHdrList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Synchronization">
+    <wsdl:port name="SynchronizationSoap" binding="tns:SynchronizationSoap">
+      <soap:address location="http://localhost:6733/PowerPOSWeb/Synchronization/Synchronization.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SynchronizationSoap12" binding="tns:SynchronizationSoap12">
+      <soap12:address location="http://localhost:6733/PowerPOSWeb/Synchronization/Synchronization.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

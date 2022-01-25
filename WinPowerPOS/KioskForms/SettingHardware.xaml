@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="WinPowerPOS.KioskForms.SettingHardware"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="768" Width="850">
+    <UserControl.Resources>
+        <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnChecking">
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="50"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnUnchecking">
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                    <SplineThicknessKeyFrame KeyTime="00:00:00.3000000" Value="1,1,1,1"/>
+                                </ThicknessAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+
+                        <DockPanel x:Name="dockPanel">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" RecognizesAccessKey="True" VerticalAlignment="Center"/>
+                            <Grid Margin="2,2,1,0" Width="Auto" Background="#FFC0CCD9">
+                                <TextBlock Text="OFF" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
+                                <TextBlock Text="ON" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" FontSize="16" FontWeight="Bold" TextWrapping="Wrap"/>
+                                <Border HorizontalAlignment="Left" x:Name="slider" Width="50" BorderThickness="1,1,1,1" CornerRadius="3,3,3,3" RenderTransformOrigin="0.5,0.5" Margin="1,1,1,1">
+                                    <Border.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                            <SkewTransform AngleX="0" AngleY="0"/>
+                                            <RotateTransform Angle="0"/>
+                                            <TranslateTransform X="0" Y="0"/>
+                                        </TransformGroup>
+                                    </Border.RenderTransform>
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#ff5CC25A" Offset="0"/>
+                                            <GradientStop Color="#ff5CC25A" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#ff5CC25A" Offset="1"/>
+                                            <GradientStop Color="#ff5CC25A" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </Grid>
+                        </DockPanel>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource OnUnchecking}" x:Name="OnUnchecking_BeginStoryboard"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource OnChecking}" x:Name="OnChecking_BeginStoryboard"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Label x:Name="label" Content="WEIGHT CHECK &amp; BAGGING AREA" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Border BorderBrush="#FF619ED6" BorderThickness="1" CornerRadius="20,20,20,20" Height="166" Margin="11,38,11,12" Padding="12,12,12,0" VerticalAlignment="Top">
+            <Border BorderBrush="#FF619ED6" BorderThickness="0" Margin="0" Padding="0" VerticalAlignment="Top">
+                <StackPanel Margin="0,0,0,0" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <DockPanel Height="45" Width="255" HorizontalAlignment="Left">
+                            <TextBlock FontSize="18" Text="Enabled:" VerticalAlignment="Center" Width="150" />
+                            <CheckBox Height="55" HorizontalAlignment="Center" Name="chWeighingScale" Style="{DynamicResource CheckBoxStyle1}" VerticalAlignment="Center" Width="105" />
+                        </DockPanel>
+                        <DockPanel Height="45" Width="500" HorizontalAlignment="Left" Margin="40,0,0,0">
+                            <TextBlock FontSize="18" Text="Status:" VerticalAlignment="Center" Width="60" />
+                            <TextBlock Name="txtWeighingScaleStatus" FontSize="18" Text="NOT CONNECTED" VerticalAlignment="Center" TextAlignment="Left" Width="440" />
+                        </DockPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <DockPanel Height="45" Width="300" HorizontalAlignment="Left" >
+                            <TextBlock Text="COM Port:" FontSize="18" VerticalAlignment="Center" Width="140"/>
+                            <Border BorderBrush="#FF619ED6" BorderThickness="1" Height="30" Margin="10,5,10,5" Padding="0,0">
+                                <TextBox x:Name="txtWeighingCOMPort" TextWrapping="Wrap" BorderBrush="{x:Null}" FontSize="18"/>
+                            </Border>
+                        </DockPanel>
+                        <Button Content="Test Weighing Scale" FontFamily="Calibri" FontSize="20" Padding="10" Margin="170,0,0,0" Click="TestWeighing_Click" />
+                    </StackPanel>
+                    <DockPanel Height="45" Width="260" HorizontalAlignment="Left" >
+                        <TextBlock Text="Weight Tolerance:" FontSize="18" VerticalAlignment="Center" Width="140"/>
+                        <Border BorderBrush="#FF619ED6" BorderThickness="1" Width="60" Height="30" Margin="10,5,0,5" Padding="0,0">
+                            <TextBox x:Name="txtTolerance" TextWrapping="Wrap" BorderBrush="{x:Null}" FontSize="18" Width="60" TextAlignment="Right" />
+                        </Border>
+                        <TextBlock Text=" g" FontSize="18" VerticalAlignment="Center" Width="20"/>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+        </Border>
+        <Path Data="M889,124" HorizontalAlignment="Right" Height="2" Margin="0,123,-40,0" Stretch="Fill" Stroke="#FF619ED6" StrokeThickness="2" VerticalAlignment="Top" Width="2"/>
+        <Label x:Name="label2" Content="RECEIPT PRINTER:" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Border BorderBrush="#FF619ED6" BorderThickness="1" Margin="10,240,12,198" CornerRadius="20" Height="123" VerticalAlignment="Top" Padding="12,12,12,0">
+            <Border VerticalAlignment="Top" BorderBrush="#FF619ED6" BorderThickness="0" Margin="0" Padding="0,0">
+                <StackPanel HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <DockPanel Width="460" Height="45" HorizontalAlignment="Left">
+                            <TextBlock Text="Printer Name:" FontSize="18" VerticalAlignment="Center" Width="150" />
+                            <Border BorderBrush="#FF619ED6" BorderThickness="1" Height="Auto" Margin="0" Padding="0,0" VerticalAlignment="Center" Width="300">
+                                <ComboBox x:Name="cbPrinter" SelectedIndex="-1" FontFamily="Calibri" FontSize="24" Height="45" VerticalContentAlignment="Center" />
+                            </Border>
+                        </DockPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <DockPanel Height="45" HorizontalAlignment="Left" Margin="0,0,0,0">
+                            <TextBlock FontSize="18" Text="Status:" VerticalAlignment="Center" Width="60" />
+                            <TextBlock Name="txtPrinterStatus" FontSize="18" Text="NOT CONNECTED" VerticalAlignment="Center" TextAlignment="Left" Width="410" />
+                        </DockPanel>
+                        <DockPanel HorizontalAlignment="Right">
+                            <Button Content="Test Printer" FontFamily="Calibri" FontSize="20" Padding="10" Margin="0,0,0,0" Width="180" Click="TestPrinter_Click" />
+                        </DockPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Border>
+    </Grid>
+</UserControl>

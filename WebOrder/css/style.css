@@ -1,0 +1,182 @@
+* {
+    box-shadow: none !important;
+}
+
+body {
+    padding-top: 70px;
+    /*background-color: lightgrey;*/
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#customdateModal .modal-footer .btn {
+    width: 70px;
+}
+
+#customdateModal .form-control[readonly],
+.datePicker.form-control[readonly] {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.datepicker.dropdown-menu {
+    font-size: 19px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+
+    .form-signin .checkbox {
+        font-weight: normal;
+    }
+
+    .form-signin .form-control {
+        position: relative;
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+    .form-signin input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+.form-group .dropdown .dropdown-menu {
+    width: 100%;
+}
+
+#divNewProducts {
+    background-color: #fff;
+}
+
+#divBackToTop {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 7px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.print-icon {
+    font-size: 16px;
+}
+
+.notif-count {
+    background-color: #d9534f;
+}
+
+.posbuttonsetup #itemscontainer #item_menu_table .itembutton,
+.posbuttonsetup #divSubCategoryModify .samplebutton {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+    .posbuttonsetup #itemscontainer #item_menu_table .itembutton .itemcaption,
+    .posbuttonsetup #divSubCategoryModify .samplebutton .itemcaption {
+        display: inline-block;
+        width: 100%;
+        bottom: 10px;
+        position: absolute;
+        text-align: center;
+    }
+
+.posbuttonsetup #catcontainer {
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+    .posbuttonsetup #catcontainer .scroll-item {
+        float: left;
+        list-style-type: none;
+        margin-right: 5px;
+    }
+
+        .posbuttonsetup #catcontainer .scroll-item:last-child {
+            margin-right: 0px;
+        }
+
+        .posbuttonsetup #catcontainer .scroll-item .cat_item {
+            display: block;
+            overflow: hidden;
+            width: 100px;
+            height: 80px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+        }
+
+.BootstrapDialog_promptWithButtons button {
+    margin-right: 5px;
+}
+
+    .BootstrapDialog_promptWithButtons button:last-child {
+        margin-right: 0px;
+    }
+
+.fixedBottom{
+    position:fixed;
+    padding-bottom:-10px;
+    bottom:10px;
+    background-color:white;
+}
+
+@media (max-width: 767px) {
+    /*#slide-nav #slidemenu .navbar-nav {
+        margin: 20px 0 12px 0;
+    }*/
+
+    .menu-settings-wide {
+        display: none;
+    }
+
+    .menu-settings-narrow {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-settings-wide {
+        display: block;
+    }
+
+    .menu-settings-narrow {
+        display: none;
+    }
+}

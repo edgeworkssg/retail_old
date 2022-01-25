@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TableNames>
+  <Table>
+    <Name>ManualSalesUpdate</Name>
+  </Table>
+  <Table>
+    <Name>PointOfSale</Name>
+  </Table>
+  <Table>
+    <Name>UserGroup</Name>
+  </Table>
+  <Table>
+    <Name>UserMst</Name>
+  </Table>
+</TableNames>

@@ -1,0 +1,47 @@
+<div id="dynamicContent">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 class="panel-title">Clinics</h4>
+        </div>
+        <div class="panel-body">
+            <div style="overflow: auto">
+                <table class="table table-hover">
+                    <thead data-bind="css: {'dropup': sortKey().asc, 'dropdown': !sortKey().asc}">
+                        <tr>
+                            <th>
+                                <a href="#" data-bind="click: sortGrid.bind($data, 'InventoryLocationName')">Clinic Code</a>
+                                <span class="caret" data-bind="visible: sortKey().columnName=='InventoryLocationName'"></span>
+                            </th>
+                            <th>
+                                <a href="#" data-bind="click: sortGrid.bind($data, 'DisplayedName')">Clinic Name</a>
+                                <span class="caret" data-bind="visible: sortKey().columnName=='DisplayedName'"></span>
+                            </th>
+                            <th>
+                                <a href="#" data-bind="click: sortGrid.bind($data, 'IsFrozen')">Frozen</a>
+                                <span class="caret" data-bind="visible: sortKey().columnName=='IsFrozen'"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: inventoryLocations">
+                        <tr>
+                            <td data-bind="text: InventoryLocationName"></td>
+                            <td data-bind="text: DisplayedName"></td>
+                            <td><input type="checkbox" class="checkbox" data-bind="checked: IsFrozen, event: {change: $parent.updateIsFrozen}" /></td>
+                        </tr>
+                    </tbody>
+                    <tbody data-bind="visible: inventoryLocations().length < 1">
+                        <tr>
+                            <td colspan="3" align="center"><br />No result found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-success" data-bind="click: updateIsFrozenAll.bind($data, true), disable: isAllFrozen()">FREEZE ALL</button>
+                <button type="button" class="btn btn-success" data-bind="click: updateIsFrozenAll.bind($data, false), disable: isAllNotFrozen()">UNFREEZE ALL</button>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel -->
+</div>
+<script type="text/javascript" src="js/freezeclinic.js"></script>

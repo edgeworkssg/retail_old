@@ -1,0 +1,230 @@
+﻿body
+{
+font-family:verdana;
+font-size:8pt;
+}
+
+td
+{
+    font-family:verdana;
+    font-size:8pt;
+    vertical-align:top;
+	text-align: left;
+}
+.ExportButton
+{
+	text-align:right;
+}
+.GrandTotal
+{
+    font-family:verdana;
+    font-size:16pt;
+    font-weight:bold;
+    background-color:White;
+    vertical-align:top;
+}
+.QuickTable 
+{
+    border-right: gainsboro 1px solid; 
+    border-top: gainsboro 1px solid; font-size: 8pt; border-left: gainsboro 1px solid;    
+    border-bottom: gainsboro 1px solid; 
+    font-family: verdana; 
+    font-size: 8pt;            
+}
+.MenuItem
+{
+    padding: 2px 2px 2px 2px;
+}
+.LabelMessage 
+{
+    font-weight:bold;
+}
+.ulNav
+{
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 2px;
+    padding-top: 2px
+}
+.liNav
+{
+    list-style-type: none;
+    text-indent: 10px;
+    white-space:nowrap;
+    line-height:1.5em
+}
+.header
+{
+    font-size:24px;
+    background-color:white;
+    height:65px;
+    padding-left:10px;
+    vertical-align:middle;
+    font-weight:bold
+    
+}
+
+.side
+{
+    width:100px;
+    border:dashed 0px whitesmoke;
+    height:90%;
+}
+
+.scaffoldWrapper
+{
+
+}
+
+.scaffoldEditTable
+{
+    
+}
+
+.scaffoldEditTableLabel
+{
+	
+}
+
+.scaffoldEditItem
+{
+	font-size:8pt;
+	font-family: "Segoe UI", Verdana, Tahoma;	
+}
+
+.scaffoldEditItemCaption
+{
+	font-size:8pt;
+	font-family: "Segoe UI", Verdana, Tahoma;
+    background-color:#f5f5f5;
+    font-weight:bold;
+	text-align: right;
+	padding-right:6px;
+}
+
+.scaffoldLabel
+{
+
+}
+
+.scaffoldButton
+{
+	margin:3px;
+	border: solid 1px #808080;
+	width: 100px;
+}
+
+.scaffoldTextBox
+{
+	border: solid 1px #DADADA;	
+}
+.fieldname
+{
+    font-weight: bold;
+    background-color: Gainsboro;
+    text-align: right;
+}
+.searchHeader 
+{
+    font-weight: bold;
+    background-color:  Navy;
+    color: White;
+    text-align:center;
+}
+.AccordHeader 
+{
+    font-weight: bold;
+    background-color:  Navy;
+    color: White;
+    text-align:center;
+    height: 20px;
+    vertical-align: bottom;
+    border-bottom: solid thin White;
+}
+.treeview
+{
+    width: 20px;
+    background-image: url(image/menubackgnd.PNG);
+    background-repeat: repeat-x;
+    height: 100%;
+    vertical-align: top;    
+}
+
+.menu 
+{
+    color:black;
+    font-weight:bold;    
+}
+
+.menuhover
+{
+    color:black;
+    font-weight:bold;
+    font-size: small;
+    color:Maroon;
+    
+}
+
+.logo
+{
+    background-image: url(image/logobg.png);
+    background-repeat: repeat-x;
+    height:89px;   
+    padding-top:0px; 
+    font-size:x-small;
+    font-family:Verdana ;
+    font-weight:bold;         
+}
+.innertable
+{
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+}
+.content
+{
+    background-image: url(image/contentbg.Gif);
+    background-repeat: repeat-x;
+    FONT-SIZE: small; FONT-FAMILY: Verdana
+    vertical-align: top;
+    width: 800px;
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+}
+.menuholder
+{
+    vertical-align: top;
+    width: 10px;
+    height: 600px;
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+}
+.rightads 
+{
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+    width: 0px;
+}
+.lblErrorMsg 
+{
+    font-weight:bold;
+}
+.title
+{
+    height: 60px;
+    vertical-align: middle;
+    width: 100%;
+    font-weight: bold;
+    font-size: large;
+    background-image: url(image/softstripes.PNG);
+    background-repeat: repeat;
+    padding-left: 20px;
+}
+

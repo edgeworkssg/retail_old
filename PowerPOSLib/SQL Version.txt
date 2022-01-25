@@ -1,0 +1,58 @@
+﻿----- VERSION 1-----------
+
+BEGIN TRANSACTION
+create table SQLVersion (versionno int )
+insert into sqlversion values(1)
+COMMIT
+
+----- VERSION 2 -------------
+
+alter table appsetting alter column appsettingvalue varchar(100)
+
+----- VERSION 3 ------------- 2014-03-25
+
+alter table savedfiles alter column remark nvarchar(MAX)
+
+Update sqlversion set versionno = 3
+
+----- VERSION 4 ------------ 2014-04-02
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[ItemSalesPersonMap](
+	[ID] [uniqueidentifier] NOT NULL,
+	[SalesPerson] [varchar](50) NULL,
+	[ItemNo] [varchar](50) NULL,
+	[Commission] [decimal](18, 0) NULL,
+	[Remarks] [varchar](100) NULL,
+	[CreatedOn] [datetime] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[ModifiedOn] [datetime] NULL,
+	[ModifiedBy] [varchar](50) NULL,
+	[Deleted] [bit] NULL,
+ CONSTRAINT [PK_ItemSalesPersonMap] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+update sqlversion set versionno = 4
+
+ 
+
+
+
+
+

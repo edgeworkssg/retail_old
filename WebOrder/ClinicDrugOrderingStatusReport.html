@@ -1,0 +1,157 @@
+<div id="dynamicContent">
+    <div id="divApprovalList">
+        <div class="panel panel-primary" style="overflow: auto; padding-right: 5px;">
+            <div class="panel-heading">
+                <h4 class="panel-title">Drug Ordering Status Report</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" id="formData">
+                    <div class="form-group">
+                        <h5>Year</h5>
+                        <div class="dropdown">
+                            <select class="select" id="Year" name="Year" style="width: 25%;">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Month</h5>
+                        <div class="dropdown">
+                            <select class="select" id="Month" name="Month" style="width: 25%;">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Clinic</h5>
+                        <div class="dropdown">
+                            <select class="select" id="ClinicCode" name="ClinicCode" style="width: 50%;">
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="buttonSearch" class="btn btn-warning" data-bind="click: searchPurchaseOrder">Search</button>
+                </form>
+
+                <div style="">
+                    <br />
+                    <br />
+
+                    <table class="" border="1" style="margin-right: 10px;">
+                        <tbody>
+                            <tr>
+                                <td style="width: 100px; background-color: green;">&nbsp;</td>
+                                <td style="padding-right: 5px; padding-left: 5px; background-color: white;">Clinic supposed to have transactions, transactions are in drug usage file.</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; background-color: red;">&nbsp;</td>
+                                <td style="padding-right: 5px; padding-left: 5px; background-color: white;">Clinic supposed to have transactions, transactions are not in drug usage file.</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; background-color: yellow;">&nbsp;</td>
+                                <td style="padding-right: 5px; padding-left: 5px; background-color: white;">Clinic not supposed to have transactions, transactions are in drug usage file.</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; background-color: black;">&nbsp;</td>
+                                <td style="padding-right: 5px; padding-left: 5px; background-color: white;">Clinic not supposed to have transactions, transactions are not in drug usage file.</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; background-color: white; text-align: center;"><strong>PH</strong></td>
+                                <td style="padding-right: 5px; padding-left: 5px; background-color: white;">Public Holiday</td>
+                            </tr>
+                        </tbody>  
+                    </table>
+
+                    <br />
+                    <table class="table table-hover" id="table-report" style="" border="1">
+                        
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore" style="display: none;">Load more...</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalOperationHoursHistory" class="modal fade bootstrap-dialog type-primary size-normal in" tabindex="-1" id="ef883bf6-fba8-4b77-9d98-5454cab5ea7c" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bootstrap-dialog-header">
+                    <div class="bootstrap-dialog-title">History</div>
+                    <div class="bootstrap-dialog-close-button" style="display: none;">
+                        <button class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="bootstrap-dialog-body">
+                    <div class="bootstrap-dialog-message" id="ModalOperationHoursHistory_OperationDate">
+                        <strong>Date selected : </strong>
+                    </div>
+                    <div id="ModalOperationHoursHistory_History"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="bootstrap-dialog-footer">
+                    <div class="bootstrap-dialog-footer-buttons">
+                        <button class="btn btn-default" data-dismiss="modal" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ModalOperationHoursEdit" class="modal fade bootstrap-dialog type-primary size-normal in" tabindex="-1" id="ef883bf6-fba8-4b77-9d98-5454cab5ea7c" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="bootstrap-dialog-header">
+                    <div class="bootstrap-dialog-title">Edit Operating Day</div>
+                    <div class="bootstrap-dialog-close-button" style="display: none;">
+                        <button class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="bootstrap-dialog-body">
+                    <table border="1px solid black;">
+                        <thead>
+                            <tr style="font-weight: bolder">
+                                <td style="padding: 5px; width: 150px;">Date</td>
+                                <td style="padding: 5px; width: 300px;">Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 5px;">
+                                    <select style="width: 125px;" id="ModalOperationHoursEdit_Status">
+                                        <option value="true">Open</option>
+                                        <option value="false">Closed</option>
+                                    </select>
+                                </td>
+                                <td style="padding: 5px;" id="ModalOperationHoursEdit_OperationDate"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="bootstrap-dialog-footer">
+                    <div class="bootstrap-dialog-footer-buttons">
+                        <button id ="ModalOperationHoursEdit_ButtonSave" class="btn btn-default" id="55b1e405-d8f4-4fc1-9abf-4bee3b003413">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/ClinicDrugOrderingStatusReport.js"></script>

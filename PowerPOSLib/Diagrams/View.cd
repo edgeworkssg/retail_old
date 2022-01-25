@@ -1,0 +1,1082 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PowerPOS.ViewAdjustedStockTakeCollection" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAdjustedStockTake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewAdjustedStockTake" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAGACYEoIEIigDUAQAMlADEODAAAwEgISDBg4bpRZA=</HashCode>
+      <FileName>DAL\ViewAdjustedStockTake.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewAlternateBarcodeCollection" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAlternateBarcode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewAlternateBarcode" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAEACAAQAAAAAACEICAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAlternateBarcode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewAvgTransactionCollection" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAvgTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewAvgTransaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQIAAACAEAAAAQgACEIAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAvgTransaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewAvgTransactionByOutletCollection" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAvgTransactionByOutlet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewAvgTransactionByOutlet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQIAAAiAEAAAAQgACEIAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewAvgTransactionByOutlet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewCashRecordingCollection" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewCashRecording.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewCashRecording" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIgAAIAAAiAABAAAAACCEICAAAgAAAAAAAAAAAQA=</HashCode>
+      <FileName>DAL\ViewCashRecording.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewCategoryCollection" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewCategory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAoIAACgAAAAAAEACEICAAgAAAAQBAAgAAQAA=</HashCode>
+      <FileName>DAL\ViewCategory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewCloseCounterReportCollection" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewCloseCounterReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewCloseCounterReport" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIBABMAQJyqAEAAAUgECEICSgggAEgAACAgCMgAA=</HashCode>
+      <FileName>DAL\ViewCloseCounterReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewCostOfGoodCollection" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewCostOfGood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewCostOfGood" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAIAAASAAQAAAEAACEIAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>DAL\ViewCostOfGood.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewDailyTransactionBySalesPersonCollection" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewDailyTransactionBySalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewDailyTransactionBySalesPerson" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEAAAIAAAiAAAAAAAAACEICAAEgIAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewDailyTransactionBySalesPerson.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewErrornousSalesStockOutCollection" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewErrornousSalesStockOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewErrornousSalesStockOut" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAACAAAAAgAAACEIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewErrornousSalesStockOut.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewEventLocationMapCollection" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewEventLocationMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewEventLocationMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAIAEAiAAAAAAAEACEICAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewEventLocationMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewEZLinkMessageParameterCollection" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewEZLinkMessageParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewEZLinkMessageParameter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAACACAEABAAACEIAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewEZLinkMessageParameter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewGroupPrivilegeCollection" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewGroupPrivilege.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewGroupPrivilege" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAACAAAAAAAQACEIAAAAAAAAAAACAAAAAE=</HashCode>
+      <FileName>DAL\ViewGroupPrivilege.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewHourlyTransactionCollection" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewHourlyTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewHourlyTransaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAIAAAiAAEAAAAAACEIAAAAAIBAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewHourlyTransaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInstallmentMembershipItemCollection" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInstallmentMembershipItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInstallmentMembershipItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEKEBE5KAACHCJAAAAMQCEIAZYBgKFAQAAAIQACQ0=</HashCode>
+      <FileName>DAL\ViewInstallmentMembershipItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryActivityCollection" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryActivity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryActivity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgGAAIEIKkIiIBQAQoMlATkOCAAgiEAISIJgQRpRbA=</HashCode>
+      <FileName>DAL\ViewInventoryActivity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryActivityByItemNoCollection" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryActivityByItemNo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryActivityByItemNo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEIAAACAAQAAoEAACEIAAAAAAAAAAIgAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryActivityByItemNo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryHeaderCollection" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryHeader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEACABE4AAgiIIAAC4MEASFIBACYDoAEwiJoAAACQU=</HashCode>
+      <FileName>DAL\ViewInventoryHeader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryItemOnHandQtyCollection" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryItemOnHandQty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryItemOnHandQty" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAIAAACAAQAAAAABCEICAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryItemOnHandQty.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventorySalesStockOutCollection" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventorySalesStockOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventorySalesStockOut" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAIAAACAAQAAAAAACEIAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventorySalesStockOut.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryTransferCollection" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryTransfer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryTransfer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAIAAAKAAAAAhBAACMIQAAAAAAAAAAAgAAwQA=</HashCode>
+      <FileName>DAL\ViewInventoryTransfer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryTransferDetailCollection" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryTransferDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryTransferDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAIAAACAAQAAhFAgCMISAAAAAAAAAAAgAgQAA=</HashCode>
+      <FileName>DAL\ViewInventoryTransferDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryTransferDiscrepancyCollection" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewInventoryTransferDiscrepancy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewInventoryTransferDiscrepancy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEEBAAAIAAAqAAQAAhFAACMISAAAEAAACAAAgAAwQA=</HashCode>
+      <FileName>DAL\ViewInventoryTransferDiscrepancy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewItemCollection" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAIAoIEIigBQAQAIlADEOCAAAgAAISBAhwRpRZA=</HashCode>
+      <FileName>DAL\ViewItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewItemGroupCollection" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewItemGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewItemGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECAIAoIEAiGBQAQAIlADEMKAAAgABICAAgSTJBYA=</HashCode>
+      <FileName>DAL\ViewItemGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewItemGroupMapCollection" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewItemGroupMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewItemGroupMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAIAAACAAAAAAAAACEIIAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>DAL\ViewItemGroupMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewLoginActivityReportCollection" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewLoginActivityReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewLoginActivityReport" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAiAgQAAAAIACEICAAAgAAAQAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewLoginActivityReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMailListCollection" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMailList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMailList" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEACAAAQCACBAAAAAACEIAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMailList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipCollection" Collapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembership" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGKEBA5KAACEiJAAQAsASEOAYaBAKDAwACCAAQCA0=</HashCode>
+      <FileName>DAL\ViewMembership.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipAttendanceCollection" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembershipAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipAttendance" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGKEBA5KAEiEiJAAQBsAyEOCYaBgKDAwACCAAQCA0=</HashCode>
+      <FileName>DAL\ViewMembershipAttendance.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipRemarkCollection" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembershipRemark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipRemark" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABGKEBA5KAACEiJAAQAsASEOAYaJAKjAwACCAAACA0=</HashCode>
+      <FileName>DAL\ViewMembershipRemark.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipTapCollection" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembershipTap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipTap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEIEAAZKAACECJAAAAMACEIAYYAQKBAQAAAAAACA0=</HashCode>
+      <FileName>DAL\ViewMembershipTap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipTapsLogCollection" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembershipTapsLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipTapsLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEIEAAZKAACECJAAAAIACEIAYaAAKBAwIAAAAACA0=</HashCode>
+      <FileName>DAL\ViewMembershipTapsLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipTotalPurchaseCollection" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembershipTotalPurchase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipTotalPurchase" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAACAABAAgAAACEIAAQAAIAAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\ViewMembershipTotalPurchase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipUpgradeCollection" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMembershipUpgrade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMembershipUpgrade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAACIEAAIKAACACBAAAAgACEKAQQAAKBAQACCAAAAAk=</HashCode>
+      <FileName>DAL\ViewMembershipUpgrade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMonthlyAvgTransactionCollection" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMonthlyAvgTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMonthlyAvgTransaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQQIAAACAEAAAAQgAKEIAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMonthlyAvgTransaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewMonthlyNumTransactionCollection" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMonthlyNumTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewMonthlyNumTransaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQQIAAACAAAAAAQgAKEIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewMonthlyNumTransaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewNumTransactionCollection" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewNumTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewNumTransaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQIAAACAAAAAAQgACEIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewNumTransaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewNumTransactionByOutletCollection" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewNumTransactionByOutlet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewNumTransactionByOutlet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAQIAAAiAAAAAAQgACEIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewNumTransactionByOutlet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPackageCollection" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPackage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aABEKBJIqJEImCLRFSQItgDEMCBDCwEgIiKAgQTZjZE=</HashCode>
+      <FileName>DAL\ViewPackage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPackageRedemptionCollection" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPackageRedemption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPackageRedemption" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAOABAIBAACAABAAQAECSEIAACAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>DAL\ViewPackageRedemption.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPreOrderScheduleCollection" Collapsed="true">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPreOrderSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPreOrderSchedule" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABAIAAACAAQAAAAEACEICAAACAAACAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPreOrderSchedule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewProductAndServiceBySalesPersonCollection" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewProductAndServiceBySalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewProductAndServiceBySalesPerson" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAEAAAIAAAiAAAAAAAAACEICAAEgIAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewProductAndServiceBySalesPerson.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPromoLocationMapCollection" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPromoLocationMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPromoLocationMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAIAAAiIAAAAAAAACEJCAAAhAAAAAAAAIEIAI=</HashCode>
+      <FileName>DAL\ViewPromoLocationMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPromoMasterDetailCollection" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPromoMasterDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPromoMasterDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAADJAAACMAwAAAAEACEJKABABAAAAgIAIIEAQI=</HashCode>
+      <FileName>DAL\ViewPromoMasterDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPromoMembershipMapCollection" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPromoMembershipMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPromoMembershipMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAIAAADIAAAAAAAACEJAAAAFAAAAAAAAAEACE=</HashCode>
+      <FileName>DAL\ViewPromoMembershipMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPromotionsByItemCollection" Collapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPromotionsByItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPromotionsByItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAmAAADJAgACMAwAAAAEACEJKABABAAAAgIAIIEAQI=</HashCode>
+      <FileName>DAL\ViewPromotionsByItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewPurchaseOrderCollection" Collapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewPurchaseOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewPurchaseOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEAAAEIQAACAAQAAAACACEICAAAgAAAQABgAAAAAA=</HashCode>
+      <FileName>DAL\ViewPurchaseOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewQuickAccessButtonCollection" Collapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewQuickAccessButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewQuickAccessButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAQAAIAAACCAQAAAAAECMICEAAgAAAAAAgAABAAA=</HashCode>
+      <FileName>DAL\ViewQuickAccessButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewQuickAccessGroupMapCollection" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewQuickAccessGroupMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewQuickAccessGroupMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACABAIAAACCAAAAAAAECMIAACAAAAAAAAgAAAAAE=</HashCode>
+      <FileName>DAL\ViewQuickAccessGroupMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewReceiptDetCollection" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewReceiptDet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewReceiptDet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAKAAQCAAAAAAQAACEICRAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewReceiptDet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewReceiptSummaryCollection" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewReceiptSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewReceiptSummary" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAKAAQCAAAAAAAAACGIAQAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DAL\ViewReceiptSummary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewRedeemLogCollection" Collapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewRedeemLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewRedeemLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGCBLAoJGoiIBxISAIlADEOCACQwAgICAAgQRJBZE=</HashCode>
+      <FileName>DAL\ViewRedeemLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewRedemptionItemCollection" Collapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewRedemptionItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewRedemptionItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGCAJAoJEoiIBQIQAIlACEOCACQgAAICAAgQRJBZE=</HashCode>
+      <FileName>DAL\ViewRedemptionItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewRedemptionLogCollection" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewRedemptionLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewRedemptionLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAEAAIAAAiAABAAAAAACEIAAAAgIAAAAgAAAAAAk=</HashCode>
+      <FileName>DAL\ViewRedemptionLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewSalesDetailCollection" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewSalesDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewSalesDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABEAAAAIAAAiAAQAAAAAACEICAAAgAAAAAAgAAQAQA=</HashCode>
+      <FileName>DAL\ViewSalesDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewSalesPersonCurrentMonthCommissionCollection" Collapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewSalesPersonCurrentMonthCommission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewSalesPersonCurrentMonthCommission" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAIAAACAAAAAAAAAiEIAAAAAAAAAAQAAAAAAE=</HashCode>
+      <FileName>DAL\ViewSalesPersonCurrentMonthCommission.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewSalesPersonLastMonthCommissionCollection" Collapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewSalesPersonLastMonthCommission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewSalesPersonLastMonthCommission" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAIAAACAAAAAAAAAiEIAAAAAAAAAAQAAAAAAE=</HashCode>
+      <FileName>DAL\ViewSalesPersonLastMonthCommission.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewSaveItemCollection" Collapsed="true">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewSaveItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewSaveItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEIAAACAAAKAIAAACEIAAAAAAAAAAIAAQCAAA=</HashCode>
+      <FileName>DAL\ViewSaveItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewSpecialEventItemCollection" Collapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewSpecialEventItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewSpecialEventItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAIgJAAACAAQAAAAEACEICAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewSpecialEventItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewStockTakeCollection" Collapsed="true">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewStockTake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewStockTake" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEACQEIAAACAAUAAgEAQCEIDAAAAEAAAABAIaAAQA=</HashCode>
+      <FileName>DAL\ViewStockTake.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionCollection" Collapsed="true">
+    <Position X="5.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewTransaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAKAAAiAABAAAAAACEICAAAgAAAgAAAAAQAQA=</HashCode>
+      <FileName>DAL\ViewTransaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionDetailCollection" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewTransactionDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABEABAAKAAAiAARACAAAACEICABggAAAgAAgABQCAA=</HashCode>
+      <FileName>DAL\ViewTransactionDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionDetailWithRemarkCollection" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewTransactionDetailWithRemark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionDetailWithRemark" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABEADAAKAAAiAARACAAAACEICABggAAAgAAgABQCQA=</HashCode>
+      <FileName>DAL\ViewTransactionDetailWithRemark.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionDetailWithSalesPersonCollection" Collapsed="true">
+    <Position X="16.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewTransactionDetailWithSalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionDetailWithSalesPerson" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAGEBIAqIEIigBQAQAItADEOCAAAgAgIyBAgwRpRZE=</HashCode>
+      <FileName>DAL\ViewTransactionDetailWithSalesPerson.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionWithMembershipCollection" Collapsed="true">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewTransactionWithMembership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionWithMembership" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LABGKEBA5qAAiEiZACQAsATEOCYbBgKDAwACiABQCQ0=</HashCode>
+      <FileName>DAL\ViewTransactionWithMembership.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionWithSalesPersonCollection" Collapsed="true">
+    <Position X="2.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewTransactionWithSalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewTransactionWithSalesPerson" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAEAAAIAAAiAAAAAAAEACEICAAAgAAAQAAAQAQAQE=</HashCode>
+      <FileName>DAL\ViewTransactionWithSalesPerson.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewUserCollection" Collapsed="true">
+    <Position X="5.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAIBAAiBCAAAAAUACEIAAAAAACAQAAAQAAAQE=</HashCode>
+      <FileName>DAL\ViewUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewVoucherRedeemedCollection" Collapsed="true">
+    <Position X="9.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewVoucherRedeemed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewVoucherRedeemed" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAIAAACABAAAAAAACEICAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewVoucherRedeemed.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewVouchersSoldCollection" Collapsed="true">
+    <Position X="12.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewVouchersSold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewVouchersSold" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAIAAACABAAAAAAACEICAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewVouchersSold.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewWarrantyMembershipItemCollection" Collapsed="true">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewWarrantyMembershipItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewWarrantyMembershipItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEGKEJA5KEAiED5ASYMtAGEKDaaZBqBOQihgQQICY0=</HashCode>
+      <FileName>DAL\ViewWarrantyMembershipItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PowerPOS.ViewWarrantyMembershipItemOrderCollection" Collapsed="true">
+    <Position X="19.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ViewWarrantyMembershipItemOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ViewWarrantyMembershipItemOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEEKEBA5KEAiED5ASYEsQGEIDaaZBqBOQihgAQACY0=</HashCode>
+      <FileName>DAL\ViewWarrantyMembershipItemOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

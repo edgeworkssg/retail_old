@@ -1,0 +1,1263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PowerPOS.AlternateBarcodeController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\AlternateBarcodeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ApplyPromotionController" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAMEAgACgAAQAAAIEEAIMQAAgAADgAMgCAAEwAAAA=</HashCode>
+      <FileName>Controller\Promo\ApplyPromotionController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.AppliedPromoController" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\AppliedPromoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CourseController" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAgAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Course Management\CourseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CSCCard" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgIAAA=</HashCode>
+      <FileName>Controller\EZLinkController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZlinkMessageParameterController" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAIAEAAAAAAAAAoAAABAgAAAQAEAA=</HashCode>
+      <FileName>Controller\EZLinkMessageParameterController.custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CashRecordingController" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAABAAAAABIAAAAQAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\POS\CashRecordingController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CashRecordingTypeController" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CashRecordingTypeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CategoryController" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CategoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CourseTypeController" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CourseTypeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EmailNotificationController" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EmailNotificationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EventAttendanceController" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EventAttendanceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EventItemMapController" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EventItemMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkMessageParameterController" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EZLinkMessageParameterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkMessageParameterMapController" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EZLinkMessageParameterMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkMsgLogController" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EZLinkMsgLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ChartController" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Web\ChartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CurrencyController" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CurrencyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ClosingController" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJACAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAgAAAAQ=</HashCode>
+      <FileName>Controller\ClosingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.CurrencyInfo" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAACQAAAABAAAAAAAAAAAAAAAAAAABEA=</HashCode>
+      <FileName>Container\CurrencyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.FeedBackMsgController" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\FeedBackMsgController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.HotKeysController" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>Controller\POS\HotKeysController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.GstController" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\GstController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Controller.GSTOverride" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABA=</HashCode>
+      <FileName>Controller\GSTOverride.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Logger" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAABAgAAAAAAAgAAAAAABAAA=</HashCode>
+      <FileName>Controller\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryUpdateLogController" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InventoryUpdateLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.LocationTransferController" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\LocationTransferController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryTransferDiscrepancyController" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InventoryTransferDiscrepancyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.LanguageInfo" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Container\LanguageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemsNewController" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ItemsNewController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InstallmentController" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAQAAAAIAAAAIAAQAAAIFBIACAAQAAAAUAAIA=</HashCode>
+      <FileName>Controller\InstallmentController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemController" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUCEEAAIAAAAAACAAICgQBGQAFBOAkEEQAAAAUABKA=</HashCode>
+      <FileName>Controller\Item\ItemController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.LoginActivityController" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\LoginActivityController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.DB" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAEIAAABAAEAAAAAAAAAAAAEAAAgAAAAAQAAAAAA=</HashCode>
+      <FileName>DAL\AllStructs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EventLocationMapController" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EventLocationMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkResponseCodeController" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EZLinkResponseCodeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ExcelController" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAA=</HashCode>
+      <FileName>Controller\Excel\ExcelController.xls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ExchangeController" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAQACAgAAEIAAIAAAQCIAAAEAAAQAgAAAAIAABAEI=</HashCode>
+      <FileName>Controller\ExchangeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryController" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EHkaXKxsOn4TAdAYbkhRiGZdYFTACgclQHjA4ohoJAA=</HashCode>
+      <FileName>Controller\Inventory\InventoryController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InstallmentDetailController" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InstallmentDetailController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemCostPriceController" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ItemCostPriceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MassEmail" Collapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAABAgAAAAAAEAAAAAAEA=</HashCode>
+      <FileName>Controller\MassEmail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MailListController" Collapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MailListController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemDepartmentController" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ItemDepartmentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryDetController" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InventoryDetController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkUnCfmLogController" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\EZLinkUnCfmLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkUtilityController" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAgAAAABAA=</HashCode>
+      <FileName>Controller\EZLinkUtilityController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.DeliveryOrderController" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAEAAAAIAAAIAAAJAAAAAAAFBIAAAAQAAIAUAAAA=</HashCode>
+      <FileName>Controller\Delivery\DeliveryOrderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CommonUILib" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAwAAAAgAAAAABAAAkAAAAAQAAgACAAAAA=</HashCode>
+      <FileName>Controller\CommonUILib.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.AttendanceSheetController" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAIAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\AttendanceSheetController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ExchangeLogController" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ExchangeLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.AppSettingController" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\AppSettingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CommissionStructureController" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CommissionStructureController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CommPort" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAIABAAEAAAAIAAEBIABAAQAAAAACBAAA=</HashCode>
+      <FileName>Controller\CommPort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.AttributesLabelController" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAEAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\AttributesLabelController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.DeliveryOrderDetailController" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Delivery\DeliveryOrderDetailController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ExportController" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAQAAAQBAEAAAAAAAAAAAAAAIAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Controller\ExportController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.FamilyController" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAQAAAAEAAIAAASAAAFBIAQAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\FamilyController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CompanyController" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CompanyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOSLib.Controller.ExchangeRateController" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgIAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\ExchangeRateController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Constants" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACDAAAAIAAQAAIAAAAAABAAAAAAAAEAA=</HashCode>
+      <FileName>Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.CompanyInfo" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Container\CompanyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZLinkController" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAIAgAAAgAECCACCAAQAEAAIgABHAANQAAAAYQQ=</HashCode>
+      <FileName>Controller\EZLinkController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.EZLinkComPortInfo" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAEAAAUEAg=</HashCode>
+      <FileName>Container\EZLinkComPortInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.BuildingController" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAQFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Course Management\BuildingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.DeliveryPersonnelController" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAUAAAAAAEAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Delivery\DeliveryPersonnelController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.FamilyGroupMapController" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\FamilyGroupMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CounterCloseLogController" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CounterCloseLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.EZlinkMessageController" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABwAAEIgAAgAAABABAIAIQAgAAFFIAAAEQAgAgUAIAA=</HashCode>
+      <FileName>Controller\EZLinkMessageController.custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.CameraController" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.DepartmentController" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\DepartmentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.FeedBackLogController" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\FeedBackLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipAttendanceController" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAY=</HashCode>
+      <FileName>Controller\Membership\MembershipAttendanceController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryHdrController" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InventoryHdrController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipController" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFVIIEShKAAWABEJITcACAAIAAlBJGIABYEASAcAgCc=</HashCode>
+      <FileName>Controller\Membership\MembershipController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryLocationController" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InventoryLocationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipTapsLogController" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipTapsLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.InventoryStockOutReasonController" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\InventoryStockOutReasonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipCustomFieldController" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipCustomFieldController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipUpgradeLogController" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipUpgradeLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipGroupController" Collapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipGroupController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipRemarkCategoryController" Collapsed="true">
+    <Position X="11.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipRemarkCategoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.OutletController" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\OutletController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromoCampaignDetController" Collapsed="true">
+    <Position X="11.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PromoCampaignDetController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.PointOfSaleInfo" Collapsed="true">
+    <Position X="11.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAEggACgQAEAAAAAgBAAGACgwAAAQADAABAAAA=</HashCode>
+      <FileName>Container\PointOfSaleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.POSController" Collapsed="true">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>E7EV1j8CPMfxOYraFIbgd2akBDQChck68YZ5ry8r26A=</HashCode>
+      <FileName>Controller\POS\POSController.APL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Feature.Package" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gFABQAIAkAEIAAAARAEAAAAAAAABABAAgUA4AAAFAhA=</HashCode>
+      <FileName>Feature\PackageFeature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipPointController" Collapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipPointController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.OrderDetController" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\OrderDetController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PointAllocationLogController" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PointAllocationLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PrivilegesController" Collapsed="true">
+    <Position X="0.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAEAAAAAAAABAAAAAAEIAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\PrivilegesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromotionAdminController" Collapsed="true">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAQBAJiAIgMAAQAAAoAQAgkAgAgwAAJAAAAQBAQE=</HashCode>
+      <FileName>Controller\Promo\PromotionAdminController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PurchaseOrderController" Collapsed="true">
+    <Position X="2.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAkACABIBAAAAAGAMAIgAAEAAAMgCAAQAgAAAQ=</HashCode>
+      <FileName>Controller\PurchaseOrderController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.ProductAttributeInfo" Collapsed="true">
+    <Position X="2.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAIBAAAAAAAAAAAAAAAAQAIAAA=</HashCode>
+      <FileName>Container\ProductAttributeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ProgrammableKeyboardController" Collapsed="true">
+    <Position X="4.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JCGAggAAAAEAIAAAIQAADCEAABAGBCAlAAggKADIAAA=</HashCode>
+      <FileName>Controller\ProgrammableKeyboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PointOfSaleController" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAQAAAAAAIAIAAEAAACFJIQAAAQAAgAWAEAg=</HashCode>
+      <FileName>Controller\POS\PointOfSaleSetupController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.OrderHdrController" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAQAAQBAAAUAAAA=</HashCode>
+      <FileName>Controller\POS\OrderHdrController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PurchaseOrderDetailController" Collapsed="true">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PurchaseOrderDetailController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PurchaseOrderHeaderController" Collapsed="true">
+    <Position X="13" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PurchaseOrderHeaderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.GroupUserPrivilegeController" Collapsed="true">
+    <Position X="13" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\GroupUserPrivilegeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemGroupController" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAACAAAAAAAAIAAAAAAAFBIgAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Promo\ItemGroupController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PackageDetController" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PackageDetController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PreOrderController" Collapsed="true">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAAAACAA=</HashCode>
+      <FileName>Controller\PreOrderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromoLocationMapController" Collapsed="true">
+    <Position X="8" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PromoLocationMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PostalCodeDBController" Collapsed="true">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PostalCodeDBController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromoCodeController" Collapsed="true">
+    <Position X="1" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PromoCodeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.QuickAccessGroupController" Collapsed="true">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\QuickAccessGroupController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.SalesPersonInfo" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Container\SalesPersonInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.RedemptionItemController" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAACAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Membership\RedemptionItemController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SavedClosingController" Collapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SavedClosingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.QuickAccessGroupMapController" Collapsed="true">
+    <Position X="4.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\QuickAccessGroupMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromoDiscountTierController" Collapsed="true">
+    <Position X="4.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PromoDiscountTierController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PowerLogController" Collapsed="true">
+    <Position X="6" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PowerLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PackageController" Collapsed="true">
+    <Position X="6" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAACAgAAAABAAAAAAAAA=</HashCode>
+      <FileName>Controller\Membership\PackageController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ReceiptController" Collapsed="true">
+    <Position X="6" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIEAAAAAEAAAAAACBCAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controller\POS\ReceiptController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.RedemptionLogController" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\RedemptionLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ReceiptDetCollection" Collapsed="true">
+    <Position X="7.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\ReceiptDet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ReportController" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EKQEIBAFgABBAABhAQwAQAwWBAPQwCOAAAiEAABmECA=</HashCode>
+      <FileName>Controller\Report\ReportController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SavedFileController" Collapsed="true">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SavedFileController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SavedItemController" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\SavedItemController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.RoomController" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAEAA=</HashCode>
+      <FileName>Controller\Course Management\RoomController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ReceiptHdrController" Collapsed="true">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ReceiptHdrController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ReceiptDetController" Collapsed="true">
+    <Position X="9.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ReceiptDetController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PreOrderRecordController" Collapsed="true">
+    <Position X="11.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PreOrderRecordController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromoMembershipMapController" Collapsed="true">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PromoMembershipMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PackageHdrController" Collapsed="true">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PackageHdrController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemGroupMapController" Collapsed="true">
+    <Position X="14.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ItemGroupMapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipRemarkController" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipRemarkController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ItemQuantityTriggerController" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ItemQuantityTriggerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipRenewalController" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\MembershipRenewalController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.MembershipTapController" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAASAAIAAAAAASFBIAAAAQCAAAUAAAA=</HashCode>
+      <FileName>Controller\Membership\MembershipTapController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PaymentTermController" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PaymentTermController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PackageRedemptionLogController" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PackageRedemptionLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PreOrderScheduleController" Collapsed="true">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PreOrderScheduleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.PrintSettingInfo" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAIAAAAACAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Container\PrintSettingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PromoCampaignHdrController" Collapsed="true">
+    <Position X="23.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\PromoCampaignHdrController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.QuickAccessController" Collapsed="true">
+    <Position X="23.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEAABAEggAAJAAAAAAAABAAgARAAAhEAAAAAAgAAA=</HashCode>
+      <FileName>Controller\QuickAccessController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.QuickAccessCategoryController" Collapsed="true">
+    <Position X="21.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\QuickAccessCategoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.QuickAccessButtonController" Collapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\QuickAccessButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ReceiptSettingController" Collapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIEAAAAAAAAAAAAIAAAAAAAFBIAAAAQIAAAUAAAA=</HashCode>
+      <FileName>Controller\ReceiptSettingController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.RecurrenceController" Collapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\RecurrenceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecurrenceLogic" Collapsed="true">
+    <Position X="21.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAAAEEAAAICKCAAAMAAEwCICgAgZAIAAAAEAAAAA=</HashCode>
+      <FileName>RecurrenceLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SalesGroupController" Collapsed="true">
+    <Position X="21.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SalesGroupController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ServicingAppointmentController" Collapsed="true">
+    <Position X="21.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAEAAQAAAAAAAAAIIAQAAQAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\ServicingAppointmentController.custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Schemas" Collapsed="true">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EmNTYvgn1urBNI8DBtIAZwJ1eIQ3J6FBwLEAbizujYg=</HashCode>
+      <FileName>DAL\AllStructs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SalesCommissionRecordController" Collapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SalesCommissionRecordController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ScheduledDiscountController" Collapsed="true">
+    <Position X="16.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\ScheduledDiscountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SalesCommissionHistoryController" Collapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SalesCommissionHistoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SaveItemController" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAEAAAAgAAAAQAAIAgAAAAAFBIAAAAQAAAQUAAgg=</HashCode>
+      <FileName>Controller\Inventory\SaveItemController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.RedeemLogController" Collapsed="true">
+    <Position X="14.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\Membership\RedeemLogController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SalesPersonController" Collapsed="true">
+    <Position X="6.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIEAAAAAAAAAAAAIAAAAEAAFBIAAAAQAAgAUIAAA=</HashCode>
+      <FileName>Controller\SalesPersonController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SpecialDiscountController" Collapsed="true">
+    <Position X="6" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SpecialDiscountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SpecialActivityLogController" Collapsed="true">
+    <Position X="2.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAIAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\SpecialActivityLogController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SyncLogController" Collapsed="true">
+    <Position X="4.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SyncLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SpecialEventController" Collapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAUAAAABBAAAAABIAAAAAAAFBIAAAAQEAAAUAAAA=</HashCode>
+      <FileName>Controller\EventController.custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Data.SqlCustomTools" Collapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQCABBAAAAAEAAAAAgAAAAAAAAAAABA=</HashCode>
+      <FileName>SqlCustomTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SPs" Collapsed="true">
+    <Position X="11.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EGRLFDtAAAQRAMIghgSAAAAQQIiAgQDABBXIwAJqCEA=</HashCode>
+      <FileName>DAL\StoredProcedures.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.TouchScreenHotKeysController" Collapsed="true">
+    <Position X="13" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAgAIAAIAAAAAACAAAAAAAAAAAAiAAAAACA=</HashCode>
+      <FileName>Controller\TouchScreenHotKeysController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.StockTakeController" Collapsed="true">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASREEggAAQAAAAAAAIAABgAIAFBIAAAgQAACCUAAAA=</HashCode>
+      <FileName>Controller\Inventory\StockTakeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.TimeSlotController" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\TimeSlotController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SyncRequestController" Collapsed="true">
+    <Position X="7.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SyncRequestController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.VoidLogController" Collapsed="true">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\VoidLogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.UtilityController" Collapsed="true">
+    <Position X="11" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIABAAAAAAAAACAgAAAAAAAAAAIAAAAAAAAAQAA=</HashCode>
+      <FileName>Controller\Utility\UtilityController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.UserPrivilegeController" Collapsed="true">
+    <Position X="9.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\UserPrivilegeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.UserMstController" Collapsed="true">
+    <Position X="5.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\UserMstController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.UserGroupController" Collapsed="true">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\UserGroupController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.Container.UserInfo" Collapsed="true">
+    <Position X="2.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAABAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Container\UserInfoContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.WarningMsgController" Collapsed="true">
+    <Position X="4" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\WarningMsgController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.WarrantyController" Collapsed="true">
+    <Position X="7.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIIAQAAAAFBIAAIAQAAAAUAACA=</HashCode>
+      <FileName>Controller\WarrantyController.custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.VoucherStatusController" Collapsed="true">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\VoucherStatusController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.PointOfSaleControllerException" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\POS\PointOfSaleSetupController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SettingController" Collapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SettingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SettlementInfo" Collapsed="true">
+    <Position X="21.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAEAAAAQgAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Controller\EZLinkController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOSLib.Properties.Settings" Collapsed="true">
+    <Position X="20" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAQBAAAAAAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SyncClientController" Collapsed="true">
+    <Position X="21.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MFAAAAAABpAAAEAAAEEACAAAAAAwCgAAAAQAEACQoAg=</HashCode>
+      <FileName>Controller\SyncClientController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.SupplierController" Collapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAIAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>DAL\SupplierController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.UserController" Collapsed="true">
+    <Position X="18.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgCAAAAAAAgACQAAAACAAAAAACAAAABgAAAAAAEAA=</HashCode>
+      <FileName>Controller\UserController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.VoucherController" Collapsed="true">
+    <Position X="19.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAIEAAAAAAcAAAAAAAFBIAAAAQAAAAUAAAA=</HashCode>
+      <FileName>Controller\VoucherController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.UserControllerException" Collapsed="true">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\UserController.Custom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerPOS.ProgrammableKeyboardControllerException" Collapsed="true">
+    <Position X="8" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\ProgrammableKeyboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

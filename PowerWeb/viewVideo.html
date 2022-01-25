@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>View Video</title>       
+    <script language=javascript src="querystring.js"> </script>
+    <script language="javascript" >
+        
+        //server address        
+        var g_sAddress = location.hostname;
+        var g_nImage = 3000;
+        var g_nControl = 3001;
+        var g_nSound = 8800;
+        var g_nImageNew = 3007;
+        var g_Codec = 0;
+        var g_bLogin = false;
+        var g_nMaxCamera = 16;
+        var g_camera = 0;
+        var g_TextSearch = false;
+        var g_nTour = 1;
+        
+        //var g_nSplit = 0;
+        //var g_nOldSplit = 0;
+        var g_sId = "admin";
+        var g_sPwd = "admin";
+        var g_bLogin = true;
+        var g_bSearch = false;
+        
+        //server logofile name
+        var g_sLogoFile = location.href + "";
+        //activeX gui area
+        var g_nTotalWidth = 675;
+        var g_nTotalHeight = 510;
+               
+        var g_nCurrPos = 0;
+        var g_nBrowserType = 0;
+        var g_bAutopan = 0;
+        var g_iIntervalID = 0;
+        var g_TextSearch = false;
+        // Port setting
+        var g_year=0;
+        var g_month=0;        
+        var g_day = 0;
+        var g_hour = 0;
+        var g_minute = 0;
+        var g_sound = 0;
+        var g_defaultcolor = "#CFCFCF";
+        var g_selectedcolor = "red";
+
+        var g_waitresponse = -1;
+        var g_split = 1;
+        var g_rotate = 0;
+        var g_type = Array("#CFCFCF", "#00FF00", "#FFFF00", "#008080", "#FFFFFF", "#FF00FF", "#FF8080", "#FF00FF", "#0099FF");
+
+        var g_play = 0;
+        var g_pdelay = 0;
+        var g_pskip = 0;
+        var g_psync = 0;
+
+        var g_soundch = 0;
+
+
+        function OnLoad() {
+                var qs = new Querystring();                                
+                
+                g_year = parseInt(qs.get("year"));
+                g_month = parseInt(qs.get("month"));
+                g_day = parseInt(qs.get("day"));
+                g_hour = parseInt(qs.get("hour"));
+                g_minute = parseInt(qs.get("minute"));
+                g_camera = parseInt(qs.get("camera"));
+                
+                DActiveView1.Channels = g_nMaxCamera;
+	            DActiveView1.AddSiteEx2(g_sAddress, g_sAddress, "", "", 0, g_nImage, g_nControl, g_nSound, g_nImageNew);	
+            		            
+	            g_bLogin = g_bLogin;
+            	
+	            if(g_bLogin)
+	            {
+		            DActiveView1.StartSearchEx2(0, g_sId, g_sPwd);	        
+            		
+		            DActiveView1.StartSearch2(0);	                            		
+		            // indeo = 0, wmv = 1
+		            DActiveView1.SetAviCodec(g_Codec)
+            		
+	            }	
+	            
+	            DActiveView1.SetSearchCamera(0, g_camera, 1);		        
+	            
+	            DActiveView1.SetSplit(1,g_camera);
+	            //This is for validation....
+	            /*hasRecording = DActiveView1.GetHourValue(g_camera, 0);			*/	        	            
+	            DActiveView1.RequestTimeTable(0, g_year, g_month, g_day);	            
+	            DActiveView1.RequestMoveSecond(0, g_year, g_month, g_day, g_hour, g_minute, 0, g_camera);
+	            g_play = 3;
+	            g_psync=1;	        	        
+	            DActiveView1.RequestSearchData(0, g_play, g_pdelay, g_pskip, g_psync, 0);          	        
+            }		        
+	    
+    function OnUnLoad() 
+    {        
+        DActiveView1.StopSearch(0);
+    }
+    </script>
+    
+    
+</head>
+<body onload="OnLoad();" onunload="OnUnLoad();">
+            <OBJECT id=DActiveView1 
+            style="LEFT: 0px; WIDTH: 526px; TOP: 0px; HEIGHT: 396px" codeBase=ActiveView.cab#version=3,0,0,14
+            classid=clsid:66F7F252-3FE1-4650-B1E5-94B2A38271C5 VIEWASTEXT>
+            <PARAM NAME="_Version" VALUE="65536">
+            <PARAM NAME="_ExtentX" VALUE="13917">
+            <PARAM NAME="_ExtentY" VALUE="10478">
+            <PARAM NAME="_StockProps" VALUE="0">
+            <PARAM NAME="Split" VALUE="1"></OBJECT>
+	      
+</body>
+</html>

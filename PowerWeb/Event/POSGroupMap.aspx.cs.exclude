@@ -1,0 +1,70 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using SubSonic;
+using PowerPOS;
+
+    public partial class POSGroupMap : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            //Fetch ListItems
+            SpecialEventCollection sp = new SpecialEventCollection();
+            sp.Where(SpecialEvent.Columns.StartDate, Comparison.LessOrEquals, DateTime.Now);
+            sp.Where(SpecialEvent.Columns.EndDate, Comparison.GreaterOrEquals, DateTime.Now);
+            sp.Load();
+
+            if (sp.Count > 0)
+            {
+                SubSonic.Utilities.Utility.LoadDropDown(ddName, sp, "EventName", "EventID", "");
+                ManyManyList1.Items.Clear();
+                ManyManyList1.PrimaryKeyValue = ddName.SelectedValue;
+                ManyManyList1.DataBind();
+            }
+            else
+            {
+                CommonWebUILib.ShowMessage(lblErrorMsg, "Please create event first. To create event, click <a href='EventScaffold.aspx'>here</a>", CommonWebUILib.MessageType.BadNews); 
+                Button1.Enabled = false;
+            }
+        }        
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (int.Parse(ddName.SelectedValue)  != 0)
+        {
+            
+            ManyManyList1.PrimaryKeyValue = ddName.SelectedValue;
+            
+            ManyManyList1.Save();
+                         
+            Query qr = EventLocationMap.CreateQuery();
+            qr.QueryType = QueryType.Update;
+            qr.AddUpdateSetting(EventLocationMap.Columns.ModifiedOn, DateTime.Now);
+            qr.AddWhere(EventLocationMap.Columns.EventID, int.Parse(ddName.SelectedValue.ToString()));
+            qr.Execute(); 
+            
+            
+        }
+    }
+
+    protected void ddName_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (int.Parse(ddName.SelectedValue) != 0)        
+        {
+            ManyManyList1.Items.Clear();
+            ManyManyList1.PrimaryKeyValue = ddName.SelectedValue;
+            ManyManyList1.DataBind();
+        }
+    }
+        
+}

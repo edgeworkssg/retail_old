@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MallIntegrationPicker.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WS_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://equipweb.biz/MallIntegrationTest</Value>
+    </Setting>
+    <Setting Name="Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Integration\\File</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MallIntegrationPicker_MallIntegrationService_MallIntegration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:2234/Synchronization/MallIntegration.asmx</Value>
+    </Setting>
+    <Setting Name="CheckFileInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="BackupFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Integration</Value>
+    </Setting>
+    <Setting Name="MallCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">208</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

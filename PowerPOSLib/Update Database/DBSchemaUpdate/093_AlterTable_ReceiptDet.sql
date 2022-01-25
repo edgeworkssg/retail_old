@@ -1,0 +1,1 @@
+﻿ALTER TABLE ReceiptDet ALTER COLUMN userfld3 VARCHAR(MAX)

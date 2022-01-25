@@ -1,0 +1,429 @@
+<div id="dynamicContent">
+    <div id="divStockTransferList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Stock Transfer</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>From Outlet</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: inventoryLocationFilterText, valueUpdate: 'keyup', event: {keyup: inventoryLocationFilterTextKeyUp}" />
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: inventoryLocationFiltered">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $parent.changeInventoryLocation"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Status</h5>
+                        <!-- Status dropdown -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown">
+                                <span class="pull-left" data-bind="text: status"></span>
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: statusDropdown">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: $data, click: function(o) { $parent.status(o) }"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Status dropdown -->
+                    </div>
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" data-bind="value: searchOrderNumber" />
+                    </div>
+
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchStockTransfer">SEARCH</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: openAddNewPage">NEW</button>
+                </form>
+                <p>&nbsp;</p>
+                <div style="overflow: auto">
+                    <div id="tableSearch">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKeyHdr().asc, 'dropdown': !sortKeyHdr().asc}">
+                            <tr>
+                                <th>
+                                    <a href="#" data-bind="click: sortHdr.bind($data, 'StockTransferHdrRefNo')">Document Number</a>
+                                    <span class="caret" data-bind="visible: sortKeyHdr().columnName=='StockTransferHdrRefNo'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortHdr.bind($data, 'TransferDate')">Transfer Request Date</a>
+                                    <span class="caret" data-bind="visible: sortKeyHdr().columnName=='TransferDate'"></span>
+                                </th>                                
+                                <th>
+                                    <a href="#" data-bind="click: sortHdr.bind($data, 'TransferFromLocation')">From Outlet</a>
+                                    <span class="caret" data-bind="visible: sortKeyHdr().columnName=='TransferFromLocation'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortHdr.bind($data, 'TransferToLocation')">To Outlet</a>
+                                    <span class="caret" data-bind="visible: sortKeyHdr().columnName=='TransferToLocation'"></span>
+                                </th>                                
+                                <th>
+                                    <a href="#" data-bind="click: sortHdr.bind($data, 'Status')">Status</a>
+                                    <span class="caret" data-bind="visible: sortKeyHdr().columnName=='Status'"></span>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: stockTransferHdrs">
+                            <tr data-bind="css: {'success': (Status()=='Approved' || Status()=='Posted' || Status()=='Received'), 'danger': Status()=='Rejected'}">
+                                <td data-bind="text: StockTransferHdrRefNo"></td>
+                                <td data-bind="text: TransferDateFormatted"></td>                                
+                                <td data-bind="text: TransferFromLocation"></td>
+                                <td data-bind="text: TransferToLocation"></td>
+                                <td data-bind="text: Status"></td>
+                                <td>
+                                    <a href="#" data-bind="visible: (Status()=='Rejected' || Status()=='Received'), click: function(o) { $parent.print(o.StockTransferHdrRefNo) }">
+                                        <span class="glyphicon glyphicon-print print-icon" title="Print"></span></a>
+                                    <a href="#" data-bind="visible: ($parent.stockTransferGoThroughWarehouse() && (Status()=='Approved' || Status()=='Received' || Status()=='Rejected' || Status()=='Posted')), click: function(o) { $parent.printInvoice(o.StockTransferHdrRefNo, Status()) }">
+                                        <span class="glyphicon glyphicon-print print-icon" title="Print Invoice"></span></a>
+                                    <a href="#" data-bind="visible: ($parent.stockTransferGoThroughWarehouse() && (Status()=='Approved' || Status()=='Received' || Status()=='Rejected' || Status()=='Posted')), click: function(o) { $parent.printCreditNote(o.StockTransferHdrRefNo, Status()) }">
+                                        <span class="glyphicon glyphicon-send print-icon" title="Print Credit Note"></span></a>
+                                </td>                                        
+                                <td>
+                                    <a href="#" data-bind="text: Status()=='Pending' ? 'edit' : 'view', click: $parent.openUpdatePage"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody data-bind="visible: isTransferHdrNotFound">
+                            <tr>
+                                <td colspan="5" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!--/ #divOrderList-->
+
+    <div id="divStockTransferModify">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Stock Transfer Edit</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: currentStockTransfer">
+                    <div class="form-group">
+                        <h5>Document Number</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: StockTransferHdrRefNo" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Transfer Date</h5>
+                        <input type="text" class="form-control" readonly="readonly" data-bind="value: TransferDateFormatted" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <h5>From Outlet</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: $parent.inventoryLocationFilterTextDetail, valueUpdate: 'keyup', event: {keyup: $parent.inventoryLocationFilterTextDetailKeyUp}, disable: true" /><!--disable: !$parent.allowChangeClinic || $parent.isReadOnly-->
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: $parent.inventoryLocationFilteredDetail">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $root.editInventoryLocationInDetails"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>
+                    
+                    <div class="form-group">
+                        <h5>To Outlet</h5>
+                        <!-- Inventory Location dropdown -->
+                        <div class="dropdown">
+                            <input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" data-bind="value: $parent.inventoryLocationFilterTextDetailTo, valueUpdate: 'keyup', event: {keyup: $parent.inventoryLocationFilterTextDetailKeyUpTo}, disable: $parent.isReadOnly" /><!--disable: !$parent.allowChangeClinic || $parent.isReadOnly-->
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: $parent.inventoryLocationFilteredDetailTo">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: InventoryLocationName, click: $root.editInventoryLocationInDetailsTo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Inventory Location dropdown -->
+                    </div>                    
+
+                    <!-- <div class="form-group" data-bind="visible: $parent.showPriceLevel">
+                        <h5>Price Level</h5> -->
+                        <!-- Price Level dropdown -->
+                        <!-- <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-default form-control" type="button" data-toggle="dropdown" data-bind="disable: $parent.isReadOnly">
+                                <span class="pull-left" data-bind="text: $parent.selectedPriceLevel"></span><span class="glyphicon glyphicon-chevron-down pull-right">
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" data-bind="foreach: $parent.priceLevel">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#" data-bind="text: Value, value: Key, click: $root.changePriceLevel">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <!-- /Price Level dropdown -->
+                    <!-- </div> -->
+
+                    <div class="form-group">
+                        <h5>Remarks</h5>
+                        <textarea class="form-control" data-bind="value: Remark, event: {change: $parent.changeRemarks}, disable: $parent.isReadOnly"></textarea>
+                    </div>
+                </form>
+
+               
+                <div id="divNewProducts" data-bind="visible: !isReadOnly()">
+                    <h4>New Products:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <h5></h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" data-bind="value: selectedItemNo" id="txtSelectedItemNo" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" type="button" data-bind="click: openSearchProductDialog">SEARCH</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h5>Quantity</h5>
+                            <input type="text" class="form-control" data-bind="value: qtyToAdd" />
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-danger" data-bind="click: deleteSelectedTransferDet, disable: deleteCheckedBtnState">DELETE CHECKED</button>
+                            <button class="btn btn-primary" type="submit" data-bind="click: addItemToTransfer">ADD ITEM</button>
+                            <button class="btn btn-primary" type="submit" data-bind="click: addItemAllItems">ADD ALL ITEMS</button>                            
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="backToFirstProduct"></div>
+                <div id="divItemDeptFilter" data-bind="foreach: itemDepartments" style="background-color:white">
+                    <button type="button" class="btn" data-bind="text: DepartmentName, click: $parent.deptFilterClick, css: {'btn-default': !isSelected(), 'btn-info': isSelected()}"></button>
+                </div>
+
+                <div id="tableDetail">
+                    <div data-bind="visible: stockTransferDets().length > 0">
+                        <div id="tableDet">
+                        <table class="table table-hover">
+                            <thead data-bind="css: {'dropup': sortKeyDet().asc, 'dropdown': !sortKeyDet().asc}" >
+                                <tr id="theadStockTransfer" style="background-color:white; width:100%;">
+                                    <th data-bind="visible: !isReadOnly()" class="rc-1">
+                                        <input type="checkbox" class="checkbox" data-bind="checked: isSelectAllTransferDet, click: toggleSelectAllTransferDet" />
+                                    </th>
+                                    <th class="rc-2">
+                                        <a href="#" data-bind="click: sortDet.bind($data, 'CategoryName')">Category</a>
+                                        <span class="caret" data-bind="visible: sortKeyDet().columnName=='CategoryName'"></span>
+                                    </th>
+                                    <th class="rc-3" style="display:none;">
+                                        <a href="#" data-bind="click: sortDet.bind($data, 'ItemNo')">Item Code</a>
+                                        <span class="caret" data-bind="visible: sortKeyDet().columnName=='ItemNo'"></span>
+                                    </th>
+                                    <th class="rc-4">
+                                        <a href="#" data-bind="click: sortDet.bind($data, 'ItemName')">Item Description</a>
+                                        <span class="caret" data-bind="visible: sortKeyDet().columnName=='ItemName'"></span>
+                                    </th>
+                                    <th class="rc-5">
+                                        <a href="#" data-bind="click: sortDet.bind($data, 'UOM')">UOM</a>
+                                        <span class="caret" data-bind="visible: sortKeyDet().columnName=='UOM'"></span>
+                                    </th>
+                                    <th class="rc-6">
+                                        <a href="#" data-bind="click: sortDet.bind($data, 'Quantity')">Quantity</a>
+                                        <span class="caret" data-bind="visible: sortKeyDet().columnName=='Quantity'"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: stockTransferDets">
+                                <tr id="tbodyStockTransfer" data-bind="visible: isVisible">
+                                    <td data-bind="visible: !$parent.isReadOnly()" class="rc-1" ><input type="checkbox" class="checkbox" data-bind="checked: isSelected" /></td>
+                                    <td data-bind="text: CategoryName" class="rc-2"></td>
+                                    <td data-bind="text: ItemNo" class="rc-3" style="display:none;"></td>
+                                    <td data-bind="text: ItemName" class="rc-4"></td>
+                                    <td data-bind="text: UOM" class="rc-5"></td>
+                                    <td data-bind="text: Quantity, css: {'info': !$parent.isReadOnly()}, click: $parent.changeItemQty" class="rc-6"></td>
+                                </tr>
+                            </tbody>
+                             <tfoot>
+                                <tr>
+                                    <td data-bind="visible: !isReadOnly()" class="rc-1" ></td>
+                                    <td class="bold">TOTAL</td>
+                                    <td class="rc-3" style="display:none;"></td>
+                                    <td colspan="3" class="bold">
+                                        <span  data-bind="text: stockTransferDets().length" ></span>&nbsp;<span>Items</span>  
+                                    </td>                                    
+                                </tr>
+                            </tfoot>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="divBottomButton">
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" data-bind="click: backToList">BACK</button>
+                        <button type="button" class="btn btn-danger" data-bind="click: cancelStockTransfer, visible: !isReadOnly()">CANCEL TRANSFER</button>
+                        <button class="btn" type="submit" data-bind="click: showPreviewItem, css: {'btn-default': !isPreview(), 'btn-primary': isPreview()}">PREVIEW</button>
+                        <button type="button" class="btn btn-default hidden-print" data-bind="visible: IsCanPrint(), click: printInvoiceFromDetails">
+                            <span class="glyphicon glyphicon-print print-icon"></span>PRINT INVOICE</button>
+                        <button type="button" class="btn btn-default hidden-print" data-bind="visible: IsCanPrint(), click: printCreditNoteFromDetails">
+                            <span class="glyphicon glyphicon-send print-icon"></span>PRINT CREDIT NOTE</button>
+                        <button type="button" class="btn btn-success" data-bind="click: submitPurchaseOrder, visible: !isReadOnly()">SUBMIT</button>
+                        <button type="button" class="btn btn-primary" data-bind="click: returnToPending, visible: currentStatus() == 'Submitted'">
+                            RETURN TO PENDING
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.panel -->
+
+        <div id="divBackToTop">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span> back to top
+        </div>
+    </div>
+    <!--/ #divPurchaseOrderModify-->	
+	
+    <!-- Modal for Search Product -->
+    <div class="modal fade" id="searchProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Search Product</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <h5>Search:</h5>
+                                    <div class="input-group">
+                                        <input type="text" id="txtSearchItem" class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-warning" data-bind="click: searchItem">SEARCH</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div style="overflow: auto; max-height: 300px">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item Code</th>
+                                            <th>Item Description</th>
+                                            <th>UOM</th>                                            
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: searchItemResults">
+                                        <tr>
+                                            <td data-bind="text: data.ItemNo"></td>
+                                            <td data-bind="text: data.ItemName"></td>
+                                            <td data-bind="text: data.Uom"></td>                                            
+                                            <td><button type="button" class="btn btn-success" data-bind="click: $parent.selectItem">ADD</button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody data-bind="visible: isItemNotFound">
+                                        <tr>
+                                            <td colspan="3" align="center"><br />No result found</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadSearchItem, visible: showLoadMoreItems">Load more...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / #searchProductModal -->
+	
+	<!-- Modal for Update QTY -->
+    <div class="modal fade" id="updateQtyModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width:300px!important;">
+			<div class="panel panel-primary" id="updateQtyModalPrimary">
+				<div class="panel-heading">
+					<h4 class="panel-title">Update Qty</h4>
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<h5><div id="lblItemNameQty"> Item Name</div></h5>						
+					</div>									
+					<div class="form-group">
+						<input type="text" id="txtUpdateQty" class="form-control" />
+					</div>		
+					<div>
+						<table cellspacing="10" width="100%" style="border-collapse: separate; border-spacing: 0 0.5em;">
+							<tr>
+								<td align="center">
+									<button id="btnKey1" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(1)">1</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey2" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(2)">2</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey3" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(3)">3</button>	
+								</td>							
+							</tr>
+							<tr>
+								<td align="center">
+									<button id="btnKey1" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(4)">4</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey2" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(5)">5</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey3" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(6)">6</button>	
+								</td>							
+							</tr>
+							<tr>
+								<td align="center">
+									<button id="btnKey1" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(7)">7</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey2" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(8)">8</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey3" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(9)">9</button>	
+								</td>							
+							</tr>							
+							<tr>
+								<td align="center">
+									<button id="btnKey1" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad('.')">.</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey2" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad(0)">0</button>	
+								</td>
+								<td align="center">
+									<button id="btnKey3" type="button" class="btn btn-primary" style="width:80px; height:40px; font-size: 20px;" data-bind="click: numericKeypad('DEL')">DEL</button>	
+								</td>							
+							</tr>														
+						</table>
+					</div>
+					<div class="pull-right">
+						<button type="button" class="btn btn-success"  data-bind="click: nextQty">Next</button>							
+						<button type="button" class="btn btn-primary"  data-bind="click: saveQty">Save</button>						
+						<button type="button" class="btn btn-default" data-bind="click: cancelQty">Cancel</button>							
+					</div>													
+				</div>
+			</div>
+        </div>
+    </div>
+    <!-- / #Select Update QTY -->		
+</div>
+<script type="text/javascript" src="js/inventorytransfer.js?version=1002"></script>

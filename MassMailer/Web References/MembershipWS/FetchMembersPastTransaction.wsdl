@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FetchHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membershipNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMembershipReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="useStartMembershipDate" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="useEndMembershipDate" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartMembershipDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndMembershipDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="useStartBirthDate" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="useEndBirthDate" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartBirthDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndBirthDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndMembershipNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ViewGroupID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SortColumn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SortDir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMembershipReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchMembershipReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchMembershipGroupName">
+        <s:complexType />
+      </s:element>
+      <s:element name="FetchMembershipGroupNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchMembershipGroupNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FetchHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:FetchHistory" />
+  </wsdl:message>
+  <wsdl:message name="FetchHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:FetchHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchMembershipReportSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchMembershipReport" />
+  </wsdl:message>
+  <wsdl:message name="FetchMembershipReportSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchMembershipReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchMembershipGroupNameSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchMembershipGroupName" />
+  </wsdl:message>
+  <wsdl:message name="FetchMembershipGroupNameSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchMembershipGroupNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FetchMembersPastTransactionSoap">
+    <wsdl:operation name="FetchHistory">
+      <wsdl:input message="tns:FetchHistorySoapIn" />
+      <wsdl:output message="tns:FetchHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMembershipReport">
+      <wsdl:input message="tns:FetchMembershipReportSoapIn" />
+      <wsdl:output message="tns:FetchMembershipReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMembershipGroupName">
+      <wsdl:input message="tns:FetchMembershipGroupNameSoapIn" />
+      <wsdl:output message="tns:FetchMembershipGroupNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FetchMembersPastTransactionSoap" type="tns:FetchMembersPastTransactionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FetchHistory">
+      <soap:operation soapAction="http://tempuri.org/FetchHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMembershipReport">
+      <soap:operation soapAction="http://tempuri.org/FetchMembershipReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMembershipGroupName">
+      <soap:operation soapAction="http://tempuri.org/FetchMembershipGroupName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FetchMembersPastTransactionSoap12" type="tns:FetchMembersPastTransactionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FetchHistory">
+      <soap12:operation soapAction="http://tempuri.org/FetchHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMembershipReport">
+      <soap12:operation soapAction="http://tempuri.org/FetchMembershipReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMembershipGroupName">
+      <soap12:operation soapAction="http://tempuri.org/FetchMembershipGroupName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FetchMembersPastTransaction">
+    <wsdl:port name="FetchMembersPastTransactionSoap" binding="tns:FetchMembersPastTransactionSoap">
+      <soap:address location="http://localhost:6733/PowerPOSWeb/FetchMembersPastTransaction.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FetchMembersPastTransactionSoap12" binding="tns:FetchMembersPastTransactionSoap12">
+      <soap12:address location="http://localhost:6733/PowerPOSWeb/FetchMembersPastTransaction.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

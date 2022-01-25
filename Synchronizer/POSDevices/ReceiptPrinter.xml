@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<config>
+	<PrinterName>RECEIPT</PrinterName>
+	<KickDrawer>27;112;48;50;50;</KickDrawer>
+</config>

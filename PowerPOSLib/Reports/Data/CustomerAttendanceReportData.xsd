@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CustomerAttendanceReportData" targetNamespace="http://tempuri.org/CustomerAttendanceReportData.xsd" xmlns:mstns="http://tempuri.org/CustomerAttendanceReportData.xsd" xmlns="http://tempuri.org/CustomerAttendanceReportData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CustomerAttendanceReportData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CustomerAttendanceReportData" msprop:Generator_DataSetName="CustomerAttendanceReportData" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Main" msprop:Generator_UserTableName="Main" msprop:Generator_RowDeletedName="MainRowDeleted" msprop:Generator_RowChangedName="MainRowChanged" msprop:Generator_RowClassName="MainRow" msprop:Generator_RowChangingName="MainRowChanging" msprop:Generator_RowEvArgName="MainRowChangeEvent" msprop:Generator_RowEvHandlerName="MainRowChangeEventHandler" msprop:Generator_TableClassName="MainDataTable" msprop:Generator_TableVarName="tableMain" msprop:Generator_RowDeletingName="MainRowDeleting" msprop:Generator_TablePropName="Main">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NRIC" msprop:Generator_UserColumnName="NRIC" msprop:Generator_ColumnVarNameInTable="columnNRIC" msprop:Generator_ColumnPropNameInRow="NRIC" msprop:Generator_ColumnPropNameInTable="NRICColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MembershipNo" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="MembershipNo" msprop:Generator_ColumnPropNameInRow="MembershipNo" msprop:Generator_ColumnVarNameInTable="columnMembershipNo" msprop:Generator_ColumnPropNameInTable="MembershipNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NameToAppear" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="NameToAppear" msprop:Generator_ColumnPropNameInRow="NameToAppear" msprop:Generator_ColumnVarNameInTable="columnNameToAppear" msprop:Generator_ColumnPropNameInTable="NameToAppearColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Mobile" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="Mobile" msprop:Generator_ColumnPropNameInRow="Mobile" msprop:Generator_ColumnVarNameInTable="columnMobile" msprop:Generator_ColumnPropNameInTable="MobileColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="InTime" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="InTime" msprop:Generator_ColumnPropNameInRow="InTime" msprop:Generator_ColumnVarNameInTable="columnInTime" msprop:Generator_ColumnPropNameInTable="InTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OutTime" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="OutTime" msprop:Generator_ColumnPropNameInRow="OutTime" msprop:Generator_ColumnVarNameInTable="columnOutTime" msprop:Generator_ColumnPropNameInTable="OutTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Duration" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="Duration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInTable="DurationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IsCheckIn" msprop:Generator_UserColumnName="IsCheckIn" msprop:Generator_ColumnVarNameInTable="columnIsCheckIn" msprop:Generator_ColumnPropNameInRow="IsCheckIn" msprop:Generator_ColumnPropNameInTable="IsCheckInColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OutletName" msprop:Generator_UserColumnName="OutletName" msprop:Generator_ColumnPropNameInRow="OutletName" msprop:Generator_ColumnVarNameInTable="columnOutletName" msprop:Generator_ColumnPropNameInTable="OutletNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

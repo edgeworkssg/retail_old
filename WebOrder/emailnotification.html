@@ -1,0 +1,112 @@
+<div id="dynamicContent">
+    <div id="divEmailNotifList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Email Notification</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <h5>Email Address</h5>
+                        <input type="text" class="form-control" data-bind="value: textEmail" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Name</h5>
+                        <input type="text" class="form-control" data-bind="value: textName" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Module</h5>
+                        <input type="text" class="form-control" data-bind="value: textModule" />
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" data-bind="checked: checkActive" /> Active
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bind="click: searchEmailNotif">SEARCH</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: openAddNewPage">NEW</button>
+                </form>
+                <p>&nbsp;</p>
+                <div style="overflow: auto">
+                    <table class="table table-hover">
+                        <thead data-bind="css: {'dropup': sortKey().asc, 'dropdown': !sortKey().asc}">
+                            <tr>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'EmailAddress')">Email Address</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='EmailAddress'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'Name')">Name</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='Name'"></span>
+                                </th>
+                                <th>
+                                    <a href="#" data-bind="click: sortGrid.bind($data, 'ModuleX')">Module</a>
+                                    <span class="caret" data-bind="visible: sortKey().columnName=='ModuleX'"></span>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: emailNotifications">
+                            <tr>
+                                <td data-bind="text: EmailAddress"></td>
+                                <td data-bind="text: Name"></td>
+                                <td data-bind="text: ModuleX"></td>
+                                <td>
+                                    <a href="#" data-bind="click: $parent.openUpdatePage">edit</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody data-bind="visible: emailNotifications().length < 1">
+                            <tr>
+                                <td colspan="4" align="center"><br />No result found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm form-control" data-bind="click: loadData, visible: showLoadMore">Load more...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!--/ #divEmailNotifList-->
+
+    <div id="divEmailNotifModify">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">Email Notification</h4>
+            </div>
+            <div class="panel-body">
+                <form role="form" data-bind="with: currentEmailNotif">
+                    <div class="form-group">
+                        <h5>Email Address</h5>
+                        <input type="text" class="form-control" data-bind="value: EmailAddress, disable: !IsNew()" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Name</h5>
+                        <input type="text" class="form-control" data-bind="value: Name" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Module</h5>
+                        <input type="text" class="form-control" data-bind="value: ModuleX" />
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" data-bind="checked: Active" /> Active
+                    </div>
+                </form>
+
+                <div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" data-bind="click: backToList">Cancel</button>
+                        <button type="button" class="btn btn-danger" data-bind="click: deleteEmailNotif, visible: currentEmailNotif() && !currentEmailNotif().IsNew()">DELETE</button>
+                        <button type="button" class="btn btn-success" data-bind="click: saveEmailNotif">SAVE</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.panel -->
+
+    </div>
+    <!--/ #divEmailNotifModify-->
+</div>
+<script type="text/javascript" src="js/emailnotification.js"></script>

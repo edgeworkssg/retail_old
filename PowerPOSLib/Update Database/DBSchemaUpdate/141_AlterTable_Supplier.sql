@@ -1,0 +1,5 @@
+﻿IF (SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Supplier' AND COLUMN_NAME = 'SupplierName') = 'varchar'
+	ALTER TABLE Supplier ALTER COLUMN SupplierName nvarchar(50)
+	
+IF (SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'PurchaseOrderHeader' AND COLUMN_NAME = 'Remark') = 'varchar'
+	ALTER TABLE PurchaseOrderHeader ALTER COLUMN Remark nvarchar(50) null

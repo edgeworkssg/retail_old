@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PaymentTypes>
+	<Payment>
+		<ID>1</ID>
+		<Name>INSTALLMENT~C.O.D</Name>
+	</Payment>
+	<Payment>
+		<ID>2</ID>
+		<Name>INSTALLMENT~7 Days Credit</Name>
+	</Payment>
+	<Payment>
+		<ID>3</ID>
+		<Name>INSTALLMENT~15 Days Credit</Name>
+	</Payment>
+	<Payment>
+		<ID>4</ID>
+		<Name>INSTALLMENT~30 Days Credit</Name>
+	</Payment>
+	<Payment>
+		<ID>5</ID>
+		<Name>INSTALLMENT~45 Days Credit</Name>
+	</Payment>
+  <Payment>
+    <ID>6</ID>
+    <Name>INSTALLMENT~60 Days Credit</Name>
+  </Payment>
+  <Payment>
+    <ID>7</ID>
+    <Name>INSTALLMENT~15 Days From Month End</Name>
+  </Payment>
+  <Payment>
+    <ID>8</ID>
+    <Name>INSTALLMENT~30 Days From Month End</Name>
+  </Payment>
+  <Payment>
+    <ID>9</ID>
+    <Name>INSTALLMENT~45 Days From Month End</Name>
+  </Payment>
+  <Payment>
+    <ID>10</ID>
+    <Name>INSTALLMENT~60 Days From Month End</Name>
+  </Payment>
+</PaymentTypes>

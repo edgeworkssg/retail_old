@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCash.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btnCash.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnCash.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="btnCash.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnCash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnCash.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnCash.Text" xml:space="preserve">
+    <value>CASH</value>
+  </data>
+  <data name="&gt;&gt;btnCash.Name" xml:space="preserve">
+    <value>btnCash</value>
+  </data>
+  <data name="&gt;&gt;btnCash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCash.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnCash.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnPay1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 16</value>
+  </data>
+  <data name="btnPay1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="btnPay1.Text" xml:space="preserve">
+    <value>NETS</value>
+  </data>
+  <data name="&gt;&gt;btnPay1.Name" xml:space="preserve">
+    <value>btnPay1</value>
+  </data>
+  <data name="&gt;&gt;btnPay1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnPay2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 16</value>
+  </data>
+  <data name="btnPay2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay2.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnPay2.Text" xml:space="preserve">
+    <value>VISA</value>
+  </data>
+  <data name="&gt;&gt;btnPay2.Name" xml:space="preserve">
+    <value>btnPay2</value>
+  </data>
+  <data name="&gt;&gt;btnPay2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay2.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPay3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 16</value>
+  </data>
+  <data name="btnPay3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay3.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="btnPay3.Text" xml:space="preserve">
+    <value>MASTER</value>
+  </data>
+  <data name="&gt;&gt;btnPay3.Name" xml:space="preserve">
+    <value>btnPay3</value>
+  </data>
+  <data name="&gt;&gt;btnPay3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay3.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnPay4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 98</value>
+  </data>
+  <data name="btnPay4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay4.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="btnPay4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay4.Name" xml:space="preserve">
+    <value>btnPay4</value>
+  </data>
+  <data name="&gt;&gt;btnPay4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay4.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnPay5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 98</value>
+  </data>
+  <data name="btnPay5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay5.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="btnPay5.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay5.Name" xml:space="preserve">
+    <value>btnPay5</value>
+  </data>
+  <data name="&gt;&gt;btnPay5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay5.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnPay6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 98</value>
+  </data>
+  <data name="btnPay6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay6.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="btnPay6.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay6.Name" xml:space="preserve">
+    <value>btnPay6</value>
+  </data>
+  <data name="&gt;&gt;btnPay6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay6.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay6.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnPay7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 98</value>
+  </data>
+  <data name="btnPay7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay7.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="btnPay7.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay7.Name" xml:space="preserve">
+    <value>btnPay7</value>
+  </data>
+  <data name="&gt;&gt;btnPay7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay7.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay7.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnPay8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 180</value>
+  </data>
+  <data name="btnPay8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay8.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="btnPay8.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay8.Name" xml:space="preserve">
+    <value>btnPay8</value>
+  </data>
+  <data name="&gt;&gt;btnPay8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay8.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnPay9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 180</value>
+  </data>
+  <data name="btnPay9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay9.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="btnPay9.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay9.Name" xml:space="preserve">
+    <value>btnPay9</value>
+  </data>
+  <data name="&gt;&gt;btnPay9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay9.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay9.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnPay10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPay10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPay10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 180</value>
+  </data>
+  <data name="btnPay10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPay10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPay10.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="btnPay10.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btnPay10.Name" xml:space="preserve">
+    <value>btnPay10</value>
+  </data>
+  <data name="&gt;&gt;btnPay10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPay10.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPay10.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnOther.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnOther.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOther.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 180</value>
+  </data>
+  <data name="btnOther.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnOther.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnOther.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="btnOther.Text" xml:space="preserve">
+    <value>MIX PAYMENT</value>
+  </data>
+  <data name="&gt;&gt;btnOther.Name" xml:space="preserve">
+    <value>btnOther</value>
+  </data>
+  <data name="&gt;&gt;btnOther.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOther.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnOther.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnPoints.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPoints.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 262</value>
+  </data>
+  <data name="btnPoints.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="btnPoints.Text" xml:space="preserve">
+    <value>POINTS</value>
+  </data>
+  <data name="&gt;&gt;btnPoints.Name" xml:space="preserve">
+    <value>btnPoints</value>
+  </data>
+  <data name="&gt;&gt;btnPoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPoints.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPoints.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnInstallment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnInstallment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnInstallment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 262</value>
+  </data>
+  <data name="btnInstallment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnInstallment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnInstallment.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="btnInstallment.Text" xml:space="preserve">
+    <value>INSTALLMENT</value>
+  </data>
+  <data name="&gt;&gt;btnInstallment.Name" xml:space="preserve">
+    <value>btnInstallment</value>
+  </data>
+  <data name="&gt;&gt;btnInstallment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnInstallment.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnInstallment.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnPAMedifund.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPAMedifund.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPAMedifund.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 262</value>
+  </data>
+  <data name="btnPAMedifund.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPAMedifund.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPAMedifund.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="btnPAMedifund.Text" xml:space="preserve">
+    <value>PAMedifund</value>
+  </data>
+  <data name="&gt;&gt;btnPAMedifund.Name" xml:space="preserve">
+    <value>btnPAMedifund</value>
+  </data>
+  <data name="&gt;&gt;btnPAMedifund.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPAMedifund.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPAMedifund.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnSMF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnSMF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSMF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 262</value>
+  </data>
+  <data name="btnSMF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnSMF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnSMF.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="btnSMF.Text" xml:space="preserve">
+    <value>SMF</value>
+  </data>
+  <data name="&gt;&gt;btnSMF.Name" xml:space="preserve">
+    <value>btnSMF</value>
+  </data>
+  <data name="&gt;&gt;btnSMF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSMF.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSMF.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnPWF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnPWF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPWF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 344</value>
+  </data>
+  <data name="btnPWF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnPWF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnPWF.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="btnPWF.Text" xml:space="preserve">
+    <value>PWF</value>
+  </data>
+  <data name="&gt;&gt;btnPWF.Name" xml:space="preserve">
+    <value>btnPWF</value>
+  </data>
+  <data name="&gt;&gt;btnPWF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPWF.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPWF.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="btnCreditCard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnCreditCard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCreditCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 344</value>
+  </data>
+  <data name="btnCreditCard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnCreditCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnCreditCard.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="btnCreditCard.Text" xml:space="preserve">
+    <value>Credit Card</value>
+  </data>
+  <data name="&gt;&gt;btnCreditCard.Name" xml:space="preserve">
+    <value>btnCreditCard</value>
+  </data>
+  <data name="&gt;&gt;btnCreditCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreditCard.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnCreditCard.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 344</value>
+  </data>
+  <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="flowLayoutPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>13, 12, 13, 12</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 427</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnNETSATMCard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnNETSATMCard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNETSATMCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 19</value>
+  </data>
+  <data name="btnNETSATMCard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnNETSATMCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnNETSATMCard.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="btnNETSATMCard.Text" xml:space="preserve">
+    <value>NETS ATM Card</value>
+  </data>
+  <data name="&gt;&gt;btnNETSATMCard.Name" xml:space="preserve">
+    <value>btnNETSATMCard</value>
+  </data>
+  <data name="&gt;&gt;btnNETSATMCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNETSATMCard.Parent" xml:space="preserve">
+    <value>pnlNETSIntegration</value>
+  </data>
+  <data name="&gt;&gt;btnNETSATMCard.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnFlashPay.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btnFlashPay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnFlashPay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnFlashPay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>211, 19</value>
+  </data>
+  <data name="btnFlashPay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnFlashPay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnFlashPay.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="btnFlashPay.Text" xml:space="preserve">
+    <value>NETS FlashPay</value>
+  </data>
+  <data name="&gt;&gt;btnFlashPay.Name" xml:space="preserve">
+    <value>btnFlashPay</value>
+  </data>
+  <data name="&gt;&gt;btnFlashPay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFlashPay.Parent" xml:space="preserve">
+    <value>pnlNETSIntegration</value>
+  </data>
+  <data name="&gt;&gt;btnFlashPay.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCashCard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnCashCard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCashCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 19</value>
+  </data>
+  <data name="btnCashCard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnCashCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnCashCard.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="btnCashCard.Text" xml:space="preserve">
+    <value>NETS CashCard</value>
+  </data>
+  <data name="&gt;&gt;btnCashCard.Name" xml:space="preserve">
+    <value>btnCashCard</value>
+  </data>
+  <data name="&gt;&gt;btnCashCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCashCard.Parent" xml:space="preserve">
+    <value>pnlNETSIntegration</value>
+  </data>
+  <data name="&gt;&gt;btnCashCard.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblNumOfItems.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNumOfItems.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lblNumOfItems.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNumOfItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 449</value>
+  </data>
+  <data name="lblNumOfItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblNumOfItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 18</value>
+  </data>
+  <data name="lblNumOfItems.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="lblNumOfItems.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;lblNumOfItems.Name" xml:space="preserve">
+    <value>lblNumOfItems</value>
+  </data>
+  <data name="&gt;&gt;lblNumOfItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumOfItems.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblNumOfItems.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblRefNo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRefNo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 18pt, style=Bold</value>
+  </data>
+  <data name="lblRefNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRefNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 482</value>
+  </data>
+  <data name="lblRefNo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblRefNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 29</value>
+  </data>
+  <data name="lblRefNo.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="lblRefNo.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;lblRefNo.Name" xml:space="preserve">
+    <value>lblRefNo</value>
+  </data>
+  <data name="&gt;&gt;lblRefNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRefNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRefNo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 449</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 18</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value># ITEMS</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 18pt, style=Bold</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 482</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 29</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>REF NO:</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnNETSQR.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAUAAABrCAIAAAAw89+YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMklEQVQ4T4XMWUvDYBCF4WmzlSZFk5qk
+        S5q2qfq7XFFxRxHFXRRFUXEXEXewP9MU1J5yLj545uKdgREZ7cqMZURGQLrt6VRPdO7p/Mdv/+n8SwdR
+        Z8eziFqb0JDokzpStjalI2p92kDUxoyJuGcNRG3OmUiseQuJsWAgMRdNRG0tWYg6t5xDkl/JI2XbqzYS
+        e81B1M66jbg3HERd2LQRtbPlIClsF5Cy3R0Xce/2IfH2+pG4+y6i9g48RF089BD3URFRDxx7SPyTIlL3
+        qY+UHZwFSMJzH3FfBEjZpcsQSXDlIwmvAySlmxBJ+baEpHJXRtTV+wpSdvRQRRI9Roi69hQh6vg5RtT1
+        lxqijl9jRF1/qyPqxnsDKbv50USSfCaIuvXVQtRD3y2k7OH2IEo76WonP72QWqvaVoxcAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btnNETSQR.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnNETSQR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNETSQR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 101</value>
+  </data>
+  <data name="btnNETSQR.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnNETSQR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnNETSQR.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="btnNETSQR.Text" xml:space="preserve">
+    <value>NETS QR</value>
+  </data>
+  <data name="&gt;&gt;btnNETSQR.Name" xml:space="preserve">
+    <value>btnNETSQR</value>
+  </data>
+  <data name="&gt;&gt;btnNETSQR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNETSQR.Parent" xml:space="preserve">
+    <value>pnlNETSIntegration</value>
+  </data>
+  <data name="&gt;&gt;btnNETSQR.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnNETSBack.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnNETSBack.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnNETSBack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNETSBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 314</value>
+  </data>
+  <data name="btnNETSBack.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnNETSBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 74</value>
+  </data>
+  <data name="btnNETSBack.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="btnNETSBack.Text" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="&gt;&gt;btnNETSBack.Name" xml:space="preserve">
+    <value>btnNETSBack</value>
+  </data>
+  <data name="&gt;&gt;btnNETSBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNETSBack.Parent" xml:space="preserve">
+    <value>pnlNETSIntegration</value>
+  </data>
+  <data name="&gt;&gt;btnNETSBack.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlNETSIntegration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="pnlNETSIntegration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 402</value>
+  </data>
+  <data name="pnlNETSIntegration.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="pnlNETSIntegration.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlNETSIntegration.Name" xml:space="preserve">
+    <value>pnlNETSIntegration</value>
+  </data>
+  <data name="&gt;&gt;pnlNETSIntegration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlNETSIntegration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlNETSIntegration.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="bgDownloadPoints.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>592, 553</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Select Payment</value>
+  </data>
+  <data name="&gt;&gt;bgDownloadPoints.Name" xml:space="preserve">
+    <value>bgDownloadPoints</value>
+  </data>
+  <data name="&gt;&gt;bgDownloadPoints.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmSelectPayment</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

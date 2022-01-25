@@ -1,0 +1,12 @@
+﻿IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'DataIndex' AND OBJECT_ID = OBJECT_ID(N'[OrderHdr]'))
+BEGIN
+	ALTER TABLE dbo.OrderHdr  ADD DataIndex BIGINT NULL
+END
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'DataIndex' AND OBJECT_ID = OBJECT_ID(N'[OrderDet]'))
+BEGIN
+	ALTER TABLE dbo.OrderDet  ADD DataIndex BIGINT NULL
+END
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'DataIndex' AND OBJECT_ID = OBJECT_ID(N'[ReceiptDet]'))
+BEGIN
+	ALTER TABLE dbo.ReceiptDet  ADD DataIndex BIGINT NULL
+END

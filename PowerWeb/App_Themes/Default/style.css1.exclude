@@ -1,0 +1,109 @@
+BODY
+{
+    font-family:Verdana;
+    font-size:x-small;
+}
+h5
+{
+    font-family: verdana;
+    text-decoration: underline;
+}
+.fieldname
+{
+    font-weight: bold;
+    background-color: Gainsboro;
+    text-align: right;
+}
+.searchHeader 
+{
+    font-weight: bold;
+    background-color:  Navy;
+    color: White;
+    text-align:center;
+}
+.treeview
+{
+    width: 20px;
+    background-image: url(image/menubackgnd.PNG);
+    background-repeat: repeat-x;
+    height: 100%;
+    vertical-align: top;
+}
+
+.menu 
+{
+    color:black;
+    font-weight:bold;    
+}
+
+.menuhover
+{
+    color:black;
+    font-weight:bold;
+    font-size: small;
+    color:Maroon;
+    
+}
+
+.logo
+{
+    background-image: url(image/logobg.png);
+    background-repeat: repeat-x;
+    height:89px;
+    padding-top:0px; 
+    font-size:x-small;
+    font-family:Verdana ;
+    font-weight:bold;         
+}
+.innertable
+{
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+}
+.content
+{
+    background-image: url(image/contentbg.Gif);
+    background-repeat: repeat-x;
+    FONT-SIZE: small; FONT-FAMILY: Verdana
+    vertical-align: top;
+    width: 800px;
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+}
+.menuholder
+{
+    vertical-align: top;
+    width: 10px;
+    height: 600px;
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+}
+.rightads 
+{
+    border-right: whitesmoke 1px solid;
+    border-top: whitesmoke 1px solid;
+    border-left: whitesmoke 1px solid;
+    border-bottom: whitesmoke 1px solid;
+    width: 0px;
+}
+.lblErrorMsg 
+{
+    font-weight:bold;
+}
+.title
+{
+    height: 60px;
+    vertical-align: middle;
+    width: 100%;
+    font-weight: bold;
+    font-size: large;
+    background-image: url(image/softstripes.PNG);
+    background-repeat: repeat;
+    padding-left: 20px;
+}

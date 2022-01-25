@@ -1,0 +1,1 @@
+﻿ALTER TABLE OrderDet ALTER COLUMN userfld2 VARCHAR(MAX)

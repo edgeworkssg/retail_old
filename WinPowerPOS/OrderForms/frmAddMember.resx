@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlAddItems.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="labelSearchNotification.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelSearchNotification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 30</value>
+  </data>
+  <data name="labelSearchNotification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 15</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelSearchNotification.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="labelSearchNotification.Text" xml:space="preserve">
+    <value>Notification label ..</value>
+  </data>
+  <data name="labelSearchNotification.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelSearchNotification.Name" xml:space="preserve">
+    <value>labelSearchNotification</value>
+  </data>
+  <data name="&gt;&gt;labelSearchNotification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSearchNotification.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;labelSearchNotification.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>587, 4</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 16</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="labelTotalNewCreatedMembers.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelTotalNewCreatedMembers.Name" xml:space="preserve">
+    <value>labelTotalNewCreatedMembers</value>
+  </data>
+  <data name="&gt;&gt;labelTotalNewCreatedMembers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTotalNewCreatedMembers.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;labelTotalNewCreatedMembers.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 6</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 16</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="label2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 4</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 16</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="labelTotalDownloadedMembers.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelTotalDownloadedMembers.Name" xml:space="preserve">
+    <value>labelTotalDownloadedMembers</value>
+  </data>
+  <data name="&gt;&gt;labelTotalDownloadedMembers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTotalDownloadedMembers.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;labelTotalDownloadedMembers.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelProgressBarSyncMembership.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 4</value>
+  </data>
+  <data name="labelProgressBarSyncMembership.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 15</value>
+  </data>
+  <data name="labelProgressBarSyncMembership.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="labelProgressBarSyncMembership.Text" xml:space="preserve">
+    <value>Downloading new created members : </value>
+  </data>
+  <data name="labelProgressBarSyncMembership.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelProgressBarSyncMembership.Name" xml:space="preserve">
+    <value>labelProgressBarSyncMembership</value>
+  </data>
+  <data name="&gt;&gt;labelProgressBarSyncMembership.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelProgressBarSyncMembership.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;labelProgressBarSyncMembership.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 20</value>
+  </data>
+  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
+    <value>txtSearch</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 3</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 41</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>SEARCH</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="progressBarSyncMembership.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="progressBarSyncMembership.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 22</value>
+  </data>
+  <data name="progressBarSyncMembership.Size" type="System.Drawing.Size, System.Drawing">
+    <value>473, 19</value>
+  </data>
+  <data name="progressBarSyncMembership.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="progressBarSyncMembership.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;progressBarSyncMembership.Name" xml:space="preserve">
+    <value>progressBarSyncMembership</value>
+  </data>
+  <data name="&gt;&gt;progressBarSyncMembership.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBarSyncMembership.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;progressBarSyncMembership.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dgvMembersList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="btnAdd.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnAdd.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="ColMembershipNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ColMembershipNo.HeaderText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ColMembershipNo.MinimumWidth" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <metadata name="GroupName.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GroupName.HeaderText" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <metadata name="NameToAppear.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="NameToAppear.HeaderText" xml:space="preserve">
+    <value>Name To Appear</value>
+  </data>
+  <data name="NameToAppear.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <metadata name="NRIC.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="NRIC.HeaderText" xml:space="preserve">
+    <value>NRIC</value>
+  </data>
+  <metadata name="ExpiryDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ExpiryDate.HeaderText" xml:space="preserve">
+    <value>ExpiryDate</value>
+  </data>
+  <metadata name="BirthDae.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BirthDae.HeaderText" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <metadata name="dgcSalesPerson.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dgcSalesPerson.HeaderText" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <metadata name="FirstName.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FirstName.HeaderText" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FirstName.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <metadata name="LastName.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="LastName.HeaderText" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastName.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <metadata name="Mobile.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Mobile.HeaderText" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <metadata name="EMail.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="EMail.HeaderText" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="EMail.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <metadata name="Address.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Address.HeaderText" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Address.MinimumWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <metadata name="PostalCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PostalCode.HeaderText" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <metadata name="Country.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Country.HeaderText" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <metadata name="City.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="City.HeaderText" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="dgvMembersList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 50</value>
+  </data>
+  <data name="dgvMembersList.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="dgvMembersList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>828, 505</value>
+  </data>
+  <data name="dgvMembersList.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;dgvMembersList.Name" xml:space="preserve">
+    <value>dgvMembersList</value>
+  </data>
+  <data name="&gt;&gt;dgvMembersList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvMembersList.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;dgvMembersList.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnCancelAdd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9pt, style=Bold</value>
+  </data>
+  <data name="btnCancelAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 3</value>
+  </data>
+  <data name="btnCancelAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 41</value>
+  </data>
+  <data name="btnCancelAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnCancelAdd.Text" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="&gt;&gt;btnCancelAdd.Name" xml:space="preserve">
+    <value>btnCancelAdd</value>
+  </data>
+  <data name="&gt;&gt;btnCancelAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancelAdd.Parent" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;btnCancelAdd.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pnlAddItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 0</value>
+  </data>
+  <data name="pnlAddItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>836, 560</value>
+  </data>
+  <data name="pnlAddItems.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;pnlAddItems.Name" xml:space="preserve">
+    <value>pnlAddItems</value>
+  </data>
+  <data name="&gt;&gt;pnlAddItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlAddItems.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlAddItems.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>839, 562</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Search Member</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColMembershipNo.Name" xml:space="preserve">
+    <value>ColMembershipNo</value>
+  </data>
+  <data name="&gt;&gt;ColMembershipNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupName.Name" xml:space="preserve">
+    <value>GroupName</value>
+  </data>
+  <data name="&gt;&gt;GroupName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NameToAppear.Name" xml:space="preserve">
+    <value>NameToAppear</value>
+  </data>
+  <data name="&gt;&gt;NameToAppear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NRIC.Name" xml:space="preserve">
+    <value>NRIC</value>
+  </data>
+  <data name="&gt;&gt;NRIC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExpiryDate.Name" xml:space="preserve">
+    <value>ExpiryDate</value>
+  </data>
+  <data name="&gt;&gt;ExpiryDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BirthDae.Name" xml:space="preserve">
+    <value>BirthDae</value>
+  </data>
+  <data name="&gt;&gt;BirthDae.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgcSalesPerson.Name" xml:space="preserve">
+    <value>dgcSalesPerson</value>
+  </data>
+  <data name="&gt;&gt;dgcSalesPerson.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FirstName.Name" xml:space="preserve">
+    <value>FirstName</value>
+  </data>
+  <data name="&gt;&gt;FirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LastName.Name" xml:space="preserve">
+    <value>LastName</value>
+  </data>
+  <data name="&gt;&gt;LastName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mobile.Name" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="&gt;&gt;Mobile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EMail.Name" xml:space="preserve">
+    <value>EMail</value>
+  </data>
+  <data name="&gt;&gt;EMail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Address.Name" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="&gt;&gt;Address.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PostalCode.Name" xml:space="preserve">
+    <value>PostalCode</value>
+  </data>
+  <data name="&gt;&gt;PostalCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Country.Name" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="&gt;&gt;Country.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;City.Name" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="&gt;&gt;City.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAddMember</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

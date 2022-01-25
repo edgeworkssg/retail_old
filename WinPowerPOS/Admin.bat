@@ -1,0 +1,1 @@
+WinPowerPOS.exe admin
