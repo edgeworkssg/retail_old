@@ -4187,6 +4187,8 @@ namespace PowerPOS
                             isTransactionSuccess = false;
                         }
                     }
+                    if (stockOutQcc.Count == 0)
+                        throw new Exception("Failed to stock out from warehouse");
 
                     if (autoStockIn && isTransactionSuccess)
                     {
@@ -4195,6 +4197,8 @@ namespace PowerPOS
                             isTransactionSuccess = false;
                     }
                     //combine qmc 
+                     if (stockInQcc.Count == 0)
+                            throw new Exception("Failed to do auto stock in");
 
                     col.AddRange(stockOutQcc);
                     col.AddRange(stockInQcc);
@@ -4790,8 +4794,11 @@ namespace PowerPOS
                         if (!StockOutFromPurchaseOrderHeader(por, UserInfo.username, 0, poHdr.WarehouseID, false, false, "", out stockOutQcc))
                         {
                             isTransactionSuccess = false;
-                        }
+                        } 
                     }
+
+                    if (stockOutQcc.Count == 0)
+                        throw new Exception("Failed to stock out from warehouse");
 
                     if (autoStockIn && isTransactionSuccess)
                     {
@@ -4800,6 +4807,9 @@ namespace PowerPOS
                             isTransactionSuccess = false;
                     }
                     //combine qmc 
+
+                    if (stockInQcc.Count == 0)
+                        throw new Exception("Failed to do auto stock in");
 
                     col.AddRange(stockOutQcc);
                     col.AddRange(stockInQcc);

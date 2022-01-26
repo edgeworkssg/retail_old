@@ -1026,7 +1026,7 @@ namespace PowerWeb.Synchronization
             string newRefNo = "";
 
             Logger.writeLog(detail);
-
+            QueryCommandCollection cmd = new QueryCommandCollection();
             try
             {
                 Logger.writeLog(string.Format("Detail for GR {0}: {1}", PurchaseOrderHeaderRefNo, detail));
@@ -1086,10 +1086,28 @@ namespace PowerWeb.Synchronization
                 foreach (var det in tmpDetails)
                 {
                     //ctrl.AddItemIntoInventoryStockIn(det.ItemNo, det.Quantity.GetValueOrDefault(0), det.FactoryPrice, out status);
-                    decimal quantity = det.Quantity.GetValueOrDefault(0);
+                    decimal quantity = det.Quantity.GetValueOrDefault(0); 
                     decimal quantityReceived = InventoryController.GetReceivedQtyForPurchaseOrderByItemNo(poHdr.PurchaseOrderHeaderRefNo, det.ItemNo);
                     if (quantity <= quantityReceived)
                         continue;
+
+                    #region *) So_GetQtyApproved
+                    decimal QtyApproved = 0;
+                    string sqlQty = @"select isnull(pd.Userint1,0) QtyApproved
+                                      from purchaseorderheader ph
+                                      inner join purchaseorderdetail pd WITH(NOLOCK) on ph.purchaseorderheaderrefno = pd.purchaseorderheaderrefno
+                                      where ph.purchaseorderheaderrefno = @purchaseorderheaderrefno and pd.Itemno = @itemno ";
+                    QueryCommand qc = new QueryCommand(sqlQty);
+                    qc.AddParameter("@purchaseorderheaderrefno", poHdr.PurchaseOrderHeaderRefNo, DbType.String);
+                    qc.AddParameter("@itemno", det.ItemNo, DbType.String);
+                    DataTable dtQty = new DataTable();
+                    dtQty.Load(DataService.GetReader(qc));
+                    if (dtQty.Rows.Count > 0)
+                        QtyApproved = (dtQty.Rows[0]["QtyApproved"] + "").GetDecimalValue();
+                    #endregion
+
+                    if (quantity > QtyApproved) 
+                        throw new Exception(string.Format("Please Check Item :{0} Cannot Received: {1} Large Then Qty Approved:{2} ", det.ItemNo, quantity, QtyApproved.ToString("N0")));   
 
                     ctrl.AddItemIntoInventoryStockIn(det.ItemNo, quantity - quantityReceived, det.FactoryPrice, out status);
 
@@ -1126,8 +1144,6 @@ namespace PowerWeb.Synchronization
                     return new JavaScriptSerializer().Serialize(new { status = status });
                 }
 
-
-
                 string statusFromSetting = AppSetting.GetSetting(AppSetting.SettingsName.GoodsOrdering.StatusAllTallyReceived);
                 string StatusAllTally = string.IsNullOrEmpty(statusFromSetting) ? "Received" : statusFromSetting;
                 string StatusPartially = StatusAllTally.ToLower() == "Received" ? "Posted" : "Received";
@@ -1135,8 +1151,9 @@ namespace PowerWeb.Synchronization
                 if (status == "")
                 {
                     ctrl.InvHdr.VendorInvoiceNo = poHdr.ShipVia;
+                    QueryCommandCollection stockInQcc = new QueryCommandCollection(); 
                     if (ctrl.StockIn(username, InventoryLocationID, IsAdjustment,
-                        CalculateCOGS, out status))
+                        CalculateCOGS, out status, out stockInQcc))
                     {
                         newRefNo = ctrl.GetInvHdrRefNo();
 
@@ -1144,28 +1161,36 @@ namespace PowerWeb.Synchronization
                         {
                             // If "Goods Receive" then update the Status to "Posted"
                             poHdr.Status = StatusPartially;
-                            poHdr.Save(username);
+                            //poHdr.Save(username);
+                            cmd.Add(poHdr.GetSaveCommand(username));
                         }
                     }
+                   if (stockInQcc.Count == 0)
+                       throw new Exception("Failed to do stock in");
+
+                   cmd.AddRange(stockInQcc);
                 }
 
                 //update status if all tally
-                string querychecked = @"select pd.itemno, pd.quantity, sum(id.quantity) as ReceivedQty
+                string querychecked = @"select pd.itemno, isnull(pd.userint1,0)QtyApproved, sum(isnull(id.quantity,0)) as ReceivedQty
                                         from purchaseorderheader ph
                                         inner join purchaseorderdetail pd WITH(NOLOCK) on ph.purchaseorderheaderrefno = pd.purchaseorderheaderrefno
                                         left join inventoryhdr ih WITH(NOLOCK) on ih.purchaseorderno = ph.purchaseorderheaderrefno
                                         left join inventorydet id WITH(NOLOCK) on ih.inventoryhdrrefno = id.inventoryhdrrefno and id.itemno = pd.itemno
                                         where ph.purchaseorderheaderrefno = '{0}' AND pd.quantity > 0 and ih.Movementtype = 'Stock In'
-                                        group by pd.itemno, pd.quantity
-                                        having sum(id.quantity) < pd.quantity";
+                                        group by pd.itemno, pd.userint1
+                                       having sum(isnull(id.quantity,0)) < isnull(pd.userint1,0) ";
                 querychecked = string.Format(querychecked, poHdr.PurchaseOrderHeaderRefNo);
                 DataTable ds = DataService.GetDataSet(new QueryCommand(querychecked)).Tables[0];
                 if (poHdr != null && (poHdr.POType.ToUpper() == "ORDER" || poHdr.POType.ToUpper() == "REPLENISH") && ds.Rows.Count == 0)
                 {
                     // If "Goods Receive" then update the Status to "Posted"
                     poHdr.Status = StatusAllTally;
-                    poHdr.Save();
+                    //poHdr.Save();
+                    cmd.Add(poHdr.GetSaveCommand(username));
                 }
+
+                DataService.ExecuteTransaction(cmd);
 
             }
             catch (Exception ex)

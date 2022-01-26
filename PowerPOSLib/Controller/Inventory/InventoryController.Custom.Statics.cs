@@ -1264,5 +1264,54 @@ namespace PowerPOS
             }
             return dt;
         }
+
+        public static Dictionary<string, decimal> GetStockBalanceQtyByListItemByDate(List<string> ItemNoList, int locationID, DateTime RequiredDate, out string status)
+        {
+            Dictionary<string, decimal> result = new Dictionary<string, decimal>();
+            status = "";
+            if (AppSetting.CastBool(AppSetting.GetSetting("StockTakeSyncOnlySave"), false))
+                return result;
+
+            try
+            {
+                #region *) Fetch: Get Current Balance
+
+                string SQLString = @"SELECT tmp.DATA as ItemNo, (SUM(OnHand) - SUM(InvQty)) Balance FROM(
+                                        SELECT TAB.DATA, ISNULL(SUM(Its.BalanceQty),0) OnHand, 0 InvQty
+                                        FROM dbo.fnSplitRow(@ItemNoList,',') TAB 
+                                        LEFT JOIN ItemSummary Its ON TAB.DATA = Its.ItemNo
+                                        AND ( its.InventoryLocationID = @InventoryLocationID OR @InventoryLocationID = 0)
+                                        GROUP BY TAB.DATA
+                                        UNION ALL
+                                        SELECT TAB.DATA, 0 OnHand, ISNULL(SUM(CASE WHEN h.movementtype like '%In' THEN d.quantity else -d.quantity end),0) InvQty				
+                                        FROM dbo.fnSplitRow(@ItemNoList,',') TAB  
+                                        LEFT JOIN inventorydet d WITH(NOLOCK) on TAB.DATA = d.ItemNo 
+                                        LEFT JOIN inventoryhdr h WITH(NOLOCK)  on h.inventoryhdrrefno=d.inventoryhdrrefno	 
+                                        WHERE h.InventoryDate > @EndDate AND (h.Inventorylocationid = @InventoryLocationID OR @InventoryLocationID = 0 )
+                                        GROUP BY TAB.DATA
+                                      )tmp GROUP BY tmp.DATA ";
+                QueryCommand Cmd = new QueryCommand(SQLString);
+                Cmd.AddParameter("@ItemNoList", string.Join(",", ItemNoList.ToArray()), DbType.String);
+                Cmd.AddParameter("@InventoryLocationID", locationID, DbType.Int32);
+                Cmd.AddParameter("@EndDate", RequiredDate.ToString("yyyy-MM-dd HH:mm:ss.fff"), DbType.DateTime);
+                DataTable dt = new DataTable();
+                dt.Load(DataService.GetReader(Cmd));
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string itemNo = dt.Rows[i]["ItemNo"] + "";
+                    decimal Balance = (dt.Rows[i]["Balance"] + "").GetDecimalValue();
+                    if (!result.ContainsKey(itemNo))
+                        result.Add(itemNo, Balance);
+                }
+                #endregion
+
+            }
+            catch (Exception X)
+            {
+                Logger.writeLog(X);
+                status = X.Message;
+            }
+            return result;
+        }
     }
 }

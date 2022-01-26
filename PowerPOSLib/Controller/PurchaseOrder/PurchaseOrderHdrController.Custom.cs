@@ -91,12 +91,31 @@ namespace PowerPOS
                                 ,CASE WHEN ISNULL(POH.CustomRefNo,'') = '' THEN POH.PurchaseOrderHdrRefNo ELSE POH.CustomRefNo END CustomRefNo
                                 ,ISNULL(POH.Userflag5, 0) IsEmailSent
                                 ,(
-                                    SELECT SUM(
-                                        CASE 
-                                            WHEN userfloat3 <= 0 THEN FactoryPrice 
-                                            WHEN userfloat3 > 0 THEN userfloat3 * userfloat5 / userfloat4 
+                                   SELECT SUM(
+                                     CASE 
+                                        WHEN userfloat3 <= 0 THEN FactoryPrice
+										+
+										( CASE 
+											WHEN isnull(Userint1,0) = 1 THEN
+												FactoryPrice / 100 * 7
+											WHEN isnull(Userint1,0) = 2 THEN
+												FactoryPrice / 100 * (7 * 1.07)
+											ELSE 0
+										  END
+										)	
+									    WHEN userfloat3 > 0 
+											THEN (isnull(userfloat3,0) * isnull(userfloat5,0) / isnull(userfloat4,0)) 
+											+
+											( CASE 
+												WHEN isnull(Userint1,0) = 1 THEN
+												(isnull(userfloat3,0) * isnull(userfloat5,0) / isnull(userfloat4,0)) / 100 * 7
+												WHEN isnull(Userint1,0) = 2 THEN
+												(isnull(userfloat3,0) * isnull(userfloat5,0) / isnull(userfloat4,0)) / 100 * (7 * 1.07)
+												ELSE 0
+											  END
+											)												
                                         END
-                                    ) FROM PurchaseOrderDet WHERE PurchaseOrderHdrRefNo = POH.PurchaseOrderHdrRefNo AND ISNULL(" + PurchaseOrderDet.UserColumns.IsDetailDeleted + @", 0) = 0) as TotalAmount
+                                    )  FROM PurchaseOrderDet WHERE PurchaseOrderHdrRefNo = POH.PurchaseOrderHdrRefNo AND ISNULL(" + PurchaseOrderDet.UserColumns.IsDetailDeleted + @", 0) = 0) as TotalAmount
                         FROM	PurchaseOrderHdr POH
 		                        INNER JOIN InventoryLocation IL ON IL.InventoryLocationID = POH.InventoryLocationID
 		                        INNER JOIN Supplier SP ON SP.SupplierID = POH.Supplier
