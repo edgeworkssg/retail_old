@@ -46,7 +46,6 @@ namespace PowerWeb.Synchronization
         {
             //InitializeComponent(); 
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-
         }
 
         public string[] GoodsOrderType = new string[] { "Replenish", "Special Order", "Back Order", "Pre Order" };
@@ -1019,6 +1018,41 @@ namespace PowerWeb.Synchronization
 
         [WebMethod]
         public string StockIn(string PurchaseOrderHeaderRefNo, string detail,
+                string username, int StockInReasonID, int InventoryLocationID,
+                bool IsAdjustment, bool CalculateCOGS, string Remark)
+        {
+            string res = "";
+            string key = string.Format("STOCKIN_{0}", PurchaseOrderHeaderRefNo);
+            
+            try
+            {
+                bool isProcessStockIn = AppSetting.CastBool(AppSetting.GetSetting(key), false);
+                if (isProcessStockIn)
+                {
+                    var result = new
+                    {
+                        status = string.Format("{0} still process to stock in", PurchaseOrderHeaderRefNo)
+                    };
+
+                    return new JavaScriptSerializer().Serialize(result); 
+                }
+
+                AppSetting.SetSetting(key, true.ToString());
+
+                res = StockInHelper(PurchaseOrderHeaderRefNo, detail, username, StockInReasonID, InventoryLocationID, IsAdjustment, CalculateCOGS, Remark);
+
+                AppSetting.SetSetting(key, false.ToString());
+            }
+            catch (Exception ex)
+            {
+                AppSetting.SetSetting(key, false.ToString());
+                Logger.writeLog(ex);
+            }
+
+            return res;
+        }
+
+        public string StockInHelper(string PurchaseOrderHeaderRefNo, string detail,
                 string username, int StockInReasonID, int InventoryLocationID,
                 bool IsAdjustment, bool CalculateCOGS, string Remark)
         {
@@ -9876,54 +9910,70 @@ namespace PowerWeb.Synchronization
         [WebMethod]
         public string StockTakeAndroid(string detail, string username, string takenBy, string verifiedBy, int InventoryLocationID, string stockTakeDate, string uniqueID)
         {
-            //Logger.writeLog("JSON=" + detail + "; Username=" + username + "; takenBy=" + takenBy + "; verifiedBy=" + verifiedBy + "; InventoryLocationID=" + InventoryLocationID + "; stockTakeDate=" + stockTakeDate + "; uniqueID=" + uniqueID);
+            Logger.writeLog("JSON=" + detail + "; Username=" + username + "; takenBy=" + takenBy + "; verifiedBy=" + verifiedBy + "; InventoryLocationID=" + InventoryLocationID + "; stockTakeDate=" + stockTakeDate + "; uniqueID=" + uniqueID);
 
             string status = "";
             bool success = false;
             System.Globalization.CultureInfo provider = System.Globalization.CultureInfo.InvariantCulture;
             List<InventoryDet> tmpDetails = new JavaScriptSerializer().Deserialize<List<InventoryDet>>(detail);
 
-            IDataReader rdr = InventoryHdr.CreateQuery().WHERE(StockTake.UserColumns.UniqueID, uniqueID).ExecuteReader();
-            if (rdr.Read())
+            try
             {
-                success = true;
+                string sql = @"
+                    SELECT  COUNT(*) RowNo 
+                    FROM	StockTake
+                    WHERE	USerfld2 = @UniqueID";
+                QueryCommand cmd = new QueryCommand(sql);
+                cmd.AddParameter("@UniqueID", uniqueID, DbType.String);
+
+                DataTable dtExist = new DataTable();
+                dtExist.Load(DataService.GetReader(cmd));
+
+                if (dtExist.Rows.Count > 0)
+                {
+                    int rowNo = (dtExist.Rows[0]["RowNo"] + "").GetInt32Value();
+                    if (rowNo > 0)
+                    {
+                        var res = new
+                        {
+                            success = true
+                        };
+
+                        return new JavaScriptSerializer().Serialize(res);
+                    }
+                }
+
+                PowerPOS.Container.CostingMethods CostingMethod = PowerPOS.Container.CostingMethods.FIFO;
+                string strCostingMethod = AppSetting.GetSetting(AppSetting.SettingsName.Inventory.CostingMethod);
+                if (strCostingMethod.ToLower() == "fifo")
+                    CostingMethod = PowerPOS.Container.CostingMethods.FIFO;
+                else if (strCostingMethod.ToLower() == "fixed avg")
+                    CostingMethod = PowerPOS.Container.CostingMethods.FixedAvg;
+                else
+                    CostingMethod = PowerPOS.Container.CostingMethods.FIFO;
+
+                InventoryController ctrl = new InventoryController(CostingMethod);
+                ctrl.SetInventoryHeaderInfo("", "", "", 0, 0, 0);
+                ctrl.SetInventoryDate(DateTime.ParseExact(stockTakeDate, "dd-MM-yyyy HH:mm:ss", provider));
+                ctrl.SetInventoryLocation(InventoryLocationID);
+                ctrl.InvHdr.UniqueID = new Guid(uniqueID);
+
+                foreach (var det in tmpDetails)
+                {
+                    ctrl.AddItemIntoInventoryStockTakeWithBatchNo(det.ItemNo, det.Quantity.GetValueOrDefault(0), det.CostOfGoods, det.Userfld1, out status);
+                }
+
+                if (ctrl.CreateStockTakeEntriesWithBatchNo(username, takenBy, verifiedBy, out status))
+                {
+                    success = true;
+                    status = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    PowerPOS.Container.CostingMethods CostingMethod = PowerPOS.Container.CostingMethods.FIFO;
-                    string strCostingMethod = AppSetting.GetSetting(AppSetting.SettingsName.Inventory.CostingMethod);
-                    if (strCostingMethod.ToLower() == "fifo")
-                        CostingMethod = PowerPOS.Container.CostingMethods.FIFO;
-                    else if (strCostingMethod.ToLower() == "fixed avg")
-                        CostingMethod = PowerPOS.Container.CostingMethods.FixedAvg;
-                    else
-                        CostingMethod = PowerPOS.Container.CostingMethods.FIFO;
-
-                    InventoryController ctrl = new InventoryController(CostingMethod);
-                    ctrl.SetInventoryHeaderInfo("", "", "", 0, 0, 0);
-                    ctrl.SetInventoryDate(DateTime.ParseExact(stockTakeDate, "dd-MM-yyyy HH:mm:ss", provider));
-                    ctrl.SetInventoryLocation(InventoryLocationID);
-                    ctrl.InvHdr.UniqueID = new Guid(uniqueID);
-
-                    foreach (var det in tmpDetails)
-                    {
-                        ctrl.AddItemIntoInventoryStockTakeWithBatchNo(det.ItemNo, det.Quantity.GetValueOrDefault(0), det.CostOfGoods, det.Userfld1, out status);
-                    }
-
-                    if (ctrl.CreateStockTakeEntriesWithBatchNo(username, takenBy, verifiedBy, out status))
-                    {
-                        success = true;
-                        status = "";
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Logger.writeLog(ex);
-                    success = false;
-                    status = ex.Message;
-                }
+                Logger.writeLog(ex);
+                success = false;
+                status = ex.Message;
             }
 
             var result = new
