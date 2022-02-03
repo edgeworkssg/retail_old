@@ -166,7 +166,14 @@ $(function() {
             };
         };
 
+        self.processStockIn = ko.observable(false);
+
         self.doStockIn = function() {
+            if(self.processStockIn())
+                return;
+
+            self.processStockIn(true);
+
             var tmpPODet = ko.utils.arrayFilter(self.purchaseOrderDetails(), function(item) {
                 return item.QtyReceived() > 0;
             });
@@ -186,6 +193,7 @@ $(function() {
 
                     if (self.POType().toUpperCase() == "ORDER" || self.POType().toUpperCase() == "REPLENISH") {
                         DAL.fnStockIn(self.purchaseOrderHeaderRefNo(), JSON.parse(ko.toJSON(itemsToReceive)), sessionStorage.username, -1, self.inventoryLocation().InventoryLocationID, false, true, "", function(result) {
+                            self.processStockIn(false);
                             if (result.status == "") {
                                 BootstrapDialog.alert("Goods have been received successfully.");
                                 self.isReadOnly(true);
@@ -195,18 +203,10 @@ $(function() {
                             };
                         });
                     }
-                    //                    else if (self.POType().toUpperCase() == "TRANSFER") {
-                    //                        DAL.fnStockTransfer(self.purchaseOrderHeaderRefNo(), JSON.parse(ko.toJSON(itemsToReceive)), sessionStorage.username, self.inventoryLocation().InventoryLocationID, self.destInventoryLocation().InventoryLocationID, function(result) {
-                    //                            if (result.status == "") {
-                    //                                BootstrapDialog.alert("Goods have been transferred successfully.");
-                    //                                self.isReadOnly(true);
-                    //                            }
-                    //                            else {
-                    //                                BootstrapDialog.alert(result.status);
-                    //                            };
-                    //                        });
-                    //                    };
-                };
+                }
+                else{
+                    self.processStockIn(false);
+                }
             });
         };
 

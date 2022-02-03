@@ -174,7 +174,7 @@
                     <div class="pull-right">
                         <button type="button" class="btn btn-default hidden-print" data-bind="visible: isEverReceived && purchaseOrderDetails().length > 0, click: print"><span class="glyphicon glyphicon-print print-icon"></span> PRINT</button>
                         <button type="button" class="btn btn-primary hidden-print" data-bind="visible: !isReadOnly(), click: allTally">ALL TALLY</button>
-                        <button type="button" class="btn btn-success hidden-print" data-bind="visible: !isReadOnly(), click: doStockIn">RECEIVE</button>
+                        <button type="button" class="btn btn-success hidden-print" data-bind="visible: !isReadOnly(), disable: processStockIn, click: doStockIn">RECEIVE</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
