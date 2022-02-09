@@ -1,5 +1,5 @@
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[REPORT_DeliveryOrder]') AND type in (N'P', N'PC'))
-	Drop Procedure [dbo].[GetItemMatrix]
+	Drop Procedure [dbo].[REPORT_DeliveryOrder]
 
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[REPORT_DeliveryOrder]') AND type in (N'P', N'PC'))
 BEGIN
