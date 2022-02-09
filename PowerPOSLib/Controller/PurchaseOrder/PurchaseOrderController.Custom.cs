@@ -4187,14 +4187,19 @@ namespace PowerPOS
                             isTransactionSuccess = false;
                         }
                     }
+                    if (stockOutQcc.Count == 0)
+                        throw new Exception("Failed to stock out from warehouse");
 
                     if (autoStockIn && isTransactionSuccess)
                     {
                         Logger.writeLog("Calling StockInFromPurchaseOrderHeader, autoStockIn: " + autoStockIn.ToString());
                         if (!StockInFromPurchaseOrderHeader(por, UserInfo.username, 0, por.GetInventoryLocationID(), false, false, "", out stockInQcc))
                             isTransactionSuccess = false;
+                        //combine qmc 
+                        if (stockInQcc.Count == 0)
+                            throw new Exception("Failed to do auto stock in");
                     }
-                    //combine qmc 
+                   
 
                     col.AddRange(stockOutQcc);
                     col.AddRange(stockInQcc);
@@ -4275,10 +4280,15 @@ namespace PowerPOS
                 //}
                 //#endregion
 
-                DataService.ExecuteTransaction(col);
-                //}
                 if (!isTransactionSuccess)
                     return false;
+
+                foreach (var c in col)
+                    c.CommandTimeout = 50000;
+
+                DataService.ExecuteTransaction(col);
+                //}
+               
 
 
                 #region *) Auto Create Supplier PO
@@ -4790,17 +4800,22 @@ namespace PowerPOS
                         if (!StockOutFromPurchaseOrderHeader(por, UserInfo.username, 0, poHdr.WarehouseID, false, false, "", out stockOutQcc))
                         {
                             isTransactionSuccess = false;
-                        }
+                        } 
                     }
+
+                    if (stockOutQcc.Count == 0)
+                        throw new Exception("Failed to stock out from warehouse");
 
                     if (autoStockIn && isTransactionSuccess)
                     {
                         Logger.writeLog("Calling StockInFromPurchaseOrderHeader, autoStockIn: " + autoStockIn.ToString());
                         if (!StockInFromPurchaseOrderHeader(por, UserInfo.username, 0, por.GetInventoryLocationID(), false, false, "", out stockInQcc))
                             isTransactionSuccess = false;
+
+                        if (stockInQcc.Count == 0)
+                            throw new Exception("Failed to do auto stock in");
                     }
                     //combine qmc 
-
                     col.AddRange(stockOutQcc);
                     col.AddRange(stockInQcc);
                 }
@@ -4820,10 +4835,13 @@ namespace PowerPOS
                     }
                 }
 
-                DataService.ExecuteTransaction(col);
-                //}
                 if (!isTransactionSuccess)
                     return false;
+
+                foreach (var c in col)
+                    c.CommandTimeout = 50000;
+
+                DataService.ExecuteTransaction(col); 
 
 
                 #region *) Auto Create Supplier PO

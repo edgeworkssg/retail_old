@@ -88,6 +88,47 @@ namespace PowerPOS
             }
         }
 
+        public bool StockIn(string username, int InventoryLocationID, bool IsAdjustment, bool CalculateCOGS, out string status, out QueryCommandCollection cmd)
+        {
+            cmd = new QueryCommandCollection();
+            bool isSuccess = false;
+            try
+            {
+                SupplierItemMap.CreateSupplierItemMapTable();
+                List<string> ListInventoryHdr = new List<string>();
+
+                cmd = CreateStockInQueryCommand(username, InventoryLocationID, IsAdjustment, CalculateCOGS); 
+
+                if (!string.IsNullOrEmpty(InvHdr.PurchaseOrderNo))
+                {
+                    Logger.writeLog("Update Purchase Order Status for : " + InvHdr.PurchaseOrderNo);
+                    PurchaseOdrController.UpdatePurchaseOrderStatus(InvHdr.PurchaseOrderNo);
+                }
+
+                if (AppSetting.CastBool(AppSetting.GetSetting(AppSetting.SettingsName.GoodsReceive.UseCustomNo), false)
+                    && InvHdr.MovementType == InventoryController.InventoryMovementType_StockIn)
+                    InventoryController.CustomRefNoUpdate();
+
+                InvHdr.IsNew = false;
+                status = "";
+
+                // check if there are any stock take after the stock in 
+                string itemlist = "";
+                if (gotStockTakeAfter(out itemlist))
+                {
+                    StockOutAdjustment(username, 1, InventoryLocationID, IsAdjustment, true, itemlist, out status);
+                } 
+                isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                //log into logger
+                Logger.writeLog(ex);
+                status = ex.Message.Replace("(warning)", "").Replace("(error)", ""); 
+            }
+            return isSuccess;
+        }
+
         public QueryCommandCollection CreateStockInQueryCommand(string username, int InventoryLocationID, bool IsAdjustment, bool CalculateCOGS)
         {
             if (ActiveCostingType == CostingTypes.FIFO)

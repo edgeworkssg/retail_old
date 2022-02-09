@@ -9,6 +9,7 @@ using SubSonic;
 using System.ComponentModel;
 using System.IO;
 using System.Drawing;
+using System.Linq;
 namespace PowerPOS
 {
     [System.ComponentModel.DataObject]
@@ -2610,10 +2611,13 @@ namespace PowerPOS
         {
             try
             {
-                InventoryDetCollection mergedTmpDet = new InventoryDetCollection();
-                MergeInventoryDet(ref mergedTmpDet);
-                InvDet = mergedTmpDet;
+                //InventoryDetCollection mergedTmpDet = new InventoryDetCollection();
+                //MergeInventoryDet(ref mergedTmpDet);
+                //InvDet = mergedTmpDet;               
                 QueryCommandCollection cmd = new QueryCommandCollection();
+                var itemNoList = InvDet.Select(o => o.ItemNo).ToList();
+                var QtyOnHandItem = new Dictionary<string, decimal>();
+                QtyOnHandItem = GetStockBalanceQtyByListItemByDate(itemNoList, InvHdr.InventoryLocationID.Value, InvHdr.InventoryDate, out status);
                 //loop through inventory det
                 for (int i = 0; i < InvDet.Count; i++)
                 {
@@ -2626,7 +2630,10 @@ namespace PowerPOS
                     object tmpObj = DataService.ExecuteScalar(cmdTmp);
                     if (tmpObj != null && tmpObj is int)
                     {
-                        decimal BalQtyAtEntry = InventoryController.GetStockBalanceQtyByItemByDate(InvDet[i].ItemNo, InvHdr.InventoryLocationID.Value, InvHdr.InventoryDate, out status);
+                        decimal BalQtyAtEntry = 0;//InventoryController.GetStockBalanceQtyByItemByDate(InvDet[i].ItemNo, InvHdr.InventoryLocationID.Value, InvHdr.InventoryDate, out status);
+                        if (QtyOnHandItem.ContainsKey(InvDet[i].ItemNo))
+                            BalQtyAtEntry = QtyOnHandItem[InvDet[i].ItemNo];
+
                         decimal AdjustmentQty = InvDet[i].Quantity.GetValueOrDefault(0) - BalQtyAtEntry;
                         SQL =
                             "UPDATE StockTake " +
@@ -2640,19 +2647,23 @@ namespace PowerPOS
                                 ", userflag1 = 0 " +
                                 ", Userfld10 = '" + InvDet[i].Userfld10 + "'"+
                             "WHERE stocktakeid=" + tmpObj.ToString() + "";
-                        cmdTmp = new QueryCommand(SQL, "PowerPOS");
-                        DataService.ExecuteQuery(cmdTmp);
+                        cmdTmp = new QueryCommand(SQL, "PowerPOS"); 
+                        cmd.Add(cmdTmp);
                     }
                     else
                     {
                         //if exist, update the count qty
                         //for every item, create insert statement
+                        decimal _BalQtyAtEntry = 0;
+                        if (QtyOnHandItem.ContainsKey(InvDet[i].ItemNo))
+                            _BalQtyAtEntry = QtyOnHandItem[InvDet[i].ItemNo];
+
                         StockTake st = new StockTake();
                         st.IsAdjusted = false;
                         st.ItemNo = InvDet[i].ItemNo;
                         st.StockTakeDate = InvHdr.InventoryDate;
                         st.StockTakeQty = InvDet[i].Quantity;
-                        st.BalQtyAtEntry = InventoryController.GetStockBalanceQtyByItemByDate(st.ItemNo, InvHdr.InventoryLocationID.Value, InvHdr.InventoryDate, out status);
+                        st.BalQtyAtEntry = _BalQtyAtEntry;  //InventoryController.GetStockBalanceQtyByItemByDate(st.ItemNo, InvHdr.InventoryLocationID.Value, InvHdr.InventoryDate, out status);
                         st.AdjustmentQty = st.StockTakeQty - st.BalQtyAtEntry;
                         //st.CostOfGoods = InventoryController.FetchAverageCostOfGoodsLeftByItemNo(st.BalQtyAtEntry.GetValueOrDefault(0), InvDet[i].ItemNo, InvHdr.InventoryLocationID.Value);
                         st.CostOfGoods = ItemSummaryController.GetAvgCostPrice_StockTake(st.ItemNo, InvHdr.InventoryLocationID.Value, InvHdr.InventoryDate);

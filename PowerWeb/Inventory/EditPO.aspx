@@ -66,7 +66,7 @@
             </td>
         </tr>
     </table>
-    <table width="600px">
+    <table width="750px">
         <tr>
             <td>
                 <asp:GridView ID="gvItem" runat="server" AutoGenerateColumns="False" SkinID="scaffold"
@@ -108,7 +108,13 @@
                                 <asp:Label ID="lblAmount" runat="server" Text='<%#String.Format("{0:0.####}", Eval("Amount")) %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="GST" HeaderText="<%$Resources:dictionary,GST %>" />
+                        <asp:BoundField DataField="GST" HeaderText="<%$Resources:dictionary,GST %>" />                        
+                        <asp:TemplateField HeaderText="Total Amount">
+                            <ItemTemplate>
+                                <asp:HiddenField ID="GSTRule" runat="server" Value='<%#Eval("GSTRule") %>'/>
+                                <asp:Label ID="lblAmountWithGst" runat="server" ></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:BoundField DataField="OnHand" HeaderText="<%$Resources:dictionary,On Hand %>" />
                         <asp:TemplateField HeaderText="<%$Resources:dictionary, %>Ref No" Visible="false">
                             <ItemTemplate>

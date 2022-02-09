@@ -184,9 +184,10 @@ namespace PowerWeb.Inventory
         }
 
         protected int Amount = 10;
-        protected int SalesPeriod1 = 14;
-        protected int SalesPeriod2 = 15;
-        protected int SalesPeriod3 = 16;
+        protected int AmounWithGST = 12;
+        protected int SalesPeriod1 = 15;
+        protected int SalesPeriod2 = 16;
+        protected int SalesPeriod3 = 17;
 
         protected void cbShowPreviousSales_OnCheckedChanged(object sender, EventArgs e)
         {
@@ -261,7 +262,7 @@ namespace PowerWeb.Inventory
             {
                 if (e.Row.RowType == DataControlRowType.Footer) 
                 {
-                    decimal amount = 0;
+                    decimal amount = 0, AmountGST = 0; 
                     foreach (GridViewRow dRow in gvItem.Rows)
                     {
                         if (dRow.Visible)
@@ -274,10 +275,29 @@ namespace PowerWeb.Inventory
                             Label ss3 = dRow.FindControl("lblAmount") as Label;
                             ss3.Text = String.Format("{0:0.####}", amt);
                             amount += amt;
+
+                            HiddenField GSTRule = dRow.FindControl("GSTRule") as HiddenField;
+                            decimal AmtWithGst  = 0;
+                            switch ((GSTRule.Value + "").GetInt32Value())
+                            {
+                                case 1:
+                                    AmtWithGst = amt + (amt / 100 * 7);
+                                    break;
+                                case 2:
+                                    AmtWithGst = amt + (amt / 100 * (7 * 1.07M));
+                                    break;
+                                default: 
+                                    AmtWithGst = amt; 
+                                    break;
+                            } 
+                            Label AmtGst = dRow.FindControl("lblAmountWithGst") as Label;
+                            AmtGst.Text = String.Format("{0:N2}", AmtWithGst);
+                            AmountGST += AmtWithGst;
+
                         }
                     }
-
                     e.Row.Cells[Amount].Text = String.Format("{0:0.####}", amount);
+                    e.Row.Cells[AmounWithGST].Text = String.Format("{0:N2}", AmountGST);
                 }
             }
             catch (Exception ex)
@@ -296,7 +316,7 @@ namespace PowerWeb.Inventory
             try
             {
 
-                decimal amount = 0;
+                decimal amount = 0, AmountGST = 0;                
                 foreach (GridViewRow dRow in gvItem.Rows)
                 {
                     if (dRow.Visible)
@@ -309,9 +329,29 @@ namespace PowerWeb.Inventory
                         Label ss3 = dRow.FindControl("lblAmount") as Label;
                         ss3.Text = String.Format("{0:0.####}", amt);
                         amount += amt;
+
+                        HiddenField GSTRule = dRow.FindControl("GSTRule") as HiddenField;
+                        decimal AmtWithGst = 0;
+                        switch ((GSTRule.Value + "").GetInt32Value())
+                        {
+                            case 1:
+                                AmtWithGst = amt + (amt / 100 * 7);
+                                break;
+                            case 2:
+                                AmtWithGst = amt + (amt / 100 * (7 * 1.07M));
+                                break;
+                            default:
+                                AmtWithGst = amt;
+                                break;
+                        }
+                        Label AmtGst = dRow.FindControl("lblAmountWithGst") as Label;
+                        AmtGst.Text = String.Format("{0:N2}", AmtWithGst);
+                        AmountGST += AmtWithGst;
+
                     }
                 }
                 gvItem.FooterRow.Cells[Amount].Text = String.Format("{0:0.####}", amount);
+                gvItem.FooterRow.Cells[AmounWithGST].Text = String.Format("{0:N2}", AmountGST); 
             }
             catch (Exception ex)
             {
