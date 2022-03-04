@@ -68,9 +68,7 @@ namespace PowerPOS
                         DECLARE @SupplierID INT;
                         DECLARE @Remark NVARCHAR(500);
                         DECLARE @Status NVARCHAR(200);
-                        DECLARE @PONumber VARCHAR(100);
-                        DECLARE @Total Decimal(20,5); 
-						DECLARE @GstAmount Decimal(20,5); 
+                        DECLARE @PONumber VARCHAR(100); 
 
                         SET @StartDate = '{0}';
                         SET @EndDate = '{1}';
@@ -81,26 +79,39 @@ namespace PowerPOS
                         SET @Status = '{6}';
                         SET @PONumber = '{9}'; 
 					
-                       SELECT   
-							@Total = CASE WHEN 
+                       	DECLARE @tmpPO as table
+						(
+							PurchaseOrderHdrRefNo nvarchar(50),
+							Total decimal(20,5),
+							GstAmount decimal(30,5)
+						)
+
+					   INSERT INTO @tmpPO
+                       SELECT     
+							hdr.PurchaseOrderHdrRefNo,
+							CASE WHEN 
 								ISNULL(hdr.Userfloat1,0) /*min purchase*/ > SUM(CASE WHEN isnull(det.Userfloat3,0) <= 0 THEN det.FactoryPrice * det.Quantity ELSE isnull(det.Userfloat3,0) * det.Quantity / isnull(det.Userfloat4,0)  END)
 								THEN  SUM(CASE WHEN isnull(det.Userfloat3,0) <= 0 THEN det.FactoryPrice * det.Quantity ELSE det.Userfloat3 * det.Quantity / isnull(det.Userfloat4,0)  END) + isnull( hdr.Userfloat2,0) /*delivery Charge*/
 								ELSE
 								 SUM(CASE WHEN isnull(det.Userfloat3,0) <= 0 THEN det.FactoryPrice * det.Quantity ELSE  isnull(det.Userfloat3,0) * det.Quantity / isnull(det.Userfloat4,0)  END)
-							END,
-							@GstAmount = CASE WHEN isnull(hdr.Userfld10,'') = '1'  
+							END Total,
+							CASE WHEN isnull(hdr.Userfld10,'') = '1'  
 									THEN SUM(CASE WHEN isnull(det.Userfloat3,0) <= 0 THEN det.FactoryPrice * det.Quantity ELSE  isnull(det.Userfloat3,0) * det.Quantity / isnull(det.Userfloat4,0)  END)/ 100 * 7
 								WHEN isnull(hdr.Userfld10,'') = '2'
 									THEN SUM(CASE WHEN isnull(det.Userfloat3,0) <= 0 THEN det.FactoryPrice * det.Quantity ELSE  isnull(det.Userfloat3,0) * det.Quantity / isnull(det.Userfloat4,0)  END)/ 100 * (7 * 1.07)
 								ELSE
 									0
-							END
+							END GstAmount
+						  
 						FROM PurchaseOrderHdr Hdr
 						INNER JOIN PurchaseOrderDet det
 						ON Hdr.PurchaseOrderHdrRefNo =det.PurchaseOrderHdrRefNo
-						WHERE (hdr.PurchaseOrderHdrRefNo LIKE '%'+@PONumber+'%' OR hdr.CustomRefNo LIKE '%'+@PONumber+'%' )
+						WHERE 
+						ISNULL(hdr.Deleted,0) = 0
+		                 AND CAST(hdr.PurchaseOrderDate AS DATE) BETWEEN CAST(@StartDate AS DATE) AND CAST(@EndDate AS DATE)
+						 AND(hdr.PurchaseOrderHdrRefNo LIKE '%'+@PONumber+'%' OR hdr.CustomRefNo LIKE '%'+@PONumber+'%' )
 						AND ISNULL(det.userflag1, 0) = 0
-						GROUP BY Hdr.PurchaseOrderHdrRefNo,hdr.Userfloat1,hdr.Userfloat2,hdr.Userfld10 
+						GROUP BY hdr.PurchaseOrderHdrRefNo, hdr.Userfloat1,hdr.Userfloat2,hdr.Userfld10 
 
                         SELECT   ROW_NUMBER() OVER(ORDER BY {7} {8}) No
 		                        ,POH.PurchaseOrderDate
@@ -112,11 +123,12 @@ namespace PowerPOS
 		                        ,CASE WHEN ISNULL(POH.Userfld7,'') = '' THEN 'Submitted' ELSE ISNULL(POH.Userfld7,'') END Status
                                 ,CASE WHEN ISNULL(POH.CustomRefNo,'') = '' THEN POH.PurchaseOrderHdrRefNo ELSE POH.CustomRefNo END CustomRefNo
                                 ,ISNULL(POH.Userflag5, 0) IsEmailSent
-                                ,CASE WHEN isnull(POH.Userfld10,'') = '1' 
-									THEN @Total + @GstAmount
-								  ELSE @Total
+                                 ,CASE WHEN isnull(POH.Userfld10,'') = '1' 
+									THEN ISNULL(PO.Total,0) + ISNULL(PO.GstAmount,0)
+								  ELSE ISNULL(PO.Total,0)
 								 END TotalAmount
                         FROM	PurchaseOrderHdr POH
+                                LEFT JOIN @tmpPO PO On PO.PurchaseOrderHdrRefNo = POH.PurchaseOrderHdrRefNo 
 		                        INNER JOIN InventoryLocation IL ON IL.InventoryLocationID = POH.InventoryLocationID
 		                        INNER JOIN Supplier SP ON SP.SupplierID = POH.Supplier
                         WHERE	ISNULL(POH.Deleted,0) = 0
