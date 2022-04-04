@@ -9936,7 +9936,8 @@ namespace PowerWeb.Synchronization
                     {
                         var res = new
                         {
-                            success = true
+                            success = true,
+                            status = ""
                         };
 
                         return new JavaScriptSerializer().Serialize(res);
