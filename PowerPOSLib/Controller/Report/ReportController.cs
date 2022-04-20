@@ -3422,9 +3422,38 @@ WHERE	TheOrder.OrderDate BETWEEN CAST(@StartDate AS DATE) AND CAST(@EndDate AS D
 
             try
             {
-                DataSet ds = SPs.FetchTransactionReport(startDate, endDate, useStartDate, useEndDate, refNo, cashierID,
-                    pointOfSaleID, outletName, paymentMode, remarks, showVoidedTransaction).GetDataSet();
-                dt = ds.Tables[0];
+                //DataSet ds = SPs.FetchTransactionReport(startDate, endDate, useStartDate, useEndDate, refNo, cashierID,
+                //    pointOfSaleID, outletName, paymentMode, remarks, showVoidedTransaction).GetDataSet();
+                //dt = ds.Tables[0];
+                var newSql = @"EXEC FetchTransactionReport
+		                               @StartDate = @StartDate_,
+		                               @EndDate = @EndDate_,
+                                       @UseStartDate = @UseStartDate_,
+                                        @UseEndDate = @UseEndDate_,
+                                       @RefNo = @RefNo_,
+                                        @CashierID = @CashierID_,
+                                        @PointOfSaleID = @PointOfSaleID_,
+                                        @Outlet = @Outlet_,
+                                        @PaymentType = @PaymentType_,
+                                        @Remarks = @Remarks_,
+                                        @ShowVoidedTransaction = @ShowVoidedTransaction_";
+                var cmd = new QueryCommand(newSql, "PowerPOS");
+                cmd.AddParameter("@StartDate_", startDate);
+                cmd.AddParameter("@EndDate_", endDate);
+                cmd.AddParameter("@UseStartDate_", useStartDate);
+                cmd.AddParameter("@UseEndDate_", useEndDate);
+                cmd.AddParameter("@RefNo_", refNo);
+                cmd.AddParameter("@CashierID_", cashierID);
+                cmd.AddParameter("@PointOfSaleID_", pointOfSaleID);
+                cmd.AddParameter("@Outlet_", outletName);
+                cmd.AddParameter("@PaymentType_", paymentMode);
+                cmd.AddParameter("@Remarks_", remarks);
+                cmd.AddParameter("@ShowVoidedTransaction_", showVoidedTransaction);
+
+                cmd.CommandTimeout = 0;
+
+                dt.Load(DataService.GetReader(cmd));
+                
             }
             catch (Exception ex)
             {
